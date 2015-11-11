@@ -5,4 +5,6 @@ typedef struct cidade{
 	int posicao[2];
 	int recursoNecessario;
 	
+	Cidades *proximo;
+	
 }Cidades;
