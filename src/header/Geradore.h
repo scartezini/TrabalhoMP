@@ -18,7 +18,7 @@ typedef struct gerador{
 *	Calcula a soma do total de recursos produzido
 *	pelas celualas.	
 *
-*	@params gerador
+*	@param gerador
 *			Inicio da lista de geradores;
 *
 *	@return 
