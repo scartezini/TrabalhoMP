@@ -1,11 +1,9 @@
 #include "Adaptadores.h"
 #include "Cidades.h"
-<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-=======
 
 /**
 * 	Cabecalho do elemento Gerador
