@@ -23,41 +23,41 @@ Cidade* criaListaCidade()
 
 Cidade* insereCidade(char *registro, Cidade *listaAlvo)
 {
-	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); //Aloca novo elemento da lista de cidades
-	char numchar[strlen(registro)]; //String auxiliar para transformar números em caracteres para inteiro usando atoi
-	int i,j=0,k=2; //Variáveis de Controle
+	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); 
+	char *numchar = (char) malloc (strlen(registro)*sizeof(char)); 
+	int i,j=0,k=2; 
 
-	for(i=2;registro[i]!=' ';i++); //Calcula o tamanho do campo nome no registro + 2
-	novo->nome = (char *)malloc((i-1)*sizeof(char)); //Aloca o tamanho calculado anteriormente -1 para o nome do novo elemento
+	for(i=2;registro[i]!=' ';i++); 
+	novo->nome = (char *)malloc((i-1)*sizeof(char));
 
-	for(i=2;j<4;i++) //Percorre o registro caracter por caracter, até todos os 4 registros terem sido percorridos (ATENÇÃO: j!= i)
+	for(i=2;j<4;i++) 
 	{
-		if(registro[i] == ' '||registro[i] == '\0') //Caso o caracter encontrado seja separador, ou seja, ' '
+		if(registro[i] == ' '||registro[i] == '\0') 
 		{
-			if(j == 0) //Caso o campo recém obtido seja o nome
+			if(j == 0) 
 				novo->nome[i-k] = '\0';
 			else
 			{
 				numchar[i-k] = '\0';
-				if(j == 1) //Caso o campo recém obtido seja a coordenada x da posição
+				if(j == 1) 
 					novo->posicao[0] = atoi(numchar);
-				else if(j == 2) //Caso o campo recém obtido seja a coordenada y da posição
+				else if(j == 2) 
 					novo->posicao[1] = atoi(numchar);
-				else if(j == 3) //Caso o campo recém obtido seja o recurso Necessario
+				else if(j == 3) 
 					novo->recursoNecessario = atoi(numchar);
 			}
-			k = i+1; //Adapta k  de forma que o campo numérico lido seja inserido na string numchar corretamente
-			j++; //Ao incrementar j, significa que leremos o próximo campo do registro
+			k = i+1; 
+			j++; 
 		}
-		else //Caso não seja separador
+		else 
 		{
-			if(j == 0) //Caso o campo a ser obtido seja um nome
+			if(j == 0) 
 				novo->nome[i-k] = registro[i];
-			else //Caso o campo a ser obtido seja algum valor numérico
+			else
 				numchar[i-k] = registro[i];
 		}
 	}
-	//Insere o novo elemento ao início da lista
+	
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 	
@@ -70,7 +70,10 @@ int imprimeListaCidade(Cidade *listaAlvo)
 	if(listaAlvo != NULL)
 	{
 		for(aux=listaAlvo;aux!=NULL;aux=aux->proximo)
-			printf("%s %d %d %d\n",aux->nome,aux->posicao[0],aux->posicao[1],aux->recursoNecessario);
+			printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d\n"
+					,aux->nome,aux->posicao[0]
+					,aux->posicao[1],aux->recursoNecessario);
+					
 		return 1;
 	}
 	else
