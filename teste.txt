@@ -1,0 +1,6 @@
+C Brasília 15 47 143
+C Belo_Horizonte 17 47 177
+C Natal 15 44 140
+C Goiânia 76 45 1438
+C Rio_de_Janeiro 34 49 14
+C São_Paulo 154 56 141
