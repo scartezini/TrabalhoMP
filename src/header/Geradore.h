@@ -5,7 +5,7 @@ typedef struct gerador{
 	int posicao[2];
 	int taxaProducao; 
 	int recursoProduzido; // Total de rocurso produzido por aquele gerador
-	int custo;
+	int custo; //Custo por segundo
 	Gerador *proximo;
 	
 	Interconexao *interconexao;
@@ -26,3 +26,16 @@ typedef struct gerador{
 *
 **/
 int recursoProduzidoTotal(Gerador *gerador);
+
+
+/**
+*	Calcula a soma de custo por segundo de todos
+* os geradores da lista 
+*
+*	@param gerador 
+*		ponteiro para o inicio da lista de geradores
+*	
+*	@return 
+*		Soma do custo por segundo de todos os geradores
+**/
+int custoGeradores(Gerador *gerador);

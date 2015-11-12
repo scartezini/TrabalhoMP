@@ -9,6 +9,8 @@ typedef struct interconexao{
 	float chanceFalha;
 	int tempoConcerto;
 	int custoConcerto;
+	
+	int numeroFalha;
 	Interconexao *proximo;
 	
 	Adaptador *adaptador;
