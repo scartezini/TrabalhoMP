@@ -1,6 +1,9 @@
-#import "Adaptadores.h"
-#import "Cidades.h"
-
+#include "Adaptadores.h"
+#include "Cidades.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
 
 typedef struct interconexao{
 	char *nome;
@@ -30,7 +33,7 @@ typedef struct interconexao{
 *		tamanho da celula de conexao que foi passada
 *
 **/
-int tamanhoConexao(Interconexao *interconexao);
+float tamanhoConexao(Interconexao *interconexao);
 
 
 /**
@@ -43,7 +46,7 @@ int tamanhoConexao(Interconexao *interconexao);
 *	@return
 *		retorna o tamanho total das conexoes da lista
 **/
-int tamanhoTotalConexao(Interconexao *interconexao);
+float tamanhoTotalConexao(Interconexao *interconexao);
 
 
 /**
