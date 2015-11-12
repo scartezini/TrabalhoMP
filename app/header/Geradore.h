@@ -1,13 +1,39 @@
-#import "Interconexoes.h"
+#include "Interconexoes.h"
+
+/**
+* 	Cabecalho do elemento Gerador
+* 	
+*	nome:
+* 		nome do gerador
+*
+* 	posicao:
+* 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
+* 	representando tambem a posicao do adapatador na interface
+*
+* 	taxaProducao:
+* 		quantidade de recurso que a cidade precisa por segundo
+*
+* 	recursoProducao:
+*		quantidade total de recurso produzido pelo gerador
+*
+*	custo:
+*		custo de geração por segundo
+*
+* 	proximo:
+* 		representa a proxima cidade da rede de cidades
+*
+*	interconexao:
+*		representa as interconexoes realizadas/apontadas pelos adaptadores
+*
+**/
 
 typedef struct gerador{
 	char *nome;
 	int posicao[2];
 	int taxaProducao; 
-	int recursoProduzido; // Total de rocurso produzido por aquele gerador
-	int custo; //Custo por segundo
+	int recursoProduzido; 
+	int custo; 
 	Gerador *proximo;
-	
 	Interconexao *interconexao;
 	
 }Gerador;
