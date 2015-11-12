@@ -4,3 +4,9 @@ C Natal 15 44 140
 C Goiânia 76 45 1438
 C Rio_de_Janeiro 34 49 14
 C São_Paulo 154 56 141
+G Usina 10 42 100 1000
+G Usina1 11 87 388 788
+I inter_1 2 2 5 5 100 0.1 15 20
+I inter_2 3 3 7 8 200 0.2 17 25
+A adapta_1 2 3
+A adapta_2 45 33
