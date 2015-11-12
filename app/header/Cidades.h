@@ -2,12 +2,31 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+* 	Cabecalho do elemento Cidade
+* 	
+*	nome:
+* 		nome da cidade
+*
+* 	posicao:
+* 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
+* 	representando tambem a posicao do adapatador na interface
+*
+* 	recursoNecessario:
+* 		quantidade de recurso que a cidade precisa por segundo
+*
+* 	recursoGasto:
+*		quantidade de recurso que a cidade usou
+*
+* 	proximo:
+* 		representa a proxima cidade da rede de cidades
+**/
+
 typedef struct cidade{
 	char *nome;
 	int posicao[2];
 	int recursoNecessario;
 	int recursoGasto;
-	
 	Cidade *proximo;
 	
 }Cidade;
@@ -32,7 +51,6 @@ int recursoGastoTotal(Cidade *cidade);
 *
 **/
 Cidade* criaListaCidade()
-
 
 /**
 *	Inserir uma nova celula na lista de cidades
