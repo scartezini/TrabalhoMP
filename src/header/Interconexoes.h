@@ -7,8 +7,8 @@ typedef struct interconexao{
 	int posicaoInical[2];
 	int posicaoFinal[2];
 	float chanceFalha;
-	int tempoConcerto;
-	int custoConcerto;
+	int tempoConserto;
+	int custoConserto;
 	
 	int numeroFalha;
 	Interconexao *proximo;
@@ -44,3 +44,17 @@ int tamanhoConexao(Interconexao *interconexao);
 *		retorna o tamanho total das conexoes da lista
 **/
 int tamanhoTotalConexao(Interconexao *interconexao);
+
+
+/**
+*	Calcula o custo total gasto com conserto 
+* de todas as celulas de conexao
+*
+*	@param interconexao
+*		ponteiro para o inicio da lista de interconexao
+*
+*	@return
+*		total gasto com conserto de toas as conexoes
+*
+**/
+int totalGastoConserto(Interconexao *interconexao);
