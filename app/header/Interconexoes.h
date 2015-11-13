@@ -60,11 +60,16 @@ typedef struct interconexao{
 }Interconexao;
 
 /**
+<<<<<<< HEAD
 *	Enumeracao para detectar uma falha
+=======
+*	Enumeracao para detectar uma falha 
+>>>>>>> refs/remotes/origin/lucas
 *
 **/
 enum Falha{falha, semFalha};
 
+<<<<<<< HEAD
 /**
 *	Funcao: criaListaCidade
 *
@@ -73,6 +78,8 @@ enum Falha{falha, semFalha};
 **/
 Interconexao* criaListaInterconexao();
 
+=======
+>>>>>>> refs/remotes/origin/lucas
 /**
 *	Funcao: tamanhoConexao
 *
