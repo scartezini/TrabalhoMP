@@ -33,6 +33,8 @@ typedef struct cidade{
 
 
 /**
+*	Funcao: recursoGastoTotal
+*
 *	Resultado da soma de todos recursos 
 * gasto pelas cidades 
 *
@@ -45,6 +47,8 @@ typedef struct cidade{
 int recursoGastoTotal(Cidade *cidade);
 
 /**
+*	Funcao: criaListaCidade
+*
 *	Inicia um ponteiro que sera para Cidade
 *
 *	@return null
@@ -53,6 +57,8 @@ int recursoGastoTotal(Cidade *cidade);
 Cidade* criaListaCidade()
 
 /**
+*	Funcao: insereCidade
+*
 *	Inserir uma nova celula na lista de cidades
 * a insercao se da pelo inicio da lista e é retornadado
 * o novo ponterio para lista.
@@ -69,8 +75,10 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 
 
 /**
-*	Imprime detodas as celulas de lista de cidade
-* as respequitivas caracteristica:
+*	Funcao: imprimeListaCidade
+*
+*	Imprime de todas as celulas de lista de cidade
+* as respectivas caracteristicas:
 *	nome
 *	posicao x
 *	posicao y
@@ -86,6 +94,8 @@ int imprimeListaCidade(Cidade *listaAlvo);
 
 
 /**
+*	Funcao: liberaListaCidade
+*
 *	Desaloca a memoria reservada para 
 * toda celula pertecente a lista de cidades
 *
