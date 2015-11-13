@@ -1,5 +1,5 @@
 #include "Interconexoes.h"
-
+ 
 /**
 * 	Cabecalho do elemento Adaptador
 * 	
