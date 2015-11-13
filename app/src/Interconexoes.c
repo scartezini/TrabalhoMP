@@ -1,4 +1,5 @@
 #include "Interconexoes.h"
+#include <assert.h>
 
 float tamanhoConexao(Interconexao *interconexao){
 	
@@ -19,21 +20,28 @@ float tamanhoConexao(Interconexao *interconexao){
 }
 
 /**
-*	Funcao: calculaFalha
+*	Funcao: tamanhoTotalConexao
+*
+*	AssertivaEntrada:
+*		interconexao != NULL; 
 *
 *	AssertivaSaida:
-*		falha || semFalha; 
+*		resultado > 0; 
 **/
 float tamanhoTotalConexao(Interconexao *interconexao){
-	
-	float resultado;
-	resultado = 0;
-	
+	assert(interconexao != NULL);
+
+	float resultado = 0;
+	Interconexao auxiliar;
+
+	auxiliar = interconexao;
+	//! Asseriva estrutural: 
 	while(interconexao != NULL){
-		resultado += tamanhoConexao(interconexao);
-		interconexao = interconexao->proximo;
+		resultado += tamanhoConexao(auxiliar);
+		auxiliar = auxiliar->proximo;
 	}
 	
+	assert(resultado > 0);
 	return resultado;
 }
 

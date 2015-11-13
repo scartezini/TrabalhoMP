@@ -62,7 +62,7 @@ enum Falha{falha, semFalha};
 /**
 *	Funcao: tamanhoConexao
 *
-*	Calcula o tamanho da celua de conexao que
+*	Calcula o tamanho da celula de conexao que
 * eh passada para a funcao
 *
 *	@param interconexao
