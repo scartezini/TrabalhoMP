@@ -1,5 +1,4 @@
-#include "Interconexao.h"
-
+#include "Interconexoes.h"
 
 float tamanhoConexao(Interconexao *interconexao){
 	
@@ -19,15 +18,44 @@ float tamanhoConexao(Interconexao *interconexao){
 	
 }
 
+/**
+*	Funcao: calculaFalha
+*
+*	AssertivaSaida:
+*		falha || semFalha; 
+**/
 float tamanhoTotalConexao(Interconexao *interconexao){
 	
 	float resultado;
 	resultado = 0;
 	
-	while(interconexao != null){
+	while(interconexao != NULL){
 		resultado += tamanhoConexao(interconexao);
 		interconexao = interconexao->proximo;
 	}
 	
 	return resultado;
+}
+
+/**
+*	Funcao: calculaFalha
+*
+*	AssertivaSaida:
+*		falha || semFalha; 
+**/
+Falha calculaFalha(){
+	float num;
+	float chance = 0.01;
+
+	//! Asseriva estrutural: num eh um numero gerado aleatoriamente
+	srand(1); 
+	num = ((float)rand())/RAND_MAX;
+
+	if ( (chance > 0) && (chance >= num) ) 
+	//! AE: chance deve ser maior que 0 e maior ou igual a num 
+		return falha;
+	else
+	//! AE: chance deve ser menor que 0 ou menor que num 
+		return semFalha;
+	//! AS: o retorno deve ser uma variavel do tipo Falha 
 }

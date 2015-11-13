@@ -56,6 +56,8 @@ typedef struct interconexao{
 	
 }Interconexao;
 
+enum Falha{falha, semFalha};
+
 
 /**
 *	Funcao: tamanhoConexao
@@ -63,7 +65,7 @@ typedef struct interconexao{
 *	Calcula o tamanho da celua de conexao que
 * eh passada para a funcao
 *
-*	@param interconexao;
+*	@param interconexao
 *		ponteiro para a celula de interconexao
 *
 *	@return 
@@ -98,7 +100,26 @@ float tamanhoTotalConexao(Interconexao *interconexao);
 *		ponteiro para o inicio da lista de interconexao
 *
 *	@return
-*		total gasto com conserto de toas as conexoes
+*		total gasto com conserto de todas as conexoes
 *
 **/
 int totalGastoConserto(Interconexao *interconexao);
+
+/**
+*	Funcao: calculaFalha
+*
+*	Calcula a possibilidade de falha
+*
+*	@return
+*		variavel do tipo Falha, indicando se houve falha
+* 
+*	Assertiva de saida:
+*		Se a chance de falha for maior que 0 e maior que um numero aleatorio
+*		Entao
+*			ocorre um falha
+*		Senao
+*			nao ocorre uma falha
+*		FimSe
+*
+**/
+Falha calculaFalha();
