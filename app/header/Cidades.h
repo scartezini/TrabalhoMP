@@ -31,6 +31,11 @@ typedef struct cidade{
 	
 }Cidade;
 
+/**
+*	Enumeracao para detectar se a lista esta vazia ou nao 
+*
+**/
+enum Vazia{vazia, naoVazia};
 
 /**
 *	Funcao: recursoGastoTotal
@@ -43,6 +48,11 @@ typedef struct cidade{
 *	
 *	@return 
 *		total de recursos gasto pelas cidades
+*
+*	Assertiva de entrada:
+*
+*	Assertiva de saida:
+*
 **/
 int recursoGastoTotal(Cidade *cidade);
 
@@ -53,8 +63,28 @@ int recursoGastoTotal(Cidade *cidade);
 *
 *	@return null
 *
+*	Assertiva de saida:
+*		estrutura do tipo Cidade nula
+*
 **/
-Cidade* criaListaCidade()
+Cidade* criaListaCidade();
+
+/**
+*	Funcao: criaVazia
+*
+*	Verifica se a lista de cidades esta vazia	
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return 
+*		variavel do tipo Vazia, indicando se a lista esta vazia
+*
+*	Assertiva de saida:
+*		estrutura do tipo Cidade nula
+*
+**/
+Vazia cidadeVazia(Cidade *cidade);
 
 /**
 *	Funcao: insereCidade
@@ -70,6 +100,11 @@ Cidade* criaListaCidade()
 *
 *	@return
 *		novo pontero para a o inicio da lista de cidade
+*
+*	Assertiva de entrada:
+*		
+*	Assertiva de saida:
+*
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 
@@ -89,8 +124,18 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *
 *	@return listaAlvo != null ? 1:0;
 *		 
+*	AssertivaSaida:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		Se a lista de cidades a ser imprimida nao eh vazia
+*		Entao
+*			ela eh imprimida
+*		Senao
+*			a lista de cidades nao eh imprimida
+*		FimSe
 **/
-int imprimeListaCidade(Cidade *listaAlvo);
+Vazia imprimeListaCidade(Cidade *listaAlvo);
 
 
 /**

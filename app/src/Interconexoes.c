@@ -51,22 +51,22 @@ float tamanhoTotalConexao(Interconexao *interconexao){
 	assert(interconexao != NULL);
 
 	float resultado = 0;
-	Interconexao auxiliar;
+	Interconexao *aux = NULL;
 
-	//! Asseriva estrutural: auxiliar é a lista nao-nula de interconexoes
-	auxiliar = interconexao;
+	//! Asseriva estrutural: aux é a lista nao-nula de interconexoes
+	aux = interconexao;
 
-	while(auxiliar != NULL){
+	while(aux != NULL){
 	//! AE: auxliar nao chegou ao fim da lista de inteconexoes
 
-		//! Comentarios de argumentacao
-			/**
-			*	Enquanto a lista de interconexoes eh percorrida, o tamanho
-			* das conexoes sao somados e armazenados na variavel resultado 
-			**/
+	//! Comentarios de argumentacao
+		/**
+		*	Enquanto a lista de interconexoes eh percorrida, o tamanho
+		* das conexoes sao somados e armazenados na variavel resultado 
+		**/
 
-		resultado += tamanhoConexao(auxiliar);
-		auxiliar = auxiliar->proximo;
+		resultado += tamanhoConexao(aux );
+		aux  = aux ->proximo;
 	}
 	//! AS: a lista de interconexoes chegou ao fim
 

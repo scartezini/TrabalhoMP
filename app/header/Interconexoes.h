@@ -25,11 +25,20 @@
 * 	tempoConcerto:
 *		tempo de concerto em caso de falha em segundos
 *
+*	capacidadeMaxima:
+*		capacidade maxima da conexao
+*
 *	custoConcerto:
 *		custo do concerto em segundos
 *
 * 	numeroFalha:
 * 		total de falhas
+*
+*	tagFalha:
+*		marcador para definir se houve falha ou nao
+*
+*	recurstoTransportado:
+*		quantidade de recurso que esta sendo transportado
 *
 *	proximo:
 *		representa as interconexoes realizadas/apontadas pelos adaptadores
@@ -52,6 +61,7 @@ typedef struct interconexao{
 	int custoConserto;
 	int numeroFalha;
 	int tagFalha;
+	int recursoTransportado;
 	
 	Interconexao *proximo;
 	Adaptador *adaptador;
