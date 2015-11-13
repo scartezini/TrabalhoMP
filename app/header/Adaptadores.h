@@ -20,13 +20,46 @@
 typedef struct adaptador{
 	char *nome;
 	int posicao[2];
-	Interconexao **interconexao;
+	Interconexao **saidas;
 	
 	Adaptador *proximo;
 	float *peso;
 	
 }Adaptador;
 
+
+/**
+*	Retorna o tipo adaptador
+*
+*	@return null
+*
+**/
+Adaptador* criaListaAdaptador();
+
+/**
+*	Inseri uma nova celula de adaptador na lista
+* dos adaptadores
+*
+*	@param registro 
+*		Registro/celula a ser inserida
+*	@param	listaAlvo 
+*		lista a qual essa nova celula sera inserida
+*
+*	@return Adaptador
+*		novo ponteiro de referencia para o inico da lista
+**/
+Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo)
+
+/**
+*
+*	Libera o espaco de memoria alocado para a lista de
+* adaptadores
+*
+*	@param listaAlvo 
+*		lista a qual sera desalocada
+*
+**/
+void liberaListaAdaptador(Adaptador *listaAlvo);
 
 /**
 *	Define como sera a distribuicao entre as conexoes 
