@@ -1,6 +1,5 @@
 #include "Adaptadores.h"
 #include "Cidades.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -60,22 +59,37 @@ typedef struct interconexao{
 	
 }Interconexao;
 
+/**
+*	Enumeracao para detectar uma falha
+*
+**/
+enum Falha{falha, semFalha};
 
 /**
-*	Calcula o tamanho da celua de conexao que
+*	Funcao: tamanhoConexao
+*
+*	Calcula o tamanho da celula de conexao que
 * eh passada para a funcao
 *
-*	@param interconexao;
+*	@param interconexao
 *		ponteiro para a celula de interconexao
 *
 *	@return 
 *		tamanho da celula de conexao que foi passada
+*
+*	Assertiva de entrada:
+*		interconexao - eh a lista de interconexoes
+*
+*	Assertiva de saida:
+*		tamanho de uma conexao
 *
 **/
 float tamanhoConexao(Interconexao *interconexao);
 
 
 /**
+*	Funcao: tamanhoTotalConexao
+*
 *	Calcula o tamanho total das conexoes 
 * da lista que eh passada
 *
@@ -84,11 +98,20 @@ float tamanhoConexao(Interconexao *interconexao);
 *
 *	@return
 *		retorna o tamanho total das conexoes da lista
+*
+*	Assertiva de entrada:
+*		interconexao - eh a lista de interconexoes
+*
+*	Assertiva de saida:
+*		resultado da soma dos tamanhos de todas as conexoes
+*
 **/
 float tamanhoTotalConexao(Interconexao *interconexao);
 
 
 /**
+*	Funcao: totalGastoConserto
+*
 *	Calcula o custo total gasto com conserto 
 * de todas as celulas de conexao
 *
@@ -96,7 +119,26 @@ float tamanhoTotalConexao(Interconexao *interconexao);
 *		ponteiro para o inicio da lista de interconexao
 *
 *	@return
-*		total gasto com conserto de toas as conexoes
+*		total gasto com conserto de todas as conexoes
 *
 **/
 int totalGastoConserto(Interconexao *interconexao);
+
+/**
+*	Funcao: calculaFalha
+*
+*	Calcula a possibilidade de falha
+*
+*	@return
+*		variavel do tipo Falha, indicando se houve falha
+* 
+*	Assertiva de saida:
+*		Se a chance de falha for maior que 0 e maior que um numero aleatorio
+*		Entao
+*			ocorre um falha
+*		Senao
+*			nao ocorre uma falha
+*		FimSe
+*
+**/
+Falha calculaFalha();

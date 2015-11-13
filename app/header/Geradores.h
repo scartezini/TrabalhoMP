@@ -41,8 +41,10 @@ typedef struct gerador{
 
 
 /**
+*	Funcao: recursoProduzidoTotal
+*
 *	Calcula a soma do total de recursos produzido
-	pelas celualas.	
+* pelas celualas.	
 *
 *	@param gerador
 *			Inicio da lista de geradores;
@@ -55,6 +57,8 @@ int recursoProduzidoTotal(Gerador *gerador);
 
 
 /**
+*	Funcao: custoGeradores
+*
 *	Calcula a soma de custo por segundo de todos
 * os geradores da lista 
 *
