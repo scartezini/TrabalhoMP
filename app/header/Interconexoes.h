@@ -1,5 +1,6 @@
 #include "Adaptadores.h"
 #include "Cidades.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -48,8 +49,11 @@ typedef struct interconexao{
 	int posicaoFinal[2];
 	float chanceFalha;
 	int tempoConserto;
+	int capacidadeMaxima;
 	int custoConserto;
 	int numeroFalha;
+	int tagFalha;
+	
 	Interconexao *proximo;
 	Adaptador *adaptador;
 	Cidade *cidade;
