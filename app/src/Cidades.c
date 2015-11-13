@@ -1,21 +1,28 @@
 #include "Cidades.h"
+#include <assert.h>
 
-<<<<<<< HEAD
-
-/*
+/**
+*	Funcao: criaListaCidade
 *
-*
-*/
-
-=======
->>>>>>> refs/remotes/origin/lucas
+*	AssertivaSaida:
+*		NULL; 
+**/
 Cidade* criaListaCidade(){
 	return NULL;
 }
 
+/**
+*	Funcao: insereCidade
+*
+*	AssertivaEntrada:
+*		interconexao != NULL; 
+*
+*	AssertivaSaida:
+*		distancia > 0; 
+**/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); 
-	char *numchar = (char) malloc (strlen(registro)*sizeof(char)); 
+	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); 
 	int i,j=0,k=2; 
 
 	for(i=2;registro[i]!=' ';i++); 
@@ -45,7 +52,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 			if(j == 0) 
 				novo->nome[i-k] = registro[i];
 			else
-				numchar[i-k] = registro[i];
+				numChar[i-k] = registro[i];
 		}
 	}
 	

@@ -43,6 +43,11 @@ typedef struct cidade{
 *	
 *	@return 
 *		total de recursos gasto pelas cidades
+*
+*	Assertiva de entrada:
+*
+*	Assertiva de saida:
+*
 **/
 int recursoGastoTotal(Cidade *cidade);
 
@@ -53,8 +58,11 @@ int recursoGastoTotal(Cidade *cidade);
 *
 *	@return null
 *
+*	Assertiva de saida:
+*		estrutura do tipo Cidade nula
+*
 **/
-Cidade* criaListaCidade()
+Cidade* criaListaCidade();
 
 /**
 *	Funcao: insereCidade

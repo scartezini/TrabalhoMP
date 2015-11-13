@@ -2,6 +2,16 @@
 #include <assert.h>
 
 /**
+*	Funcao: criaListaInterconexao
+*
+*	AssertivaSaida:
+*		NULL; 
+**/
+Interconexao* criaListaInterconexao(){
+	return NULL;
+}
+
+/**
 *	Funcao: tamanhoConexao
 *
 *	AssertivaEntrada:

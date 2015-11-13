@@ -66,6 +66,14 @@ typedef struct interconexao{
 enum Falha{falha, semFalha};
 
 /**
+*	Funcao: criaListaCidade
+*
+*	AssertivaSaida:
+*		NULL; 
+**/
+Interconexao* criaListaInterconexao();
+
+/**
 *	Funcao: tamanhoConexao
 *
 *	Calcula o tamanho da celula de conexao que
