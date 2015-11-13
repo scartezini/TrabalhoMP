@@ -15,13 +15,22 @@
 *
 *	peso:
 *		vetor que guarda a porcentagem que cada conexao vai receber
+*
+*	quantidadeSaidas:
+*		indica quantas conexoes saem desse adaptador
+*
+*	recursoRecebido:
+*		quanto de recurso o adaptador recebeu naquele turno
 **/
 
 typedef struct adaptador{
 	char *nome;
 	int posicao[2];
 	Interconexao **saidas;
+	int quantidadeSaidas;
 	
+	int recursoRecebido;
+
 	Adaptador *proximo;
 	float *peso;
 	
@@ -41,14 +50,14 @@ Adaptador* criaListaAdaptador();
 * dos adaptadores
 *
 *	@param registro 
-*		Registro/celula a ser inserida
+*		String que sera decodificada e inserida
 *	@param	listaAlvo 
 *		lista a qual essa nova celula sera inserida
 *
 *	@return Adaptador
 *		novo ponteiro de referencia para o inico da lista
 **/
-Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo)
+Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
 
 /**
 *
@@ -62,6 +71,9 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo)
 void liberaListaAdaptador(Adaptador *listaAlvo);
 
 /**
+*	//TODO ja mandar para as conexoes o recurso 
+* assim evita um for 
+*	
 *	Define como sera a distribuicao entre as conexoes 
 * que esta ligada a cada adaptador e guarda a porcentagem
 * a ser distribuida no vetor do peso
@@ -69,8 +81,12 @@ void liberaListaAdaptador(Adaptador *listaAlvo);
 *	interconexao->capacidadeMax /
 *	soma de todas as capacidadeMax
 *  
+*	Essa funcao espera que a lista de inreconexoes ja foi previamente 
+* estabelecida 
+*	//TODO retirar essa dependencia
+*
 * @param adapatador
-* 		ponteiro para o inico da lista de adaptadores
+* 		ponteiro para o inico da lista de adaptadores;
 *
 **/
 void defineDistribuicao(Adaptador *adapatador);
