@@ -1,9 +1,5 @@
 #include "Adaptadores.h"
 #include "Cidades.h"
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/lucas
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -63,8 +59,11 @@ typedef struct interconexao{
 	
 }Interconexao;
 
+/**
+*	Enumeracao para detectar uma falha 
+*
+**/
 enum Falha{falha, semFalha};
-
 
 /**
 *	Funcao: tamanhoConexao
@@ -77,6 +76,12 @@ enum Falha{falha, semFalha};
 *
 *	@return 
 *		tamanho da celula de conexao que foi passada
+*
+*	Assertiva de entrada:
+*		interconexao - eh a lista de interconexoes
+*
+*	Assertiva de saida:
+*		tamanho de uma conexao
 *
 **/
 float tamanhoConexao(Interconexao *interconexao);
@@ -93,6 +98,13 @@ float tamanhoConexao(Interconexao *interconexao);
 *
 *	@return
 *		retorna o tamanho total das conexoes da lista
+*
+*	Assertiva de entrada:
+*		interconexao - eh a lista de interconexoes
+*
+*	Assertiva de saida:
+*		resultado da soma dos tamanhos de todas as conexoes
+*
 **/
 float tamanhoTotalConexao(Interconexao *interconexao);
 

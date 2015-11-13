@@ -1,22 +1,41 @@
 #include "Interconexoes.h"
 #include <assert.h>
 
+/**
+*	Funcao: tamanhoConexao
+*
+*	AssertivaEntrada:
+*		interconexao != NULL; 
+*
+*	AssertivaSaida:
+*		distancia > 0; 
+**/
 float tamanhoConexao(Interconexao *interconexao){
+	assert(interconexao != NULL);
+
+	int xA; //!< Valor no eixo x da posicao inicial 
+	int yA; //!< Valor no eixo y da posicao inicial 
 	
-	int xA;
-	int yA;
-	
-	int xB;
-	int yB;
+	int xB; //!< Valor no eixo x da posicao final
+	int yB; //!< Valor no eixo y da posicao final
+
+	int distancia;
 	
 	xA = interconexao->posicaoInical[0];
 	yA = interconexao->posicaoInical[1];
 	
 	xB = interconexao->posicaoFinal[0];
 	yB = interconexao->posicaoFinal[1];
+
+	//! Comentarios de argumentacao
+		/**
+		*	Calculando a distancia utilizando ((xb-xa)^2 + (yb-ya)^2)^(1/2)
+		**/
+
+	distancia = sqrt(pow((xB - xA),2) + pow((yB - yA),2));
 	
-	return sqrt(pow((xB - xA),2) + pow((yB - yA),2));
-	
+	assert(distancia > 0);
+	return distancia;
 }
 
 /**
@@ -34,13 +53,23 @@ float tamanhoTotalConexao(Interconexao *interconexao){
 	float resultado = 0;
 	Interconexao auxiliar;
 
+	//! Asseriva estrutural: auxiliar é a lista nao-nula de interconexoes
 	auxiliar = interconexao;
-	//! Asseriva estrutural: 
-	while(interconexao != NULL){
+
+	while(auxiliar != NULL){
+	//! AE: auxliar nao chegou ao fim da lista de inteconexoes
+
+		//! Comentarios de argumentacao
+			/**
+			*	Enquanto a lista de interconexoes eh percorrida, o tamanho
+			* das conexoes sao somados e armazenados na variavel resultado 
+			**/
+
 		resultado += tamanhoConexao(auxiliar);
 		auxiliar = auxiliar->proximo;
 	}
-	
+	//! AS: a lista de interconexoes chegou ao fim
+
 	assert(resultado > 0);
 	return resultado;
 }
