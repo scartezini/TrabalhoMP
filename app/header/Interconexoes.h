@@ -1,11 +1,9 @@
 #include "Adaptadores.h"
 #include "Cidades.h"
-<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-=======
 
 /**
 * 	Cabecalho do elemento Gerador
@@ -60,6 +58,8 @@ typedef struct interconexao{
 
 
 /**
+*	Funcao: tamanhoConexao
+*
 *	Calcula o tamanho da celua de conexao que
 * eh passada para a funcao
 *
@@ -74,6 +74,8 @@ float tamanhoConexao(Interconexao *interconexao);
 
 
 /**
+*	Funcao: tamanhoTotalConexao
+*
 *	Calcula o tamanho total das conexoes 
 * da lista que eh passada
 *
@@ -87,6 +89,8 @@ float tamanhoTotalConexao(Interconexao *interconexao);
 
 
 /**
+*	Funcao: totalGastoConserto
+*
 *	Calcula o custo total gasto com conserto 
 * de todas as celulas de conexao
 *

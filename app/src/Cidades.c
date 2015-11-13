@@ -1,13 +1,8 @@
 #include "Cidades.h"
 
-
-
-
 Cidade* criaListaCidade(){
 	return NULL;
 }
-
-
 
 Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); 
@@ -51,8 +46,6 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	return listaAlvo;
 }
 
-
-
 int imprimeListaCidade(Cidade *listaAlvo){
 	Cidade *aux = NULL;
 	if(listaAlvo != NULL)
@@ -67,8 +60,6 @@ int imprimeListaCidade(Cidade *listaAlvo){
 	else
 		return 0;
 }
-
-
 
 void liberaListaCidade(Cidade *listaAlvo){
 	Cidade *aux1 = NULL;
