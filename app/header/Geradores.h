@@ -8,7 +8,7 @@
 *
 * 	posicao:
 * 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adapatador na interface
+* 	representando tambem a posicao do adaptador na interface
 *
 * 	taxaProducao:
 * 		quantidade de recurso que a cidade precisa por segundo
@@ -38,7 +38,44 @@ typedef struct gerador{
 	
 }Gerador;
 
+/**
+*	Enumeracao para detectar se a lista esta vazia ou nao 
+*
+**/
+enum Vazio{vazio, naoVazio};
 
+/**
+*	Funcao: criaListaGerador
+*
+*	Inicia um ponteiro que sera para Gerador
+*
+*	@return null
+*
+*	Assertiva de saida:
+*		estrutura do tipo Gerador nula
+*
+**/
+Cidade* criaListaCidade();
+
+/**
+*	Funcao: geradorVazio
+*
+*	Verifica se a lista de geradores esta vazia	
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de geradores
+*
+*	@return 
+*		variavel do tipo Vazio, indicando se a lista esta vazia
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Gerador
+*
+*	Assertiva de saida:
+*		condicao do Gerador sendo vazio ou nao vazio
+*
+**/
+Vazio geradorVazio(Gerador *gerador);
 
 /**
 *	Funcao: recursoProduzidoTotal

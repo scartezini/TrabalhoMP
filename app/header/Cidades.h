@@ -10,7 +10,7 @@
 *
 * 	posicao:
 * 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adapatador na interface
+* 	representando tambem a posicao do adaptador na interface
 *
 * 	recursoNecessario:
 * 		quantidade de recurso que a cidade precisa por segundo
@@ -31,20 +31,11 @@ typedef struct cidade{
 	
 }Cidade;
 
-
 /**
-*	Funcao: recursoGastoTotal
+*	Enumeracao para detectar se a lista esta vazia ou nao 
 *
-*	Resultado da soma de todos recursos 
-* gasto pelas cidades 
-*
-*	@param cidade
-*		ponteiro para o inicio da lista de cidades
-*	
-*	@return 
-*		total de recursos gasto pelas cidades
 **/
-int recursoGastoTotal(Cidade *cidade);
+enum Vazia{vazia, naoVazia};
 
 /**
 *	Funcao: criaListaCidade
@@ -53,8 +44,31 @@ int recursoGastoTotal(Cidade *cidade);
 *
 *	@return null
 *
+*	Assertiva de saida:
+*		estrutura do tipo Cidade nula
+*
 **/
-Cidade* criaListaCidade()
+Cidade* criaListaCidade();
+
+/**
+*	Funcao: cidadeVazia
+*
+*	Verifica se a lista de cidades esta vazia	
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return 
+*		variavel do tipo Vazia, indicando se a lista esta vazia
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade
+*
+*	Assertiva de saida:
+*		condicao da Cidade sendo vazia ou nao vazia
+*
+**/
+Vazia cidadeVazia(Cidade *cidade);
 
 /**
 *	Funcao: insereCidade
@@ -70,9 +84,14 @@ Cidade* criaListaCidade()
 *
 *	@return
 *		novo pontero para a o inicio da lista de cidade
+*
+*	Assertiva de entrada:
+*		
+*
+*	Assertiva de saida:
+*
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo);
-
 
 /**
 *	Funcao: imprimeListaCidade
@@ -87,11 +106,21 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *	@param listaAlvo
 *		lista que sera impressa 
 *
-*	@return listaAlvo != null ? 1:0;
+*	@return listaAlvo
+*		variavel do tipo Vazia, indicando se a lista esta vazia
 *		 
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		Se a lista de cidades a ser imprimida nao eh vazia
+*		Entao
+*			ela eh imprimida
+*		Senao
+*			a lista de cidades nao eh imprimida
+*		FimSe
 **/
-int imprimeListaCidade(Cidade *listaAlvo);
-
+Vazia imprimeListaCidade(Cidade *listaAlvo);
 
 /**
 *	Funcao: liberaListaCidade
@@ -101,5 +130,30 @@ int imprimeListaCidade(Cidade *listaAlvo);
 *
 *	@param listaAlvo
 *		lista a ser desalocada
+*
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		A lista deve estar vazia
 **/
 void liberaListaCidade(Cidade *listaAlvo);
+
+/**
+*	Funcao: recursoGastoTotal
+*
+*	Resultado da soma de todos recursos 
+* gasto pelas cidades 
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de cidades
+*	
+*	@return 
+*		total de recursos gasto pelas cidades
+*
+*	Assertiva de entrada:
+*
+*	Assertiva de saida:
+*
+**/
+int recursoGastoTotal(Cidade *cidade);
