@@ -32,7 +32,7 @@ typedef struct adaptador{
 	Interconexao **saidas;
 	int quantidadeSaidas;
 	
-	
+
 	Adaptador *proximo;
 	
 }Adaptador;
@@ -109,16 +109,15 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
 **/
 void liberaListaAdaptador(Adaptador *listaAlvo);
 
-/**
-*	//TODO ja mandar para as conexoes o recurso 
-* assim evita um for 
+/** 
 *	
 *	Define como sera a distribuicao entre as conexoes 
-* que esta ligada a cada adaptador e guarda a porcentagem
-* a ser distribuida no vetor do peso
-*
-*	interconexao->capacidadeMax /
-*	soma de todas as capacidadeMax
+* que esta ligada a cada adaptador e manda a quantidade que 
+* sera passada para as correspondentes conexoes 
+*	
+*	interconexao->recursoTransportado = 
+*		interconexao->capacidadeMax * adaptador->recursoRecebido /
+*		soma de todas as capacidadeMax
 *  
 *	Essa funcao espera que a lista de inreconexoes ja foi previamente 
 * estabelecida 
