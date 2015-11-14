@@ -40,18 +40,25 @@
 *	cidade:
 *		cidade de destino
 *
+*	recursoTranstortado:
+*		quantidade de recuso que esta sendo transportado pela conexao no turno
+*
 **/
 
 typedef struct interconexao{
 	char *nome;
 	int posicaoInical[2];
 	int posicaoFinal[2];
+
 	float chanceFalha;
 	int tempoConserto;
-	int capacidadeMaxima;
 	int custoConserto;
+	
 	int numeroFalha;
 	int tagFalha;
+
+	int capacidadeMaxima;
+	int recursoTransportado;
 	
 	Interconexao *proximo;
 	Adaptador *adaptador;

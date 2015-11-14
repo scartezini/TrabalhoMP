@@ -115,6 +115,17 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 }
 
 
+
+/**
+*
+*	Funcao: defineDistribuicao
+*
+*	AssertivaEntrada:
+*		adaptador != null;
+*		para cada adaptador da lista:
+*			adaptador->saidas[i] != null
+*
+**/
 void defineDistribuicao(Adaptador *adaptador){
 
 	while(adaptador != NULL){
@@ -132,12 +143,51 @@ void defineDistribuicao(Adaptador *adaptador){
 		int somatorio = 0;
 		for(i=0;i<adaptador->quatidadeSaidas;i++){
 
-			somatorio += adaptador->saidas[i]->capacidadeMaxima;
+			if(adaptador->saidas[i]->tagFalha == 0){
+				somatorio += adaptador->saidas[i]->capacidadeMaxima;
+			}
 		}
 
+
+		int recursoTransportado;
+		Interconexao *conexao;
 		for (int i = 0; i < adaptador->quatidadeSaidas; ++i){
-			
-			adaptador->peso[i] = adaptador->saidas[i]->capacidadeMaxima / somatorio;
+
+			conexao = adaptador->saidas[i];
+
+			if(conexao->tagFalha == 0){
+
+
+				/**
+				*	Recurso transportado é a quantidade de recurso que cada 
+				* conexao vai transportar no turno
+				*	Somatorio é a soma de capaxidade maxima de todos as conexoes
+				* ativas;
+				*
+				*	RT = recursoTransportado
+				*	CM = capacidadeMaxima
+				*	RS = recursoRecebido
+				*
+				*	RT = CM*RS/somatorio
+				*
+				**/
+				recursoTransportado = conexao->capacidadeMaxima 
+				 						* adaptador->recursoRecebido 
+				 						/ somatorio;
+
+				/**
+				*
+				*	if(recursoTransportado <= conexao->capacidadeMaxima){
+				*		conexao->recursoTransportado = recursoTransportado;
+				*	}else{
+				*		conexao->recursoTransportado = conexao->capacidadeMaxima;
+				*	}
+				*
+				**/
+				recursoTransportado <= conexao->capacidadeMaxima ? 
+				 						conexao->recursoTransportado = recursoTransportado :
+				 						conexao->recursoTransportado = conexao->capacidadeMaxima;
+			}
 		}
 
 
