@@ -31,6 +31,11 @@ typedef struct cidade{
 	
 }Cidade;
 
+/**
+*	Enumeracao para detectar se a lista esta vazia ou nao 
+*
+**/
+enum Vazia{vazia, naoVazia};
 
 /**
 *	Funcao: recursoGastoTotal
@@ -65,6 +70,26 @@ int recursoGastoTotal(Cidade *cidade);
 Cidade* criaListaCidade();
 
 /**
+*	Funcao: criaVazia
+*
+*	Verifica se a lista de cidades esta vazia	
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return 
+*		variavel do tipo Vazia, indicando se a lista esta vazia
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade
+*
+*	Assertiva de saida:
+*		condicao da Cidade sendo vazia ou nao vazia
+*
+**/
+Vazia cidadeVazia(Cidade *cidade);
+
+/**
 *	Funcao: insereCidade
 *
 *	Inserir uma nova celula na lista de cidades
@@ -78,6 +103,11 @@ Cidade* criaListaCidade();
 *
 *	@return
 *		novo pontero para a o inicio da lista de cidade
+*
+*	Assertiva de entrada:
+*		
+*	Assertiva de saida:
+*
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 
@@ -97,8 +127,18 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *
 *	@return listaAlvo != null ? 1:0;
 *		 
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		Se a lista de cidades a ser imprimida nao eh vazia
+*		Entao
+*			ela eh imprimida
+*		Senao
+*			a lista de cidades nao eh imprimida
+*		FimSe
 **/
-int imprimeListaCidade(Cidade *listaAlvo);
+Vazia imprimeListaCidade(Cidade *listaAlvo);
 
 
 /**
@@ -109,5 +149,8 @@ int imprimeListaCidade(Cidade *listaAlvo);
 *
 *	@param listaAlvo
 *		lista a ser desalocada
+*
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
 **/
 void liberaListaCidade(Cidade *listaAlvo);

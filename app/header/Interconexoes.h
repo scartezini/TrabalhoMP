@@ -69,7 +69,6 @@ typedef struct interconexao{
 **/
 enum Falha{falha, semFalha};
 
-<<<<<<< HEAD
 /**
 *	Funcao: criaListaCidade
 *
@@ -78,8 +77,6 @@ enum Falha{falha, semFalha};
 **/
 Interconexao* criaListaInterconexao();
 
-=======
->>>>>>> refs/remotes/origin/lucas
 /**
 *	Funcao: tamanhoConexao
 *
