@@ -2,7 +2,6 @@
 #include <assert.h>
 
 /**
-<<<<<<< HEAD
 *	Funcao: criaListaInterconexao
 *
 *	AssertivaSaida:
@@ -13,8 +12,6 @@ Interconexao* criaListaInterconexao(){
 }
 
 /**
-=======
->>>>>>> refs/remotes/origin/lucas
 *	Funcao: tamanhoConexao
 *
 *	AssertivaEntrada:
