@@ -26,13 +26,14 @@
 typedef struct adaptador{
 	char *nome;
 	int posicao[2];
+	int recursoRecebido;
+
+
 	Interconexao **saidas;
 	int quantidadeSaidas;
 	
-	int recursoRecebido;
-
+	
 	Adaptador *proximo;
-	float *peso;
 	
 }Adaptador;
 
