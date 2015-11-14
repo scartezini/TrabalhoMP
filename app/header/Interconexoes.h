@@ -13,11 +13,11 @@
 *
 * 	posicaoInicial:
 * 		vetor posicaoInicial, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adapatador na interface
+* 	representando tambem a posicao do adaptador na interface
 *
 * 	posicaoInicial:
 * 		vetor posicaoInicial, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adapatador na interface
+* 	representando tambem a posicao do adaptador na interface
 *
 * 	chanceFalha:
 * 		chance de falha por segundo
@@ -66,7 +66,9 @@ typedef struct interconexao{
 enum Falha{falha, semFalha};
 
 /**
-*	Funcao: criaListaCidade
+*	Funcao: criaListaInterconexao
+*
+*	Inicia um ponteiro que sera para Interconexao
 *
 *	AssertivaSaida:
 *		NULL; 

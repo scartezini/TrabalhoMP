@@ -10,7 +10,7 @@
 *
 * 	posicao:
 * 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adapatador na interface
+* 	representando tambem a posicao do adaptador na interface
 *
 * 	recursoNecessario:
 * 		quantidade de recurso que a cidade precisa por segundo
@@ -38,25 +38,6 @@ typedef struct cidade{
 enum Vazia{vazia, naoVazia};
 
 /**
-*	Funcao: recursoGastoTotal
-*
-*	Resultado da soma de todos recursos 
-* gasto pelas cidades 
-*
-*	@param cidade
-*		ponteiro para o inicio da lista de cidades
-*	
-*	@return 
-*		total de recursos gasto pelas cidades
-*
-*	Assertiva de entrada:
-*
-*	Assertiva de saida:
-*
-**/
-int recursoGastoTotal(Cidade *cidade);
-
-/**
 *	Funcao: criaListaCidade
 *
 *	Inicia um ponteiro que sera para Cidade
@@ -70,7 +51,7 @@ int recursoGastoTotal(Cidade *cidade);
 Cidade* criaListaCidade();
 
 /**
-*	Funcao: criaVazia
+*	Funcao: cidadeVazia
 *
 *	Verifica se a lista de cidades esta vazia	
 *
@@ -106,11 +87,11 @@ Vazia cidadeVazia(Cidade *cidade);
 *
 *	Assertiva de entrada:
 *		
+*
 *	Assertiva de saida:
 *
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo);
-
 
 /**
 *	Funcao: imprimeListaCidade
@@ -125,7 +106,8 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *	@param listaAlvo
 *		lista que sera impressa 
 *
-*	@return listaAlvo != null ? 1:0;
+*	@return listaAlvo
+*		variavel do tipo Vazia, indicando se a lista esta vazia
 *		 
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
@@ -140,7 +122,6 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 **/
 Vazia imprimeListaCidade(Cidade *listaAlvo);
 
-
 /**
 *	Funcao: liberaListaCidade
 *
@@ -152,5 +133,27 @@ Vazia imprimeListaCidade(Cidade *listaAlvo);
 *
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		A lista deve estar vazia
 **/
 void liberaListaCidade(Cidade *listaAlvo);
+
+/**
+*	Funcao: recursoGastoTotal
+*
+*	Resultado da soma de todos recursos 
+* gasto pelas cidades 
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de cidades
+*	
+*	@return 
+*		total de recursos gasto pelas cidades
+*
+*	Assertiva de entrada:
+*
+*	Assertiva de saida:
+*
+**/
+int recursoGastoTotal(Cidade *cidade);

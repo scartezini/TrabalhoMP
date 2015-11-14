@@ -8,7 +8,7 @@
 *
 * 	posicao:
 * 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adapatador na interface
+* 	representando tambem a posicao do adaptador na interface
 *
 * 	interconexao:
 * 		representa as interconexoes realizadas/apontadas pelos adaptadores
@@ -36,17 +36,44 @@ typedef struct adaptador{
 	
 }Adaptador;
 
+/**
+*	Enumeracao para detectar se a lista esta vazia ou nao 
+*
+**/
+enum Vazio{vazio, naoVazio};
 
 /**
-*	Retorna o tipo adaptador
+*	Funcao: criaListaAdaptador
 *
-*	@return null
+*	Inicia um ponteiro que sera para Adaptador
 *
+*	AssertivaSaida:
+*		NULL; 
 **/
 Adaptador* criaListaAdaptador();
 
 /**
-*	Inseri uma nova celula de adaptador na lista
+*	Funcao: adaptadorVazio
+*
+*	Verifica se a lista de adaptadores esta vazia	
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de adaptadores
+*
+*	@return 
+*		variavel do tipo Vazio, indicando se a lista esta vazia
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Adaptador
+*
+*	Assertiva de saida:
+*		condicao do Adaptador sendo vazio ou nao vazio
+*
+**/
+Vazio adaptadorVazio(Adaptador *adaptador);
+
+/**
+*	Insere uma nova celula de adaptador na lista
 * dos adaptadores
 *
 *	@param registro 
@@ -56,6 +83,12 @@ Adaptador* criaListaAdaptador();
 *
 *	@return Adaptador
 *		novo ponteiro de referencia para o inico da lista
+*
+*	Assertiva de entrada:
+*
+*		
+*	Assertiva de saida:
+*
 **/
 Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
 
@@ -67,6 +100,11 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
 *	@param listaAlvo 
 *		lista a qual sera desalocada
 *
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		A lista deve estar vazia
 **/
 void liberaListaAdaptador(Adaptador *listaAlvo);
 
@@ -85,8 +123,8 @@ void liberaListaAdaptador(Adaptador *listaAlvo);
 * estabelecida 
 *	//TODO retirar essa dependencia
 *
-* @param adapatador
+* @param adaptador
 * 		ponteiro para o inico da lista de adaptadores;
 *
 **/
-void defineDistribuicao(Adaptador *adapatador);
+void defineDistribuicao(Adaptador *adaptador);

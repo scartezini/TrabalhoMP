@@ -2,14 +2,6 @@
 #include <assert.h>
 
 /**
-*	Funcao: recursoGastoTotal
-*
-**/
-int recursoGastoTotal(Cidade *cidade){
-
-}
-
-/**
 *	Funcao: criaListaCidade
 *
 *	AssertivaSaida:
@@ -20,7 +12,7 @@ Cidade* criaListaCidade(){
 }
 
 /**
-*	Funcao: criaListaCidade
+*	Funcao: cidadeVazia
 *
 *	AssertivaSaida:
 *		vazia || naoVazia; 
@@ -114,13 +106,13 @@ void imprimeListaCidade(Cidade *listaAlvo){
 }
 
 /**
-*	Funcao: imprimeListaCidade
+*	Funcao: liberaListaCidade
 *
 *	AssertivaEntrada:
 *		cidadeVazia(listaAlvo) == naoVazia;
 *
 *	AssertivaSaida:
-*		listaAlvo == NULL;
+*		cidadeVazia(listaAlvo) == vazia;
 *		
 **/
 void liberaListaCidade(Cidade *listaAlvo){
@@ -142,5 +134,13 @@ void liberaListaCidade(Cidade *listaAlvo){
 	}
 	//! AS: listaAlvo chegou ao fim
 
-	assert(listaAlvo == NULL);
+	assert(cidadeVazia(listaAlvo) == vazia);
+}
+
+/**
+*	Funcao: recursoGastoTotal
+*
+**/
+int recursoGastoTotal(Cidade *cidade){
+
 }
