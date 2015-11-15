@@ -15,9 +15,13 @@
 * 		vetor posicaoInicial, representando x na posicao[0] e y na posicao[1], ambas em km,
 * 	representando tambem a posicao do adaptador na interface
 *
-* 	posicaoInicial:
-* 		vetor posicaoInicial, representando x na posicao[0] e y na posicao[1], ambas em km,
+* 	posicaoFinal:
+* 		vetor posicaoFinal, representando x na posicao[0] e y na posicao[1], ambas em km,
 * 	representando tambem a posicao do adaptador na interface
+*
+*	tagDestino:
+*		tag para indentificar qual é a ligaçao final de cada conexao, 
+*		seja cidade ou adaptador
 *
 * 	chanceFalha:
 * 		chance de falha por segundo
@@ -31,6 +35,15 @@
 * 	numeroFalha:
 * 		total de falhas
 *
+* 	tagFalha:
+* 		indica se houve falha
+*
+*	capacidadeMaxima:
+*		capacidade maxima da interconexao
+*
+*	recursoTranstortado:
+*		quantidade de recuso que esta sendo transportado pela conexao no turno
+*
 *	proximo:
 *		representa as interconexoes realizadas/apontadas pelos adaptadores
 *
@@ -39,27 +52,20 @@
 *
 *	cidade:
 *		cidade de destino
-*
-*	recursoTranstortado:
-*		quantidade de recuso que esta sendo transportado pela conexao no turno
-*
-*	tagDestino:
-*		tag para indentificar qual é a ligaçao final de cada conexao, 
-*		seja cidade ou adaptador
 **/
 
 typedef struct interconexao{
 	char *nome;
 	int posicaoInical[2];
 	int posicaoFinal[2];
-	int tagDestino;
+	int tagDestino; 
 
 	float chanceFalha;
 	int tempoConserto;
 	int custoConserto;
 	
 	int numeroFalha;
-	int tagFalha;
+	int tagFalha; 
 
 	int capacidadeMaxima;
 	int recursoTransportado;
@@ -74,7 +80,7 @@ typedef struct interconexao{
 *	Enumeracao para detectar uma falha
 *
 **/
-enum Falha{falha, semFalha};
+enum Falha{FALHA, SEM_FALHA};
 
 /**
 *	Enumeracao para detectar qual eh o ponto 
@@ -105,7 +111,7 @@ Interconexao* criaListaInterconexao();
 *		tamanho da celula de conexao que foi passada
 *
 *	Assertiva de entrada:
-*		interconexao - eh a lista de interconexoes
+*		interconexao - eh uma lista de interconexoes nao vazia
 *
 *	Assertiva de saida:
 *		tamanho de uma conexao
@@ -127,7 +133,7 @@ float tamanhoConexao(Interconexao *interconexao);
 *		retorna o tamanho total das conexoes da lista
 *
 *	Assertiva de entrada:
-*		interconexao - eh a lista de interconexoes
+*		interconexao - eh uma lista de interconexoes nao vazia
 *
 *	Assertiva de saida:
 *		resultado da soma dos tamanhos de todas as conexoes
@@ -183,5 +189,15 @@ Falha calculaFalha();
 *		ponterio de referencia para o inicio da lista
 *		de interconexoes 
 *
+*	Assertiva de entrada:
+*		interconexao - eh uma lista de interconexoes nao vazia
+*
+*	Assertiva de saida:
+*		Se o destino da interconexao for um adaptador
+*		Entao
+*			soma-se o recurso transportado ao Adaptador da lista de interconexoes
+*		Senao
+*			soma-se o recurso transportado a Cidade da lista de interconexoes
+*		FimSe
 **/
 void mandarRecursoTransportado(Interconexao *interconexao);

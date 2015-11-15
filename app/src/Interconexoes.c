@@ -1,4 +1,4 @@
-#include "Interconexoes.h"
+#include "../header/Interconexoes.h"
 #include <assert.h>
 
 /**
@@ -61,13 +61,13 @@ float tamanhoTotalConexao(Interconexao *interconexao){
 	assert(interconexao != NULL);
 
 	float resultado = 0;
-	Interconexao auxiliar;
+	Interconexao *aux;
 
-	//! Asseriva estrutural: auxiliar é a lista nao-nula de interconexoes
-	auxiliar = interconexao;
+	//! Asseriva estrutural: aux é a lista nao-nula de interconexoes
+	aux = interconexao;
 
-	while(auxiliar != NULL){
-	//! AE: auxliar nao chegou ao fim da lista de inteconexoes
+	while(aux != NULL){
+	//! AE: aux nao chegou ao fim da lista de inteconexoes
 
 		//! Comentarios de argumentacao
 			/**
@@ -75,8 +75,8 @@ float tamanhoTotalConexao(Interconexao *interconexao){
 			* das conexoes sao somados e armazenados na variavel resultado 
 			**/
 
-		resultado += tamanhoConexao(auxiliar);
-		auxiliar = auxiliar->proximo;
+		resultado += tamanhoConexao(aux);
+		aux = aux->proximo;
 	}
 	//! AS: a lista de interconexoes chegou ao fim
 
@@ -88,7 +88,7 @@ float tamanhoTotalConexao(Interconexao *interconexao){
 *	Funcao: calculaFalha
 *
 *	AssertivaSaida:
-*		falha || semFalha; 
+*		FALHA || SEM_FALHA; 
 **/
 Falha calculaFalha(){
 	float num;
@@ -100,10 +100,10 @@ Falha calculaFalha(){
 
 	if ( (chance > 0) && (chance >= num) ) 
 	//! AE: chance deve ser maior que 0 e maior ou igual a num 
-		return falha;
+		return FALHA;
 	else
 	//! AE: chance deve ser menor que 0 ou menor que num 
-		return semFalha;
+		return SEM_FALHA;
 	//! AS: o retorno deve ser uma variavel do tipo Falha 
 }
 
@@ -112,32 +112,42 @@ Falha calculaFalha(){
 *	Funcao: mandarRecursoTransportado
 *	
 *	AssertivaEntrada:
-*		interconexao != null
+*		interconexao != NULL;
 *
 **/
 void mandarRecursoTransportado(Interconexao *interconexao){
 	assert(interconexao != NULL);
-	Interconexao *auxConexao;
+	
+	Interconexao *aux;
 	int recursoEnviado;
 
-	while(interconexao != NULL){
-		auxConexao = interconexao;
-		 
-		if(auxConexao->tagFalha == semFalha){
-
-			recursoEnviado = auxConexao->recursoTransportado;
-
-			if(auxConexao->tagDestino == ADAPTADOR )
-				auxConexao->adaptador->recursoRecebido += recursoEnviado;
+	//! Asseriva estrutural: aux é a lista nao-nula de interconexoes
+	aux = interconexao;
+	
+	while(aux != NULL){
+	//! AE: aux nao chegou ao fim da lista de inteconexoes
+	
+		if(aux->tagFalha == semFalha){
+		//! AE: a interconexao corrente nao possui falha
+			recursoEnviado = aux->recursoTransportado;
 			
-			else if(auxConexao->tagDestino == CIDADE)
-				auxConexao->cidade->recursoRecebido += recursoEnviado;
-
-
+			//! Comentarios de argumentacao
+				/**
+				*	Enqaunto a lista de interconexoes eh percorrida, dependendo do destino da interconexao, 
+				* soma-se o recurso ao respectivo destino
+				**/
+				
+			if(aux->tagDestino == ADAPTADOR){
+			//! AE: o destino da interconexao eh um Adaptador
+				aux->adaptador->recursoRecebido += recursoEnviado;
+			}
+			else if(aux->tagDestino == CIDADE){
+			//! AE: o destino da interconexao eh uma Cidade
+				aux->cidade->recursoRecebido += recursoEnviado;
+			}
 		}
 
-		interconexao = interconexao->proximo;
+		aux = aux->proximo;
 	}
-
-
+	//! AS: a lista de interconexoes chegou ao fim
 }

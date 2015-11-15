@@ -1,4 +1,4 @@
-#include "Geradores.h"
+#include "../header/Geradores.h"
 #include <assert.h>
 
 /**
@@ -15,14 +15,14 @@ Gerador* criaListaGerador(){
 *	Funcao: criaListaCidade
 *
 *	AssertivaSaida:
-*		vazio || naoVazio; 
+*		VAZIO || NAO_VAZIO; 
 **/
 Vazio geradorVazio(Gerador *listaAlvo){
 	if(listaAlvo == NULL)
 	//! AE: listaAlvo eh vazia
-		return vazia;
+		return VAZIO;
 	else
 	//! AE: listaAlvo nao eh vazia
-		return naoVazia;
+		return NAO_VAZIO;
 	//! AS: o retorno deve ser uma variavel do tipo Vazia
 }

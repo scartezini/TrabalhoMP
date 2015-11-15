@@ -1,4 +1,4 @@
-#include "Adaptadores.h"
+#include "../header/Adaptadores.h"
 #include <assert.h>
 
 /**
@@ -15,15 +15,15 @@ Adaptador* criaListaAdaptador(){
 *	Funcao: adaptadorVazio
 *
 *	AssertivaSaida:
-*		vazia || naoVazia; 
+*		VAZIO || NAO_VAZIO; 
 **/
-Vazia adaptadorVazio(Adaptador *listaAlvo){
+Vazio adaptadorVazio(Adaptador *listaAlvo){
 	if(listaAlvo == NULL)
 	//! AE: listaAlvo eh vazia
-		return vazia;
+		return VAZIO;
 	else
 	//! AE: listaAlvo nao eh vazia
-		return naoVazia;
+		return NAO_VAZIO;
 	//! AS: o retorno deve ser uma variavel do tipo Vazia
 }
 
@@ -81,19 +81,18 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 	return listaAlvo;
 }
 
-
 /**
 *	Funcao: liberaListaAdaptador
 *
 *	AssertivaEntrada:
-*		adaptadorVazio(listaAlvo) == naoVazio;
+*		adaptadorVazio(listaAlvo) == NAO_VAZIO;
 *
 *	AssertivaSaida:
-*		adaptadorVazio(listaAlvo) == vazio;
+*		adaptadorVazio(listaAlvo) == VAZIO;
 *		
 **/
 void liberaListaAdaptador(Adaptador *listaAlvo){
-	assert(adaptadorVazio(listaAlvo) == naoVazio)
+	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
 
 	Adaptador *aux1 = NULL;
 	Adaptador *aux2 = NULL;
@@ -111,23 +110,22 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 	}
 	//! AS: listaAlvo chegou ao fim
 
-	assert(adaptadorVazio(listaAlvo) == vazio);
+	assert(adaptadorVazio(listaAlvo) == VAZIO);
 }
-
-
 
 /**
 *
 *	Funcao: defineDistribuicao
 *
 *	AssertivaEntrada:
-*		adaptador != null;
-*		para cada adaptador da lista:
-*			adaptador->saidas[i] != null
+*		adaptadorVazio(listaAlvo) == NAO_VAZIO;
+*		//para cada adaptador da lista:
+*			//adaptador->saidas[i] != null
 *
 **/
 void defineDistribuicao(Adaptador *adaptador){
-
+	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
+	
 	while(adaptador != NULL){
 
 		if(adaptador->saidas == NULL){
@@ -157,7 +155,7 @@ void defineDistribuicao(Adaptador *adaptador){
 
 			if(conexao->tagFalha == semFalha){
 
-
+			//! Comentarios de argumentacao
 				/**
 				*	Recurso transportado é a quantidade de recurso que cada 
 				* conexao vai transportar no turno

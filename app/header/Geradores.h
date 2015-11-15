@@ -42,7 +42,7 @@ typedef struct gerador{
 *	Enumeracao para detectar se a lista esta vazia ou nao 
 *
 **/
-enum Vazio{vazio, naoVazio};
+enum Vazio{VAZIO, NAO_VAZIO};
 
 /**
 *	Funcao: criaListaGerador

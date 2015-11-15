@@ -42,7 +42,7 @@ typedef struct cidade{
 *	Enumeracao para detectar se a lista esta vazia ou nao 
 *
 **/
-enum Vazia{vazia, naoVazia};
+enum Vazia{VAZIA, NAO_VAZIA};
 
 /**
 *	Funcao: criaListaCidade

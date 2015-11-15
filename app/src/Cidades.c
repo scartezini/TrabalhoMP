@@ -1,4 +1,4 @@
-#include "Cidades.h"
+#include "../header/Cidades.h"
 #include <assert.h>
 
 /**
@@ -15,15 +15,15 @@ Cidade* criaListaCidade(){
 *	Funcao: cidadeVazia
 *
 *	AssertivaSaida:
-*		vazia || naoVazia; 
+*		VAZIA || NAO_VAZIA; 
 **/
 Vazia cidadeVazia(Cidade *listaAlvo){
 	if(listaAlvo == NULL)
 	//! AE: listaAlvo eh vazia
-		return vazia;
+		return VAZIA;
 	else
 	//! AE: listaAlvo nao eh vazia
-		return naoVazia;
+		return NAO_VAZIA;
 	//! AS: o retorno deve ser uma variavel do tipo Vazia
 }
 
@@ -82,11 +82,11 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 *	Funcao: imprimeListaCidade
 *
 *	AssertivaEntrada:
-*		cidadeVazia(listaAlvo) == naoVazia;
+*		cidadeVazia(listaAlvo) == NAO_VAZIA;
 *		
 **/
 void imprimeListaCidade(Cidade *listaAlvo){
-	assert(cidadeVazia(listaAlvo) == naoVazia);
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 
 	Cidade *aux = NULL;
 
@@ -109,14 +109,14 @@ void imprimeListaCidade(Cidade *listaAlvo){
 *	Funcao: liberaListaCidade
 *
 *	AssertivaEntrada:
-*		cidadeVazia(listaAlvo) == naoVazia;
+*		cidadeVazia(listaAlvo) == NAO_VAZIA;
 *
 *	AssertivaSaida:
-*		cidadeVazia(listaAlvo) == vazia;
+*		cidadeVazia(listaAlvo) == VAZIA;
 *		
 **/
 void liberaListaCidade(Cidade *listaAlvo){
-	assert(cidadeVazia(listaAlvo) == naoVazia);
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 
 	Cidade *aux1 = NULL;
 	Cidade *aux2 = NULL;
@@ -134,7 +134,7 @@ void liberaListaCidade(Cidade *listaAlvo){
 	}
 	//! AS: listaAlvo chegou ao fim
 
-	assert(cidadeVazia(listaAlvo) == vazia);
+	assert(cidadeVazia(listaAlvo) == VAZIA);
 }
 
 /**
