@@ -43,12 +43,16 @@
 *	recursoTranstortado:
 *		quantidade de recuso que esta sendo transportado pela conexao no turno
 *
+*	tagDestino:
+*		tag para indentificar qual é a ligaçao final de cada conexao, 
+*		seja cidade ou adaptador
 **/
 
 typedef struct interconexao{
 	char *nome;
 	int posicaoInical[2];
 	int posicaoFinal[2];
+	int tagDestino;
 
 	float chanceFalha;
 	int tempoConserto;
@@ -71,6 +75,12 @@ typedef struct interconexao{
 *
 **/
 enum Falha{falha, semFalha};
+
+/**
+*	Enumeracao para detectar qual eh o ponto 
+* final de ligacao da conexao 
+**/
+enum Destino{ADAPTADOR, CIDADE}
 
 /**
 *	Funcao: criaListaInterconexao
@@ -159,3 +169,19 @@ int totalGastoConserto(Interconexao *interconexao);
 *
 **/
 Falha calculaFalha();
+
+
+/**
+*
+*	Funcao: mandarRecursoTransportado
+*
+*	Muda cada referencia seja para adaptador ou 
+* para cidade, dependenodo do em qual esta ligada,
+* alterando o valor do recurso atual. 
+*
+*	@param interconexao
+*		ponterio de referencia para o inicio da lista
+*		de interconexoes 
+*
+**/
+void mandarRecursoTransportado(Interconexao *interconexao);

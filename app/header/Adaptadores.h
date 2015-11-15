@@ -1,4 +1,7 @@
 #include "Interconexoes.h"
+#include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
  
 /**
 * 	Cabecalho do elemento Adaptador

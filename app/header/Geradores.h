@@ -105,4 +105,18 @@ int recursoProduzidoTotal(Gerador *gerador);
 *	@return 
 *		Soma do custo por segundo de todos os geradores
 **/
-int custoGeradores(Gerador *gerador)
+int custoGeradores(Gerador *gerador);
+
+
+/**
+*	Funcao: mandarRecursoProduzido
+*	
+*	Altera os nos de conexão do grafo com o recurso
+* enviado
+*
+*	@param gerador 
+*		ponteiro para o inicio da lista de geradores
+*
+*
+**/
+void mandarRecursoProduzido(Gerador *gerador);
