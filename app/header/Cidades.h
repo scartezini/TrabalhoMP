@@ -88,10 +88,10 @@ Vazia cidadeVazia(Cidade *cidade);
 *	@param registro
 *		string que sera lida do arquivo representando Cidade
 *	@param listaAlvo 
-*		lista de cidade a qual a nova celula sera inserida
+*		lista de cidades onde a nova celula sera inserida
 *
 *	@return
-*		novo pontero para a o inicio da lista de cidade
+*		novo pontero para a o inicio da lista de cidades
 *
 *	Assertiva de entrada:
 *		registro - eh um vetor contendo o conteudo do txt, deve ser diferente de NULL

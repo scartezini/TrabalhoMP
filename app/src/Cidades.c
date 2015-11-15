@@ -1,6 +1,8 @@
 #include "../header/Cidades.h"
 #include <assert.h>
 
+/** -----------------------Funcoes Basicas---------------------------- */
+
 /**
 *	Funcao: criaListaCidade
 *
@@ -184,7 +186,7 @@ void liberaListaCidade(Cidade *listaAlvo){
 	//! AE: listaAlvo nao chegou ao fim
 	//! Comentarios de argumentacao
 		/**
-		*	Liberam os atributos alocados dinamicamente do elemento Cidade
+		*	Liberam os atributos alocados dinamicamente do elemento Cidade corrente
 		**/
 		aux2 = aux1->proximo;
 		free(aux1->nome);
@@ -194,6 +196,8 @@ void liberaListaCidade(Cidade *listaAlvo){
 
 	assert(cidadeVazia(listaAlvo) == VAZIA);
 }
+
+/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: recursoGastoTotal

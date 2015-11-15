@@ -1,6 +1,8 @@
 #include "../header/Adaptadores.h"
 #include <assert.h>
 
+/** -----------------------Funcoes Basicas---------------------------- */
+
 /**
 *	Funcao: criaListaAdaptador
 *
@@ -184,7 +186,7 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 	//! AE: listaAlvo nao chegou ao fim
 	//! Comentarios de argumentacao
 		/**
-		*	Liberam os atributos alocados dinamicamente do elemento Adaptador
+		*	Liberam os atributos alocados dinamicamente do elemento Adaptador corrente
 		**/
 		aux2 = aux1->proximo;
 		free(aux1->nome);
@@ -194,6 +196,8 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 
 	assert(adaptadorVazio(listaAlvo) == VAZIO);
 }
+
+/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *

@@ -184,7 +184,7 @@ void liberaListaGerador(Gerador *listaAlvo){
 	//! AE: listaAlvo nao chegou ao fim
 	//! Comentarios de argumentacao
 		/**
-		*	Liberam os atributos alocados dinamicamente do elemento Gerador
+		*	Liberam os atributos alocados dinamicamente do elemento Gerador corrente
 		**/
 		aux2 = aux1->proximo;
 		free(aux1->nome);
