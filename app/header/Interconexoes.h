@@ -197,7 +197,7 @@ Falha calculaFalha();
 *		Entao
 *			soma-se o recurso transportado ao Adaptador da lista de interconexoes
 *		Senao
-*			soma-se o recurso transportado a Cidade da lista de interconexoes
+*			soma-se o recurso transportado ao Adaptador da lista de interconexoes
 *		FimSe
 **/
 void mandarRecursoTransportado(Interconexao *interconexao);

@@ -82,6 +82,33 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 }
 
 /**
+*	Funcao: imprimeListaAdaptador
+*
+*	AssertivaEntrada:
+*		adaptadorVazio(listaAlvo) == NAO_VAZIO;
+*		
+**/
+void imprimeListaAdaptador(Adaptador *listaAlvo){
+	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
+
+	Cidade *aux = NULL;
+
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	for(aux=listaAlvo;aux!=NULL;aux=aux->proximo){
+	//! AE: listaAlvo nao chegou ao fim
+	//! Comentarios de argumentacao
+		/**
+		*	Imprime os atributos do adaptador corrente
+		**/
+		printf("nome: %s pos_x: %d pos_y: %d recurso recebido%d quantidade de saidas%d\n"
+				,aux->nome,aux->posicao[0]
+				,aux->posicao[1],aux->recursoRecebido
+				,aux->quantidadeSaidas);
+	}
+	//! AS: listaAlvo chegou ao fim		
+}
+
+/**
 *	Funcao: liberaListaAdaptador
 *
 *	AssertivaEntrada:
@@ -119,9 +146,7 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 *
 *	AssertivaEntrada:
 *		adaptadorVazio(listaAlvo) == NAO_VAZIO;
-*		//para cada adaptador da lista:
-*			//adaptador->saidas[i] != null
-*
+*		para cada adaptador da lista: adaptador->saidas[i] != null;
 **/
 void defineDistribuicao(Adaptador *adaptador){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);

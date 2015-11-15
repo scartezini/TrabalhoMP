@@ -15,15 +15,14 @@
 * 	recursoNecessario:
 * 		quantidade de recurso que a cidade precisa por segundo
 *
+*	recursoRecebido:
+*		quantidade de recurso recebido por segundo pela Cidade	
+*
 * 	recursoGasto:
 *		quantidade de recurso que a cidade usou
 *
 * 	proximo:
-* 		representa a proxima cidade da rede de cidades
-*
-*	recursoRecebido:
-*		quanto de recurso que a cidade recebeu naquele turno
-*
+* 		representa a proxima Cidade da rede de Cidades
 **/
 
 typedef struct cidade{
@@ -109,6 +108,8 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *	posicao x
 *	posicao y
 *	recurso necessario
+*	recurso recebido
+*	recurso gasto
 *
 *	@param listaAlvo
 *		lista que sera impressa 
@@ -127,7 +128,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *			a lista de cidades nao eh imprimida
 *		FimSe
 **/
-Vazia imprimeListaCidade(Cidade *listaAlvo);
+void imprimeListaCidade(Cidade *listaAlvo);
 
 /**
 *	Funcao: liberaListaCidade

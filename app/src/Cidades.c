@@ -95,12 +95,12 @@ void imprimeListaCidade(Cidade *listaAlvo){
 	//! AE: listaAlvo nao chegou ao fim
 	//! Comentarios de argumentacao
 		/**
-		*	Imprime o nome, as posicoes e o recurso necessario da cidade
-		* corrente na lista auxiliar
+		*	Imprime os atributos da cidade corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d\n"
+		printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d recurso recebido%d recurso gasto%d\n "
 				,aux->nome,aux->posicao[0]
-				,aux->posicao[1],aux->recursoNecessario);
+				,aux->posicao[1],aux->recursoNecessario,aux->recursoRecebido
+				,recursoGasto);
 	}
 	//! AS: listaAlvo chegou ao fim		
 }

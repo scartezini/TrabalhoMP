@@ -13,7 +13,7 @@
 * 	taxaProducao:
 * 		quantidade de recurso que a cidade precisa por segundo
 *
-* 	recursoProducao:
+* 	recursoProduzido:
 *		quantidade total de recurso produzido pelo gerador
 *
 *	custo:
@@ -30,9 +30,11 @@
 typedef struct gerador{
 	char *nome;
 	int posicao[2];
+	
 	int taxaProducao; 
 	int recursoProduzido; 
 	int custo; 
+	
 	Gerador *proximo;
 	Interconexao *interconexao;
 	
@@ -55,7 +57,7 @@ enum Vazio{VAZIO, NAO_VAZIO};
 *		estrutura do tipo Gerador nula
 *
 **/
-Cidade* criaListaCidade();
+Cidade* criaListaGerador();
 
 /**
 *	Funcao: geradorVazio
