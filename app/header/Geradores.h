@@ -84,7 +84,7 @@ Vazio geradorVazio(Gerador *gerador);
 * pelas celualas.	
 *
 *	@param gerador
-*			Inicio da lista de geradores;
+*		inicio da lista de geradores;
 *
 *	@return 
 *		soma de todo o recurso produzido pelos geradores
