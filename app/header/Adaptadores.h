@@ -47,6 +47,8 @@ typedef struct adaptador{
 **/
 enum Vazio{VAZIO, NAO_VAZIO};
 
+/** -----------------------Funcoes Basicas---------------------------- */
+
 /**
 *	Funcao: criaListaAdaptador
 *
@@ -90,10 +92,10 @@ Vazio adaptadorVazio(Adaptador *adaptador);
 *		novo ponteiro de referencia para o inico da lista
 *
 *	Assertiva de entrada:
+*		registro - eh um vetor contendo o conteudo do txt, deve ser diferente de NULL
 *
-*		
 *	Assertiva de saida:
-*
+*		A lista recebida pela funcao, deve ser o proximo adaptador apontado pela lista retornada
 **/
 Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
 
@@ -142,6 +144,8 @@ void imprimeListaAdaptador(Adaptador *listaAlvo);
 *		A lista deve estar vazia
 **/
 void liberaListaAdaptador(Adaptador *listaAlvo);
+
+/** -----------------------Funcoes de Calculo---------------------------- */
 
 /** 
 *	

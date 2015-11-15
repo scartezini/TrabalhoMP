@@ -43,6 +43,8 @@ typedef struct cidade{
 **/
 enum Vazia{VAZIA, NAO_VAZIA};
 
+/** -----------------------Funcoes Basicas---------------------------- */
+
 /**
 *	Funcao: criaListaCidade
 *
@@ -92,10 +94,10 @@ Vazia cidadeVazia(Cidade *cidade);
 *		novo pontero para a o inicio da lista de cidade
 *
 *	Assertiva de entrada:
-*		
+*		registro - eh um vetor contendo o conteudo do txt, deve ser diferente de NULL
 *
 *	Assertiva de saida:
-*
+*		A lista recebida pela funcao, deve ser a proxima cidade apontada pela lista retornada
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 
@@ -146,6 +148,8 @@ void imprimeListaCidade(Cidade *listaAlvo);
 *		A lista deve estar vazia
 **/
 void liberaListaCidade(Cidade *listaAlvo);
+
+/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: recursoGastoTotal

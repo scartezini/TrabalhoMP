@@ -32,10 +32,6 @@ Vazia cidadeVazia(Cidade *listaAlvo){
 *
 *	AssertivaEntrada:
 *		registro != NULL;
-*
-*	AssertivaSaida:
-*		listaAlvo->proximo == novo->proximo;
-*		
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	assert(registro != NULL);
@@ -58,8 +54,8 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	//! Asseriva estrutural: o nome da nova cidade possui tamanho i-1 
 	novo->nome = (char *)malloc((i-1)*sizeof(char));
 			
-	for(i=2;j<=5;i++){
-	//! AE: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos representaveis da cidade
+	for(i=2;j<=3;i++){
+	//! AE: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos da cidade
 		
 		if(registro[i] == ' ' || registro[i] == '\0'){
 		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador	
@@ -73,10 +69,10 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 					**/
 				novo->nome[i-k] = '\0';
 			}
-			//! AS: o valor de j eh diferente de 0	
+			//! AS: o valor de j eh maior que 0	
 			
 			else{
-			//! AE: o valor de j eh diferente de 0
+			//! AE: o valor de j eh maior que 0
 			
 				//! Comentarios de argumentacao
 					/**
@@ -87,7 +83,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 				//! Comentarios de argumentacao
 					/**
 					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar 
-					* no seu respectivo atributo
+					* no seu respectivo atributo lido
 					**/	
 				if(j == 1) 
 					novo->posicao[0] = atoi(numChar);
@@ -95,12 +91,8 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 					novo->posicao[1] = atoi(numChar);
 				else if(j == 3) 
 					novo->recursoNecessario = atoi(numChar);
-				else if(j == 4) 
-					novo->recursoRecebido = atoi(numChar);
-				else if(j == 5) 
-					novo->recursoGasto = atoi(numChar);
 			}
-			//! AE: o valor de j eh maior que 5
+			//! AS: o valor de j eh maior que 4
 			
 			k = i+1; 
 			j++; 
@@ -128,17 +120,19 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 		}
 		//! AS: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
 	}
-	//! AE: o valor da variavel auxiliar j ultrapassou o numero total de atributos representaveis da cidade
+	//! AS: o valor da variavel auxiliar j ultrapassou o numero total de atributos lidos da cidade
 
 	//! Comentarios de argumentacao
 		/**
-		*	A proxima cidade da lista que contem a nova cidade inserida na primeira posicao
-		* recebe a lista de cidades atuais
+		*	Os atributos nao lidos da cidade inserida recebem o valor nulo, e a proxima cidade
+		* da lista que contem a nova cidade inserido na cabeca recebe a lista de cidades atual
 		**/		
+	novo->recursoRecebido = 0;
+	novo->recursoGasto = 0;
+	
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 	
-	assert(listaAlvo->proximo == novo->proximo);
 	return listaAlvo;
 }
 

@@ -31,49 +31,104 @@ Vazio adaptadorVazio(Adaptador *listaAlvo){
 *	Funcao: insereAdaptador
 *
 *	AssertivaEntrada:
-*		
-*
-*	AssertivaSaida:
-*		
+*		registro != NULL;
 **/
 Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
-
-	Adaptador *novo = (Adaptador *)malloc(sizeof(Adaptador));
-	char numchar[strlen(registro)];
-	int i,j=0,k=2;
+	assert(registro != NULL);
+	
+	Adaptador *novo = (Adaptador *)malloc(sizeof(Adaptador)); //!< Alocacao de um novo adaptador
+	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
+	int i,j=0,k=2; //!< Variaveis de auxilio
 
 	for(i=2;registro[i]!=' ';i++);
+	//! AE: a posicao corrente do registro possui um caracter relevante
+	
+	//! Comentarios de argumentacao
+		/**
+		*	Comecando de registro[2], enquanto registro[i] for um caracter irrelevante,
+		* soma-se 1 a variavel de auxilio i
+		**/
+		
+	//! AS: a posicao corrente do registro possui um caracter irrelevante
+	
+	//! Asseriva estrutural: o nome do novo adaptador possui tamanho i-1 
 	novo->nome = (char *)malloc((i-1)*sizeof(char));
 
-	for(i=2;j<3;i++){
-		if(registro[i] == ' '||registro[i] == '\0'){
-			if(j == 0)
-				novo->nome[i-k] = '\0';
-			else{
-				numchar[i-k] = '\0';
-				if(j == 1)
-					novo->posicao[0] = atoi(numchar);
-				else if(j == 2)
-					novo->posicao[1] = atoi(numchar);
-			}
+	for(i=2;j<=2;i++){
+	//! AE: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos do adaptador
 
+		if(registro[i] == ' '||registro[i] == '\0'){
+		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador	
+
+			if(j == 0){
+			//! AE: o valor de j eh igual a 0	
+
+				//! Comentarios de argumentacao
+					/**
+					*	A (posicao corrente-k) recebe um caracter finalizador
+					**/
+				novo->nome[i-k] = '\0';
+			}
+			//! AS: o valor de j eh maior que 0	
+			
+			else{
+			//! AE: o valor de j eh maior que 0
+			
+				//! Comentarios de argumentacao
+					/**
+					*	A (posicao corrente-k) do vetor numChar recebe um caracter finalizador
+					**/	
+				numChar[i-k] = '\0';
+				
+				//! Comentarios de argumentacao
+					/**
+					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar 
+					* no seu respectivo atributo lido
+					**/	
+				if(j == 1)
+					novo->posicao[0] = atoi(numChar);
+				else if(j == 2)
+					novo->posicao[1] = atoi(numChar);
+			}
+			//! AS: o valor de j eh maior que 4
+			
 			k = i+1;
 			j++;
 		}
-
+		//! AS: a posicao corrente do registro possui um caracter relevante	
+		
 		else{
-
+		//! AE: a posicao corrente do registro possui um caracter relevante
+			
+			//! Comentarios de argumentacao
+				/**
+				*	Se o valor da variavel de auxilio j for 0
+				*	Entao
+				*		armazena-se a posicao corrente do registro na 
+				*	 (posicao corrente-k) do nome do adaptador
+				*	Senao
+				*		armazena-se a posicao corrente do registro na 
+				*	 (posicao corrente-k) do vetor numChar
+				*	FimSe
+				**/		
 			if(j == 0)
 				novo->nome[i-k] = registro[i];
 			else
-				numchar[i-k] = registro[i];
+				numChar[i-k] = registro[i];
 		}
+		//! AS: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
 	}
-	novo->saidas = NULL;
-	novo->quatidadeSaidas =0;
+	//! AS: o valor da variavel auxiliar j ultrapassou o numero total de atributos lidos da adaptador
 
+	//! Comentarios de argumentacao
+		/**
+		*	Os atributos nao lidos do adaptador inserido recebem o valor nulo, e o proximo adaptador
+		* da lista que contem o novo adaptador inserido na cabeca recebe a lista de adaptadores atual
+		**/		
 	novo->recursoRecebido = 0;
-	novo->peso = NULL;
+	novo->saidas = NULL;
+	novo->quatidadeSaidas = 0;
+	//novo->peso = NULL;
 
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
@@ -91,7 +146,7 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 void imprimeListaAdaptador(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
 
-	Cidade *aux = NULL;
+	Adaptador *aux = NULL;
 
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	for(aux=listaAlvo;aux!=NULL;aux=aux->proximo){
