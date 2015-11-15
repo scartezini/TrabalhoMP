@@ -20,13 +20,20 @@
 *
 * 	proximo:
 * 		representa a proxima cidade da rede de cidades
+*
+*	recursoRecebido:
+*		quanto de recurso que a cidade recebeu naquele turno
+*
 **/
 
 typedef struct cidade{
 	char *nome;
 	int posicao[2];
+
 	int recursoNecessario;
+	int recursoRecebido;
 	int recursoGasto;
+
 	Cidade *proximo;
 	
 }Cidade;

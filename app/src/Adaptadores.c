@@ -143,7 +143,7 @@ void defineDistribuicao(Adaptador *adaptador){
 		int somatorio = 0;
 		for(i=0;i<adaptador->quatidadeSaidas;i++){
 
-			if(adaptador->saidas[i]->tagFalha == 0){
+			if(adaptador->saidas[i]->tagFalha == semFalha){
 				somatorio += adaptador->saidas[i]->capacidadeMaxima;
 			}
 		}
@@ -155,7 +155,7 @@ void defineDistribuicao(Adaptador *adaptador){
 
 			conexao = adaptador->saidas[i];
 
-			if(conexao->tagFalha == 0){
+			if(conexao->tagFalha == semFalha){
 
 
 				/**

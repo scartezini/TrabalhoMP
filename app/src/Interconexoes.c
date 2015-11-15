@@ -106,3 +106,38 @@ Falha calculaFalha(){
 		return semFalha;
 	//! AS: o retorno deve ser uma variavel do tipo Falha 
 }
+
+/**
+*
+*	Funcao: mandarRecursoTransportado
+*	
+*	AssertivaEntrada:
+*		interconexao != null
+*
+**/
+void mandarRecursoTransportado(Interconexao *interconexao){
+	assert(interconexao != NULL);
+	Interconexao *auxConexao;
+	int recursoEnviado;
+
+	while(interconexao != NULL){
+		auxConexao = interconexao;
+		 
+		if(auxConexao->tagFalha == semFalha){
+
+			recursoEnviado = auxConexao->recursoTransportado;
+
+			if(auxConexao->tagDestino == ADAPTADOR )
+				auxConexao->adaptador->recursoRecebido += recursoEnviado;
+			
+			else if(auxConexao->tagDestino == CIDADE)
+				auxConexao->cidade->recursoRecebido += recursoEnviado;
+
+
+		}
+
+		interconexao = interconexao->proximo;
+	}
+
+
+}
