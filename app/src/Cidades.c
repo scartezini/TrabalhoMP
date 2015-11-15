@@ -31,50 +31,114 @@ Vazia cidadeVazia(Cidade *listaAlvo){
 *	Funcao: insereCidade
 *
 *	AssertivaEntrada:
-*		
+*		registro != NULL;
 *
 *	AssertivaSaida:
+*		listaAlvo->proximo == novo->proximo;
 *		
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo){
-	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); 
-	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); 
-	int i,j=0,k=2; 
+	assert(registro != NULL);
+	
+	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); //!< Alocacao da nova cidade
+	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
+	int i,j=0,k=2; //!< Variaveis de auxilio
 
-	for(i=2;registro[i]!=' ';i++); 
+	for(i=2;registro[i]!=' ';i++);
+	//! AE: a posicao corrente do registro possui um caracter relevante
+	
+	//! Comentarios de argumentacao
+		/**
+		*	Comecando de registro[2], enquanto registro[i] for um caracter irrelevante,
+		* soma-se 1 a variavel de auxilio i
+		**/
+		
+	//! AS: a posicao corrente do registro possui um caracter irrelevante
+	
+	//! Asseriva estrutural: o nome da nova cidade possui tamanho i-1 
 	novo->nome = (char *)malloc((i-1)*sizeof(char));
-
-	for(i=2;j<4;i++) 
-	{
-		if(registro[i] == ' '|| registro[i] == '\0') 
-		{
-			if(j == 0) 
+			
+	for(i=2;j<=5;i++){
+	//! AE: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos representaveis da cidade
+		
+		if(registro[i] == ' ' || registro[i] == '\0'){
+		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador	
+			
+			if(j == 0){ 
+			//! AE: o valor de j eh igual a 0	
+				
+				//! Comentarios de argumentacao
+					/**
+					*	A (posicao corrente-k) recebe um caracter finalizador
+					**/
 				novo->nome[i-k] = '\0';
-			else
-			{
-				numchar[i-k] = '\0';
-				if(j == 1) 
-					novo->posicao[0] = atoi(numchar);
-				else if(j == 2) 
-					novo->posicao[1] = atoi(numchar);
-				else if(j == 3) 
-					novo->recursoNecessario = atoi(numchar);
 			}
+			//! AS: o valor de j eh diferente de 0	
+			
+			else{
+			//! AE: o valor de j eh diferente de 0
+			
+				//! Comentarios de argumentacao
+					/**
+					*	A (posicao corrente-k) do vetor numChar recebe um caracter finalizador
+					**/	
+				numChar[i-k] = '\0';
+				
+				//! Comentarios de argumentacao
+					/**
+					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar 
+					* no seu respectivo atributo
+					**/	
+				if(j == 1) 
+					novo->posicao[0] = atoi(numChar);
+				else if(j == 2) 
+					novo->posicao[1] = atoi(numChar);
+				else if(j == 3) 
+					novo->recursoNecessario = atoi(numChar);
+				else if(j == 4) 
+					novo->recursoRecebido = atoi(numChar);
+				else if(j == 5) 
+					novo->recursoGasto = atoi(numChar);
+			}
+			//! AE: o valor de j eh maior que 5
+			
 			k = i+1; 
 			j++; 
 		}
-		else 
-		{
+		//! AS: a posicao corrente do registro possui um caracter relevante	
+		
+		else{
+		//! AE: a posicao corrente do registro possui um caracter relevante
+			
+			//! Comentarios de argumentacao
+				/**
+				*	Se o valor da variavel de auxilio j for 0
+				*	Entao
+				*		armazena-se a posicao corrente do registro na 
+				*	 (posicao corrente-k) do nome da cidade
+				*	Senao
+				*		armazena-se a posicao corrente do registro na 
+				*	 (posicao corrente-k) do vetor numChar
+				*	FimSe
+				**/		
 			if(j == 0) 
 				novo->nome[i-k] = registro[i];
 			else
 				numChar[i-k] = registro[i];
 		}
+		//! AS: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
 	}
-	
+	//! AE: o valor da variavel auxiliar j ultrapassou o numero total de atributos representaveis da cidade
+
+	//! Comentarios de argumentacao
+		/**
+		*	A proxima cidade da lista que contem a nova cidade inserida na primeira posicao
+		* recebe a lista de cidades atuais
+		**/		
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 	
+	assert(listaAlvo->proximo == novo->proximo);
 	return listaAlvo;
 }
 
