@@ -129,7 +129,7 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 		**/		
 	novo->recursoRecebido = 0;
 	novo->saidas = NULL;
-	novo->quatidadeSaidas = 0;
+	novo->quantidadeSaidas = 0;
 	//novo->peso = NULL;
 
 	novo->proximo = listaAlvo;
@@ -207,35 +207,35 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 *		adaptadorVazio(listaAlvo) == NAO_VAZIO;
 *		para cada adaptador da lista: adaptador->saidas[i] != null;
 **/
-void defineDistribuicao(Adaptador *adaptador){
+void defineDistribuicao(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
 	
-	while(adaptador != NULL){
+	while(listaAlvo != NULL){
 
-		if(adaptador->saidas == NULL){
+		if(listaAlvo->saidas == NULL){
 			return;
 		}
 
-		if(adaptador->peso == NULL){
-			adaptador->peso = (float *) malloc(adaptador->quatidadeSaidas * sizeof(float));
+		if(listaAlvo->peso == NULL){
+			listaAlvo->peso = (float *) malloc(listaAlvo->quatidadeSaidas * sizeof(float));
 		}
 
 
 		int i;
 		int somatorio = 0;
-		for(i=0;i<adaptador->quatidadeSaidas;i++){
+		for(i=0;i<listaAlvo->quatidadeSaidas;i++){
 
-			if(adaptador->saidas[i]->tagFalha == semFalha){
-				somatorio += adaptador->saidas[i]->capacidadeMaxima;
+			if(listaAlvo->saidas[i]->tagFalha == semFalha){
+				somatorio += listaAlvo->saidas[i]->capacidadeMaxima;
 			}
 		}
 
 
 		int recursoTransportado;
 		Interconexao *conexao;
-		for (int i = 0; i < adaptador->quatidadeSaidas; ++i){
+		for (int i = 0; i < listaAlvo->quatidadeSaidas; ++i){
 
-			conexao = adaptador->saidas[i];
+			conexao = listaAlvo->saidas[i];
 
 			if(conexao->tagFalha == semFalha){
 
@@ -254,7 +254,7 @@ void defineDistribuicao(Adaptador *adaptador){
 				*
 				**/
 				recursoTransportado = conexao->capacidadeMaxima 
-				 						* adaptador->recursoRecebido 
+				 						* listaAlvo->recursoRecebido 
 				 						/ somatorio;
 
 				/**
@@ -273,6 +273,6 @@ void defineDistribuicao(Adaptador *adaptador){
 		}
 
 
-		adaptador = adaptador->proximo;
+		listaAlvo = listaAlvo->proximo;
 	}
 }

@@ -90,9 +90,9 @@ Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 				else if(j == 2)
 					novo->posicao[1] = atoi(numChar);
 				else if(j == 3)
-					novo->recursoProduzido = atoi(numchar);
+					novo->recursoProduzido = atoi(numChar);
 				else if(j == 4)
-					novo->custo = atoi(numchar);
+					novo->custo = atoi(numChar);
 			}
 			//! AS: o valor de j eh maior que 5
 			

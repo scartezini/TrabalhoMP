@@ -1,98 +1,4 @@
-#include "Adaptadores.h"
-#include "Cidades.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-
-/**
-* 	Cabecalho do elemento Gerador
-* 	
-*	nome:
-* 		nome do gerador
-*
-* 	posicaoInicial:
-* 		vetor posicaoInicial, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adaptador na interface
-*
-* 	posicaoFinal:
-* 		vetor posicaoFinal, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adaptador na interface
-*
-*	tagDestino:
-*		tag para indentificar qual é a ligaçao final de cada conexao, 
-*		seja cidade ou adaptador
-*
-* 	chanceFalha:
-* 		chance de falha por segundo
-*
-* 	tempoConcerto:
-*		tempo de concerto em caso de falha em segundos
-*
-*	custoConcerto:
-*		custo do concerto em segundos
-*
-* 	numeroFalha:
-* 		total de falhas
-*
-* 	tagFalha:
-* 		indica se houve falha
-*
-*	capacidadeMaxima:
-*		capacidade maxima da interconexao
-*
-*	recursoTranstortado:
-*		quantidade de recuso que esta sendo transportado pela conexao no turno
-*
-*	proximo:
-*		representa as interconexoes realizadas/apontadas pelos adaptadores
-*
-* 	adaptador:
-*		adaptador utilizado/apontado pela interconexao
-*
-*	cidade:
-*		cidade de destino
-**/
-
-typedef struct interconexao{
-	char *nome;
-	int posicaoInical[2];
-	int posicaoFinal[2];
-	Destino tagDestino; 
-
-	float chanceFalha;
-	int tempoConserto;
-	int custoConserto;
-	
-	int numeroFalha;
-	Falha tagFalha; 
-
-	int capacidadeMaxima;
-	int recursoTransportado;
-	
-	Interconexao *proximo;
-	Adaptador *adaptador;
-	Cidade *cidade;
-	
-}Interconexao;
-
-/**
-*	Enumeracao para detectar se a lista esta vazia ou nao 
-*
-**/
-enum Vazia{VAZIA, NAO_VAZIA};
-
-/**
-*	Enumeracao para detectar uma falha
-*
-**/
-enum Falha{FALHA, SEM_FALHA};
-
-/**
-*	Enumeracao para detectar qual eh o ponto 
-* final de ligacao da conexao 
-**/
-enum Destino{ADAPTADOR, CIDADE};
+#include "Principal.h"
 
 /** -----------------------Funcoes Basicas---------------------------- */
 
@@ -147,7 +53,7 @@ Vazia interconexaoVazia(Interconexao *interconexao);
 *	Assertiva de saida:
 *		A lista recebida pela funcao, deve ser a proxima interconexao apontada pela lista retornada
 **/
-Interconexao* insereInterconexao(char *registro, Inteconexao *listaAlvo);
+Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo);
 
 /**
 *	Funcao: imprimeListaInterconexao

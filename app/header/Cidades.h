@@ -1,47 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-/**
-* 	Cabecalho do elemento Cidade
-* 	
-*	nome:
-* 		nome da cidade
-*
-* 	posicao:
-* 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adaptador na interface
-*
-* 	recursoNecessario:
-* 		quantidade de recurso que a cidade precisa por segundo
-*
-*	recursoRecebido:
-*		quantidade de recurso recebido por segundo pela Cidade	
-*
-* 	recursoGasto:
-*		quantidade de recurso que a cidade usou
-*
-* 	proximo:
-* 		representa a proxima Cidade da rede de Cidades
-**/
-
-typedef struct cidade{
-	char *nome;
-	int posicao[2];
-
-	int recursoNecessario;
-	int recursoRecebido;
-	int recursoGasto;
-
-	Cidade *proximo;
-	
-}Cidade;
-
-/**
-*	Enumeracao para detectar se a lista esta vazia ou nao 
-*
-**/
-enum Vazia{VAZIA, NAO_VAZIA};
+#include "Principal.h"
 
 /** -----------------------Funcoes Basicas---------------------------- */
 
