@@ -1,98 +1,4 @@
-#include "Adaptadores.h"
-#include "Cidades.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-
-/**
-* 	Cabecalho do elemento Gerador
-* 	
-*	nome:
-* 		nome do gerador
-*
-* 	posicaoInicial:
-* 		vetor posicaoInicial, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adaptador na interface
-*
-* 	posicaoFinal:
-* 		vetor posicaoFinal, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adaptador na interface
-*
-*	tagDestino:
-*		tag para indentificar qual é a ligaçao final de cada conexao, 
-*		seja cidade ou adaptador
-*
-* 	chanceFalha:
-* 		chance de falha por segundo
-*
-* 	tempoConcerto:
-*		tempo de concerto em caso de falha em segundos
-*
-*	custoConcerto:
-*		custo do concerto em segundos
-*
-* 	numeroFalha:
-* 		total de falhas
-*
-* 	tagFalha:
-* 		indica se houve falha
-*
-*	capacidadeMaxima:
-*		capacidade maxima da interconexao
-*
-*	recursoTranstortado:
-*		quantidade de recuso que esta sendo transportado pela conexao no turno
-*
-*	proximo:
-*		representa as interconexoes realizadas/apontadas pelos adaptadores
-*
-* 	adaptador:
-*		adaptador utilizado/apontado pela interconexao
-*
-*	cidade:
-*		cidade de destino
-**/
-
-typedef struct interconexao{
-	char *nome;
-	int posicaoInical[2];
-	int posicaoFinal[2];
-	Destino tagDestino; 
-
-	float chanceFalha;
-	int tempoConserto;
-	int custoConserto;
-	
-	int numeroFalha;
-	Falha tagFalha; 
-
-	int capacidadeMaxima;
-	int recursoTransportado;
-	
-	Interconexao *proximo;
-	Adaptador *adaptador;
-	Cidade *cidade;
-	
-}Interconexao;
-
-/**
-*	Enumeracao para detectar se a lista esta vazia ou nao 
-*
-**/
-enum Vazia{VAZIA, NAO_VAZIA};
-
-/**
-*	Enumeracao para detectar uma falha
-*
-**/
-enum Falha{FALHA, SEM_FALHA};
-
-/**
-*	Enumeracao para detectar qual eh o ponto 
-* final de ligacao da conexao 
-**/
-enum Destino{ADAPTADOR, CIDADE};
+#include "Geradores.h"
 
 /** -----------------------Funcoes Basicas---------------------------- */
 
@@ -124,7 +30,7 @@ Interconexao* criaListaInterconexao();
 *		condicao da Interconexao sendo vazia ou nao vazia
 *
 **/
-Vazia interconexaoVazia(Interconexao *interconexao);
+Vazia interconexaoVazia(Interconexao *);
 
 /**
 *	Funcao: insereInterconexao
@@ -147,7 +53,7 @@ Vazia interconexaoVazia(Interconexao *interconexao);
 *	Assertiva de saida:
 *		A lista recebida pela funcao, deve ser a proxima interconexao apontada pela lista retornada
 **/
-Interconexao* insereInterconexao(char *registro, Inteconexao *listaAlvo);
+Interconexao* insereInterconexao(char *, Interconexao *);
 
 /**
 *	Funcao: imprimeListaInterconexao
@@ -185,7 +91,7 @@ Interconexao* insereInterconexao(char *registro, Inteconexao *listaAlvo);
 *			a lista de interconexoes nao eh imprimida
 *		FimSe
 **/
-void imprimeListaInterconexao(Interconexao *listaAlvo);
+void imprimeListaInterconexao(Interconexao *);
 
 /**
 *	Funcao: liberaListaInterconexao
@@ -202,7 +108,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo);
 *	AssertivaSaida:
 *		A lista deve estar vazia
 **/
-void liberaListaInterconexao(Interconexao *listaAlvo);
+void liberaListaInterconexao(Interconexao *);
 
 /** -----------------------Funcoes de Calculo---------------------------- */
 
@@ -225,7 +131,7 @@ void liberaListaInterconexao(Interconexao *listaAlvo);
 *		tamanho de uma conexao
 *
 **/
-float tamanhoConexao(Interconexao *interconexao);
+float tamanhoConexao(Interconexao *);
 
 
 /**
@@ -247,7 +153,7 @@ float tamanhoConexao(Interconexao *interconexao);
 *		resultado da soma dos tamanhos de todas as conexoes
 *
 **/
-float tamanhoTotalConexao(Interconexao *interconexao);
+float tamanhoTotalConexao(Interconexao *);
 
 
 /**
@@ -263,7 +169,7 @@ float tamanhoTotalConexao(Interconexao *interconexao);
 *		total gasto com conserto de todas as conexoes
 *
 **/
-int totalGastoConserto(Interconexao *interconexao);
+int totalGastoConserto(Interconexao *);
 
 /**
 *	Funcao: calculaFalha
@@ -283,7 +189,6 @@ int totalGastoConserto(Interconexao *interconexao);
 *
 **/
 Falha calculaFalha();
-
 
 /**
 *
@@ -308,4 +213,4 @@ Falha calculaFalha();
 *			soma-se o recurso transportado ao Adaptador da lista de interconexoes
 *		FimSe
 **/
-void mandarRecursoTransportado(Interconexao *interconexao);
+void mandarRecursoTransportado(Interconexao *);

@@ -1,47 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-/**
-* 	Cabecalho do elemento Cidade
-* 	
-*	nome:
-* 		nome da cidade
-*
-* 	posicao:
-* 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adaptador na interface
-*
-* 	recursoNecessario:
-* 		quantidade de recurso que a cidade precisa por segundo
-*
-*	recursoRecebido:
-*		quantidade de recurso recebido por segundo pela Cidade	
-*
-* 	recursoGasto:
-*		quantidade de recurso que a cidade usou
-*
-* 	proximo:
-* 		representa a proxima Cidade da rede de Cidades
-**/
-
-typedef struct cidade{
-	char *nome;
-	int posicao[2];
-
-	int recursoNecessario;
-	int recursoRecebido;
-	int recursoGasto;
-
-	Cidade *proximo;
-	
-}Cidade;
-
-/**
-*	Enumeracao para detectar se a lista esta vazia ou nao 
-*
-**/
-enum Vazia{VAZIA, NAO_VAZIA};
+#include "Adaptadores.h"
 
 /** -----------------------Funcoes Basicas---------------------------- */
 
@@ -76,7 +33,7 @@ Cidade* criaListaCidade();
 *		condicao da Cidade sendo vazia ou nao vazia
 *
 **/
-Vazia cidadeVazia(Cidade *cidade);
+Vazia cidadeVazia(Cidade *);
 
 /**
 *	Funcao: insereCidade
@@ -99,7 +56,7 @@ Vazia cidadeVazia(Cidade *cidade);
 *	Assertiva de saida:
 *		A lista recebida pela funcao, deve ser a proxima cidade apontada pela lista retornada
 **/
-Cidade* insereCidade(char *registro, Cidade *listaAlvo);
+Cidade* insereCidade(char *, Cidade *);
 
 /**
 *	Funcao: imprimeListaCidade
@@ -130,7 +87,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *			a lista de cidades nao eh imprimida
 *		FimSe
 **/
-void imprimeListaCidade(Cidade *listaAlvo);
+void imprimeListaCidade(Cidade *);
 
 /**
 *	Funcao: liberaListaCidade
@@ -147,7 +104,7 @@ void imprimeListaCidade(Cidade *listaAlvo);
 *	AssertivaSaida:
 *		A lista deve estar vazia
 **/
-void liberaListaCidade(Cidade *listaAlvo);
+void liberaListaCidade(Cidade *);
 
 /** -----------------------Funcoes de Calculo---------------------------- */
 
@@ -168,4 +125,4 @@ void liberaListaCidade(Cidade *listaAlvo);
 *	Assertiva de saida:
 *
 **/
-int recursoGastoTotal(Cidade *cidade);
+int recursoGastoTotal(Cidade *);

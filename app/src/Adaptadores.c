@@ -129,8 +129,8 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 		**/		
 	novo->recursoRecebido = 0;
 	novo->saidas = NULL;
-	novo->quatidadeSaidas = 0;
-	//novo->peso = NULL;
+	novo->quantidadeSaidas = 0;
+	novo->peso = NULL;
 
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
@@ -207,55 +207,59 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 *		adaptadorVazio(listaAlvo) == NAO_VAZIO;
 *		para cada adaptador da lista: adaptador->saidas[i] != null;
 **/
-void defineDistribuicao(Adaptador *adaptador){
+void defineDistribuicao(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
 	
-	while(adaptador != NULL){
+	Adaptador *aux;
+	Interconexao *conexao; //!< conexoes do adaptador
 
-		if(adaptador->saidas == NULL){
+	int i, somatorio = 0, recursoTransportado;	
+
+	//! Assertiva estrutural: aux é a lista nao-nula de adaptadores
+	aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE: aux nao chegou ao fim da lista de adaptadores
+
+		if(aux->saidas == NULL){
+		//! AE: o adaptador nao possui interconexoes
 			return;
 		}
 
-		if(adaptador->peso == NULL){
-			adaptador->peso = (float *) malloc(adaptador->quatidadeSaidas * sizeof(float));
+		if(aux->peso == NULL){
+		//! AE: o adaptador nao possui interconexoes
+		//! Comentarios de argumentacao
+			/**
+			*	Alocacao do vetor de pesos de acordo com a quantidade de saidas que
+			* o adaptador possui
+			**/
+			aux->peso = (float *) malloc(aux->quantidadeSaidas * sizeof(float));
 		}
 
-
-		int i;
-		int somatorio = 0;
-		for(i=0;i<adaptador->quatidadeSaidas;i++){
-
-			if(adaptador->saidas[i]->tagFalha == semFalha){
-				somatorio += adaptador->saidas[i]->capacidadeMaxima;
+		for(i=0;i<aux->quantidadeSaidas;i++){
+		//! AE: o numero total de saidas do adaptador nao foi alcancado pela variavel auxiliar i
+			
+			if(aux->saidas[i]->tagFalha == SEM_FALHA){
+			//! AE: as interconexoes realizadas pelo adaptador nao possuem falhas
+				//! Assertiva estrutural: somatorio contem a soma das capacidades maximas de cada interconexao realizada pelo adaptador
+				somatorio += aux->saidas[i]->capacidadeMaxima;
 			}
+			//! AS: alguma das interconexoes realizadas pelo adaptador possui falha
+		
 		}
+		//! AS: a quantidade total de saidas foi obtida por meio da variavel auxiliar i
 
+		for (i=0;i<aux->quantidadeSaidas;++i){
+		//! AE: o numero total de saidas do adaptador nao foi alcancado pela variavel auxiliar i
+		
+			//! Assertiva estrutural: conexao eh a lista de interconexoes do adaptador
+			conexao = aux->saidas[i];
 
-		int recursoTransportado;
-		Interconexao *conexao;
-		for (int i = 0; i < adaptador->quatidadeSaidas; ++i){
+			if(conexao->tagFalha == SEM_FALHA){
+			//! AE: a interconexao corrente nao possui falha
 
-			conexao = adaptador->saidas[i];
-
-			if(conexao->tagFalha == semFalha){
-
-			//! Comentarios de argumentacao
-				/**
-				*	Recurso transportado é a quantidade de recurso que cada 
-				* conexao vai transportar no turno
-				*	Somatorio é a soma de capaxidade maxima de todos as conexoes
-				* ativas;
-				*
-				*	RT = recursoTransportado
-				*	CM = capacidadeMaxima
-				*	RS = recursoRecebido
-				*
-				*	RT = CM*RS/somatorio
-				*
-				**/
-				recursoTransportado = conexao->capacidadeMaxima 
-				 						* adaptador->recursoRecebido 
-				 						/ somatorio;
+				//! Assertiva estrutural: recursoTransportado é a quantidade de recurso que cada conexao vai transportar no turno
+				recursoTransportado = (conexao->capacidadeMaxima * aux->recursoRecebido) / somatorio;
 
 				/**
 				*
@@ -266,13 +270,14 @@ void defineDistribuicao(Adaptador *adaptador){
 				*	}
 				*
 				**/
-				recursoTransportado <= conexao->capacidadeMaxima ? 
-				 						conexao->recursoTransportado = recursoTransportado :
-				 						conexao->recursoTransportado = conexao->capacidadeMaxima;
+				recursoTransportado = conexao->capacidadeMaxima ? conexao->recursoTransportado = recursoTransportado : conexao->recursoTransportado = conexao->capacidadeMaxima;
 			}
+			//! AS: a interconexao corrente possui falha
+
 		}
+		//! AS: a quantidade total de saidas foi obtida por meio da variavel auxiliar i
 
-
-		adaptador = adaptador->proximo;
+		aux = aux->proximo;
 	}
+	//! AS: a lista de adaptadores chegou ao fim
 }

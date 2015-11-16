@@ -1,51 +1,4 @@
-#include "Interconexoes.h"
-#include <stdlib.h>
-#include <math.h>
-#include <stdio.h>
- 
-/**
-* 	Cabecalho do elemento Adaptador
-* 	
-*	nome:
-* 		nome do adaptador
-*
-* 	posicao:
-* 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adaptador na interface
-*
-*	recursoRecebido:
-*		quantidade de recurso recebido por segundo pelo Adaptador
-*
-* 	saidas:
-* 		representa as interconexoes realizadas/apontadas pelos adaptadores
-*
-*	quantidadeSaidas:
-*		quantidade de conexoes que o adaptador possui
-*
-*	//peso:
-*		//vetor que guarda a porcentagem que cada conexao vai receber
-*
-* 	proximo:
-* 		representa a proxima Adaptador da lista de Adaptadores
-**/
-
-typedef struct adaptador{
-	char *nome;
-	int posicao[2];
-	int recursoRecebido;
-
-	Interconexao **saidas;
-	int quantidadeSaidas;
-	
-	Adaptador *proximo;
-	
-}Adaptador;
-
-/**
-*	Enumeracao para detectar se a lista esta vazia ou nao 
-*
-**/
-enum Vazio{VAZIO, NAO_VAZIO};
+#include "Principal.h"
 
 /** -----------------------Funcoes Basicas---------------------------- */
 
@@ -77,7 +30,7 @@ Adaptador* criaListaAdaptador();
 *		condicao do Adaptador sendo vazio ou nao vazio
 *
 **/
-Vazio adaptadorVazio(Adaptador *adaptador);
+Vazio adaptadorVazio(Adaptador *);
 
 /**
 *	Insere uma nova celula de adaptador na lista
@@ -97,7 +50,7 @@ Vazio adaptadorVazio(Adaptador *adaptador);
 *	Assertiva de saida:
 *		A lista recebida pela funcao, deve ser o proximo adaptador apontado pela lista retornada
 **/
-Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
+Adaptador* insereAdaptador(char *, Adaptador *);
 
 /**
 *	Funcao: imprimeListaAdaptador
@@ -127,7 +80,7 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
 *			a lista de adaptadores nao eh imprimida
 *		FimSe
 **/
-void imprimeListaAdaptador(Adaptador *listaAlvo);
+void imprimeListaAdaptador(Adaptador *);
 
 /**
 *
@@ -143,7 +96,7 @@ void imprimeListaAdaptador(Adaptador *listaAlvo);
 *	AssertivaSaida:
 *		A lista deve estar vazia
 **/
-void liberaListaAdaptador(Adaptador *listaAlvo);
+void liberaListaAdaptador(Adaptador *);
 
 /** -----------------------Funcoes de Calculo---------------------------- */
 
@@ -164,4 +117,4 @@ void liberaListaAdaptador(Adaptador *listaAlvo);
 * @param adaptador
 * 		ponteiro para o inico da lista de adaptadores;
 **/
-void defineDistribuicao(Adaptador *adaptador);
+void defineDistribuicao(Adaptador *);

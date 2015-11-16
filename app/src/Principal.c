@@ -1,7 +1,4 @@
-#include "../header/Cidades.h"
-#include "../header/Geradores.h"
 #include "../header/Interconexoes.h"
-#include "../header/Adaptadores.h"
 
 int main()
 {

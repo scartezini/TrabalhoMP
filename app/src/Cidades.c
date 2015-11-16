@@ -160,7 +160,7 @@ void imprimeListaCidade(Cidade *listaAlvo){
 		printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d recurso recebido%d recurso gasto%d\n "
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoNecessario,aux->recursoRecebido
-				,recursoGasto);
+				,aux->recursoGasto);
 	}
 	//! AS: listaAlvo chegou ao fim		
 }

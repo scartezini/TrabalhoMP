@@ -88,21 +88,21 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 					* no seu respectivo atributo lido
 					**/	
 				if(j == 1) 
-					novo->posicaoInical[0] = atoi(numChar);
+					novo->posicaoInicial[0] = atoi(numChar);
 				else if(j == 2) 
-					novo->posicaoInical[1] = atoi(numChar);
+					novo->posicaoInicial[1] = atoi(numChar);
 				else if(j == 3) 
-					novo->posicaoInical[0] = atoi(numChar);
+					novo->posicaoInicial[0] = atoi(numChar);
 				else if(j == 4) 
-					novo->posicaoInical[1] = atoi(numChar);
+					novo->posicaoInicial[1] = atoi(numChar);
 				else if(j == 5) 
 					novo->capacidadeMaxima = atoi(numChar);
 				else if(j == 6)
 					novo->chanceFalha = atoi(numChar);
 				else if(j == 7)
-					novo->tempoConcerto = atoi(numChar);
+					novo->tempoConserto = atoi(numChar);
 				else if(j == 8)
-					novo->custoConcerto = atoi(numChar);
+					novo->custoConserto = atoi(numChar);
 			}
 			//! AS: o valor de j eh maior que 8
 			
@@ -169,9 +169,9 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 		/**
 		*	Imprime os atributos da interconexao corrente
 		**/
-		printf("nome: %s posI_x: %d posI_y: %d posF_x: %d posF_y: %d tag destino%d chance falha%d tempo concerto%d custo concerto%d numero falha%d tag falha: %s capacidade maxima%d recurso transportado%d\n"
-				,aux->nome,aux->posicaoInical[0],aux->posicaoInical[1],aux->posicaoFinal[0],aux->posicaoFinal[1]
-				,aux->tagDestino, aux->chanceFalha, aux->tempoConcerto, aux->custoConcerto, aux->numeroFalha
+		printf("nome: %s posI_x: %d posI_y: %d posF_x: %d posF_y: %d tag destino%d chance falha%f tempo concerto%d custo concerto%d numero falha%d tag falha: %d capacidade maxima%d recurso transportado%d\n"
+				,aux->nome,aux->posicaoInicial[0],aux->posicaoInicial[1],aux->posicaoFinal[0],aux->posicaoFinal[1]
+				,aux->tagDestino, aux->chanceFalha, aux->tempoConserto, aux->custoConserto, aux->numeroFalha
 				,aux->tagFalha, aux->capacidadeMaxima, aux->recursoTransportado);
 	}
 	//! AS: listaAlvo chegou ao fim		
@@ -193,7 +193,7 @@ void liberaListaInterconexao(Interconexao *listaAlvo){
 	Interconexao *aux1 = NULL;
 	Interconexao *aux2 = NULL;
 
-	//! Asseriva estrutural: aux1 é a listaAlvo, porem sendo percorrida
+	//! Assertiva estrutural: aux1 é a listaAlvo, porem sendo percorrida
 	for(aux1=listaAlvo;aux1!=NULL;aux1=aux2){
 	//! AE: listaAlvo nao chegou ao fim
 	//! Comentarios de argumentacao
@@ -220,7 +220,7 @@ void liberaListaInterconexao(Interconexao *listaAlvo){
 *	AssertivaSaida:
 *		distancia > 0; 
 **/
-float tamanhoConexao(Interconexao *interconexao){
+float tamanhoConexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 
 	int xA; //!< Valor no eixo x da posicao inicial 
@@ -231,11 +231,11 @@ float tamanhoConexao(Interconexao *interconexao){
 
 	int distancia;
 	
-	xA = interconexao->posicaoInical[0];
-	yA = interconexao->posicaoInical[1];
+	xA = listaAlvo->posicaoInicial[0];
+	yA = listaAlvo->posicaoInicial[1];
 	
-	xB = interconexao->posicaoFinal[0];
-	yB = interconexao->posicaoFinal[1];
+	xB = listaAlvo->posicaoFinal[0];
+	yB = listaAlvo->posicaoFinal[1];
 
 	//! Comentarios de argumentacao
 		/**
@@ -257,14 +257,14 @@ float tamanhoConexao(Interconexao *interconexao){
 *	AssertivaSaida:
 *		resultado > 0; 
 **/
-float tamanhoTotalConexao(Interconexao *interconexao){
+float tamanhoTotalConexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 
 	float resultado = 0;
 	Interconexao *aux;
 
 	//! Asseriva estrutural: aux é a lista nao-nula de interconexoes
-	aux = interconexao;
+	aux = listaAlvo;
 
 	while(aux != NULL){
 	//! AE: aux nao chegou ao fim da lista de inteconexoes
@@ -315,14 +315,14 @@ Falha calculaFalha(){
 *		interconexaoVazia(listaAlvo) == NAO_VAZIA;
 *
 **/
-void mandarRecursoTransportado(Interconexao *interconexao){
+void mandarRecursoTransportado(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 	
 	Interconexao *aux;
 	int recursoEnviado;
 
 	//! Asseriva estrutural: aux é a lista nao-nula de interconexoes
-	aux = interconexao;
+	aux = listaAlvo;
 	
 	while(aux != NULL){
 	//! AE: aux nao chegou ao fim da lista de inteconexoes
