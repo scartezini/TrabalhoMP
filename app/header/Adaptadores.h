@@ -30,7 +30,7 @@ Adaptador* criaListaAdaptador();
 *		condicao do Adaptador sendo vazio ou nao vazio
 *
 **/
-Vazio adaptadorVazio(Adaptador *adaptador);
+Vazio adaptadorVazio(Adaptador *);
 
 /**
 *	Insere uma nova celula de adaptador na lista
@@ -50,7 +50,7 @@ Vazio adaptadorVazio(Adaptador *adaptador);
 *	Assertiva de saida:
 *		A lista recebida pela funcao, deve ser o proximo adaptador apontado pela lista retornada
 **/
-Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
+Adaptador* insereAdaptador(char *, Adaptador *);
 
 /**
 *	Funcao: imprimeListaAdaptador
@@ -80,7 +80,7 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
 *			a lista de adaptadores nao eh imprimida
 *		FimSe
 **/
-void imprimeListaAdaptador(Adaptador *listaAlvo);
+void imprimeListaAdaptador(Adaptador *);
 
 /**
 *
@@ -96,7 +96,7 @@ void imprimeListaAdaptador(Adaptador *listaAlvo);
 *	AssertivaSaida:
 *		A lista deve estar vazia
 **/
-void liberaListaAdaptador(Adaptador *listaAlvo);
+void liberaListaAdaptador(Adaptador *);
 
 /** -----------------------Funcoes de Calculo---------------------------- */
 
@@ -117,4 +117,4 @@ void liberaListaAdaptador(Adaptador *listaAlvo);
 * @param adaptador
 * 		ponteiro para o inico da lista de adaptadores;
 **/
-void defineDistribuicao(Adaptador *adaptador);
+void defineDistribuicao(Adaptador *);

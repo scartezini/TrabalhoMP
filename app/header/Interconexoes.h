@@ -1,4 +1,4 @@
-#include "Principal.h"
+#include "Geradores.h"
 
 /** -----------------------Funcoes Basicas---------------------------- */
 
@@ -30,7 +30,7 @@ Interconexao* criaListaInterconexao();
 *		condicao da Interconexao sendo vazia ou nao vazia
 *
 **/
-Vazia interconexaoVazia(Interconexao *interconexao);
+Vazia interconexaoVazia(Interconexao *);
 
 /**
 *	Funcao: insereInterconexao
@@ -53,7 +53,7 @@ Vazia interconexaoVazia(Interconexao *interconexao);
 *	Assertiva de saida:
 *		A lista recebida pela funcao, deve ser a proxima interconexao apontada pela lista retornada
 **/
-Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo);
+Interconexao* insereInterconexao(char *, Interconexao *);
 
 /**
 *	Funcao: imprimeListaInterconexao
@@ -91,7 +91,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo);
 *			a lista de interconexoes nao eh imprimida
 *		FimSe
 **/
-void imprimeListaInterconexao(Interconexao *listaAlvo);
+void imprimeListaInterconexao(Interconexao *);
 
 /**
 *	Funcao: liberaListaInterconexao
@@ -108,7 +108,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo);
 *	AssertivaSaida:
 *		A lista deve estar vazia
 **/
-void liberaListaInterconexao(Interconexao *listaAlvo);
+void liberaListaInterconexao(Interconexao *);
 
 /** -----------------------Funcoes de Calculo---------------------------- */
 
@@ -131,7 +131,7 @@ void liberaListaInterconexao(Interconexao *listaAlvo);
 *		tamanho de uma conexao
 *
 **/
-float tamanhoConexao(Interconexao *interconexao);
+float tamanhoConexao(Interconexao *);
 
 
 /**
@@ -153,7 +153,7 @@ float tamanhoConexao(Interconexao *interconexao);
 *		resultado da soma dos tamanhos de todas as conexoes
 *
 **/
-float tamanhoTotalConexao(Interconexao *interconexao);
+float tamanhoTotalConexao(Interconexao *);
 
 
 /**
@@ -169,7 +169,7 @@ float tamanhoTotalConexao(Interconexao *interconexao);
 *		total gasto com conserto de todas as conexoes
 *
 **/
-int totalGastoConserto(Interconexao *interconexao);
+int totalGastoConserto(Interconexao *);
 
 /**
 *	Funcao: calculaFalha
@@ -189,7 +189,6 @@ int totalGastoConserto(Interconexao *interconexao);
 *
 **/
 Falha calculaFalha();
-
 
 /**
 *
@@ -214,4 +213,4 @@ Falha calculaFalha();
 *			soma-se o recurso transportado ao Adaptador da lista de interconexoes
 *		FimSe
 **/
-void mandarRecursoTransportado(Interconexao *interconexao);
+void mandarRecursoTransportado(Interconexao *);

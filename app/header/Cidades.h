@@ -1,4 +1,4 @@
-#include "Principal.h"
+#include "Adaptadores.h"
 
 /** -----------------------Funcoes Basicas---------------------------- */
 
@@ -33,7 +33,7 @@ Cidade* criaListaCidade();
 *		condicao da Cidade sendo vazia ou nao vazia
 *
 **/
-Vazia cidadeVazia(Cidade *cidade);
+Vazia cidadeVazia(Cidade *);
 
 /**
 *	Funcao: insereCidade
@@ -56,7 +56,7 @@ Vazia cidadeVazia(Cidade *cidade);
 *	Assertiva de saida:
 *		A lista recebida pela funcao, deve ser a proxima cidade apontada pela lista retornada
 **/
-Cidade* insereCidade(char *registro, Cidade *listaAlvo);
+Cidade* insereCidade(char *, Cidade *);
 
 /**
 *	Funcao: imprimeListaCidade
@@ -87,7 +87,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *			a lista de cidades nao eh imprimida
 *		FimSe
 **/
-void imprimeListaCidade(Cidade *listaAlvo);
+void imprimeListaCidade(Cidade *);
 
 /**
 *	Funcao: liberaListaCidade
@@ -104,7 +104,7 @@ void imprimeListaCidade(Cidade *listaAlvo);
 *	AssertivaSaida:
 *		A lista deve estar vazia
 **/
-void liberaListaCidade(Cidade *listaAlvo);
+void liberaListaCidade(Cidade *);
 
 /** -----------------------Funcoes de Calculo---------------------------- */
 
@@ -125,4 +125,4 @@ void liberaListaCidade(Cidade *listaAlvo);
 *	Assertiva de saida:
 *
 **/
-int recursoGastoTotal(Cidade *cidade);
+int recursoGastoTotal(Cidade *);

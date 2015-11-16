@@ -99,8 +99,8 @@ typedef struct cidade{
 *	quantidadeSaidas:
 *		quantidade de conexoes que o adaptador possui
 *
-*	//peso:
-*		//vetor que guarda a porcentagem que cada conexao vai receber
+*	peso:
+*		vetor que guarda a porcentagem que cada conexao vai receber
 *
 * 	proximo:
 * 		representa a proxima Adaptador da lista de Adaptadores
@@ -113,6 +113,7 @@ typedef struct adaptador{
 
 	struct interconexao **saidas;
 	int quantidadeSaidas;
+	int *peso;
 	
 	struct adaptador *proximo;
 	

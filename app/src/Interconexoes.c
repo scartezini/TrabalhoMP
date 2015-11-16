@@ -193,7 +193,7 @@ void liberaListaInterconexao(Interconexao *listaAlvo){
 	Interconexao *aux1 = NULL;
 	Interconexao *aux2 = NULL;
 
-	//! Asseriva estrutural: aux1 é a listaAlvo, porem sendo percorrida
+	//! Assertiva estrutural: aux1 é a listaAlvo, porem sendo percorrida
 	for(aux1=listaAlvo;aux1!=NULL;aux1=aux2){
 	//! AE: listaAlvo nao chegou ao fim
 	//! Comentarios de argumentacao
