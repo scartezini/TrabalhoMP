@@ -15,9 +15,13 @@
 * 		vetor posicaoInicial, representando x na posicao[0] e y na posicao[1], ambas em km,
 * 	representando tambem a posicao do adaptador na interface
 *
-* 	posicaoInicial:
-* 		vetor posicaoInicial, representando x na posicao[0] e y na posicao[1], ambas em km,
+* 	posicaoFinal:
+* 		vetor posicaoFinal, representando x na posicao[0] e y na posicao[1], ambas em km,
 * 	representando tambem a posicao do adaptador na interface
+*
+*	tagDestino:
+*		tag para indentificar qual é a ligaçao final de cada conexao, 
+*		seja cidade ou adaptador
 *
 * 	chanceFalha:
 * 		chance de falha por segundo
@@ -31,6 +35,15 @@
 * 	numeroFalha:
 * 		total de falhas
 *
+* 	tagFalha:
+* 		indica se houve falha
+*
+*	capacidadeMaxima:
+*		capacidade maxima da interconexao
+*
+*	recursoTranstortado:
+*		quantidade de recuso que esta sendo transportado pela conexao no turno
+*
 *	proximo:
 *		representa as interconexoes realizadas/apontadas pelos adaptadores
 *
@@ -39,27 +52,20 @@
 *
 *	cidade:
 *		cidade de destino
-*
-*	recursoTranstortado:
-*		quantidade de recuso que esta sendo transportado pela conexao no turno
-*
-*	tagDestino:
-*		tag para indentificar qual é a ligaçao final de cada conexao, 
-*		seja cidade ou adaptador
 **/
 
 typedef struct interconexao{
 	char *nome;
 	int posicaoInical[2];
 	int posicaoFinal[2];
-	int tagDestino;
+	Destino tagDestino; 
 
 	float chanceFalha;
 	int tempoConserto;
 	int custoConserto;
 	
 	int numeroFalha;
-	int tagFalha;
+	Falha tagFalha; 
 
 	int capacidadeMaxima;
 	int recursoTransportado;
@@ -71,16 +77,24 @@ typedef struct interconexao{
 }Interconexao;
 
 /**
+*	Enumeracao para detectar se a lista esta vazia ou nao 
+*
+**/
+enum Vazia{VAZIA, NAO_VAZIA};
+
+/**
 *	Enumeracao para detectar uma falha
 *
 **/
-enum Falha{falha, semFalha};
+enum Falha{FALHA, SEM_FALHA};
 
 /**
 *	Enumeracao para detectar qual eh o ponto 
 * final de ligacao da conexao 
 **/
-enum Destino{ADAPTADOR, CIDADE}
+enum Destino{ADAPTADOR, CIDADE};
+
+/** -----------------------Funcoes Basicas---------------------------- */
 
 /**
 *	Funcao: criaListaInterconexao
@@ -91,6 +105,106 @@ enum Destino{ADAPTADOR, CIDADE}
 *		NULL; 
 **/
 Interconexao* criaListaInterconexao();
+
+/**
+*	Funcao: interconexaoVazia
+*
+*	Verifica se a lista de interconexoes esta vazia	
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de interconexoes
+*
+*	@return 
+*		variavel do tipo Vazia, indicando se a lista esta vazia
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Interconexao
+*
+*	Assertiva de saida:
+*		condicao da Interconexao sendo vazia ou nao vazia
+*
+**/
+Vazia interconexaoVazia(Interconexao *interconexao);
+
+/**
+*	Funcao: insereInterconexao
+*
+*	Inserir uma nova celula na lista de interconexoes
+* a insercao se da pelo inicio da lista e é retornadado
+* o novo ponterio para lista.
+*
+*	@param registro
+*		string que sera lida do arquivo representando Inteconexao
+*	@param listaAlvo 
+*		lista de interconexoes onde a nova celula sera inserida
+*
+*	@return
+*		novo pontero para a o inicio da lista de interconexoes
+*
+*	Assertiva de entrada:
+*		registro - eh um vetor contendo o conteudo do txt, deve ser diferente de NULL
+*
+*	Assertiva de saida:
+*		A lista recebida pela funcao, deve ser a proxima interconexao apontada pela lista retornada
+**/
+Interconexao* insereInterconexao(char *registro, Inteconexao *listaAlvo);
+
+/**
+*	Funcao: imprimeListaInterconexao
+*
+*	Imprime de todas as celulas de lista de interconexoes
+* as respectivas caracteristicas:
+*	nome
+*	posicao inicial x
+*	posicao inicial y
+*	posicao final x
+*	posicao final y
+*	tag de destino
+*	chance de falha
+*	tempo de concerto
+*	custo de concerto
+*	numero de falhas
+*	tag de falha
+*	capacidade maxima
+*	recurso transportado
+*
+*	@param listaAlvo
+*		lista que sera impressa 
+*
+*	@return listaAlvo
+*		variavel do tipo Vazia, indicando se a lista esta vazia
+*		 
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		Se a lista de interconexoes a ser imprimida nao eh vazia
+*		Entao
+*			ela eh imprimida
+*		Senao
+*			a lista de interconexoes nao eh imprimida
+*		FimSe
+**/
+void imprimeListaInterconexao(Interconexao *listaAlvo);
+
+/**
+*	Funcao: liberaListaInterconexao
+*
+*	Desaloca a memoria reservada para 
+* toda celula pertecente a lista de interconexoes
+*
+*	@param listaAlvo
+*		lista a ser desalocada
+*
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		A lista deve estar vazia
+**/
+void liberaListaInterconexao(Interconexao *listaAlvo);
+
+/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: tamanhoConexao
@@ -105,7 +219,7 @@ Interconexao* criaListaInterconexao();
 *		tamanho da celula de conexao que foi passada
 *
 *	Assertiva de entrada:
-*		interconexao - eh a lista de interconexoes
+*		interconexao - eh uma lista de interconexoes nao vazia
 *
 *	Assertiva de saida:
 *		tamanho de uma conexao
@@ -127,7 +241,7 @@ float tamanhoConexao(Interconexao *interconexao);
 *		retorna o tamanho total das conexoes da lista
 *
 *	Assertiva de entrada:
-*		interconexao - eh a lista de interconexoes
+*		interconexao - eh uma lista de interconexoes nao vazia
 *
 *	Assertiva de saida:
 *		resultado da soma dos tamanhos de todas as conexoes
@@ -183,5 +297,15 @@ Falha calculaFalha();
 *		ponterio de referencia para o inicio da lista
 *		de interconexoes 
 *
+*	Assertiva de entrada:
+*		interconexao - eh uma lista de interconexoes nao vazia
+*
+*	Assertiva de saida:
+*		Se o destino da interconexao for um adaptador
+*		Entao
+*			soma-se o recurso transportado ao Adaptador da lista de interconexoes
+*		Senao
+*			soma-se o recurso transportado ao Adaptador da lista de interconexoes
+*		FimSe
 **/
 void mandarRecursoTransportado(Interconexao *interconexao);

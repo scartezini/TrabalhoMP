@@ -13,7 +13,7 @@
 * 	taxaProducao:
 * 		quantidade de recurso que a cidade precisa por segundo
 *
-* 	recursoProducao:
+* 	recursoProduzido:
 *		quantidade total de recurso produzido pelo gerador
 *
 *	custo:
@@ -30,9 +30,11 @@
 typedef struct gerador{
 	char *nome;
 	int posicao[2];
+	
 	int taxaProducao; 
 	int recursoProduzido; 
 	int custo; 
+	
 	Gerador *proximo;
 	Interconexao *interconexao;
 	
@@ -42,7 +44,9 @@ typedef struct gerador{
 *	Enumeracao para detectar se a lista esta vazia ou nao 
 *
 **/
-enum Vazio{vazio, naoVazio};
+enum Vazio{VAZIO, NAO_VAZIO};
+
+/** -----------------------Funcoes Basicas---------------------------- */
 
 /**
 *	Funcao: criaListaGerador
@@ -55,7 +59,7 @@ enum Vazio{vazio, naoVazio};
 *		estrutura do tipo Gerador nula
 *
 **/
-Cidade* criaListaCidade();
+Cidade* criaListaGerador();
 
 /**
 *	Funcao: geradorVazio
@@ -78,13 +82,86 @@ Cidade* criaListaCidade();
 Vazio geradorVazio(Gerador *gerador);
 
 /**
+*	Funcao: insereGerador
+*
+*	Inserir uma nova celula na lista de geradores
+* a insercao se da pelo inicio da lista e é retornadado
+* o novo ponterio para lista.
+*
+*	@param registro
+*		string que sera lida do arquivo representando Gerador
+*	@param listaAlvo 
+*		lista de cidade a qual a nova celula sera inserida
+*
+*	@return
+*		novo pontero para a o inicio da lista de geradores
+*
+*	Assertiva de entrada:
+*		registro - eh um vetor contendo o conteudo do txt, deve ser diferente de NULL
+*
+*	Assertiva de saida:
+*		A lista recebida pela funcao, deve ser o proximo gerador apontado pela lista retornada
+**/
+Gerador* insereGerador(char *registro, Gerador *listaAlvo);
+
+/**
+*	Funcao: imprimeListaGerador
+*
+*	Imprime de todas as celulas de lista de gerador
+* as respectivas caracteristicas:
+*	nome
+*	posicao x
+*	posicao y
+*	taxa de producao
+*	recurso produzido
+*	custo
+*
+*	@param listaAlvo
+*		lista que sera impressa 
+*
+*	@return listaAlvo
+*		variavel do tipo Vazio, indicando se a lista esta vazia
+*		 
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		Se a lista de geradores a ser imprimida nao eh vazia
+*		Entao
+*			ela eh imprimida
+*		Senao
+*			a lista de geradores nao eh imprimida
+*		FimSe
+**/
+void imprimeListaGerador(Gerador *listaAlvo);
+
+/**
+*	Funcao: liberaListaGerador
+*
+*	Desaloca a memoria reservada para 
+* toda celula pertecente a lista de geradores
+*
+*	@param listaAlvo
+*		lista a ser desalocada
+*
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		A lista deve estar vazia
+**/
+void liberaListaGerador(Gerador *listaAlvo);
+
+/** -----------------------Funcoes de Calculo---------------------------- */
+
+/**
 *	Funcao: recursoProduzidoTotal
 *
 *	Calcula a soma do total de recursos produzido
 * pelas celualas.	
 *
 *	@param gerador
-*			Inicio da lista de geradores;
+*		inicio da lista de geradores;
 *
 *	@return 
 *		soma de todo o recurso produzido pelos geradores

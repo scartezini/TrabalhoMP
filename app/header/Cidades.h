@@ -15,15 +15,14 @@
 * 	recursoNecessario:
 * 		quantidade de recurso que a cidade precisa por segundo
 *
+*	recursoRecebido:
+*		quantidade de recurso recebido por segundo pela Cidade	
+*
 * 	recursoGasto:
 *		quantidade de recurso que a cidade usou
 *
 * 	proximo:
-* 		representa a proxima cidade da rede de cidades
-*
-*	recursoRecebido:
-*		quanto de recurso que a cidade recebeu naquele turno
-*
+* 		representa a proxima Cidade da rede de Cidades
 **/
 
 typedef struct cidade{
@@ -42,7 +41,9 @@ typedef struct cidade{
 *	Enumeracao para detectar se a lista esta vazia ou nao 
 *
 **/
-enum Vazia{vazia, naoVazia};
+enum Vazia{VAZIA, NAO_VAZIA};
+
+/** -----------------------Funcoes Basicas---------------------------- */
 
 /**
 *	Funcao: criaListaCidade
@@ -87,16 +88,16 @@ Vazia cidadeVazia(Cidade *cidade);
 *	@param registro
 *		string que sera lida do arquivo representando Cidade
 *	@param listaAlvo 
-*		lista de cidade a qual a nova celula sera inserida
+*		lista de cidades onde a nova celula sera inserida
 *
 *	@return
-*		novo pontero para a o inicio da lista de cidade
+*		novo pontero para a o inicio da lista de cidades
 *
 *	Assertiva de entrada:
-*		
+*		registro - eh um vetor contendo o conteudo do txt, deve ser diferente de NULL
 *
 *	Assertiva de saida:
-*
+*		A lista recebida pela funcao, deve ser a proxima cidade apontada pela lista retornada
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 
@@ -109,6 +110,8 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *	posicao x
 *	posicao y
 *	recurso necessario
+*	recurso recebido
+*	recurso gasto
 *
 *	@param listaAlvo
 *		lista que sera impressa 
@@ -127,7 +130,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *			a lista de cidades nao eh imprimida
 *		FimSe
 **/
-Vazia imprimeListaCidade(Cidade *listaAlvo);
+void imprimeListaCidade(Cidade *listaAlvo);
 
 /**
 *	Funcao: liberaListaCidade
@@ -145,6 +148,8 @@ Vazia imprimeListaCidade(Cidade *listaAlvo);
 *		A lista deve estar vazia
 **/
 void liberaListaCidade(Cidade *listaAlvo);
+
+/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: recursoGastoTotal

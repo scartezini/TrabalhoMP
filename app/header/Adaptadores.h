@@ -13,17 +13,20 @@
 * 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
 * 	representando tambem a posicao do adaptador na interface
 *
-* 	interconexao:
+*	recursoRecebido:
+*		quantidade de recurso recebido por segundo pelo Adaptador
+*
+* 	saidas:
 * 		representa as interconexoes realizadas/apontadas pelos adaptadores
 *
-*	peso:
-*		vetor que guarda a porcentagem que cada conexao vai receber
-*
 *	quantidadeSaidas:
-*		indica quantas conexoes saem desse adaptador
+*		quantidade de conexoes que o adaptador possui
 *
-*	recursoRecebido:
-*		quanto de recurso o adaptador recebeu naquele turno
+*	//peso:
+*		//vetor que guarda a porcentagem que cada conexao vai receber
+*
+* 	proximo:
+* 		representa a proxima Adaptador da lista de Adaptadores
 **/
 
 typedef struct adaptador{
@@ -31,11 +34,9 @@ typedef struct adaptador{
 	int posicao[2];
 	int recursoRecebido;
 
-
 	Interconexao **saidas;
 	int quantidadeSaidas;
 	
-
 	Adaptador *proximo;
 	
 }Adaptador;
@@ -44,7 +45,9 @@ typedef struct adaptador{
 *	Enumeracao para detectar se a lista esta vazia ou nao 
 *
 **/
-enum Vazio{vazio, naoVazio};
+enum Vazio{VAZIO, NAO_VAZIO};
+
+/** -----------------------Funcoes Basicas---------------------------- */
 
 /**
 *	Funcao: criaListaAdaptador
@@ -89,12 +92,42 @@ Vazio adaptadorVazio(Adaptador *adaptador);
 *		novo ponteiro de referencia para o inico da lista
 *
 *	Assertiva de entrada:
+*		registro - eh um vetor contendo o conteudo do txt, deve ser diferente de NULL
 *
-*		
 *	Assertiva de saida:
-*
+*		A lista recebida pela funcao, deve ser o proximo adaptador apontado pela lista retornada
 **/
 Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
+
+/**
+*	Funcao: imprimeListaAdaptador
+*
+*	Imprime de todas as celulas de lista de adaptador
+* as respectivas caracteristicas:
+*	nome
+*	posicao x
+*	posicao y
+*	recurso recebido
+*	quantidade de saidas
+*
+*	@param listaAlvo
+*		lista que sera impressa 
+*
+*	@return listaAlvo
+*		variavel do tipo Vazio, indicando se a lista esta vazia
+*		 
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		Se a lista de adaptadores a ser imprimida nao eh vazia
+*		Entao
+*			ela eh imprimida
+*		Senao
+*			a lista de adaptadores nao eh imprimida
+*		FimSe
+**/
+void imprimeListaAdaptador(Adaptador *listaAlvo);
 
 /**
 *
@@ -112,6 +145,8 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo);
 **/
 void liberaListaAdaptador(Adaptador *listaAlvo);
 
+/** -----------------------Funcoes de Calculo---------------------------- */
+
 /** 
 *	
 *	Define como sera a distribuicao entre as conexoes 
@@ -122,12 +157,11 @@ void liberaListaAdaptador(Adaptador *listaAlvo);
 *		interconexao->capacidadeMax * adaptador->recursoRecebido /
 *		soma de todas as capacidadeMax
 *  
-*	Essa funcao espera que a lista de inreconexoes ja foi previamente 
+*	Essa funcao espera que a lista de interconexoes ja foi previamente 
 * estabelecida 
 *	//TODO retirar essa dependencia
 *
 * @param adaptador
 * 		ponteiro para o inico da lista de adaptadores;
-*
 **/
 void defineDistribuicao(Adaptador *adaptador);
