@@ -29,39 +29,20 @@ Interconexao* criaListaInterconexao();
 *	Assertiva de saida:
 *		condicao da Interconexao sendo vazia ou nao vazia
 *
-<<<<<<< HEAD
-*	capacidadeMaxima:
-*		capacidade maxima da conexao
-*
-*	custoConcerto:
-*		custo do concerto em segundos
-=======
 **/
 Vazia interconexaoVazia(Interconexao *);
 
 /**
 *	Funcao: insereInterconexao
->>>>>>> origin/lucas
 *
 *	Inserir uma nova celula na lista de interconexoes
 * a insercao se da pelo inicio da lista e é retornadado
 * o novo ponterio para lista.
 *
-<<<<<<< HEAD
-*	tagFalha:
-*		marcador para definir se houve falha ou nao
-*
-*	recurstoTransportado:
-*		quantidade de recurso que esta sendo transportado
-*
-*	proximo:
-*		representa as interconexoes realizadas/apontadas pelos adaptadores
-=======
 *	@param registro
 *		string que sera lida do arquivo representando Inteconexao
 *	@param listaAlvo 
 *		lista de interconexoes onde a nova celula sera inserida
->>>>>>> origin/lucas
 *
 *	@return
 *		novo pontero para a o inicio da lista de interconexoes
@@ -74,25 +55,6 @@ Vazia interconexaoVazia(Interconexao *);
 **/
 Interconexao* insereInterconexao(char *, Interconexao *);
 
-<<<<<<< HEAD
-typedef struct interconexao{
-	char *nome;
-	int posicaoInical[2];
-	int posicaoFinal[2];
-	float chanceFalha;
-	int tempoConserto;
-	int capacidadeMaxima;
-	int custoConserto;
-	int numeroFalha;
-	int tagFalha;
-	int recursoTransportado;
-	
-	Interconexao *proximo;
-	Adaptador *adaptador;
-	Cidade *cidade;
-	
-}Interconexao;
-=======
 /**
 *	Funcao: imprimeListaInterconexao
 *
@@ -130,7 +92,6 @@ typedef struct interconexao{
 *		FimSe
 **/
 void imprimeListaInterconexao(Interconexao *);
->>>>>>> origin/lucas
 
 /**
 *	Funcao: liberaListaInterconexao

@@ -261,15 +261,6 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 
 	float resultado = 0;
-<<<<<<< HEAD
-	Interconexao *aux = NULL;
-
-	//! Asseriva estrutural: aux é a lista nao-nula de interconexoes
-	aux = interconexao;
-
-	while(aux != NULL){
-	//! AE: auxliar nao chegou ao fim da lista de inteconexoes
-=======
 	Interconexao *aux;
 
 	//! Asseriva estrutural: aux é a lista nao-nula de interconexoes
@@ -277,21 +268,15 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 
 	while(aux != NULL){
 	//! AE: aux nao chegou ao fim da lista de inteconexoes
->>>>>>> origin/lucas
 
-	//! Comentarios de argumentacao
-		/**
-		*	Enquanto a lista de interconexoes eh percorrida, o tamanho
-		* das conexoes sao somados e armazenados na variavel resultado 
-		**/
+		//! Comentarios de argumentacao
+			/**
+			*	Enquanto a lista de interconexoes eh percorrida, o tamanho
+			* das conexoes sao somados e armazenados na variavel resultado 
+			**/
 
-<<<<<<< HEAD
-		resultado += tamanhoConexao(aux );
-		aux  = aux ->proximo;
-=======
 		resultado += tamanhoConexao(aux);
 		aux = aux->proximo;
->>>>>>> origin/lucas
 	}
 	//! AS: a lista de interconexoes chegou ao fim
 

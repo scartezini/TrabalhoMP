@@ -13,25 +13,7 @@
 *		estrutura do tipo Cidade nula
 *
 **/
-<<<<<<< HEAD
-
-typedef struct cidade{
-	char *nome;
-	int posicao[2];
-	int recursoNecessario;
-	int recursoGasto;
-	Cidade *proximo;
-	
-}Cidade;
-
-/**
-*	Enumeracao para detectar se a lista esta vazia ou nao 
-*
-**/
-enum Vazia{vazia, naoVazia};
-=======
 Cidade* criaListaCidade();
->>>>>>> origin/lucas
 
 /**
 *	Funcao: cidadeVazia
@@ -42,21 +24,7 @@ Cidade* criaListaCidade();
 *		ponteiro para o inicio da lista de cidades
 *
 *	@return 
-<<<<<<< HEAD
-*		total de recursos gasto pelas cidades
-*
-*	Assertiva de entrada:
-*
-*	Assertiva de saida:
-*
-**/
-int recursoGastoTotal(Cidade *cidade);
-
-/**
-*	Funcao: criaListaCidade
-=======
 *		variavel do tipo Vazia, indicando se a lista esta vazia
->>>>>>> origin/lucas
 *
 *	Assertiva de entrada:
 *		estrutura do tipo Cidade
@@ -64,32 +32,8 @@ int recursoGastoTotal(Cidade *cidade);
 *	Assertiva de saida:
 *		condicao da Cidade sendo vazia ou nao vazia
 *
-*	Assertiva de saida:
-*		estrutura do tipo Cidade nula
-*
 **/
-Cidade* criaListaCidade();
-
-/**
-*	Funcao: criaVazia
-*
-*	Verifica se a lista de cidades esta vazia	
-*
-*	@param cidade
-*		ponteiro para o inicio da lista de cidades
-*
-*	@return 
-*		variavel do tipo Vazia, indicando se a lista esta vazia
-*
-*	Assertiva de saida:
-*		estrutura do tipo Cidade nula
-*
-**/
-<<<<<<< HEAD
-Vazia cidadeVazia(Cidade *cidade);
-=======
 Vazia cidadeVazia(Cidade *);
->>>>>>> origin/lucas
 
 /**
 *	Funcao: insereCidade
@@ -104,14 +48,6 @@ Vazia cidadeVazia(Cidade *);
 *		lista de cidades onde a nova celula sera inserida
 *
 *	@return
-<<<<<<< HEAD
-*		novo pontero para a o inicio da lista de cidade
-*
-*	Assertiva de entrada:
-*		
-*	Assertiva de saida:
-*
-=======
 *		novo pontero para a o inicio da lista de cidades
 *
 *	Assertiva de entrada:
@@ -119,7 +55,6 @@ Vazia cidadeVazia(Cidade *);
 *
 *	Assertiva de saida:
 *		A lista recebida pela funcao, deve ser a proxima cidade apontada pela lista retornada
->>>>>>> origin/lucas
 **/
 Cidade* insereCidade(char *, Cidade *);
 
@@ -141,11 +76,7 @@ Cidade* insereCidade(char *, Cidade *);
 *	@return listaAlvo
 *		variavel do tipo Vazia, indicando se a lista esta vazia
 *		 
-<<<<<<< HEAD
-*	AssertivaSaida:
-=======
 *	AssertivaEntrada:
->>>>>>> origin/lucas
 *		A lista nao deve ser vazia
 *
 *	AssertivaSaida:
@@ -156,12 +87,7 @@ Cidade* insereCidade(char *, Cidade *);
 *			a lista de cidades nao eh imprimida
 *		FimSe
 **/
-<<<<<<< HEAD
-Vazia imprimeListaCidade(Cidade *listaAlvo);
-
-=======
 void imprimeListaCidade(Cidade *);
->>>>>>> origin/lucas
 
 /**
 *	Funcao: liberaListaCidade

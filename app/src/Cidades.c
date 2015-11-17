@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-#include "Cidades.h"
-#include <assert.h>
-
-/**
-*	Funcao: recursoGastoTotal
-*
-**/
-int recursoGastoTotal(Cidade *cidade){
-
-}
-=======
 #include "../header/Cidades.h"
 #include <assert.h>
 
 /** -----------------------Funcoes Basicas---------------------------- */
->>>>>>> origin/lucas
 
 /**
 *	Funcao: criaListaCidade
@@ -27,32 +14,18 @@ Cidade* criaListaCidade(){
 }
 
 /**
-<<<<<<< HEAD
-*	Funcao: criaListaCidade
-*
-*	AssertivaSaida:
-*		vazia || naoVazia; 
-=======
 *	Funcao: cidadeVazia
 *
 *	AssertivaSaida:
 *		VAZIA || NAO_VAZIA; 
->>>>>>> origin/lucas
 **/
 Vazia cidadeVazia(Cidade *listaAlvo){
 	if(listaAlvo == NULL)
 	//! AE: listaAlvo eh vazia
-<<<<<<< HEAD
-		return vazia;
-	else
-	//! AE: listaAlvo nao eh vazia
-		return naoVazia;
-=======
 		return VAZIA;
 	else
 	//! AE: listaAlvo nao eh vazia
 		return NAO_VAZIA;
->>>>>>> origin/lucas
 	//! AS: o retorno deve ser uma variavel do tipo Vazia
 }
 
@@ -60,17 +33,6 @@ Vazia cidadeVazia(Cidade *listaAlvo){
 *	Funcao: insereCidade
 *
 *	AssertivaEntrada:
-<<<<<<< HEAD
-*		
-*
-*	AssertivaSaida:
-*		
-**/
-Cidade* insereCidade(char *registro, Cidade *listaAlvo){
-	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); 
-	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); 
-	int i,j=0,k=2; 
-=======
 *		registro != NULL;
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo){
@@ -79,7 +41,6 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); //!< Alocacao da nova cidade
 	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
->>>>>>> origin/lucas
 
 	for(i=2;registro[i]!=' ';i++);
 	//! AE: a posicao corrente do registro possui um caracter relevante
@@ -94,14 +55,6 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	
 	//! Asseriva estrutural: o nome da nova cidade possui tamanho i-1 
 	novo->nome = (char *)malloc((i-1)*sizeof(char));
-<<<<<<< HEAD
-
-	for(i=2;j<4;i++) 
-	{
-		if(registro[i] == ' '|| registro[i] == '\0') 
-		{
-			if(j == 0) 
-=======
 			
 	for(i=2;j<=3;i++){
 	//! AE: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos da cidade
@@ -116,7 +69,6 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 					/**
 					*	A (posicao corrente-k) recebe um caracter finalizador
 					**/
->>>>>>> origin/lucas
 				novo->nome[i-k] = '\0';
 			}
 			//! AS: o valor de j eh maior que 0	
@@ -190,19 +142,11 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 *	Funcao: imprimeListaCidade
 *
 *	AssertivaEntrada:
-<<<<<<< HEAD
-*		cidadeVazia(listaAlvo) == naoVazia;
-*		
-**/
-void imprimeListaCidade(Cidade *listaAlvo){
-	assert(cidadeVazia(listaAlvo) == naoVazia);
-=======
 *		cidadeVazia(listaAlvo) == NAO_VAZIA;
 *		
 **/
 void imprimeListaCidade(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
->>>>>>> origin/lucas
 
 	Cidade *aux = NULL;
 
@@ -211,39 +155,17 @@ void imprimeListaCidade(Cidade *listaAlvo){
 	//! AE: listaAlvo nao chegou ao fim
 	//! Comentarios de argumentacao
 		/**
-<<<<<<< HEAD
-		*	Imprime o nome, as posicoes e o recurso necessario da cidade
-		* corrente na lista auxiliar
-		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d\n"
-				,aux->nome,aux->posicao[0]
-				,aux->posicao[1],aux->recursoNecessario);
-=======
 		*	Imprime os atributos da cidade corrente
 		**/
 		printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d recurso recebido%d recurso gasto%d\n "
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoNecessario,aux->recursoRecebido
 				,aux->recursoGasto);
->>>>>>> origin/lucas
 	}
 	//! AS: listaAlvo chegou ao fim		
 }
 
 /**
-<<<<<<< HEAD
-*	Funcao: imprimeListaCidade
-*
-*	AssertivaEntrada:
-*		cidadeVazia(listaAlvo) == naoVazia;
-*
-*	AssertivaSaida:
-*		listaAlvo == NULL;
-*		
-**/
-void liberaListaCidade(Cidade *listaAlvo){
-	assert(cidadeVazia(listaAlvo) == naoVazia);
-=======
 *	Funcao: liberaListaCidade
 *
 *	AssertivaEntrada:
@@ -255,7 +177,6 @@ void liberaListaCidade(Cidade *listaAlvo){
 **/
 void liberaListaCidade(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
->>>>>>> origin/lucas
 
 	Cidade *aux1 = NULL;
 	Cidade *aux2 = NULL;
@@ -265,11 +186,7 @@ void liberaListaCidade(Cidade *listaAlvo){
 	//! AE: listaAlvo nao chegou ao fim
 	//! Comentarios de argumentacao
 		/**
-<<<<<<< HEAD
-		*	Liberam os atributos alocados dinamicamente do elemento Cidade
-=======
 		*	Liberam os atributos alocados dinamicamente do elemento Cidade corrente
->>>>>>> origin/lucas
 		**/
 		aux2 = aux1->proximo;
 		free(aux1->nome);
@@ -277,9 +194,6 @@ void liberaListaCidade(Cidade *listaAlvo){
 	}
 	//! AS: listaAlvo chegou ao fim
 
-<<<<<<< HEAD
-	assert(listaAlvo == NULL);
-=======
 	assert(cidadeVazia(listaAlvo) == VAZIA);
 }
 
@@ -291,5 +205,4 @@ void liberaListaCidade(Cidade *listaAlvo){
 **/
 int recursoGastoTotal(Cidade *cidade){
 
->>>>>>> origin/lucas
 }
