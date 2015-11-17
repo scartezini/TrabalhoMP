@@ -192,5 +192,5 @@ void liberaListaGerador(Gerador *listaAlvo){
 	}
 	//! AS: listaAlvo chegou ao fim
 
-	assert(geradorVazio(listaAlvo) == VAZIO);
+	assert(geradorVazio(aux1) == VAZIO);
 }
