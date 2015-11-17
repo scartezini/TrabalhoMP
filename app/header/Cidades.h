@@ -1,26 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "Adaptadores.h"
+
+/** -----------------------Funcoes Basicas---------------------------- */
 
 /**
-* 	Cabecalho do elemento Cidade
-* 	
-*	nome:
-* 		nome da cidade
+*	Funcao: criaListaCidade
 *
-* 	posicao:
-* 		vetor posicao, representando x na posicao[0] e y na posicao[1], ambas em km,
-* 	representando tambem a posicao do adapatador na interface
+*	Inicia um ponteiro que sera para Cidade
 *
-* 	recursoNecessario:
-* 		quantidade de recurso que a cidade precisa por segundo
+*	@return null
 *
-* 	recursoGasto:
-*		quantidade de recurso que a cidade usou
+*	Assertiva de saida:
+*		estrutura do tipo Cidade nula
 *
-* 	proximo:
-* 		representa a proxima cidade da rede de cidades
 **/
+<<<<<<< HEAD
 
 typedef struct cidade{
 	char *nome;
@@ -36,17 +29,20 @@ typedef struct cidade{
 *
 **/
 enum Vazia{vazia, naoVazia};
+=======
+Cidade* criaListaCidade();
+>>>>>>> origin/lucas
 
 /**
-*	Funcao: recursoGastoTotal
+*	Funcao: cidadeVazia
 *
-*	Resultado da soma de todos recursos 
-* gasto pelas cidades 
+*	Verifica se a lista de cidades esta vazia	
 *
 *	@param cidade
 *		ponteiro para o inicio da lista de cidades
-*	
+*
 *	@return 
+<<<<<<< HEAD
 *		total de recursos gasto pelas cidades
 *
 *	Assertiva de entrada:
@@ -58,10 +54,15 @@ int recursoGastoTotal(Cidade *cidade);
 
 /**
 *	Funcao: criaListaCidade
+=======
+*		variavel do tipo Vazia, indicando se a lista esta vazia
+>>>>>>> origin/lucas
 *
-*	Inicia um ponteiro que sera para Cidade
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade
 *
-*	@return null
+*	Assertiva de saida:
+*		condicao da Cidade sendo vazia ou nao vazia
 *
 *	Assertiva de saida:
 *		estrutura do tipo Cidade nula
@@ -84,7 +85,11 @@ Cidade* criaListaCidade();
 *		estrutura do tipo Cidade nula
 *
 **/
+<<<<<<< HEAD
 Vazia cidadeVazia(Cidade *cidade);
+=======
+Vazia cidadeVazia(Cidade *);
+>>>>>>> origin/lucas
 
 /**
 *	Funcao: insereCidade
@@ -96,18 +101,27 @@ Vazia cidadeVazia(Cidade *cidade);
 *	@param registro
 *		string que sera lida do arquivo representando Cidade
 *	@param listaAlvo 
-*		lista de cidade a qual a nova celula sera inserida
+*		lista de cidades onde a nova celula sera inserida
 *
 *	@return
+<<<<<<< HEAD
 *		novo pontero para a o inicio da lista de cidade
 *
 *	Assertiva de entrada:
 *		
 *	Assertiva de saida:
 *
+=======
+*		novo pontero para a o inicio da lista de cidades
+*
+*	Assertiva de entrada:
+*		registro - eh um vetor contendo o conteudo do txt, deve ser diferente de NULL
+*
+*	Assertiva de saida:
+*		A lista recebida pela funcao, deve ser a proxima cidade apontada pela lista retornada
+>>>>>>> origin/lucas
 **/
-Cidade* insereCidade(char *registro, Cidade *listaAlvo);
-
+Cidade* insereCidade(char *, Cidade *);
 
 /**
 *	Funcao: imprimeListaCidade
@@ -118,13 +132,20 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *	posicao x
 *	posicao y
 *	recurso necessario
+*	recurso recebido
+*	recurso gasto
 *
 *	@param listaAlvo
 *		lista que sera impressa 
 *
-*	@return listaAlvo != null ? 1:0;
+*	@return listaAlvo
+*		variavel do tipo Vazia, indicando se a lista esta vazia
 *		 
+<<<<<<< HEAD
 *	AssertivaSaida:
+=======
+*	AssertivaEntrada:
+>>>>>>> origin/lucas
 *		A lista nao deve ser vazia
 *
 *	AssertivaSaida:
@@ -135,8 +156,12 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo);
 *			a lista de cidades nao eh imprimida
 *		FimSe
 **/
+<<<<<<< HEAD
 Vazia imprimeListaCidade(Cidade *listaAlvo);
 
+=======
+void imprimeListaCidade(Cidade *);
+>>>>>>> origin/lucas
 
 /**
 *	Funcao: liberaListaCidade
@@ -146,5 +171,32 @@ Vazia imprimeListaCidade(Cidade *listaAlvo);
 *
 *	@param listaAlvo
 *		lista a ser desalocada
+*
+*	AssertivaEntrada:
+*		A lista nao deve ser vazia
+*
+*	AssertivaSaida:
+*		A lista deve estar vazia
 **/
-void liberaListaCidade(Cidade *listaAlvo);
+void liberaListaCidade(Cidade *);
+
+/** -----------------------Funcoes de Calculo---------------------------- */
+
+/**
+*	Funcao: recursoGastoTotal
+*
+*	Resultado da soma de todos recursos 
+* gasto pelas cidades 
+*
+*	@param cidade
+*		ponteiro para o inicio da lista de cidades
+*	
+*	@return 
+*		total de recursos gasto pelas cidades
+*
+*	Assertiva de entrada:
+*
+*	Assertiva de saida:
+*
+**/
+int recursoGastoTotal(Cidade *);
