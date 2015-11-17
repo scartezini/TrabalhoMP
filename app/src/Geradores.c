@@ -37,7 +37,7 @@ Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 	assert(registro != NULL);
 	
 	Gerador *novo = (Gerador *)malloc(sizeof(Gerador)); //!< Alocacao de um novo gerador
-	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
+	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
 
 	for(i=2;registro[i]!=' ';i++);

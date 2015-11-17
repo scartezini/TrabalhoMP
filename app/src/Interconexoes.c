@@ -39,7 +39,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	assert(registro != NULL);
 	
 	Interconexao *novo = (Interconexao *)malloc(sizeof(Interconexao)); //!< Alocacao da nova Interconexao
-	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
+	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
 
 	for(i=2;registro[i]!=' ';i++);

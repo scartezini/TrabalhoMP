@@ -39,7 +39,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	assert(registro != NULL);
 	
 	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); //!< Alocacao da nova cidade
-	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
+	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
 
 	for(i=2;registro[i]!=' ';i++);
