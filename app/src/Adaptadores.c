@@ -39,7 +39,7 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 	assert(registro != NULL);
 	
 	Adaptador *novo = (Adaptador *)malloc(sizeof(Adaptador)); //!< Alocacao de um novo adaptador
-	char *numChar = (char) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
+	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
 
 	for(i=2;registro[i]!=' ';i++);
@@ -233,7 +233,7 @@ void defineDistribuicao(Adaptador *listaAlvo){
 			*	Alocacao do vetor de pesos de acordo com a quantidade de saidas que
 			* o adaptador possui
 			**/
-			aux->peso = (float *) malloc(aux->quantidadeSaidas * sizeof(float));
+			aux->peso = (int *) malloc(aux->quantidadeSaidas * sizeof(int));
 		}
 
 		for(i=0;i<aux->quantidadeSaidas;i++){
@@ -270,7 +270,8 @@ void defineDistribuicao(Adaptador *listaAlvo){
 				*	}
 				*
 				**/
-				recursoTransportado = conexao->capacidadeMaxima ? conexao->recursoTransportado = recursoTransportado : conexao->recursoTransportado = conexao->capacidadeMaxima;
+				conexao->recursoTransportado = (recursoTransportado <= conexao->capacidadeMaxima)
+											 ?  recursoTransportado : conexao->capacidadeMaxima;
 			}
 			//! AS: a interconexao corrente possui falha
 
