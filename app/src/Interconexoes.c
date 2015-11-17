@@ -98,7 +98,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 				else if(j == 5) 
 					novo->capacidadeMaxima = atoi(numChar);
 				else if(j == 6)
-					novo->chanceFalha = atoi(numChar);
+					novo->chanceFalha = atof(numChar);
 				else if(j == 7)
 					novo->tempoConserto = atoi(numChar);
 				else if(j == 8)
@@ -206,7 +206,7 @@ void liberaListaInterconexao(Interconexao *listaAlvo){
 	}
 	//! AS: listaAlvo chegou ao fim
 
-	assert(interconexaoVazia(listaAlvo) == VAZIA);
+	assert(interconexaoVazia(aux1) == VAZIA);
 }
 
 /** -----------------------Funcoes de Calculo---------------------------- */
