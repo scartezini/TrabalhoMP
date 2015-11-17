@@ -194,7 +194,7 @@ void liberaListaCidade(Cidade *listaAlvo){
 	}
 	//! AS: listaAlvo chegou ao fim
 
-	assert(cidadeVazia(listaAlvo) == VAZIA);
+	assert(cidadeVazia(aux1) == VAZIA);
 }
 
 /** -----------------------Funcoes de Calculo---------------------------- */

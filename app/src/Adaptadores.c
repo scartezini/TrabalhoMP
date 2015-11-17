@@ -194,7 +194,7 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 	}
 	//! AS: listaAlvo chegou ao fim
 
-	assert(adaptadorVazio(listaAlvo) == VAZIO);
+	assert(adaptadorVazio(aux1) == VAZIO);
 }
 
 /** -----------------------Funcoes de Calculo---------------------------- */
