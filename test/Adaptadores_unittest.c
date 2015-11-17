@@ -20,3 +20,9 @@ TEST(adaptadorVazio, naoVazio){
 	adaptador = (Adaptador *) malloc (sizeof(Adaptador));
 	ASSERT_TRUE(adaptadorVazio(adaptador) == NAO_VAZIO);
 }
+
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest( &argc, argv );
+   	return RUN_ALL_TESTS();
+}
