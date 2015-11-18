@@ -28,8 +28,8 @@ TEST(insereAdaptador, Vazio){
 	char *entrada = (char *) malloc(sizeof(char) * strlen("A adapta_1 2 3"));
 	char *nome = (char *) malloc(sizeof(char) * strlen("adapta_1"));
 
-	entrada = "A adapta_1 2 3";
-	nome = "adapta_1";
+	strcpy(entrada,"A adapta_1 2 3");
+	strcpy(nome, "adapta_1");
 
 	adaptador = insereAdaptador(entrada,adaptador);
 	ASSERT_TRUE(strcmp(nome,adaptador->nome) == 0);
@@ -37,9 +37,37 @@ TEST(insereAdaptador, Vazio){
 	ASSERT_TRUE(adaptador->posicao[1] == 3);
 }
 
+TEST(insereAdaptador, naoVazio){
+	Adaptador *adaptador = criaListaAdaptador();
+
+	char *entrada = (char *) malloc(sizeof(char) * strlen("A adapta_1 2 3"));
+	char *nome = (char *) malloc(sizeof(char) * strlen("adapta_1"));
+
+	strcpy(entrada,"A adapta_1 2 3");
+	strcpy(nome, "adapta_1");
+
+	adaptador = insereAdaptador(entrada,adaptador);
+	ASSERT_TRUE(strcmp(nome,adaptador->nome) == 0);
+	ASSERT_TRUE(adaptador->posicao[0] == 2);
+	ASSERT_TRUE(adaptador->posicao[1] == 3);
+
+	strcpy(entrada,"A adapta_2 4 5");
+	strcpy(nome, "adapta_2");
+
+	adaptador = insereAdaptador(entrada,adaptador);
+	ASSERT_TRUE(strcmp(nome,adaptador->nome) == 0);
+	ASSERT_TRUE(adaptador->posicao[0] == 4);
+	ASSERT_TRUE(adaptador->posicao[1] == 5);
 
 
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest( &argc, argv );
-   	return RUN_ALL_TESTS();
+	strcpy(entrada,"A adapta_1 2 3");
+	strcpy(nome, "adapta_1");
+
+	adaptador = adaptador->proximo;
+	ASSERT_TRUE(strcmp(nome,adaptador->nome) == 0);
+	ASSERT_TRUE(adaptador->posicao[0] == 2);
+	ASSERT_TRUE(adaptador->posicao[1] == 3);
+
 }
+
+
