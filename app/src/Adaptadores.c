@@ -7,7 +7,7 @@
 *	Funcao: criaListaAdaptador
 *
 *	AssertivaSaida:
-*		NULL; 
+*		NULL;
 **/
 Adaptador* criaListaAdaptador(){
 	return NULL;
@@ -17,7 +17,7 @@ Adaptador* criaListaAdaptador(){
 *	Funcao: adaptadorVazio
 *
 *	AssertivaSaida:
-*		VAZIO || NAO_VAZIO; 
+*		VAZIO || NAO_VAZIO;
 **/
 Vazio adaptadorVazio(Adaptador *listaAlvo){
 	if(listaAlvo == NULL)
@@ -37,33 +37,33 @@ Vazio adaptadorVazio(Adaptador *listaAlvo){
 **/
 Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 	assert(registro != NULL);
-	
+
 	Adaptador *novo = (Adaptador *)malloc(sizeof(Adaptador)); //!< Alocacao de um novo adaptador
 	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
 
 	for(i=2;registro[i]!=' ';i++);
 	//! AE: a posicao corrente do registro possui um caracter relevante
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Comecando de registro[2], enquanto registro[i] for um caracter irrelevante,
 		* soma-se 1 a variavel de auxilio i
 		**/
-		
+
 	//! AS: a posicao corrente do registro possui um caracter irrelevante
-	
-	//! Asseriva estrutural: o nome do novo adaptador possui tamanho i-1 
+
+	//! Asseriva estrutural: o nome do novo adaptador possui tamanho i-1
 	novo->nome = (char *)malloc((i-1)*sizeof(char));
 
 	for(i=2;j<=2;i++){
 	//! AE: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos do adaptador
 
 		if(registro[i] == ' '||registro[i] == '\0'){
-		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador	
+		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
 
 			if(j == 0){
-			//! AE: o valor de j eh igual a 0	
+			//! AE: o valor de j eh igual a 0
 
 				//! Comentarios de argumentacao
 					/**
@@ -71,48 +71,48 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 					**/
 				novo->nome[i-k] = '\0';
 			}
-			//! AS: o valor de j eh maior que 0	
-			
+			//! AS: o valor de j eh maior que 0
+
 			else{
 			//! AE: o valor de j eh maior que 0
-			
+
 				//! Comentarios de argumentacao
 					/**
 					*	A (posicao corrente-k) do vetor numChar recebe um caracter finalizador
-					**/	
+					**/
 				numChar[i-k] = '\0';
-				
+
 				//! Comentarios de argumentacao
 					/**
-					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar 
+					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar
 					* no seu respectivo atributo lido
-					**/	
+					**/
 				if(j == 1)
 					novo->posicao[0] = atoi(numChar);
 				else if(j == 2)
 					novo->posicao[1] = atoi(numChar);
 			}
 			//! AS: o valor de j eh maior que 4
-			
+
 			k = i+1;
 			j++;
 		}
-		//! AS: a posicao corrente do registro possui um caracter relevante	
-		
+		//! AS: a posicao corrente do registro possui um caracter relevante
+
 		else{
 		//! AE: a posicao corrente do registro possui um caracter relevante
-			
+
 			//! Comentarios de argumentacao
 				/**
 				*	Se o valor da variavel de auxilio j for 0
 				*	Entao
-				*		armazena-se a posicao corrente do registro na 
+				*		armazena-se a posicao corrente do registro na
 				*	 (posicao corrente-k) do nome do adaptador
 				*	Senao
-				*		armazena-se a posicao corrente do registro na 
+				*		armazena-se a posicao corrente do registro na
 				*	 (posicao corrente-k) do vetor numChar
 				*	FimSe
-				**/		
+				**/
 			if(j == 0)
 				novo->nome[i-k] = registro[i];
 			else
@@ -126,15 +126,16 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 		/**
 		*	Os atributos nao lidos do adaptador inserido recebem o valor nulo, e o proximo adaptador
 		* da lista que contem o novo adaptador inserido na cabeca recebe a lista de adaptadores atual
-		**/		
+		**/
 	novo->recursoRecebido = 0;
 	novo->saidas = NULL;
+	novo->entradas = NULL;
 	novo->quantidadeSaidas = 0;
-	novo->peso = NULL;
+
 
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
-	
+
 	return listaAlvo;
 }
 
@@ -143,7 +144,7 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 *
 *	AssertivaEntrada:
 *		adaptadorVazio(listaAlvo) == NAO_VAZIO;
-*		
+*
 **/
 void imprimeListaAdaptador(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
@@ -162,7 +163,7 @@ void imprimeListaAdaptador(Adaptador *listaAlvo){
 				,aux->posicao[1],aux->recursoRecebido
 				,aux->quantidadeSaidas);
 	}
-	//! AS: listaAlvo chegou ao fim		
+	//! AS: listaAlvo chegou ao fim
 }
 
 /**
@@ -173,7 +174,7 @@ void imprimeListaAdaptador(Adaptador *listaAlvo){
 *
 *	AssertivaSaida:
 *		adaptadorVazio(listaAlvo) == VAZIO;
-*		
+*
 **/
 void liberaListaAdaptador(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
@@ -209,11 +210,11 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 **/
 void defineDistribuicao(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
-	
+
 	Adaptador *aux;
 	Interconexao *conexao; //!< conexoes do adaptador
 
-	int i, somatorio = 0, recursoTransportado;	
+	int i, somatorio = 0, recursoTransportado;
 
 	//! Assertiva estrutural: aux é a lista nao-nula de adaptadores
 	aux = listaAlvo;
@@ -238,20 +239,20 @@ void defineDistribuicao(Adaptador *listaAlvo){
 
 		for(i=0;i<aux->quantidadeSaidas;i++){
 		//! AE: o numero total de saidas do adaptador nao foi alcancado pela variavel auxiliar i
-			
+
 			if(aux->saidas[i]->tagFalha == SEM_FALHA){
 			//! AE: as interconexoes realizadas pelo adaptador nao possuem falhas
 				//! Assertiva estrutural: somatorio contem a soma das capacidades maximas de cada interconexao realizada pelo adaptador
 				somatorio += aux->saidas[i]->capacidadeMaxima;
 			}
 			//! AS: alguma das interconexoes realizadas pelo adaptador possui falha
-		
+
 		}
 		//! AS: a quantidade total de saidas foi obtida por meio da variavel auxiliar i
 
 		for (i=0;i<aux->quantidadeSaidas;++i){
 		//! AE: o numero total de saidas do adaptador nao foi alcancado pela variavel auxiliar i
-		
+
 			//! Assertiva estrutural: conexao eh a lista de interconexoes do adaptador
 			conexao = aux->saidas[i];
 
