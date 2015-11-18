@@ -75,7 +75,7 @@ typedef struct cidade{
 	int recursoGasto;
 
 	struct cidade *proximo;
-	interconexoes *entrada;
+	struct interconexao *entrada;
 
 }Cidade;
 
@@ -189,14 +189,14 @@ typedef struct interconexao{
 	int recursoTransportado;
 
 	struct interconexao *proximo;
-	Adaptador *entradaAdaptador;
-	Gerador *entradaGerador;
+	struct adaptador *entradaAdaptador;
+	struct gerador *entradaGerador;
 
-	Adaptador *saidaAdaptador;
-	Cidade *saidaCidade;
+	struct adaptador *saidaAdaptador;
+	struct cidade *saidaCidade;
 
-	Interconexao *poximoEntradaAdaptador;
-	Interconexao *proximoSaidaAdaptador;
+	struct interconexao *proximoEntradaAdaptador;
+	struct interconexao *proximoSaidaAdaptador;
 
 }Interconexao;
 

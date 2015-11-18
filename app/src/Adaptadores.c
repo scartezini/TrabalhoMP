@@ -214,7 +214,9 @@ void defineDistribuicao(Adaptador *listaAlvo){
 	Adaptador *aux;
 	Interconexao *conexao; //!< conexoes do adaptador
 
-	int i, somatorio = 0, recursoTransportado;
+	int i;
+	int somatorio;
+	int recursoTransportado;
 
 	//! Assertiva estrutural: aux é a lista nao-nula de adaptadores
 	aux = listaAlvo;
@@ -222,62 +224,35 @@ void defineDistribuicao(Adaptador *listaAlvo){
 	while(aux != NULL){
 	//! AE: aux nao chegou ao fim da lista de adaptadores
 
-		if(aux->saidas == NULL){
-		//! AE: o adaptador nao possui interconexoes
-			return;
-		}
+		somatorio = 0;
 
-		if(aux->peso == NULL){
-		//! AE: o adaptador nao possui interconexoes
-		//! Comentarios de argumentacao
+		if(aux->saidas  != NULL){
+			conexao = aux->saidas;
+
 			/**
-			*	Alocacao do vetor de pesos de acordo com a quantidade de saidas que
-			* o adaptador possui
+			*	While percorre a lista de conexoes que saem do adaptador
+			* soma a capaxidade maxima de todas as conexoes;
 			**/
-			aux->peso = (int *) malloc(aux->quantidadeSaidas * sizeof(int));
-		}
-
-		for(i=0;i<aux->quantidadeSaidas;i++){
-		//! AE: o numero total de saidas do adaptador nao foi alcancado pela variavel auxiliar i
-
-			if(aux->saidas[i]->tagFalha == SEM_FALHA){
-			//! AE: as interconexoes realizadas pelo adaptador nao possuem falhas
-				//! Assertiva estrutural: somatorio contem a soma das capacidades maximas de cada interconexao realizada pelo adaptador
-				somatorio += aux->saidas[i]->capacidadeMaxima;
+			while (conexao != NULL) {
+				somatorio += conexao->capacidadeMaxima;
+				conexao = conexao->proximoSaidaAdaptador;
 			}
-			//! AS: alguma das interconexoes realizadas pelo adaptador possui falha
 
-		}
-		//! AS: a quantidade total de saidas foi obtida por meio da variavel auxiliar i
+			conexao = aux->saidas;
 
-		for (i=0;i<aux->quantidadeSaidas;++i){
-		//! AE: o numero total de saidas do adaptador nao foi alcancado pela variavel auxiliar i
+			while(conexao != NULL){
+				if(conexao->tagFalha == SEM_FALHA){
 
-			//! Assertiva estrutural: conexao eh a lista de interconexoes do adaptador
-			conexao = aux->saidas[i];
+					recursoTransportado = (conexao->capacidadeMaxima * aux->recursoRecebido) / somatorio;
 
-			if(conexao->tagFalha == SEM_FALHA){
-			//! AE: a interconexao corrente nao possui falha
+					conexao->recursoTransportado = (conexao->capacidadeMaxima >= recursoTransportado) ?
+																					recursoTransportado : conexao->capacidadeMaxima;
 
-				//! Assertiva estrutural: recursoTransportado é a quantidade de recurso que cada conexao vai transportar no turno
-				recursoTransportado = (conexao->capacidadeMaxima * aux->recursoRecebido) / somatorio;
+				}
 
-				/**
-				*
-				*	if(recursoTransportado <= conexao->capacidadeMaxima){
-				*		conexao->recursoTransportado = recursoTransportado;
-				*	}else{
-				*		conexao->recursoTransportado = conexao->capacidadeMaxima;
-				*	}
-				*
-				**/
-				conexao->recursoTransportado = (recursoTransportado <= conexao->capacidadeMaxima)
-											 ?  recursoTransportado : conexao->capacidadeMaxima;
 			}
-			//! AS: a interconexao corrente possui falha
 
 		}
-		//! AS: a quantidade total de saidas foi obtida por meio da variavel auxiliar i
 
 		aux = aux->proximo;
 	}

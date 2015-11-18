@@ -145,7 +145,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	novo->recursoTransportado = 0;
 
 
-	novo->poximoEntradaAdaptador = NULL;
+	novo->proximoEntradaAdaptador = NULL;
 	novo->proximoSaidaAdaptador = NULL;
 	novo->saidaCidade = NULL;
 	novo->saidaAdaptador = NULL;
@@ -348,11 +348,11 @@ void mandarRecursoTransportado(Interconexao *listaAlvo){
 
 			if(aux->tagDestino == ADAPTADOR){
 			//! AE: o destino da interconexao eh um Adaptador
-				aux->adaptador->recursoRecebido += recursoEnviado;
+				aux->saidaAdaptador->recursoRecebido += recursoEnviado;
 			}
 			else if(aux->tagDestino == CIDADE){
 			//! AE: o destino da interconexao eh uma Cidade
-				aux->cidade->recursoRecebido += recursoEnviado;
+				aux->saidaCidade->recursoRecebido += recursoEnviado;
 			}
 		}
 

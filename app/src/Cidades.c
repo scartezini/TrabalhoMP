@@ -131,7 +131,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 		**/
 	novo->recursoRecebido = 0;
 	novo->recursoGasto = 0;
-	novo->entradas = NULL;
+	novo->entrada = NULL;
 
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
