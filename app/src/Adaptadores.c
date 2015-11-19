@@ -216,7 +216,7 @@ void defineDistribuicao(Adaptador *listaAlvo){
 
 	int i;
 	int somatorio;
-	int recursoTransportado;
+	int recursoTransportado; //!< quantidade de recurso transportado
 
 	//! Assertiva estrutural: aux é a lista nao-nula de adaptadores
 	aux = listaAlvo;
@@ -224,34 +224,56 @@ void defineDistribuicao(Adaptador *listaAlvo){
 	while(aux != NULL){
 	//! AE: aux nao chegou ao fim da lista de adaptadores
 
+		//! Assertiva estrutural: somatorio eh a soma das capacidades maximas do adaptador corrente
 		somatorio = 0;
 
-		if(aux->saidas  != NULL){
+		if(aux->saidas != NULL){
+		//! AE: o adaptador corrente possui saidas
+		
+			//! Assertiva estrutural: conexao eh a lista de saidas do adaptador corrente
 			conexao = aux->saidas;
-
-			/**
-			*	While percorre a lista de conexoes que saem do adaptador
-			* soma a capaxidade maxima de todas as conexoes;
-			**/
-			while (conexao != NULL) {
+			
+			//! Comentarios de argumentacao
+				/**
+				*	Enquanto percorre a lista de conexoes que saem do adaptador
+				* somam-se a capaxidade maxima de todas as conexoes
+				**/
+				
+			while (conexao != NULL){
+			//! AE: a lista de saidas do adaptador nao chegou ao fim
 				somatorio += conexao->capacidadeMaxima;
 				conexao = conexao->proximoSaidaAdaptador;
 			}
-
+			//! AS: a lista de saidas do adaptador chegou ao fim
+			
+			//! Assertiva estrutural: conexao eh a lista de saidas do adaptador corrente
 			conexao = aux->saidas;
 
 			while(conexao != NULL){
+			//! AE: a lista de saidas do adaptador nao chegou ao fim
+			
 				if(conexao->tagFalha == SEM_FALHA){
-
+				//! AE: a saida corrente do adaptador nao possui falha
+				
+					//! Assertiva estrutural: recursoTransportado é a quantidade de recurso que cada conexao vai transportar no turno
 					recursoTransportado = (conexao->capacidadeMaxima * aux->recursoRecebido) / somatorio;
 
+					//! Comentarios de argumentacao
+						/**
+						*	Se a a capacidade maxima da saida corrente do adaptador for maior ou igual ao recursoTransportado
+						*	Entao
+						*		o recursoTransportado da saida corrente do adaptador recebe o recursoTransportado
+						*	Senao
+						*		recebe a capacidadeMaxima da saida corrente do adaptador
+						*	FimSe
+						**/
 					conexao->recursoTransportado = (conexao->capacidadeMaxima >= recursoTransportado) ?
-																					recursoTransportado : conexao->capacidadeMaxima;
+													recursoTransportado : conexao->capacidadeMaxima;
 
 				}
-
+				//! AS: a saida corrente do adaptador possui falha
 			}
-
+			//! AS: a lista de saidas do adaptador chegou ao fim
 		}
 
 		aux = aux->proximo;
