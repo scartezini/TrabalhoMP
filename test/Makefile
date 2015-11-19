@@ -9,15 +9,20 @@
 # -lm math.h
 # -g debugging
 # -Wall warnings
+#
+# As outras flags sao para o gtest e gcov
 CC = g++
 CFLAGS = -lm -g -Wall
+TESTFLAGS = -lgtest -lgtest_main -lpthread -ftest-coverage -fprofile-arcs
 
 # Definindo o 'make' como a compilacao do trabalho e nao dos testes
-default: trabalho
+default: teste
+
+# Para criar os .o, precisamos dos .c e .h
 
 # Para criar o executável, precisamos dos .c
-trabalho: *.c 
-	$(CC) *.c  $(CFLAGS) -o trabalho.out
+teste: *.c 
+	$(CC) ../app/src/*.c *.c $(CFLAGS) $(TESTFLAGS) -o teste.out
 
 clean: 
-	rm *.out
+	rm *.out *.gcno
