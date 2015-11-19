@@ -17,7 +17,7 @@ Interconexao* criaListaInterconexao();
 *
 *	Verifica se a lista de interconexoes esta vazia	
 *
-*	@param cidade
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de interconexoes
 *
 *	@return 
@@ -75,10 +75,7 @@ Interconexao* insereInterconexao(char *, Interconexao *);
 *	recurso transportado
 *
 *	@param listaAlvo
-*		lista que sera impressa 
-*
-*	@return listaAlvo
-*		variavel do tipo Vazia, indicando se a lista esta vazia
+*		lista que sera impressa
 *		 
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
@@ -118,7 +115,7 @@ void liberaListaInterconexao(Interconexao *);
 *	Calcula o tamanho da celula de conexao que
 * eh passada para a funcao
 *
-*	@param interconexao
+*	@param listaAlvo
 *		ponteiro para a celula de interconexao
 *
 *	@return 
@@ -140,7 +137,7 @@ float tamanhoConexao(Interconexao *);
 *	Calcula o tamanho total das conexoes 
 * da lista que eh passada
 *
-*	@param interconexao
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de celulas de conexao
 *
 *	@return
@@ -162,7 +159,7 @@ float tamanhoTotalConexao(Interconexao *);
 *	Calcula o custo total gasto com conserto 
 * de todas as celulas de conexao
 *
-*	@param interconexao
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de interconexao
 *
 *	@return
@@ -198,7 +195,7 @@ Falha calculaFalha();
 * para cidade, dependenodo do em qual esta ligada,
 * alterando o valor do recurso atual. 
 *
-*	@param interconexao
+*	@param listaAlvo
 *		ponterio de referencia para o inicio da lista
 *		de interconexoes 
 *

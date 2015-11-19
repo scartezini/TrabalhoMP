@@ -20,7 +20,7 @@ Gerador* criaListaGerador();
 *
 *	Verifica se a lista de geradores esta vazia	
 *
-*	@param cidade
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de geradores
 *
 *	@return 
@@ -72,9 +72,6 @@ Gerador* insereGerador(char *, Gerador *);
 *
 *	@param listaAlvo
 *		lista que sera impressa 
-*
-*	@return listaAlvo
-*		variavel do tipo Vazio, indicando se a lista esta vazia
 *		 
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
@@ -114,7 +111,7 @@ void liberaListaGerador(Gerador *);
 *	Calcula a soma do total de recursos produzido
 * pelas celualas.	
 *
-*	@param gerador
+*	@param listaAlvo
 *		inicio da lista de geradores;
 *
 *	@return 
@@ -130,7 +127,7 @@ int recursoProduzidoTotal(Gerador *);
 *	Calcula a soma de custo por segundo de todos
 * os geradores da lista 
 *
-*	@param gerador 
+*	@param listaAlvo 
 *		ponteiro para o inicio da lista de geradores
 *	
 *	@return 
@@ -145,7 +142,7 @@ int custoGeradores(Gerador *);
 *	Altera os nos de conexão do grafo com o recurso
 * enviado
 *
-*	@param gerador 
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de geradores
 *
 *

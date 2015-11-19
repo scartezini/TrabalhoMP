@@ -169,10 +169,16 @@ typedef struct adaptador{
 *		representa a proxima interconexao na lista de interconexoes
 *
 * 	entradaAdaptador:
-*		ponteiro para a entrada do adaptador relacionado a interconexao
+*		aponta, caso a entrada seja um adaptador, para o adaptador cuja saída eh esta interconexao
 *
 * 	saidaAdaptador:
-*		ponteiro para a saida do adaptador relacionado a interconexao
+*		aponta, caso a saida seja um adaptador, para o adaptador cuja entrada eh esta interconexao
+*
+*	entradaInterconexao:
+*		aponta, caso a entrada seja interconexao, para a interconexao cuja saida eh esta interconexao		
+*
+*	saidaInterconexao:
+*		aponta, caso a saida seja interconexao, para a interconexao cuja entrada eh esta interconexao
 *
 *	proximoEntradaAdaptador:
 *		ponteiro para a proxima entrada do adaptador relacionado a interconexao			
@@ -180,11 +186,14 @@ typedef struct adaptador{
 *	proximoSaidaAdaptador:
 *		ponteiro para a proxima saida do adaptador relacionado a interconexao	
 *
+*	proximoEntradaCidade:
+*		ponteiro para a proxima cidade de destino
+*
 *	entradaGerador:
-*		ponteiro para a entrada do gerador relacionado a interconexao
+*		aponta, caso a entrada seja um gerador, para o gerador cuja saida eh esta interconexao
 *
 *	saidaCidade:
-*		cidade de destino da interconexao
+*		aponta, caso a saida seja uma cidade, para a cidade cuja entrada eh esta interconexao
 **/
 
 typedef struct interconexao{
@@ -208,8 +217,13 @@ typedef struct interconexao{
 	struct adaptador *entradaAdaptador;
 	struct adaptador *saidaAdaptador;
 	
+	struct interconexao *entradaInterconexao;
+	struct interconexao *saidaInterconexao;
+	
 	struct interconexao *proximoEntradaAdaptador;
 	struct interconexao *proximoSaidaAdaptador;
+	
+	struct interconexao *proximoEntradaCidade;
 	
 	struct gerador *entradaGerador;
 	

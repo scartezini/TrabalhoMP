@@ -1,4 +1,4 @@
-#include "../header/Interconexoes.h"
+#include "../header/Geral.h"
 
 int main()
 {

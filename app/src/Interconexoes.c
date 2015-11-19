@@ -144,12 +144,20 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	novo->capacidadeMaxima = 0;
 	novo->recursoTransportado = 0;
 
+	novo->entradaAdaptador = NULL;
+	novo->saidaAdaptador = NULL;
+	
+	novo->entradaInterconexao = NULL;
+	novo->saidaInterconexao = NULL;
+	
 	novo->proximoEntradaAdaptador = NULL;
 	novo->proximoSaidaAdaptador = NULL;
-	novo->saidaCidade = NULL;
-	novo->saidaAdaptador = NULL;
+	
+	novo->proximoEntradaCidade = NULL;
+	
 	novo->entradaGerador = NULL;
-	novo->entradaAdaptador = NULL;
+	
+	novo->saidaCidade = NULL;
 
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
