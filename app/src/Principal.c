@@ -50,6 +50,14 @@ int main()
 	
 	//! Comentarios de argumentacao
 		/**
+		*	Conectando e verificando as listas
+		**/
+	conecta(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
+	printf("\n\n");
+	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
+	
+	//! Comentarios de argumentacao
+		/**
 		*	Desalocando as listas obtidas
 		**/
 	liberaListaCidade(listaCidades);
