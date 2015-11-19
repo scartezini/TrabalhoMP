@@ -32,4 +32,4 @@ cppcheck:
 
 # Make para limpar todos os arquivos gerados
 clean: 
-	rm app/src/*.gcno app/src/*.out app/src/*.c.gcov app/src/*.h.gcov app/src/*.gcov app/src/*.gcda app/test/*.gcno app/test/*.out app/test/*.c.gcov app/test/*.h.gcov app/test/*.gcov 
+	rm app/src/*.gcno app/src/*.out app/src/*.c.gcov app/src/*.h.gcov app/src/*.gcov app/src/*.gcda app/test/*.gcno app/test/*.out app/test/*.c.gcov app/test/*.h.gcov app/test/*.gcov app/test/*.gcda

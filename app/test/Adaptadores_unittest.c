@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 #include "../header/Adaptadores.h"
 
-
 TEST(criaListaAdaptador, vazia){
 
 	Adaptador *adaptador = criaListaAdaptador();
@@ -69,5 +68,4 @@ TEST(insereAdaptador, naoVazio){
 	ASSERT_TRUE(adaptador->posicao[1] == 3);
 
 }
-
 

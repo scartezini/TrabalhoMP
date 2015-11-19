@@ -16,9 +16,13 @@ CFLAGS = -lm -g -Wall
 TESTFLAGS = -lgtest -lgtest_main -lpthread
 GCOVFLAGS = -ftest-coverage -fprofile-arcs
 
+# Definindo os .c como uma variavel
+SRCS = ../src/Adaptadores.c ../src/Cidades.c ../src/Geradores.c ../src/Interconexoes.c ../src/Geral.c
+
 # Definindo o 'make' como a compilacao do trabalho e nao dos testes
 default: teste
 
 # Para criar o executável, precisamos dos .cpp
 teste: *.c 
-	$(CC) ../src/*.c *.c $(CFLAGS) $(GCOVFLAGS) $(TESTFLAGS) -o teste.out
+	$(CC) $(SRCS) *.c $(CFLAGS) $(GCOVFLAGS) $(TESTFLAGS) -o teste.out
+
