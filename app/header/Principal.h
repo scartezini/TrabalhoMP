@@ -16,7 +16,7 @@ typedef enum vazia{
 
 /**
 *	Enumeracao para detectar se a lista esta vazia ou nao
-*
+*	
 **/
 typedef enum vazio{
 	VAZIO, NAO_VAZIO
@@ -63,7 +63,10 @@ typedef enum destino{
 *		quantidade de recurso que a cidade usou
 *
 * 	proximo:
-* 		representa a proxima Cidade da rede de Cidades
+* 		representa a proxima cidade da rede de cidades
+*
+*	entrada:
+*		ponteiro que representa a interconexao de entrada da cidade
 **/
 
 typedef struct cidade{
@@ -94,14 +97,14 @@ typedef struct cidade{
 *	recursoRecebido:
 *		quantidade de recurso recebido por segundo pelo Adaptador
 *
+*	entrada:
+*		ponteiro que representa a interconexao de entrada do adaptador
+*
 * 	saidas:
 * 		representa as interconexoes realizadas/apontadas pelos adaptadores
 *
 *	quantidadeSaidas:
 *		quantidade de conexoes que o adaptador possui
-*
-*	peso:
-*		vetor que guarda a porcentagem que cada conexao vai receber
 *
 * 	proximo:
 * 		representa a proxima Adaptador da lista de Adaptadores
@@ -163,13 +166,25 @@ typedef struct adaptador{
 *		quantidade de recuso que esta sendo transportado pela conexao no turno
 *
 *	proximo:
-*		representa as interconexoes realizadas/apontadas pelos adaptadores
+*		representa a proxima interconexao na lista de interconexoes
 *
-* 	adaptador:
-*		adaptador utilizado/apontado pela interconexao
+* 	entradaAdaptador:
+*		ponteiro para a entrada do adaptador relacionado a interconexao
 *
-*	cidade:
-*		cidade de destino
+* 	saidaAdaptador:
+*		ponteiro para a saida do adaptador relacionado a interconexao
+*
+*	proximoEntradaAdaptador:
+*		ponteiro para a proxima entrada do adaptador relacionado a interconexao			
+*
+*	proximoSaidaAdaptador:
+*		ponteiro para a proxima saida do adaptador relacionado a interconexao	
+*
+*	entradaGerador:
+*		ponteiro para a entrada do gerador relacionado a interconexao
+*
+*	saidaCidade:
+*		cidade de destino da interconexao
 **/
 
 typedef struct interconexao{
@@ -189,15 +204,17 @@ typedef struct interconexao{
 	int recursoTransportado;
 
 	struct interconexao *proximo;
+	
 	struct adaptador *entradaAdaptador;
-	struct gerador *entradaGerador;
-
 	struct adaptador *saidaAdaptador;
-	struct cidade *saidaCidade;
-
+	
 	struct interconexao *proximoEntradaAdaptador;
 	struct interconexao *proximoSaidaAdaptador;
-
+	
+	struct gerador *entradaGerador;
+	
+	struct cidade *saidaCidade;
+	
 }Interconexao;
 
 
@@ -225,7 +242,7 @@ typedef struct interconexao{
 * 	proximo:
 * 		representa a proxima cidade da rede de cidades
 *
-*	interconexao:
+*	saida:
 *		representa as interconexoes realizadas/apontadas pelos adaptadores
 *
 **/
