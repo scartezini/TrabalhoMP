@@ -131,7 +131,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 		**/
 	novo->recursoRecebido = 0;
 	novo->recursoGasto = 0;
-	novo->entrada = NULL;
+	novo->entradas = NULL;
 
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
@@ -205,5 +205,5 @@ void liberaListaCidade(Cidade *listaAlvo){
 *
 **/
 int recursoGastoTotal(Cidade *cidade){
-
+	return 0;
 }

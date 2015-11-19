@@ -65,7 +65,7 @@ typedef enum destino{
 * 	proximo:
 * 		representa a proxima cidade da rede de cidades
 *
-*	entrada:
+*	entradas:
 *		ponteiro que representa a interconexao de entrada da cidade
 **/
 
@@ -78,7 +78,7 @@ typedef struct cidade{
 	int recursoGasto;
 
 	struct cidade *proximo;
-	struct interconexao *entrada;
+	struct interconexao *entradas;
 
 }Cidade;
 
