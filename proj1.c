@@ -12,7 +12,7 @@ struct cidade
 	int posicao[2];
 	int recursoNecessario;
 
-	struct interconexao *entradas; //Aponta para a interconexão cuja saida é esta cidade
+	struct interconexao *entradas; //Lista de interconexões de entrada desta cidade
 
 	struct cidade *proximo;
 };
@@ -211,13 +211,13 @@ struct interconexao
 	struct cidade *saidaCidade; //Aponta, caso a saída seja uma cidade, para a cidade cuja entrada é esta interconexão
 	struct adaptador *entradaAdaptador; //Aponta, caso a entrada seja um adaptador, para o adaptador cuja saída é esta interconexão
 	struct adaptador *saidaAdaptador; //Aponta, caso a saída seja um adaptador, para o adaptador cuja entrada é esta interconexão
-	struct interconexao *entradaInterconexao; //Aponta, caso a entrada seja interconexão, para a interconexão cuja saída é esta interconexão
-	struct interconexao *saidaInterconexao; //Aponta, caso a saída seja interconexão, para a interconexão cuja entrada é esta interconexão
+	struct interconexao *entradaInterconexao; //Aponta, caso a entrada seja uma interconexão, para a interconexão cuja saída é esta interconexão
+	struct interconexao *saidaInterconexao; //Aponta, caso a saída seja uma interconexão, para a interconexão cuja entrada é esta interconexão
 
 	struct interconexao *proximo; //Próximo da lista de interconexões
 	struct interconexao *proximoEntradaAdaptador; //Próximo da lista de entradas do adaptador que tem como entrada esta interconexão
 	struct interconexao *proximoSaidaAdaptador; //Próximo da lista de saídas do adaptador que tem como saída esta interconexão
-	struct interconexao *proximoEntradaCidade;
+	struct interconexao *proximoEntradaCidade; //Próximo da lista de entradas da cidade que tem como entrada esta interconexão
 };
 typedef struct interconexao Interconexao;
 
@@ -281,6 +281,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo)
 	novo->proximo = NULL;
 	novo->proximoSaidaAdaptador = NULL;
 	novo->proximoEntradaAdaptador = NULL;
+	novo->proximoEntradaCidade = NULL;
 	if(listaAlvo != NULL)
 	{
 		for(aux=listaAlvo;aux->proximo!=NULL;aux=aux->proximo);
@@ -429,25 +430,6 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 
 	for(auxI1 = interconexoes; auxI1 != NULL; auxI1 = auxI1->proximo) //Percorre a lista de interconexões
 	{
-		for(auxI2 = interconexoes; auxI2 != NULL; auxI2 = auxI2->proximo)
-		{
-			//Caso a posição inicial da interconexão auxI1 coincida com a posição final da interconexão auxI2
-			if(auxI1->posicaoInicial[0] == auxI2->posicaoFinal[0] && auxI1->posicaoInicial[1] == auxI2->posicaoFinal[1])
-			{
-				//Insere-se a interconexão auxI1 como saída da interconexão auxI2
-				auxI2->saidaInterconexao = auxI1;
-				//Insere-se a interconexão auxI2 como entrada da interconexão auxI1
-				auxI1->entradaInterconexao = auxI2;
-			}
-			//Caso a posição final da interconexão auxI1 coincida com a posição inicial da interconexão auxI2
-			if(auxI1->posicaoFinal[0] == auxI2->posicaoInicial[0] && auxI1->posicaoFinal[1] == auxI2->posicaoInicial[1])
-			{
-				//Insere-se a interconexão auxI2 como saída da interconexão auxI1
-				auxI1->saidaInterconexao = auxI2;
-				//Insere-se a interconexão auxI1 como entrada da interconexão auxI2
-				auxI2->entradaInterconexao = auxI1;
-			}
-		}
 		for(auxA = adaptadores; auxA != NULL; auxA = auxA->proximo) //Percorre a lista de adaptadores
 		{
 			//Caso a posição inicial da interconexão apontada por auxI1 coincida com a posição do adaptador apontado por auxA
@@ -492,60 +474,89 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 				auxC->entradas = auxI1;
 			}
 		}
+		for(auxI2 = interconexoes; auxI2 != NULL; auxI2 = auxI2->proximo)
+		{
+			printf("aixI1: %s e auxI2: %s\n",auxI1->nome,auxI2->nome);
+			//Caso a posição inicial da interconexão auxI1 coincida com a posição final da interconexão auxI2
+			if(auxI1->entradaGerador == NULL && auxI1->entradaAdaptador == NULL && auxI1->entradaInterconexao == NULL && auxI2->saidaCidade == NULL && auxI2->saidaAdaptador == NULL && auxI2->saidaInterconexao == NULL && auxI1->posicaoInicial[0] == auxI2->posicaoFinal[0] && auxI1->posicaoInicial[1] == auxI2->posicaoFinal[1])
+			{
+				printf("TESTE1.1\n");
+				//Insere-se a interconexão auxI1 como saída da interconexão auxI2
+				auxI2->saidaInterconexao = auxI1;
+				//Insere-se a interconexão auxI2 como entrada da interconexão auxI1
+				auxI1->entradaInterconexao = auxI2;
+			}
+			//Caso a posição final da interconexão auxI1 coincida com a posição inicial da interconexão auxI2
+			if(auxI2->entradaGerador == NULL && auxI2->entradaAdaptador == NULL && auxI2->entradaInterconexao == NULL && auxI1->saidaCidade == NULL && auxI1->saidaAdaptador == NULL && auxI1->saidaInterconexao == NULL && auxI1->posicaoFinal[0] == auxI2->posicaoInicial[0] && auxI1->posicaoFinal[1] == auxI2->posicaoInicial[1])
+			{
+				printf("TESTE1.2\n");
+				//Insere-se a interconexão auxI2 como saída da interconexão auxI1
+				auxI1->saidaInterconexao = auxI2;
+				//Insere-se a interconexão auxI1 como entrada da interconexão auxI2
+				auxI2->entradaInterconexao = auxI1;
+			}
+		}
 	}
 }
 
 void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores)
 {
+	FILE *fp = fopen("ProblemasDeConsistenciaDosElementos.txt","w");
 	Cidade *auxC = NULL;
 	Gerador *auxG = NULL;
 	Interconexao *auxI = NULL;
 	Adaptador *auxA = NULL;
 
+	fprintf(fp,"CIDADAES:\n");
 	if(cidades != NULL)
 	{
 		for(auxC = cidades; auxC != NULL; auxC = auxC->proximo) //Percorre a lista de cidades
 		{
 			if(auxC->entradas == NULL)
-				printf("# %s está desconectada!\n",auxC->nome);
+				fprintf(fp,"# %s está desconectada!\n",auxC->nome);
 		}
 	}
 	else
-		printf("# Não há cidades para serem abastecidas!\n");
+		fprintf(fp,"# Não há cidades para serem abastecidas!\n");
+	fprintf(fp,"\nGERADORES:\n");
 	if(geradores != NULL)
 	{
 		for(auxG = geradores; auxG != NULL; auxG = auxG->proximo) //Percorre a lista de geradores
 		{
 			if(auxG->saida == NULL)
-				printf("# %s está desconectado!\n",auxG->nome);
+				fprintf(fp,"# %s está desconectado!\n",auxG->nome);
 		}
 	}
 	else
-		printf("# Não há geradores para gerar recursos!\n");
+		fprintf(fp,"# Não há geradores para gerar recursos!\n");
+	fprintf(fp,"\nINTERCONEXÕES:\n");
 	if(interconexoes != NULL)
 	{
-		for(auxI = interconexoes; auxI != NULL; auxI = auxI->proximo) //Percorre a lista de
+		for(auxI = interconexoes; auxI != NULL; auxI = auxI->proximo) //Percorre a lista de interconexões
 		{
-			if(auxI->entradaGerador == NULL && auxI->entradaAdaptador == NULL && auxI->entradaInterconexao)
-				printf("# Entrada de %s está desconectada!\n",auxI->nome);
-			if(auxI->saidaCidade == NULL && auxI->saidaAdaptador == NULL && auxI->saidaInterconexao)
-				printf("# Saída de %s está desconectada!\n",auxI->nome);
+			if(auxI->entradaGerador == NULL && auxI->entradaAdaptador == NULL && auxI->entradaInterconexao == NULL)
+				fprintf(fp,"# Entrada de %s está desconectada!\n",auxI->nome);
+			if(auxI->saidaCidade == NULL && auxI->saidaAdaptador == NULL && auxI->saidaInterconexao == NULL)
+				fprintf(fp,"# Saída de %s está desconectada!\n",auxI->nome);
 		}
 	}
 	else
-		printf("# Não há interconexoes para transportar recursos!\n");
+		fprintf(fp,"# Não há interconexoes para transportar recursos!\n");
+	fprintf(fp,"\nADAPTADORES:\n");
 	if(adaptadores != NULL)
 	{
-		for(auxA = adaptadores; auxA != NULL; auxA = auxA->proximo) //Percorre a lista de
+		for(auxA = adaptadores; auxA != NULL; auxA = auxA->proximo) //Percorre a lista de adaptadores
 		{
 			if(auxA->entradas == NULL)
-				printf("# Não há entrada em %s!\n",auxA->nome);
+				fprintf(fp,"# Não há entrada em %s!\n",auxA->nome);
 			if(auxA->saidas == NULL)
-				printf("# Não há saídas em %s!\n",auxA->nome);
+				fprintf(fp,"# Não há saídas em %s!\n",auxA->nome);
 		}
 	}
 	else
-		printf("# Não há interconexoes para transportar recursos!\n");
+		fprintf(fp,"# Não há adaptadores para distribuir recursos!\n");
+
+	fclose(fp);
 }
 
 ////////////////////////
