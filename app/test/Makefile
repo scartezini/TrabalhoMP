@@ -17,7 +17,7 @@ TESTFLAGS = -lgtest -lgtest_main -lpthread
 GCOVFLAGS = -ftest-coverage -fprofile-arcs
 
 # Definindo os .c como uma variavel
-SRCS = ../app/src/Adaptadores.c ../app/src/Cidades.c ../app/src/Geradores.c ../app/src/Interconexoes.c ../app/src/Geral.c
+SRCS = ../src/Adaptadores.c ../src/Cidades.c ../src/Geradores.c ../src/Interconexoes.c ../src/Geral.c
 
 # Definindo o 'make' como a compilacao do trabalho e nao dos testes
 default: teste
@@ -25,8 +25,3 @@ default: teste
 # Para criar o executável, precisamos dos .cpp
 teste: *.c
 	$(CC) $(SRCS) *.c $(CFLAGS) $(GCOVFLAGS) $(TESTFLAGS) -o teste.out
-
-clean:
-	rm *.out
-	rm *.gcno
-	rm *.gcda
