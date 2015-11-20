@@ -131,7 +131,7 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 **/
 void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores)
 {
-	FILE *fp = fopen("ProblemasDeConsistenciaDosElementos.txt","w");
+	FILE *fp = fopen("../../ProblemasDeConsistenciaDosElementos.txt","w");
 	Cidade *auxC = NULL; //!< Ponteiro auxiliar para cidade
 	Gerador *auxG = NULL; //!< Ponteiro auxiliar para gerador
 	Interconexao *auxI = NULL; //!< Ponteiro auxiliar para interconexao

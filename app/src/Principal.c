@@ -2,7 +2,7 @@
 
 int main()
 {
-	FILE *fp = fopen("../../teste/teste.txt","r"); //!< Abre arquivo de entrada
+	FILE *fp = fopen("teste.txt","r"); //!< Abre arquivo de entrada
 	Cidade *listaCidades = criaListaCidade();
 	Gerador *listaGeradores = criaListaGerador();
 	Interconexao *listaInterconexoes = criaListaInterconexao();
