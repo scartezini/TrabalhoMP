@@ -214,7 +214,7 @@ void defineDistribuicao(Adaptador *listaAlvo){
 	Adaptador *aux;
 	Interconexao *conexao; //!< conexoes do adaptador
 
-	int i;
+	
 	int somatorio;
 	int recursoTransportado; //!< quantidade de recurso transportado
 
@@ -229,32 +229,32 @@ void defineDistribuicao(Adaptador *listaAlvo){
 
 		if(aux->saidas != NULL){
 		//! AE: o adaptador corrente possui saidas
-		
+
 			//! Assertiva estrutural: conexao eh a lista de saidas do adaptador corrente
 			conexao = aux->saidas;
-			
+
 			//! Comentarios de argumentacao
 				/**
 				*	Enquanto percorre a lista de conexoes que saem do adaptador
 				* somam-se a capaxidade maxima de todas as conexoes
 				**/
-				
+
 			while (conexao != NULL){
 			//! AE: a lista de saidas do adaptador nao chegou ao fim
 				somatorio += conexao->capacidadeMaxima;
 				conexao = conexao->proximoSaidaAdaptador;
 			}
 			//! AS: a lista de saidas do adaptador chegou ao fim
-			
+
 			//! Assertiva estrutural: conexao eh a lista de saidas do adaptador corrente
 			conexao = aux->saidas;
 
 			while(conexao != NULL){
 			//! AE: a lista de saidas do adaptador nao chegou ao fim
-			
+
 				if(conexao->tagFalha == SEM_FALHA){
 				//! AE: a saida corrente do adaptador nao possui falha
-				
+
 					//! Assertiva estrutural: recursoTransportado é a quantidade de recurso que cada conexao vai transportar no turno
 					recursoTransportado = (conexao->capacidadeMaxima * aux->recursoRecebido) / somatorio;
 
