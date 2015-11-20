@@ -476,11 +476,9 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 		}
 		for(auxI2 = interconexoes; auxI2 != NULL; auxI2 = auxI2->proximo)
 		{
-			printf("aixI1: %s e auxI2: %s\n",auxI1->nome,auxI2->nome);
 			//Caso a posição inicial da interconexão auxI1 coincida com a posição final da interconexão auxI2
 			if(auxI1->entradaGerador == NULL && auxI1->entradaAdaptador == NULL && auxI1->entradaInterconexao == NULL && auxI2->saidaCidade == NULL && auxI2->saidaAdaptador == NULL && auxI2->saidaInterconexao == NULL && auxI1->posicaoInicial[0] == auxI2->posicaoFinal[0] && auxI1->posicaoInicial[1] == auxI2->posicaoFinal[1])
 			{
-				printf("TESTE1.1\n");
 				//Insere-se a interconexão auxI1 como saída da interconexão auxI2
 				auxI2->saidaInterconexao = auxI1;
 				//Insere-se a interconexão auxI2 como entrada da interconexão auxI1
@@ -489,7 +487,6 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 			//Caso a posição final da interconexão auxI1 coincida com a posição inicial da interconexão auxI2
 			if(auxI2->entradaGerador == NULL && auxI2->entradaAdaptador == NULL && auxI2->entradaInterconexao == NULL && auxI1->saidaCidade == NULL && auxI1->saidaAdaptador == NULL && auxI1->saidaInterconexao == NULL && auxI1->posicaoFinal[0] == auxI2->posicaoInicial[0] && auxI1->posicaoFinal[1] == auxI2->posicaoInicial[1])
 			{
-				printf("TESTE1.2\n");
 				//Insere-se a interconexão auxI2 como saída da interconexão auxI1
 				auxI1->saidaInterconexao = auxI2;
 				//Insere-se a interconexão auxI1 como entrada da interconexão auxI2
