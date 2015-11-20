@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../app/header/Adaptadores.h"
+#include "../header/Adaptadores.h"
 
 TEST(criaListaAdaptador, vazia){
 
