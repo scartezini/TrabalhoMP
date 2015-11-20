@@ -17,7 +17,7 @@ Adaptador* criaListaAdaptador();
 *
 *	Verifica se a lista de adaptadores esta vazia	
 *
-*	@param cidade
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de adaptadores
 *
 *	@return 
@@ -38,7 +38,7 @@ Vazio adaptadorVazio(Adaptador *);
 *
 *	@param registro 
 *		String que sera decodificada e inserida
-*	@param	listaAlvo 
+*	@param listaAlvo 
 *		lista a qual essa nova celula sera inserida
 *
 *	@return Adaptador
@@ -64,10 +64,7 @@ Adaptador* insereAdaptador(char *, Adaptador *);
 *	quantidade de saidas
 *
 *	@param listaAlvo
-*		lista que sera impressa 
-*
-*	@return listaAlvo
-*		variavel do tipo Vazio, indicando se a lista esta vazia
+*		lista que sera impressa
 *		 
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
@@ -114,7 +111,7 @@ void liberaListaAdaptador(Adaptador *);
 * estabelecida 
 *	//TODO retirar essa dependencia
 *
-* @param adaptador
-* 		ponteiro para o inico da lista de adaptadores;
+*	@param listaAlvo
+*		ponteiro para o inico da lista de adaptadores;
 **/
 void defineDistribuicao(Adaptador *);
