@@ -92,9 +92,9 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 				else if(j == 2)
 					novo->posicaoInicial[1] = atoi(numChar);
 				else if(j == 3)
-					novo->posicaoInicial[0] = atoi(numChar);
+					novo->posicaoFinal[0] = atoi(numChar);
 				else if(j == 4)
-					novo->posicaoInicial[1] = atoi(numChar);
+					novo->posicaoFinal[1] = atoi(numChar);
 				else if(j == 5)
 					novo->capacidadeMaxima = atoi(numChar);
 				else if(j == 6)
