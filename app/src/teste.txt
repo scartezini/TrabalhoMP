@@ -1,4 +1,5 @@
-﻿C Brasília 1 5 143
+﻿
+C Brasília 1 5 143
 C Belo_Horizonte 1 10 177
 C Natal 1 15 140
 C Goiânia 1 20 1438
