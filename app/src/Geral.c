@@ -71,7 +71,7 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 		
 		for(auxC = cidades; auxC != NULL; auxC = auxC->proximo){
 		//! AE: o auxC ainda nao chegou ao fim da lista de cidades
-		
+
 			if(auxI1->posicaoFinal[0] == auxC->posicao[0] && auxI1->posicaoFinal[1] == auxC->posicao[1]){
 			//! AE: a posicao final da interconexao apontada por auxI1 coincide com a posicao da cidade apontado por auxC
 
@@ -90,7 +90,7 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 		
 		for(auxI2 = interconexoes; auxI2 != NULL; auxI2 = auxI2->proximo){
 		//! AE: o auxI2 ainda nao chegou ao fim da lista de interconexoes
-		
+
 			if(auxI1->entradaGerador == NULL && auxI1->entradaAdaptador == NULL && auxI1->entradaInterconexao == NULL && auxI2->saidaCidade == NULL && auxI2->saidaAdaptador == NULL && auxI2->saidaInterconexao == NULL && auxI1->posicaoInicial[0] == auxI2->posicaoFinal[0] && auxI1->posicaoInicial[1] == auxI2->posicaoFinal[1]){
 			//! AE: a posicao inicial da interconexao apontada por auxI1 coincide com a posicao final da interconexao apontada por auxI2
 			
@@ -131,7 +131,7 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 **/
 void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores)
 {
-	FILE *fp = fopen("ProblemasDeConsistenciaDosElementos.txt","w");
+	FILE *fp = fopen("../../ProblemasDeConsistenciaDosElementos.txt","w");
 	Cidade *auxC = NULL; //!< Ponteiro auxiliar para cidade
 	Gerador *auxG = NULL; //!< Ponteiro auxiliar para gerador
 	Interconexao *auxI = NULL; //!< Ponteiro auxiliar para interconexao
