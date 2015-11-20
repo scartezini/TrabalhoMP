@@ -276,8 +276,10 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo)
 	//Insere o novo elemento ao final da lista
 	novo->entradaGerador = NULL;
 	novo->entradaAdaptador = NULL;
+	novo->entradaInterconexao = NULL;
 	novo->saidaCidade = NULL;
 	novo->saidaAdaptador = NULL;
+	novo->saidaInterconexao = NULL;
 	novo->proximo = NULL;
 	novo->proximoSaidaAdaptador = NULL;
 	novo->proximoEntradaAdaptador = NULL;
@@ -498,7 +500,7 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 
 void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores)
 {
-	FILE *fp = fopen("ProblemasDeConsistenciaDosElementos(Filipe).txt","w");
+	FILE *fp = fopen("ProblemasDeConsistenciaDosElementos.txt","w");
 	Cidade *auxC = NULL;
 	Gerador *auxG = NULL;
 	Interconexao *auxI = NULL;
@@ -562,7 +564,7 @@ void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, 
 
 int main()
 {
-	FILE *fp = fopen("app/src/teste.txt","r"); //Abre arquivo de entrada
+	FILE *fp = fopen("test/teste.txt","r"); //Abre arquivo de entrada
 	Cidade *listaCidades = criaListaCidade();
 	Gerador *listaGeradores = criaListaGerador();
 	Interconexao *listaInterconexoes = criaListaInterconexao();
