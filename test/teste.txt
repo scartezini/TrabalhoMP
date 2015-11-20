@@ -26,4 +26,3 @@ A adapta_3 10 15
 A adapta_4 10 20
 A adapta_5 10 25
 A adapta_6 10 30
-

@@ -276,8 +276,10 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo)
 	//Insere o novo elemento ao final da lista
 	novo->entradaGerador = NULL;
 	novo->entradaAdaptador = NULL;
+	novo->entradaInterconexao = NULL;
 	novo->saidaCidade = NULL;
 	novo->saidaAdaptador = NULL;
+	novo->saidaInterconexao = NULL;
 	novo->proximo = NULL;
 	novo->proximoSaidaAdaptador = NULL;
 	novo->proximoEntradaAdaptador = NULL;

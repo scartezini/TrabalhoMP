@@ -281,6 +281,8 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo)
 	novo->proximo = NULL;
 	novo->proximoSaidaAdaptador = NULL;
 	novo->proximoEntradaAdaptador = NULL;
+	novo->entradaInterconexao = NULL;
+	novo->saidaInterconexao = NULL;
 	novo->proximoEntradaCidade = NULL;
 	if(listaAlvo != NULL)
 	{
@@ -560,7 +562,7 @@ void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, 
 // Programa Principal //
 ////////////////////////
 
-/*int main()
+int main()
 {
 	FILE *fp = fopen("test/teste.txt","r"); //Abre arquivo de entrada
 	Cidade *listaCidades = criaListaCidade();
@@ -605,4 +607,4 @@ void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, 
 
 	getchar();
 	return 0;
-}*/
+}
