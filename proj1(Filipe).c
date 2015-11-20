@@ -12,6 +12,8 @@ struct cidade
 	int posicao[2];
 	int recursoNecessario;
 
+	struct interconexao *entradas; //Lista de interconexões de entrada desta cidade
+
 	struct cidade *proximo;
 };
 typedef struct cidade Cidade;
@@ -23,41 +25,42 @@ Cidade* criaListaCidade()
 
 Cidade* insereCidade(char *registro, Cidade *listaAlvo)
 {
-	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); 
-	char *numchar = (char) malloc (strlen(registro)*sizeof(char)); 
-	int i,j=0,k=2; 
+	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); //Aloca novo elemento da lista de cidades
+	char numchar[strlen(registro)]; //String auxiliar para transformar números em caracteres para inteiro usando atoi
+	int i,j=0,k=2; //Variáveis de Controle
 
-	for(i=2;registro[i]!=' ';i++); 
-	novo->nome = (char *)malloc((i-1)*sizeof(char));
+	for(i=2;registro[i]!=' ';i++); //Calcula o tamanho do campo nome no registro + 2
+	novo->nome = (char *)malloc((i-1)*sizeof(char)); //Aloca o tamanho calculado anteriormente -1 para o nome do novo elemento
 
-	for(i=2;j<4;i++) 
+	for(i=2;j<4;i++) //Percorre o registro caracter por caracter, até todos os 4 campos terem sido percorridos (ATENÇÃO: j!= i)
 	{
-		if(registro[i] == ' '||registro[i] == '\0') 
+		if(registro[i] == ' '||registro[i] == '\0') //Caso o caracter encontrado seja separador, ou seja, ' '
 		{
-			if(j == 0) 
+			if(j == 0) //Caso o campo recém obtido seja o nome
 				novo->nome[i-k] = '\0';
 			else
 			{
 				numchar[i-k] = '\0';
-				if(j == 1) 
+				if(j == 1) //Caso o campo recém obtido seja a coordenada x da posição
 					novo->posicao[0] = atoi(numchar);
-				else if(j == 2) 
+				else if(j == 2) //Caso o campo recém obtido seja a coordenada y da posição
 					novo->posicao[1] = atoi(numchar);
-				else if(j == 3) 
+				else if(j == 3) //Caso o campo recém obtido seja o recurso Necessario
 					novo->recursoNecessario = atoi(numchar);
 			}
-			k = i+1; 
-			j++; 
+			k = i+1; //Adapta k  de forma que o campo numérico lido seja inserido na string numchar corretamente
+			j++; //Ao incrementar j, significa que leremos o próximo campo do registro
 		}
-		else 
+		else //Caso não seja separador
 		{
-			if(j == 0) 
+			if(j == 0) //Caso o campo a ser obtido seja um nome
 				novo->nome[i-k] = registro[i];
-			else
+			else //Caso o campo a ser obtido seja algum valor numérico
 				numchar[i-k] = registro[i];
 		}
 	}
-	
+	//Insere o novo elemento ao início da lista
+	novo->entradas = NULL;
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 	
@@ -70,10 +73,7 @@ int imprimeListaCidade(Cidade *listaAlvo)
 	if(listaAlvo != NULL)
 	{
 		for(aux=listaAlvo;aux!=NULL;aux=aux->proximo)
-			printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d\n"
-					,aux->nome,aux->posicao[0]
-					,aux->posicao[1],aux->recursoNecessario);
-					
+			printf("%s %d %d %d\n",aux->nome,aux->posicao[0],aux->posicao[1],aux->recursoNecessario);
 		return 1;
 	}
 	else
@@ -106,7 +106,8 @@ struct gerador
 	int posicao[2];
 	int recursoProduzido;
 	int custoRecurso;
-	struct interconexao *saida;
+
+	struct interconexao *saida; //Aponta para a interconexão cuja entrada é este gerador
 	
 	struct gerador *proximo;
 };
@@ -119,43 +120,44 @@ Gerador* criaListaGerador()
 
 Gerador* insereGerador(char *registro, Gerador *listaAlvo)
 {
-	Gerador *novo = (Gerador *)malloc(sizeof(Gerador));
-	char numchar[strlen(registro)];
-	int i,j=0,k=2;
+	Gerador *novo = (Gerador *)malloc(sizeof(Gerador)); //Aloca novo elemento da lista de geradores
+	char numchar[strlen(registro)]; //String auxiliar para transformar números em caracteres para inteiro usando atoi
+	int i,j=0,k=2; //Variáveis de Controle
 
-	for(i=2;registro[i]!=' ';i++);
-	novo->nome = (char *)malloc((i-1)*sizeof(char));
+	for(i=2;registro[i]!=' ';i++); //Calcula o tamanho do campo nome no registro + 2
+	novo->nome = (char *)malloc((i-1)*sizeof(char)); //Aloca o tamanho calculado anteriormente -1 para o nome do novo elemento
 
-	for(i=2;j<5;i++)
+	for(i=2;j<5;i++) //Percorre o registro caracter por caracter, até todos os 5 campos terem sido percorridos (ATENÇÃO: j!= i)
 	{
-		if(registro[i] == ' '||registro[i] == '\0')
+		if(registro[i] == ' '||registro[i] == '\0') //Caso o caracter encontrado seja separador, ou seja, ' '
 		{
-			if(j == 0)
+			if(j == 0) //Caso o campo recém obtido seja o nome
 				novo->nome[i-k] = '\0';
 			else
 			{
 				numchar[i-k] = '\0';
-				if(j == 1)
+				if(j == 1) //Caso o campo recém obtido seja a coordenada x da posição
 					novo->posicao[0] = atoi(numchar);
-				else if(j == 2)
+				else if(j == 2) //Caso o campo recém obtido seja a coordenada y da posição
 					novo->posicao[1] = atoi(numchar);
-				else if(j == 3)
+				else if(j == 3) //Caso o campo recém obtido seja o recurso produzido
 					novo->recursoProduzido = atoi(numchar);
-				else if(j == 4)
+				else if(j == 4) //Caso o campo recém obtido seja o custo por recurso produzido
 					novo->custoRecurso = atoi(numchar);
 			}
-			k = i+1;
-			j++;
+			k = i+1; //Adapta k  de forma que o campo numérico lido seja inserido na string numchar corretamente
+			j++; //Ao incrementar j, significa que leremos o próximo campo do registro
 		}
-		else
+		else //Caso não seja separador
 		{
-			if(j == 0)
+			if(j == 0) //Caso o campo a ser obtido seja um nome
 				novo->nome[i-k] = registro[i];
-			else
+			else //Caso o campo a ser obtido seja algum valor numérico
 				numchar[i-k] = registro[i];
 		}
 	}
 	novo->saida = NULL;
+	//Insere o novo elemento ao início da lista
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 	
@@ -204,10 +206,18 @@ struct interconexao
 	float chanceFalha;
 	int tempoConserto;
 	int custoConserto;
-	struct cidade *cidadeAlvo;
-	struct adaptador *adaptadorAlvo;
+	
+	struct gerador *entradaGerador; //Aponta, caso a entrada seja um gerador, para o gerador cuja saída é esta interconexão
+	struct cidade *saidaCidade; //Aponta, caso a saída seja uma cidade, para a cidade cuja entrada é esta interconexão
+	struct adaptador *entradaAdaptador; //Aponta, caso a entrada seja um adaptador, para o adaptador cuja saída é esta interconexão
+	struct adaptador *saidaAdaptador; //Aponta, caso a saída seja um adaptador, para o adaptador cuja entrada é esta interconexão
+	struct interconexao *entradaInterconexao; //Aponta, caso a entrada seja uma interconexão, para a interconexão cuja saída é esta interconexão
+	struct interconexao *saidaInterconexao; //Aponta, caso a saída seja uma interconexão, para a interconexão cuja entrada é esta interconexão
 
-	struct interconexao *proximo;
+	struct interconexao *proximo; //Próximo da lista de interconexões
+	struct interconexao *proximoEntradaAdaptador; //Próximo da lista de entradas do adaptador que tem como entrada esta interconexão
+	struct interconexao *proximoSaidaAdaptador; //Próximo da lista de saídas do adaptador que tem como saída esta interconexão
+	struct interconexao *proximoEntradaCidade; //Próximo da lista de entradas da cidade que tem como entrada esta interconexão
 };
 typedef struct interconexao Interconexao;
 
@@ -218,55 +228,60 @@ Interconexao* criaListaInterconexao()
 
 Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo)
 {
-	Interconexao *novo = (Interconexao *)malloc(sizeof(Interconexao));
-	Interconexao *aux = NULL;
-	char numchar[strlen(registro)];
-	int i,j=0,k=2;
+	Interconexao *novo = (Interconexao *)malloc(sizeof(Interconexao)); //Aloca novo elemento da lista de interconexoes
+	Interconexao *aux = NULL; //Auxiliar para percorrer lista e inserir novo elemento ao final
+	char numchar[strlen(registro)]; //String auxiliar para transformar números em caracteres para inteiro usando atoi ou atof
+	int i,j=0,k=2; //Variáveis de Controle
 
-	for(i=2;registro[i]!=' ';i++);
-	novo->nome = (char *)malloc((i-1)*sizeof(char));
+	for(i=2;registro[i]!=' ';i++); //Calcula o tamanho do campo nome no registro + 2
+	novo->nome = (char *)malloc((i-1)*sizeof(char)); //Aloca o tamanho calculado anteriormente -1 para o nome do novo elemento
 
-	for(i=2;j<9;i++)
+	for(i=2;j<9;i++) //Percorre o registro caracter por caracter, até todos os 9 campos terem sido percorridos (ATENÇÃO: j!= i)
 	{
-		if(registro[i] == ' '||registro[i] == '\0')
+		if(registro[i] == ' '||registro[i] == '\0') //Caso o caracter encontrado seja separador, ou seja, ' '
 		{
-			if(j == 0)
+			if(j == 0) //Caso o campo recém obtido seja o nome
 				novo->nome[i-k] = '\0';
 			else
 			{
 				numchar[i-k] = '\0';
-				if(j == 1)
+				if(j == 1) //Caso o campo recém obtido seja a coordenada x da posição inicial
 					novo->posicaoInicial[0] = atoi(numchar);
-				else if(j == 2)
+				else if(j == 2) //Caso o campo recém obtido seja a coordenada y da posição inicial
 					novo->posicaoInicial[1] = atoi(numchar);
-				else if(j == 3)
+				else if(j == 3) //Caso o campo recém obtido seja a coordenada x da posição final
 					novo->posicaoFinal[0] = atoi(numchar);
-				else if(j == 4)
+				else if(j == 4) //Caso o campo recém obtido seja a coordenada y da posição final
 					novo->posicaoFinal[1] = atoi(numchar);
-				else if(j == 5)
+				else if(j == 5) //Caso o campo recém obtido seja a capacidade maxima de transporte de recurso
 					novo->capacidadeMax = atoi(numchar);
-				else if(j == 6)
+				else if(j == 6) //Caso o campo recém obtido seja a chance de falha da interconexao
 					novo->chanceFalha = atof(numchar);
-				else if(j == 7)
+				else if(j == 7) //Caso o campo recém obtido seja o tempo de conserto da interconexao caso falhe
 					novo->tempoConserto = atoi(numchar);
-				else if(j == 8)
+				else if(j == 8) //Caso o campo recém obtido seja o custo de conserto da interconexao caso falhe
 					novo->custoConserto = atoi(numchar);
 			}
-			k = i+1;
-			j++;
+			k = i+1; //Adapta k  de forma que o campo numérico lido seja inserido na string numchar corretamente
+			j++; //Ao incrementar j, significa que leremos o próximo campo do registro
 		}
-		else
+		else //Caso não seja separador
 		{
-			if(j == 0)
+			if(j == 0) //Caso o campo a ser obtido seja um nome
 				novo->nome[i-k] = registro[i];
-			else
+			else //Caso o campo a ser obtido seja algum valor numérico
 				numchar[i-k] = registro[i];
 		}
 	}
-	novo->cidadeAlvo = NULL;
-	novo->adaptadorAlvo = NULL;
 	//Insere o novo elemento ao final da lista
+	novo->entradaGerador = NULL;
+	novo->entradaAdaptador = NULL;
+	novo->saidaCidade = NULL;
+	novo->saidaAdaptador = NULL;
 	novo->proximo = NULL;
+	novo->proximoSaidaAdaptador = NULL;
+	novo->proximoEntradaAdaptador = NULL;
+	novo->proximoEntradaCidade = NULL;
 	if(listaAlvo != NULL)
 	{
 		for(aux=listaAlvo;aux->proximo!=NULL;aux=aux->proximo);
@@ -316,7 +331,9 @@ struct adaptador
 {
 	char *nome;
 	int posicao[2];
-	struct interconexoes **saidas;
+
+	struct interconexao *entradas; //Lista de interconexões de entrada deste adaptador
+	struct interconexao *saidas; //Lista de interconexões de saída deste adaptador
 
 	struct adaptador *proximo;
 };
@@ -329,39 +346,41 @@ Adaptador* criaListaAdaptador()
 
 Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo)
 {
-	Adaptador *novo = (Adaptador *)malloc(sizeof(Adaptador));
-	char numchar[strlen(registro)];
-	int i,j=0,k=2;
+	Adaptador *novo = (Adaptador *)malloc(sizeof(Adaptador)); //Aloca novo elemento da lista de adaptadores
+	char numchar[strlen(registro)]; //String auxiliar para transformar números em caracteres para inteiro usando atoi ou atof
+	int i,j=0,k=2; //Variáveis de Controle
 
-	for(i=2;registro[i]!=' ';i++);
-	novo->nome = (char *)malloc((i-1)*sizeof(char));
+	for(i=2;registro[i]!=' ';i++); //Calcula o tamanho do campo nome no registro + 2
+	novo->nome = (char *)malloc((i-1)*sizeof(char)); //Aloca o tamanho calculado anteriormente -1 para o nome do novo elemento
 
-	for(i=2;j<3;i++)
+	for(i=2;j<3;i++) //Percorre o registro caracter por caracter, até todos os 3 campos terem sido percorridos (ATENÇÃO: j!= i)
 	{
-		if(registro[i] == ' '||registro[i] == '\0')
+		if(registro[i] == ' '||registro[i] == '\0') //Caso o caracter encontrado seja separador, ou seja, ' '
 		{
-			if(j == 0)
+			if(j == 0) //Caso o campo recém obtido seja o nome
 				novo->nome[i-k] = '\0';
 			else
 			{
 				numchar[i-k] = '\0';
-				if(j == 1)
+				if(j == 1) //Caso o campo recém obtido seja a coordenada x da posição
 					novo->posicao[0] = atoi(numchar);
-				else if(j == 2)
+				else if(j == 2) //Caso o campo recém obtido seja a coordenada i da posição
 					novo->posicao[1] = atoi(numchar);
 			}
-			k = i+1;
-			j++;
+			k = i+1; //Adapta k  de forma que o campo numérico lido seja inserido na string numchar corretamente
+			j++; //Ao incrementar j, significa que leremos o próximo campo do registro
 		}
 		else
 		{
-			if(j == 0)
+			if(j == 0) //Caso o campo a ser obtido seja um nome
 				novo->nome[i-k] = registro[i];
-			else
+			else //Caso o campo a ser obtido seja algum valor numérico
 				numchar[i-k] = registro[i];
 		}
 	}
+	novo->entradas = NULL;
 	novo->saidas = NULL;
+	//Insere o novo elemento ao início da lista
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 	
@@ -397,13 +416,153 @@ void liberaListaAdaptador(Adaptador *listaAlvo)
 	}
 }
 
+////////////////////
+// Funções Gerais //
+////////////////////
+
+void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores)
+{
+	Cidade *auxC = NULL;
+	Gerador *auxG = NULL;
+	Interconexao *auxI1 = NULL;
+	Interconexao *auxI2 = NULL;
+	Adaptador *auxA = NULL;
+
+	for(auxI1 = interconexoes; auxI1 != NULL; auxI1 = auxI1->proximo) //Percorre a lista de interconexões
+	{
+		for(auxA = adaptadores; auxA != NULL; auxA = auxA->proximo) //Percorre a lista de adaptadores
+		{
+			//Caso a posição inicial da interconexão apontada por auxI1 coincida com a posição do adaptador apontado por auxA
+			if(auxI1->posicaoInicial[0] == auxA->posicao[0] && auxI1->posicaoInicial[1] == auxA->posicao[1])
+			{
+				//Insere-se o adaptador como entrada da interconexão
+				auxI1->entradaAdaptador = auxA;
+				//Insere-se a interconexão na lista de saídas do adaptador
+				auxI1->proximoSaidaAdaptador = auxA->saidas;
+				auxA->saidas = auxI1;
+			}
+			//Caso a posição final da interconexão apontada por auxI1 coincida com a posição do adaptador apontado por auxA
+			if(auxI1->posicaoFinal[0] == auxA->posicao[0] && auxI1->posicaoFinal[1] == auxA->posicao[1])
+			{
+				//Insere-se o adaptador como saída da interconexão
+				auxI1->saidaAdaptador = auxA;
+				//Insere-se a interconexão na lista de entradas do adaptador
+				auxI1->proximoEntradaAdaptador = auxA->entradas;
+				auxA->entradas = auxI1;
+			}
+		}
+		for(auxG = geradores; auxG != NULL; auxG = auxG->proximo) //Percorre a lista de geradores
+		{
+			//Caso a posição inicial da interconexão apontada por auxI1 coincida com a posição do gerador apontado por auxG
+			if(auxI1->posicaoInicial[0] == auxG->posicao[0] && auxI1->posicaoInicial[1] == auxG->posicao[1])
+			{
+				//Insere-se a interconexão como saída do gerador
+				auxG->saida = auxI1;
+				//Insere-se o gerador como entrada da interconexão
+				auxI1->entradaGerador = auxG;
+			}
+		}
+		for(auxC = cidades; auxC != NULL; auxC = auxC->proximo) //Percorre a lista de cidades
+		{
+			//Caso a posição final da interconexão apontada por auxI coincida com a posição da cidade apontado por auxC
+			if(auxI1->posicaoFinal[0] == auxC->posicao[0] && auxI1->posicaoFinal[1] == auxC->posicao[1])
+			{
+				//Insere-se a cidade como saída da interconexão
+				auxI1->saidaCidade = auxC;
+				//Insere-se a interconexão na lista de entradas da cidade
+				auxI1->proximoEntradaCidade = auxC->entradas;
+				auxC->entradas = auxI1;
+			}
+		}
+		for(auxI2 = interconexoes; auxI2 != NULL; auxI2 = auxI2->proximo)
+		{
+			//Caso a posição inicial da interconexão auxI1 coincida com a posição final da interconexão auxI2
+			if(auxI1->entradaGerador == NULL && auxI1->entradaAdaptador == NULL && auxI1->entradaInterconexao == NULL && auxI2->saidaCidade == NULL && auxI2->saidaAdaptador == NULL && auxI2->saidaInterconexao == NULL && auxI1->posicaoInicial[0] == auxI2->posicaoFinal[0] && auxI1->posicaoInicial[1] == auxI2->posicaoFinal[1])
+			{
+				//Insere-se a interconexão auxI1 como saída da interconexão auxI2
+				auxI2->saidaInterconexao = auxI1;
+				//Insere-se a interconexão auxI2 como entrada da interconexão auxI1
+				auxI1->entradaInterconexao = auxI2;
+			}
+			//Caso a posição final da interconexão auxI1 coincida com a posição inicial da interconexão auxI2
+			if(auxI2->entradaGerador == NULL && auxI2->entradaAdaptador == NULL && auxI2->entradaInterconexao == NULL && auxI1->saidaCidade == NULL && auxI1->saidaAdaptador == NULL && auxI1->saidaInterconexao == NULL && auxI1->posicaoFinal[0] == auxI2->posicaoInicial[0] && auxI1->posicaoFinal[1] == auxI2->posicaoInicial[1])
+			{
+				//Insere-se a interconexão auxI2 como saída da interconexão auxI1
+				auxI1->saidaInterconexao = auxI2;
+				//Insere-se a interconexão auxI1 como entrada da interconexão auxI2
+				auxI2->entradaInterconexao = auxI1;
+			}
+		}
+	}
+}
+
+void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores)
+{
+	FILE *fp = fopen("ProblemasDeConsistenciaDosElementos(Filipe).txt","w");
+	Cidade *auxC = NULL;
+	Gerador *auxG = NULL;
+	Interconexao *auxI = NULL;
+	Adaptador *auxA = NULL;
+
+	fprintf(fp,"CIDADAES:\n");
+	if(cidades != NULL)
+	{
+		for(auxC = cidades; auxC != NULL; auxC = auxC->proximo) //Percorre a lista de cidades
+		{
+			if(auxC->entradas == NULL)
+				fprintf(fp,"# %s está desconectada!\n",auxC->nome);
+		}
+	}
+	else
+		fprintf(fp,"# Não há cidades para serem abastecidas!\n");
+	fprintf(fp,"\nGERADORES:\n");
+	if(geradores != NULL)
+	{
+		for(auxG = geradores; auxG != NULL; auxG = auxG->proximo) //Percorre a lista de geradores
+		{
+			if(auxG->saida == NULL)
+				fprintf(fp,"# %s está desconectado!\n",auxG->nome);
+		}
+	}
+	else
+		fprintf(fp,"# Não há geradores para gerar recursos!\n");
+	fprintf(fp,"\nINTERCONEXÕES:\n");
+	if(interconexoes != NULL)
+	{
+		for(auxI = interconexoes; auxI != NULL; auxI = auxI->proximo) //Percorre a lista de interconexões
+		{
+			if(auxI->entradaGerador == NULL && auxI->entradaAdaptador == NULL && auxI->entradaInterconexao == NULL)
+				fprintf(fp,"# Entrada de %s está desconectada!\n",auxI->nome);
+			if(auxI->saidaCidade == NULL && auxI->saidaAdaptador == NULL && auxI->saidaInterconexao == NULL)
+				fprintf(fp,"# Saída de %s está desconectada!\n",auxI->nome);
+		}
+	}
+	else
+		fprintf(fp,"# Não há interconexoes para transportar recursos!\n");
+	fprintf(fp,"\nADAPTADORES:\n");
+	if(adaptadores != NULL)
+	{
+		for(auxA = adaptadores; auxA != NULL; auxA = auxA->proximo) //Percorre a lista de adaptadores
+		{
+			if(auxA->entradas == NULL)
+				fprintf(fp,"# Não há entrada em %s!\n",auxA->nome);
+			if(auxA->saidas == NULL)
+				fprintf(fp,"# Não há saídas em %s!\n",auxA->nome);
+		}
+	}
+	else
+		fprintf(fp,"# Não há adaptadores para distribuir recursos!\n");
+
+	fclose(fp);
+}
+
 ////////////////////////
 // Programa Principal //
 ////////////////////////
 
 int main()
 {
-	FILE *fp = fopen("teste.txt","r"); //Abre arquivo de entrada
+	FILE *fp = fopen("app/src/teste.txt","r"); //Abre arquivo de entrada
 	Cidade *listaCidades = criaListaCidade();
 	Gerador *listaGeradores = criaListaGerador();
 	Interconexao *listaInterconexoes = criaListaInterconexao();
@@ -433,6 +592,10 @@ int main()
 	printf("\nlistaGeradores:\n");imprimeListaGerador(listaGeradores);
 	printf("\nlistaInterconexoes:\n");imprimeListaInterconexao(listaInterconexoes);
 	printf("\nlistaAdaptadores:\n");imprimeListaAdaptador(listaAdaptadores);
+	
+	conecta(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
+	printf("\n\n");
+	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 
 	//Desaloca listas obtidas
 	liberaListaCidade(listaCidades);
