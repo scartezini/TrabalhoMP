@@ -129,7 +129,7 @@ Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 		*	Os atributos nao lidos do gerador inserido recebem o valor nulo, e o proximo gerador
 		* da lista que contem o novo gerador inserido na cabeca recebe a lista de geradores atual
 		**/
-
+	novo->taxaProducao = 0;
 	novo->proximo = listaAlvo;
 	novo->saida = NULL;
 	listaAlvo = novo;

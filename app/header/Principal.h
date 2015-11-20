@@ -258,7 +258,6 @@ typedef struct interconexao{
 *
 *	saida:
 *		representa as interconexoes realizadas/apontadas pelos adaptadores
-*
 **/
 
 typedef struct gerador{
@@ -270,6 +269,6 @@ typedef struct gerador{
 	int custo;
 
 	struct gerador *proximo;
-	Interconexao *saida;
+	struct interconexao *saida;
 
 }Gerador;

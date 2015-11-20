@@ -14,7 +14,7 @@ int main()
 	
 		if(fgets(str,100,fp)!=NULL){
 		//! AE: a linha (registro) obtido do arquivo possui conteudo
-		
+
 			if(str[0] == 'C'){
 			//! AE: O registro obtido eh do tipo Cidade
 				listaCidades = insereCidade(str,listaCidades);

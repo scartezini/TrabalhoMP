@@ -9,15 +9,15 @@
 # -lm math.h
 # -g debugging
 # -Wall warnings
+#
+# As outras flags sao para o gcov
 CC = g++
 CFLAGS = -lm -g -Wall
+GCOVFLAGS = -ftest-coverage -fprofile-arcs
 
 # Definindo o 'make' como a compilacao do trabalho e nao dos testes
 default: trabalho
 
 # Para criar o executável, precisamos dos .c
-trabalho: *.c 
-	$(CC) *.c  $(CFLAGS) -o trabalho.out
-
-clean: 
-	rm *.out
+trabalho: *.c
+	$(CC) *.c  $(CFLAGS) $(GCOVFLAGS) -o trabalho.out

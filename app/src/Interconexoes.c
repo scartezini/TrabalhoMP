@@ -39,6 +39,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	assert(registro != NULL);
 
 	Interconexao *novo = (Interconexao *)malloc(sizeof(Interconexao)); //!< Alocacao da nova Interconexao
+	Interconexao *aux = NULL; //!< Variavel auxiliar para percorrer a lista e inserir o elemento no final
 	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
 
@@ -92,9 +93,9 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 				else if(j == 2)
 					novo->posicaoInicial[1] = atoi(numChar);
 				else if(j == 3)
-					novo->posicaoInicial[0] = atoi(numChar);
+					novo->posicaoFinal[0] = atoi(numChar);
 				else if(j == 4)
-					novo->posicaoInicial[1] = atoi(numChar);
+					novo->posicaoFinal[1] = atoi(numChar);
 				else if(j == 5)
 					novo->capacidadeMaxima = atoi(numChar);
 				else if(j == 6)
@@ -159,8 +160,21 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	
 	novo->saidaCidade = NULL;
 
-	novo->proximo = listaAlvo;
-	listaAlvo = novo;
+	novo->proximo = NULL;
+	
+	if(interconexaoVazia(listaAlvo) == NAO_VAZIA){
+	//! AE: se a listaAlvo nao for vazia
+	
+		for(aux=listaAlvo;aux->proximo!=NULL;aux=aux->proximo);
+		//! AE: o aux nao chegou ao final da lista de interconexoes
+		
+		aux->proximo = novo;
+	}
+	else{
+	//! AE: se a listaAlvo for vazia
+		
+		listaAlvo = novo;	
+	}
 
 	return listaAlvo;
 }

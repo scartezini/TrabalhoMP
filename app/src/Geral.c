@@ -134,11 +134,11 @@ void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, 
 	FILE *fp = fopen("ProblemasDeConsistenciaDosElementos.txt","w");
 	Cidade *auxC = NULL; //!< Ponteiro auxiliar para cidade
 	Gerador *auxG = NULL; //!< Ponteiro auxiliar para gerador
-	Adaptador *auxA = NULL; //!< Ponteiro auxiliar para adaptador
 	Interconexao *auxI = NULL; //!< Ponteiro auxiliar para interconexao
+	Adaptador *auxA = NULL; //!< Ponteiro auxiliar para adaptador
 
 	fprintf(fp,"CIDADES:\n");
-	if(cidadeVazia(auxC) == NAO_VAZIA){
+	if(cidadeVazia(cidades) == NAO_VAZIA){
 	//! AE: a lista de cidades nao eh vazia	
 		
 		for(auxC = cidades; auxC != NULL; auxC = auxC->proximo){
@@ -157,7 +157,7 @@ void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, 
 	}
 		
 	fprintf(fp,"\nGERADORES:\n");
-	if(geradorVazio(auxG) == NAO_VAZIO){
+	if(geradorVazio(geradores) == NAO_VAZIO){
 	//! AE: a lista de geradores nao eh vazia	
 	
 		for(auxG = geradores; auxG != NULL; auxG = auxG->proximo){
@@ -174,33 +174,9 @@ void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, 
 	//! AE: a lista de geradores eh vazia	
 		fprintf(fp,"# Não há geradores para gerar recursos!\n");
 	}
-	
-	fprintf(fp,"\nADAPTADORES:\n");
-	if(adaptadorVazio(auxA) == NAO_VAZIO){
-	//! AE: a lista de adaptadores nao eh vazia
-	
-		for(auxA = adaptadores; auxA != NULL; auxA = auxA->proximo){
-		//! AE: o auxA ainda nao chegou ao fim da lista de adaptadores
-		
-			if(auxA->entradas == NULL){
-			//! AE: o adaptador corrente nao posssui entradas
-				fprintf(fp,"# Não há entrada em %s!\n",auxA->nome);
-			}
-			
-			if(auxA->saidas == NULL){
-			//! AE: o adaptador corrente nao posssui saidas
-				fprintf(fp,"# Não há saídas em %s!\n",auxA->nome);
-			}
-		}
-		//! AS: o auxA chegou ao fim da lista de adaptadores
-	}
-	else{
-	//! AE: a lista de adaptadores eh vazia
-		fprintf(fp,"# Não há adaptadores para distribuir recursos!\n");	
-	}
-	
+
 	fprintf(fp,"\nINTERCONEXÕES:\n");
-	if(interconexaoVazia(auxI) == NAO_VAZIA){
+	if(interconexaoVazia(interconexoes) == NAO_VAZIA){
 	//! AE: a lista de interconexoes nao eh vazia
 		
 		for(auxI = interconexoes; auxI != NULL; auxI = auxI->proximo){
@@ -221,6 +197,30 @@ void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, 
 	else{
 	//! AE: a lista de interconexoes eh vazia		
 		fprintf(fp,"# Não há interconexoes para transportar recursos!\n");
+	}
+	
+	fprintf(fp,"\nADAPTADORES:\n");
+	if(adaptadorVazio(adaptadores) == NAO_VAZIO){
+	//! AE: a lista de adaptadores nao eh vazia
+	
+		for(auxA = adaptadores; auxA != NULL; auxA = auxA->proximo){
+		//! AE: o auxA ainda nao chegou ao fim da lista de adaptadores
+		
+			if(auxA->entradas == NULL){
+			//! AE: o adaptador corrente nao posssui entradas
+				fprintf(fp,"# Não há entrada em %s!\n",auxA->nome);
+			}
+			
+			if(auxA->saidas == NULL){
+			//! AE: o adaptador corrente nao posssui saidas
+				fprintf(fp,"# Não há saídas em %s!\n",auxA->nome);
+			}
+		}
+		//! AS: o auxA chegou ao fim da lista de adaptadores
+	}
+	else{
+	//! AE: a lista de adaptadores eh vazia
+		fprintf(fp,"# Não há adaptadores para distribuir recursos!\n");	
 	}
 
 	fclose(fp);
