@@ -20,7 +20,7 @@ Cidade* criaListaCidade();
 *
 *	Verifica se a lista de cidades esta vazia	
 *
-*	@param cidade
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de cidades
 *
 *	@return 
@@ -72,9 +72,6 @@ Cidade* insereCidade(char *, Cidade *);
 *
 *	@param listaAlvo
 *		lista que sera impressa 
-*
-*	@return listaAlvo
-*		variavel do tipo Vazia, indicando se a lista esta vazia
 *		 
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
@@ -114,7 +111,7 @@ void liberaListaCidade(Cidade *);
 *	Resultado da soma de todos recursos 
 * gasto pelas cidades 
 *
-*	@param cidade
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de cidades
 *	
 *	@return 

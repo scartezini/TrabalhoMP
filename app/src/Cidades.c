@@ -7,7 +7,7 @@
 *	Funcao: criaListaCidade
 *
 *	AssertivaSaida:
-*		NULL; 
+*		NULL;
 **/
 Cidade* criaListaCidade(){
 	return NULL;
@@ -17,7 +17,7 @@ Cidade* criaListaCidade(){
 *	Funcao: cidadeVazia
 *
 *	AssertivaSaida:
-*		VAZIA || NAO_VAZIA; 
+*		VAZIA || NAO_VAZIA;
 **/
 Vazia cidadeVazia(Cidade *listaAlvo){
 	if(listaAlvo == NULL)
@@ -37,85 +37,85 @@ Vazia cidadeVazia(Cidade *listaAlvo){
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	assert(registro != NULL);
-	
+
 	Cidade *novo = (Cidade *)malloc(sizeof(Cidade)); //!< Alocacao da nova cidade
 	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
 
 	for(i=2;registro[i]!=' ';i++);
 	//! AE: a posicao corrente do registro possui um caracter relevante
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Comecando de registro[2], enquanto registro[i] for um caracter irrelevante,
 		* soma-se 1 a variavel de auxilio i
 		**/
-		
+
 	//! AS: a posicao corrente do registro possui um caracter irrelevante
-	
-	//! Asseriva estrutural: o nome da nova cidade possui tamanho i-1 
+
+	//! Asseriva estrutural: o nome da nova cidade possui tamanho i-1
 	novo->nome = (char *)malloc((i-1)*sizeof(char));
-			
+
 	for(i=2;j<=3;i++){
 	//! AE: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos da cidade
-		
+
 		if(registro[i] == ' ' || registro[i] == '\0'){
-		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador	
-			
-			if(j == 0){ 
-			//! AE: o valor de j eh igual a 0	
-				
+		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+			if(j == 0){
+			//! AE: o valor de j eh igual a 0
+
 				//! Comentarios de argumentacao
 					/**
 					*	A (posicao corrente-k) recebe um caracter finalizador
 					**/
 				novo->nome[i-k] = '\0';
 			}
-			//! AS: o valor de j eh maior que 0	
-			
+			//! AS: o valor de j eh maior que 0
+
 			else{
 			//! AE: o valor de j eh maior que 0
-			
+
 				//! Comentarios de argumentacao
 					/**
 					*	A (posicao corrente-k) do vetor numChar recebe um caracter finalizador
-					**/	
+					**/
 				numChar[i-k] = '\0';
-				
+
 				//! Comentarios de argumentacao
 					/**
-					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar 
+					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar
 					* no seu respectivo atributo lido
-					**/	
-				if(j == 1) 
+					**/
+				if(j == 1)
 					novo->posicao[0] = atoi(numChar);
-				else if(j == 2) 
+				else if(j == 2)
 					novo->posicao[1] = atoi(numChar);
-				else if(j == 3) 
+				else if(j == 3)
 					novo->recursoNecessario = atoi(numChar);
 			}
 			//! AS: o valor de j eh maior que 4
-			
-			k = i+1; 
-			j++; 
+
+			k = i+1;
+			j++;
 		}
-		//! AS: a posicao corrente do registro possui um caracter relevante	
-		
+		//! AS: a posicao corrente do registro possui um caracter relevante
+
 		else{
 		//! AE: a posicao corrente do registro possui um caracter relevante
-			
+
 			//! Comentarios de argumentacao
 				/**
 				*	Se o valor da variavel de auxilio j for 0
 				*	Entao
-				*		armazena-se a posicao corrente do registro na 
+				*		armazena-se a posicao corrente do registro na
 				*	 (posicao corrente-k) do nome da cidade
 				*	Senao
-				*		armazena-se a posicao corrente do registro na 
+				*		armazena-se a posicao corrente do registro na
 				*	 (posicao corrente-k) do vetor numChar
 				*	FimSe
-				**/		
-			if(j == 0) 
+				**/
+			if(j == 0)
 				novo->nome[i-k] = registro[i];
 			else
 				numChar[i-k] = registro[i];
@@ -128,13 +128,14 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 		/**
 		*	Os atributos nao lidos da cidade inserida recebem o valor nulo, e a proxima cidade
 		* da lista que contem a nova cidade inserido na cabeca recebe a lista de cidades atual
-		**/		
+		**/
 	novo->recursoRecebido = 0;
 	novo->recursoGasto = 0;
-	
+	novo->entradas = NULL;
+
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
-	
+
 	return listaAlvo;
 }
 
@@ -143,7 +144,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 *
 *	AssertivaEntrada:
 *		cidadeVazia(listaAlvo) == NAO_VAZIA;
-*		
+*
 **/
 void imprimeListaCidade(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
@@ -162,7 +163,7 @@ void imprimeListaCidade(Cidade *listaAlvo){
 				,aux->posicao[1],aux->recursoNecessario,aux->recursoRecebido
 				,aux->recursoGasto);
 	}
-	//! AS: listaAlvo chegou ao fim		
+	//! AS: listaAlvo chegou ao fim
 }
 
 /**
@@ -173,7 +174,7 @@ void imprimeListaCidade(Cidade *listaAlvo){
 *
 *	AssertivaSaida:
 *		cidadeVazia(listaAlvo) == VAZIA;
-*		
+*
 **/
 void liberaListaCidade(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
@@ -204,5 +205,5 @@ void liberaListaCidade(Cidade *listaAlvo){
 *
 **/
 int recursoGastoTotal(Cidade *cidade){
-
+	return 0;
 }

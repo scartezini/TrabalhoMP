@@ -7,7 +7,7 @@
 *	Funcao: criaListaInterconexao
 *
 *	AssertivaSaida:
-*		NULL; 
+*		NULL;
 **/
 Interconexao* criaListaInterconexao(){
 	return NULL;
@@ -17,7 +17,7 @@ Interconexao* criaListaInterconexao(){
 *	Funcao: interconexaoVazia
 *
 *	AssertivaSaida:
-*		VAZIA || NAO_VAZIA; 
+*		VAZIA || NAO_VAZIA;
 **/
 Vazia interconexaoVazia(Interconexao *listaAlvo){
 	if(listaAlvo == NULL)
@@ -37,65 +37,66 @@ Vazia interconexaoVazia(Interconexao *listaAlvo){
 **/
 Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	assert(registro != NULL);
-	
+
 	Interconexao *novo = (Interconexao *)malloc(sizeof(Interconexao)); //!< Alocacao da nova Interconexao
+	Interconexao *aux = NULL; //!< Variavel auxiliar para percorrer a lista e inserir o elemento no final
 	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
 
 	for(i=2;registro[i]!=' ';i++);
 	//! AE: a posicao corrente do registro possui um caracter relevante
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Comecando de registro[2], enquanto registro[i] for um caracter irrelevante,
 		* soma-se 1 a variavel de auxilio i
 		**/
-		
+
 	//! AS: a posicao corrente do registro possui um caracter irrelevante
-	
-	//! Asseriva estrutural: o nome da nova interconexao possui tamanho i-1 
+
+	//! Asseriva estrutural: o nome da nova interconexao possui tamanho i-1
 	novo->nome = (char *)malloc((i-1)*sizeof(char));
-			
+
 	for(i=2;j<=8;i++){
 	//! AE: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos da interconexao
-		
+
 		if(registro[i] == ' ' || registro[i] == '\0'){
-		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador	
-			
-			if(j == 0){ 
-			//! AE: o valor de j eh igual a 0	
-				
+		//! AE: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+			if(j == 0){
+			//! AE: o valor de j eh igual a 0
+
 				//! Comentarios de argumentacao
 					/**
 					*	A (posicao corrente-k) recebe um caracter finalizador
 					**/
 				novo->nome[i-k] = '\0';
 			}
-			//! AS: o valor de j eh maior que 0	
-			
+			//! AS: o valor de j eh maior que 0
+
 			else{
 			//! AE: o valor de j eh maior que 0
-			
+
 				//! Comentarios de argumentacao
 					/**
 					*	A (posicao corrente-k) do vetor numChar recebe um caracter finalizador
-					**/	
+					**/
 				numChar[i-k] = '\0';
-				
+
 				//! Comentarios de argumentacao
 					/**
-					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar 
+					*	De acordo com o valor da variavel auxiliar j, armazena-se o vetor numChar
 					* no seu respectivo atributo lido
-					**/	
-				if(j == 1) 
+					**/
+				if(j == 1)
 					novo->posicaoInicial[0] = atoi(numChar);
-				else if(j == 2) 
+				else if(j == 2)
 					novo->posicaoInicial[1] = atoi(numChar);
-				else if(j == 3) 
-					novo->posicaoInicial[0] = atoi(numChar);
-				else if(j == 4) 
-					novo->posicaoInicial[1] = atoi(numChar);
-				else if(j == 5) 
+				else if(j == 3)
+					novo->posicaoFinal[0] = atoi(numChar);
+				else if(j == 4)
+					novo->posicaoFinal[1] = atoi(numChar);
+				else if(j == 5)
 					novo->capacidadeMaxima = atoi(numChar);
 				else if(j == 6)
 					novo->chanceFalha = atof(numChar);
@@ -105,27 +106,27 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 					novo->custoConserto = atoi(numChar);
 			}
 			//! AS: o valor de j eh maior que 8
-			
-			k = i+1; 
-			j++; 
+
+			k = i+1;
+			j++;
 		}
-		//! AS: a posicao corrente do registro possui um caracter relevante	
-		
+		//! AS: a posicao corrente do registro possui um caracter relevante
+
 		else{
 		//! AE: a posicao corrente do registro possui um caracter relevante
-			
+
 			//! Comentarios de argumentacao
 				/**
 				*	Se o valor da variavel de auxilio j for 0
 				*	Entao
-				*		armazena-se a posicao corrente do registro na 
+				*		armazena-se a posicao corrente do registro na
 				*	 (posicao corrente-k) do nome da interconexao
 				*	Senao
-				*		armazena-se a posicao corrente do registro na 
+				*		armazena-se a posicao corrente do registro na
 				*	 (posicao corrente-k) do vetor numChar
 				*	FimSe
-				**/		
-			if(j == 0) 
+				**/
+			if(j == 0)
 				novo->nome[i-k] = registro[i];
 			else
 				numChar[i-k] = registro[i];
@@ -138,15 +139,43 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 		/**
 		*	Os atributos nao lidos da inteconexao inserida recebem o valor nulo, e a proxima interconexao
 		* da lista que contem a nova inteconexao inserido na cabeca recebe a lista de interconexoes atual
-		**/		
-	novo->numeroFalha = 0;
+		**/
 	novo->tagFalha = SEM_FALHA;
+	novo->numeroFalha = 0;
 	novo->capacidadeMaxima = 0;
 	novo->recursoTransportado = 0;
+
+	novo->entradaAdaptador = NULL;
+	novo->saidaAdaptador = NULL;
 	
-	novo->proximo = listaAlvo;
-	listaAlvo = novo;
+	novo->entradaInterconexao = NULL;
+	novo->saidaInterconexao = NULL;
 	
+	novo->proximoEntradaAdaptador = NULL;
+	novo->proximoSaidaAdaptador = NULL;
+	
+	novo->proximoEntradaCidade = NULL;
+	
+	novo->entradaGerador = NULL;
+	
+	novo->saidaCidade = NULL;
+
+	novo->proximo = NULL;
+	
+	if(interconexaoVazia(listaAlvo) == NAO_VAZIA){
+	//! AE: se a listaAlvo nao for vazia
+	
+		for(aux=listaAlvo;aux->proximo!=NULL;aux=aux->proximo);
+		//! AE: o aux nao chegou ao final da lista de interconexoes
+		
+		aux->proximo = novo;
+	}
+	else{
+	//! AE: se a listaAlvo for vazia
+		
+		listaAlvo = novo;	
+	}
+
 	return listaAlvo;
 }
 
@@ -155,7 +184,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 *
 *	AssertivaEntrada:
 *		interconexaoVazia(listaAlvo) == NAO_VAZIA;
-*		
+*
 **/
 void imprimeListaInterconexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
@@ -174,7 +203,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 				,aux->tagDestino, aux->chanceFalha, aux->tempoConserto, aux->custoConserto, aux->numeroFalha
 				,aux->tagFalha, aux->capacidadeMaxima, aux->recursoTransportado);
 	}
-	//! AS: listaAlvo chegou ao fim		
+	//! AS: listaAlvo chegou ao fim
 }
 
 /**
@@ -185,7 +214,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 *
 *	AssertivaSaida:
 *		interconexaoVazia(listaAlvo) == VAZIA;
-*		
+*
 **/
 void liberaListaInterconexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
@@ -215,25 +244,25 @@ void liberaListaInterconexao(Interconexao *listaAlvo){
 *	Funcao: tamanhoConexao
 *
 *	AssertivaEntrada:
-*		interconexaoVazia(listaAlvo) == NAO_VAZIA; 
+*		interconexaoVazia(listaAlvo) == NAO_VAZIA;
 *
 *	AssertivaSaida:
-*		distancia > 0; 
+*		distancia > 0;
 **/
 float tamanhoConexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 
-	int xA; //!< Valor no eixo x da posicao inicial 
-	int yA; //!< Valor no eixo y da posicao inicial 
-	
+	int xA; //!< Valor no eixo x da posicao inicial
+	int yA; //!< Valor no eixo y da posicao inicial
+
 	int xB; //!< Valor no eixo x da posicao final
 	int yB; //!< Valor no eixo y da posicao final
 
 	int distancia;
-	
+
 	xA = listaAlvo->posicaoInicial[0];
 	yA = listaAlvo->posicaoInicial[1];
-	
+
 	xB = listaAlvo->posicaoFinal[0];
 	yB = listaAlvo->posicaoFinal[1];
 
@@ -243,7 +272,7 @@ float tamanhoConexao(Interconexao *listaAlvo){
 		**/
 
 	distancia = sqrt(pow((xB - xA),2) + pow((yB - yA),2));
-	
+
 	assert(distancia > 0);
 	return distancia;
 }
@@ -252,10 +281,10 @@ float tamanhoConexao(Interconexao *listaAlvo){
 *	Funcao: tamanhoTotalConexao
 *
 *	AssertivaEntrada:
-*		interconexaoVazia(listaAlvo) == NAO_VAZIA; 
+*		interconexaoVazia(listaAlvo) == NAO_VAZIA;
 *
 *	AssertivaSaida:
-*		resultado > 0; 
+*		resultado > 0;
 **/
 float tamanhoTotalConexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
@@ -272,7 +301,7 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 		//! Comentarios de argumentacao
 			/**
 			*	Enquanto a lista de interconexoes eh percorrida, o tamanho
-			* das conexoes sao somados e armazenados na variavel resultado 
+			* das conexoes sao somados e armazenados na variavel resultado
 			**/
 
 		resultado += tamanhoConexao(aux);
@@ -288,62 +317,62 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 *	Funcao: calculaFalha
 *
 *	AssertivaSaida:
-*		FALHA || SEM_FALHA; 
+*		FALHA || SEM_FALHA;
 **/
 Falha calculaFalha(){
 	float num;
 	float chance = 0.01;
 
 	//! Asseriva estrutural: num eh um numero gerado aleatoriamente
-	srand(1); 
+	srand(1);
 	num = ((float)rand())/RAND_MAX;
 
-	if ( (chance > 0) && (chance >= num) ) 
-	//! AE: chance deve ser maior que 0 e maior ou igual a num 
+	if ( (chance > 0) && (chance >= num) )
+	//! AE: chance deve ser maior que 0 e maior ou igual a num
 		return FALHA;
 	else
-	//! AE: chance deve ser menor que 0 ou menor que num 
+	//! AE: chance deve ser menor que 0 ou menor que num
 		return SEM_FALHA;
-	//! AS: o retorno deve ser uma variavel do tipo Falha 
+	//! AS: o retorno deve ser uma variavel do tipo Falha
 }
 
 /**
 *
 *	Funcao: mandarRecursoTransportado
-*	
+*
 *	AssertivaEntrada:
 *		interconexaoVazia(listaAlvo) == NAO_VAZIA;
 *
 **/
 void mandarRecursoTransportado(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
-	
+
 	Interconexao *aux;
 	int recursoEnviado;
 
 	//! Asseriva estrutural: aux é a lista nao-nula de interconexoes
 	aux = listaAlvo;
-	
+
 	while(aux != NULL){
 	//! AE: aux nao chegou ao fim da lista de inteconexoes
-	
+
 		if(aux->tagFalha == SEM_FALHA){
 		//! AE: a interconexao corrente nao possui falha
 			recursoEnviado = aux->recursoTransportado;
-			
+
 			//! Comentarios de argumentacao
 				/**
-				*	Enqaunto a lista de interconexoes eh percorrida, dependendo do destino da interconexao, 
+				*	Enqaunto a lista de interconexoes eh percorrida, dependendo do destino da interconexao,
 				* soma-se o recurso ao respectivo destino
 				**/
-				
+
 			if(aux->tagDestino == ADAPTADOR){
 			//! AE: o destino da interconexao eh um Adaptador
-				aux->adaptador->recursoRecebido += recursoEnviado;
+				aux->saidaAdaptador->recursoRecebido += recursoEnviado;
 			}
 			else if(aux->tagDestino == CIDADE){
 			//! AE: o destino da interconexao eh uma Cidade
-				aux->cidade->recursoRecebido += recursoEnviado;
+				aux->saidaCidade->recursoRecebido += recursoEnviado;
 			}
 		}
 
