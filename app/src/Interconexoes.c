@@ -159,7 +159,22 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	
 	novo->saidaCidade = NULL;
 
-	novo->proximo = listaAlvo;
+	novo->proximo = NULL;
+	
+	if(interconexaoVazia(listaAlvo) == NAO_VAZIA){
+	//! AE: se a listaAlvo nao for vazia
+	
+		for(aux=listaAlvo;aux->proximo!=NULL;aux=aux->proximo);
+		//! AE: o aux nao chegou ao final da lista de interconexoes
+		
+		aux->proximo = novo;
+	}
+	else{
+	//! AE: se a listaAlvo for vazia
+		
+		listaAlvo = novo;	
+	}
+	
 	listaAlvo = novo;
 
 	return listaAlvo;
