@@ -1,4 +1,4 @@
-#include "../header/Interconexoes.h"
+#include "../header/Geral.h"
 
 int main()
 {
@@ -14,7 +14,7 @@ int main()
 	
 		if(fgets(str,100,fp)!=NULL){
 		//! AE: a linha (registro) obtido do arquivo possui conteudo
-		
+
 			if(str[0] == 'C'){
 			//! AE: O registro obtido eh do tipo Cidade
 				listaCidades = insereCidade(str,listaCidades);
@@ -47,6 +47,14 @@ int main()
 	printf("\nlistaGeradores:\n");imprimeListaGerador(listaGeradores);
 	printf("\nlistaInterconexoes:\n");imprimeListaInterconexao(listaInterconexoes);
 	printf("\nlistaAdaptadores:\n");imprimeListaAdaptador(listaAdaptadores);
+	
+	//! Comentarios de argumentacao
+		/**
+		*	Conectando e verificando as listas
+		**/
+	conecta(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
+	printf("\n\n");
+	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 	
 	//! Comentarios de argumentacao
 		/**
