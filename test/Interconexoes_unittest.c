@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <gtest/gtest.h>
 #include "../app/header/Interconexoes.h"
 
@@ -95,6 +94,13 @@ TEST(insereInterconexao, naoVazia){
 	EXPECT_EQ(interconexao->tempoConserto, 15);
 	EXPECT_EQ(interconexao->custoConserto, 20);
 }
-=======
-#include "../app/header/Interconexoes.h"
->>>>>>> af17af09d23ef9c3866b6375e4617464b08eaf12
+
+//! Testando a funcao tamanhoConexao
+
+//! Testando a funcao tamanhoTotalConexao
+
+//! Testando a funcao totalGastoConserto
+
+//! Testando a funcao calculaFalha
+
+//! Testando a funcao mandarRecursoTransportado

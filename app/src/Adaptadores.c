@@ -191,6 +191,8 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 		**/
 		aux2 = aux1->proximo;
 		free(aux1->nome);
+		free(aux1->saidas);
+		free(aux1->entradas);
 		free(aux1);
 	}
 	//! AS: listaAlvo chegou ao fim
