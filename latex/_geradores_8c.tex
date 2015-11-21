@@ -1,0 +1,159 @@
+\hypertarget{_geradores_8c}{\section{app/src/\-Geradores.c File Reference}
+\label{_geradores_8c}\index{app/src/\-Geradores.\-c@{app/src/\-Geradores.\-c}}
+}
+{\ttfamily \#include \char`\"{}../header/\-Geradores.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$ \hyperlink{_geradores_8c_a7f89ea89ba76e15879bedcc213c09170}{cria\-Lista\-Gerador} ()
+\item 
+\hyperlink{_principal_8h_ad14a49393e140b5aaf590f1133a735f3}{Vazio} \hyperlink{_geradores_8c_a4fe02cd9b5a0c028996b432a20c5617b}{gerador\-Vazio} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
+\item 
+\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$ \hyperlink{_geradores_8c_a0dc4284717529572626295e68bbaef8b}{insere\-Gerador} (char $\ast$registro, \hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
+\item 
+void \hyperlink{_geradores_8c_aef7a9a2180717f987a4fcc599f401f17}{imprime\-Lista\-Gerador} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
+\item 
+void \hyperlink{_geradores_8c_a2252c63cf393825b7ceef5cfc7309436}{libera\-Lista\-Gerador} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_geradores_8c_a7f89ea89ba76e15879bedcc213c09170}{\index{Geradores.\-c@{Geradores.\-c}!cria\-Lista\-Gerador@{cria\-Lista\-Gerador}}
+\index{cria\-Lista\-Gerador@{cria\-Lista\-Gerador}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{cria\-Lista\-Gerador}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gerador}$\ast$ cria\-Lista\-Gerador (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_a7f89ea89ba76e15879bedcc213c09170}
+Funcao\-: cria\-Lista\-Gerador
+
+Assertiva\-Saida\-: N\-U\-L\-L; 
+
+Definition at line 10 of file Geradores.\-c.
+
+\hypertarget{_geradores_8c_a4fe02cd9b5a0c028996b432a20c5617b}{\index{Geradores.\-c@{Geradores.\-c}!gerador\-Vazio@{gerador\-Vazio}}
+\index{gerador\-Vazio@{gerador\-Vazio}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{gerador\-Vazio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vazio} gerador\-Vazio (
+\begin{DoxyParamCaption}
+\item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_a4fe02cd9b5a0c028996b432a20c5617b}
+Funcao\-: cria\-Lista\-Cidade
+
+Assertiva\-Saida\-: V\-A\-Z\-I\-O $|$$|$ N\-A\-O\-\_\-\-V\-A\-Z\-I\-O; A\-E\-: lista\-Alvo eh vazia
+
+A\-E\-: lista\-Alvo nao eh vazia
+
+A\-S\-: o retorno deve ser uma variavel do tipo Vazia 
+
+Definition at line 20 of file Geradores.\-c.
+
+\hypertarget{_geradores_8c_aef7a9a2180717f987a4fcc599f401f17}{\index{Geradores.\-c@{Geradores.\-c}!imprime\-Lista\-Gerador@{imprime\-Lista\-Gerador}}
+\index{imprime\-Lista\-Gerador@{imprime\-Lista\-Gerador}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{imprime\-Lista\-Gerador}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\-Lista\-Gerador (
+\begin{DoxyParamCaption}
+\item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_aef7a9a2180717f987a4fcc599f401f17}
+Funcao\-: imprime\-Lista\-Gerador
+
+Assertiva\-Entrada\-: gerador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O; Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Imprime os atributos do gerador corrente
+
+A\-S\-: lista\-Alvo chegou ao fim 
+
+Definition at line 147 of file Geradores.\-c.
+
+\hypertarget{_geradores_8c_a0dc4284717529572626295e68bbaef8b}{\index{Geradores.\-c@{Geradores.\-c}!insere\-Gerador@{insere\-Gerador}}
+\index{insere\-Gerador@{insere\-Gerador}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{insere\-Gerador}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gerador}$\ast$ insere\-Gerador (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{registro, }
+\item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_a0dc4284717529572626295e68bbaef8b}
+Funcao\-: insere\-Gerador
+
+Assertiva\-Entrada\-: registro != N\-U\-L\-L; $<$ Alocacao de um novo gerador
+
+$<$ Alocacao de um vetor do tamanho do registro
+
+$<$ Variaveis de auxilio
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Comecando de registro\mbox{[}2\mbox{]}, enquanto registro\mbox{[}i\mbox{]} for um caracter irrelevante, soma-\/se 1 a variavel de auxilio i
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante
+
+Asseriva estrutural\-: o nome do novo adaptador possui tamanho i-\/1
+
+A\-E\-: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos do gerador
+
+A\-E\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-E\-: o valor de j eh igual a 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) recebe um caracter finalizador
+
+A\-S\-: o valor de j eh maior que 0
+
+A\-E\-: o valor de j eh maior que 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) do vetor num\-Char recebe um caracter finalizador
+
+Comentarios de argumentacao
+
+De acordo com o valor da variavel auxiliar j, armazena-\/se o vetor num\-Char no seu respectivo atributo lido
+
+A\-S\-: o valor de j eh maior que 5
+
+A\-S\-: a posicao corrente do registro possui um caracter relevante
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Se o valor da variavel de auxilio j for 0 Entao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do nome do gerador Senao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do vetor num\-Char Fim\-Se
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-S\-: o valor da variavel auxiliar j ultrapassou o numero total de atributos lidos do gerador
+
+Comentarios de argumentacao
+
+Os atributos nao lidos do gerador inserido recebem o valor nulo, e o proximo gerador da lista que contem o novo gerador inserido na cabeca recebe a lista de geradores atual
+
+Definition at line 36 of file Geradores.\-c.
+
+\hypertarget{_geradores_8c_a2252c63cf393825b7ceef5cfc7309436}{\index{Geradores.\-c@{Geradores.\-c}!libera\-Lista\-Gerador@{libera\-Lista\-Gerador}}
+\index{libera\-Lista\-Gerador@{libera\-Lista\-Gerador}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{libera\-Lista\-Gerador}]{\setlength{\rightskip}{0pt plus 5cm}void libera\-Lista\-Gerador (
+\begin{DoxyParamCaption}
+\item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_a2252c63cf393825b7ceef5cfc7309436}
+Funcao\-: libera\-Lista\-Gerador
+
+Assertiva\-Entrada\-: gerador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O;
+
+Assertiva\-Saida\-: gerador\-Vazio(lista\-Alvo) == V\-A\-Z\-I\-O; Asseriva estrutural\-: aux1 é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Liberam os atributos alocados dinamicamente do elemento Gerador corrente
+
+A\-S\-: lista\-Alvo chegou ao fim 
+
+Definition at line 177 of file Geradores.\-c.
+

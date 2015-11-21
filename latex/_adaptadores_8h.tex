@@ -1,0 +1,288 @@
+\hypertarget{_adaptadores_8h}{\section{app/header/\-Adaptadores.h File Reference}
+\label{_adaptadores_8h}\index{app/header/\-Adaptadores.\-h@{app/header/\-Adaptadores.\-h}}
+}
+{\ttfamily \#include \char`\"{}Principal.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$ \hyperlink{_adaptadores_8h_ae153537ae7870c9c435cacddfb1f08c2}{cria\-Lista\-Adaptador} ()
+\item 
+\hyperlink{_principal_8h_ad14a49393e140b5aaf590f1133a735f3}{Vazio} \hyperlink{_adaptadores_8h_af4780437ee94f4b16db1ffae475eb948}{adaptador\-Vazio} (\hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$)
+\item 
+\hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$ \hyperlink{_adaptadores_8h_af1e84615a93a92902670adadf88d496d}{insere\-Adaptador} (char $\ast$, \hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$)
+\item 
+void \hyperlink{_adaptadores_8h_a5f7d655ce03695427ebb378ef51799a2}{imprime\-Lista\-Adaptador} (\hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$)
+\item 
+void \hyperlink{_adaptadores_8h_ab0047ef3ef244a53b27d0899d399ac9a}{libera\-Lista\-Adaptador} (\hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$)
+\item 
+void \hyperlink{_adaptadores_8h_ae29396fe5a8fd8a3b0c2ec834c0cefbb}{define\-Distribuicao} (\hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_adaptadores_8h_af4780437ee94f4b16db1ffae475eb948}{\index{Adaptadores.\-h@{Adaptadores.\-h}!adaptador\-Vazio@{adaptador\-Vazio}}
+\index{adaptador\-Vazio@{adaptador\-Vazio}!Adaptadores.h@{Adaptadores.\-h}}
+\subsubsection[{adaptador\-Vazio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vazio} adaptador\-Vazio (
+\begin{DoxyParamCaption}
+\item[{{\bf Adaptador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_adaptadores_8h_af4780437ee94f4b16db1ffae475eb948}
+Funcao\-: adaptador\-Vazio
+
+Verifica se a lista de adaptadores esta vazia
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de adaptadores\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+variavel do tipo Vazio, indicando se a lista esta vazia
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Adaptador
+
+Assertiva de saida\-: condicao do Adaptador sendo vazio ou nao vazio
+
+Funcao\-: adaptador\-Vazio
+
+Assertiva\-Saida\-: V\-A\-Z\-I\-O $|$$|$ N\-A\-O\-\_\-\-V\-A\-Z\-I\-O; A\-E\-: lista\-Alvo eh vazia
+
+A\-E\-: lista\-Alvo nao eh vazia
+
+A\-S\-: o retorno deve ser uma variavel do tipo Vazia 
+
+Definition at line 22 of file Adaptadores.\-c.
+
+\hypertarget{_adaptadores_8h_ae153537ae7870c9c435cacddfb1f08c2}{\index{Adaptadores.\-h@{Adaptadores.\-h}!cria\-Lista\-Adaptador@{cria\-Lista\-Adaptador}}
+\index{cria\-Lista\-Adaptador@{cria\-Lista\-Adaptador}!Adaptadores.h@{Adaptadores.\-h}}
+\subsubsection[{cria\-Lista\-Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adaptador}$\ast$ cria\-Lista\-Adaptador (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_adaptadores_8h_ae153537ae7870c9c435cacddfb1f08c2}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Funcoes Basicas-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Funcao\-: cria\-Lista\-Adaptador
+
+Inicia um ponteiro que sera para Adaptador
+
+Assertiva\-Saida\-: N\-U\-L\-L;
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Funcoes Basicas-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Funcao\-: cria\-Lista\-Adaptador
+
+Assertiva\-Saida\-: N\-U\-L\-L; 
+
+Definition at line 12 of file Adaptadores.\-c.
+
+\hypertarget{_adaptadores_8h_ae29396fe5a8fd8a3b0c2ec834c0cefbb}{\index{Adaptadores.\-h@{Adaptadores.\-h}!define\-Distribuicao@{define\-Distribuicao}}
+\index{define\-Distribuicao@{define\-Distribuicao}!Adaptadores.h@{Adaptadores.\-h}}
+\subsubsection[{define\-Distribuicao}]{\setlength{\rightskip}{0pt plus 5cm}void define\-Distribuicao (
+\begin{DoxyParamCaption}
+\item[{{\bf Adaptador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_adaptadores_8h_ae29396fe5a8fd8a3b0c2ec834c0cefbb}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Funcoes de Calculo-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------
+
+Define como sera a distribuicao entre as conexoes que esta ligada a cada adaptador e manda a quantidade que sera passada para as correspondentes conexoes
+
+interconexao-\/$>$recurso\-Transportado = interconexao-\/$>$capacidade\-Max $\ast$ adaptador-\/$>$recurso\-Recebido / soma de todas as capacidade\-Max
+
+Essa funcao espera que a lista de interconexoes ja foi previamente estabelecida //\-T\-O\-D\-O retirar essa dependencia
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inico da lista de adaptadores;\\
+\hline
+\end{DoxyParams}
+-----------------------Funcoes de Calculo-\/---------------------------
+
+Funcao\-: define\-Distribuicao
+
+Assertiva\-Entrada\-: adaptador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O; para cada adaptador da lista\-: adaptador-\/$>$saidas\mbox{[}i\mbox{]} != null; $<$ conexoes do adaptador
+
+$<$ quantidade de recurso transportado
+
+Assertiva estrutural\-: aux é a lista nao-\/nula de adaptadores
+
+A\-E\-: aux nao chegou ao fim da lista de adaptadores
+
+Assertiva estrutural\-: somatorio eh a soma das capacidades maximas do adaptador corrente
+
+A\-E\-: o adaptador corrente possui saidas
+
+Assertiva estrutural\-: conexao eh a lista de saidas do adaptador corrente
+
+Comentarios de argumentacao
+
+Enquanto percorre a lista de conexoes que saem do adaptador somam-\/se a capaxidade maxima de todas as conexoes
+
+A\-E\-: a lista de saidas do adaptador nao chegou ao fim
+
+A\-S\-: a lista de saidas do adaptador chegou ao fim
+
+Assertiva estrutural\-: conexao eh a lista de saidas do adaptador corrente
+
+A\-E\-: a lista de saidas do adaptador nao chegou ao fim
+
+A\-E\-: a saida corrente do adaptador nao possui falha
+
+Assertiva estrutural\-: recurso\-Transportado é a quantidade de recurso que cada conexao vai transportar no turno
+
+Comentarios de argumentacao
+
+Se a a capacidade maxima da saida corrente do adaptador for maior ou igual ao recurso\-Transportado Entao o recurso\-Transportado da saida corrente do adaptador recebe o recurso\-Transportado Senao recebe a capacidade\-Maxima da saida corrente do adaptador Fim\-Se
+
+A\-S\-: a saida corrente do adaptador possui falha
+
+A\-S\-: a lista de saidas do adaptador chegou ao fim
+
+A\-S\-: a lista de adaptadores chegou ao fim 
+
+Definition at line 211 of file Adaptadores.\-c.
+
+\hypertarget{_adaptadores_8h_a5f7d655ce03695427ebb378ef51799a2}{\index{Adaptadores.\-h@{Adaptadores.\-h}!imprime\-Lista\-Adaptador@{imprime\-Lista\-Adaptador}}
+\index{imprime\-Lista\-Adaptador@{imprime\-Lista\-Adaptador}!Adaptadores.h@{Adaptadores.\-h}}
+\subsubsection[{imprime\-Lista\-Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\-Lista\-Adaptador (
+\begin{DoxyParamCaption}
+\item[{{\bf Adaptador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_adaptadores_8h_a5f7d655ce03695427ebb378ef51799a2}
+Funcao\-: imprime\-Lista\-Adaptador
+
+Imprime de todas as celulas de lista de adaptador as respectivas caracteristicas\-: nome posicao x posicao y recurso recebido quantidade de saidas
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & lista que sera impressa\\
+\hline
+\end{DoxyParams}
+Assertiva\-Entrada\-: A lista nao deve ser vazia
+
+Assertiva\-Saida\-: Se a lista de adaptadores a ser imprimida nao eh vazia Entao ela eh imprimida Senao a lista de adaptadores nao eh imprimida Fim\-Se
+
+Funcao\-: imprime\-Lista\-Adaptador
+
+Assertiva\-Entrada\-: adaptador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O; Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Imprime os atributos do adaptador corrente
+
+A\-S\-: lista\-Alvo chegou ao fim 
+
+Definition at line 149 of file Adaptadores.\-c.
+
+\hypertarget{_adaptadores_8h_af1e84615a93a92902670adadf88d496d}{\index{Adaptadores.\-h@{Adaptadores.\-h}!insere\-Adaptador@{insere\-Adaptador}}
+\index{insere\-Adaptador@{insere\-Adaptador}!Adaptadores.h@{Adaptadores.\-h}}
+\subsubsection[{insere\-Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adaptador}$\ast$ insere\-Adaptador (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{registro, }
+\item[{{\bf Adaptador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_adaptadores_8h_af1e84615a93a92902670adadf88d496d}
+Insere uma nova celula de adaptador na lista dos adaptadores
+
+
+\begin{DoxyParams}{Parameters}
+{\em registro} & String que sera decodificada e inserida \\
+\hline
+{\em lista\-Alvo} & lista a qual essa nova celula sera inserida\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Adaptador novo ponteiro de referencia para o inico da lista
+\end{DoxyReturn}
+Assertiva de entrada\-: registro -\/ eh um vetor contendo o conteudo do txt, deve ser diferente de N\-U\-L\-L
+
+Assertiva de saida\-: A lista recebida pela funcao, deve ser o proximo adaptador apontado pela lista retornada
+
+Funcao\-: insere\-Adaptador
+
+Assertiva\-Entrada\-: registro != N\-U\-L\-L; $<$ Alocacao de um novo adaptador
+
+$<$ Alocacao de um vetor do tamanho do registro
+
+$<$ Variaveis de auxilio
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Comecando de registro\mbox{[}2\mbox{]}, enquanto registro\mbox{[}i\mbox{]} for um caracter irrelevante, soma-\/se 1 a variavel de auxilio i
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante
+
+Asseriva estrutural\-: o nome do novo adaptador possui tamanho i-\/1
+
+A\-E\-: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos do adaptador
+
+A\-E\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-E\-: o valor de j eh igual a 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) recebe um caracter finalizador
+
+A\-S\-: o valor de j eh maior que 0
+
+A\-E\-: o valor de j eh maior que 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) do vetor num\-Char recebe um caracter finalizador
+
+Comentarios de argumentacao
+
+De acordo com o valor da variavel auxiliar j, armazena-\/se o vetor num\-Char no seu respectivo atributo lido
+
+A\-S\-: o valor de j eh maior que 4
+
+A\-S\-: a posicao corrente do registro possui um caracter relevante
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Se o valor da variavel de auxilio j for 0 Entao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do nome do adaptador Senao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do vetor num\-Char Fim\-Se
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-S\-: o valor da variavel auxiliar j ultrapassou o numero total de atributos lidos da adaptador
+
+Comentarios de argumentacao
+
+Os atributos nao lidos do adaptador inserido recebem o valor nulo, e o proximo adaptador da lista que contem o novo adaptador inserido na cabeca recebe a lista de adaptadores atual
+
+Definition at line 38 of file Adaptadores.\-c.
+
+\hypertarget{_adaptadores_8h_ab0047ef3ef244a53b27d0899d399ac9a}{\index{Adaptadores.\-h@{Adaptadores.\-h}!libera\-Lista\-Adaptador@{libera\-Lista\-Adaptador}}
+\index{libera\-Lista\-Adaptador@{libera\-Lista\-Adaptador}!Adaptadores.h@{Adaptadores.\-h}}
+\subsubsection[{libera\-Lista\-Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}void libera\-Lista\-Adaptador (
+\begin{DoxyParamCaption}
+\item[{{\bf Adaptador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_adaptadores_8h_ab0047ef3ef244a53b27d0899d399ac9a}
+Libera o espaco de memoria alocado para a lista de adaptadores
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & lista a qual sera desalocada\\
+\hline
+\end{DoxyParams}
+Assertiva\-Entrada\-: A lista nao deve ser vazia
+
+Assertiva\-Saida\-: A lista deve estar vazia
+
+Funcao\-: libera\-Lista\-Adaptador
+
+Assertiva\-Entrada\-: adaptador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O;
+
+Assertiva\-Saida\-: adaptador\-Vazio(lista\-Alvo) == V\-A\-Z\-I\-O; Asseriva estrutural\-: aux1 é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Liberam os atributos alocados dinamicamente do elemento Adaptador corrente
+
+A\-S\-: lista\-Alvo chegou ao fim 
+
+Definition at line 179 of file Adaptadores.\-c.
+
