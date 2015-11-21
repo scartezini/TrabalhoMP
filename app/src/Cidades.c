@@ -1,23 +1,40 @@
 #include "../header/Cidades.h"
 #include <assert.h>
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
-*	Funcao: criaListaCidade
+*	Funcao: criaListaCidade (Iterador)
 *
 *	AssertivaSaida:
 *		NULL;
+*
+*	Requisitos:
+*		criacao de uma nova lista do tipo Cidade
+*
+*	Interfaces explicitas:
+*		Cidade*, criaListaCidade
 **/
 Cidade* criaListaCidade(){
 	return NULL;
 }
 
 /**
-*	Funcao: cidadeVazia
+*	Funcao: cidadeVazia (Iterador)
 *
 *	AssertivaSaida:
 *		VAZIA || NAO_VAZIA;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Cidade
+*
+*	Requisitos:
+*		checar se a lista está vazia
+*
+*	Interfaces explicitas:
+*		Vazia, cidadeVazia, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		Vazia - tipo de dado, indicando se a lista eh vazia ou nao
+*		listaAlvo - lista de cidades
 **/
 Vazia cidadeVazia(Cidade *listaAlvo){
 	if(listaAlvo == NULL)
@@ -34,6 +51,20 @@ Vazia cidadeVazia(Cidade *listaAlvo){
 *
 *	AssertivaEntrada:
 *		registro != NULL;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Cidade
+*		registro - string, nao vazia, contendo uma linha do arquivo txt de entrada
+*
+*	Requisitos:
+*		inserir uma nova cidade na lista de cidades
+*
+*	Interfaces explicitas:
+*		Cidade*, insereCidade, char *registro, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		registro - representa uma linha do arquivo de entrada
+*		listaAlvo - lista de cidades
 **/
 Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	assert(registro != NULL);
@@ -140,11 +171,22 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 }
 
 /**
-*	Funcao: imprimeListaCidade
+*	Funcao: imprimeListaCidade (Iterador)
 *
 *	AssertivaEntrada:
 *		cidadeVazia(listaAlvo) == NAO_VAZIA;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Cidade
+*
+*	Requisitos:
+*		impressao da lista de cidades
+*
+*	Interfaces explicitas:
+*		void, imprimeListaCidade, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
 **/
 void imprimeListaCidade(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
@@ -167,14 +209,25 @@ void imprimeListaCidade(Cidade *listaAlvo){
 }
 
 /**
-*	Funcao: liberaListaCidade
+*	Funcao: liberaListaCidade (Iterador)
 *
 *	AssertivaEntrada:
 *		cidadeVazia(listaAlvo) == NAO_VAZIA;
 *
 *	AssertivaSaida:
-*		cidadeVazia(listaAlvo) == VAZIA;
+*		cidadeVazia(aux1) == VAZIA;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Cidade
+*
+*	Requisitos:
+*		liberacao da lista de cidades
+*
+*	Interfaces explicitas:
+*		void, liberaListaCidade, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
 **/
 void liberaListaCidade(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
@@ -197,8 +250,6 @@ void liberaListaCidade(Cidade *listaAlvo){
 
 	assert(cidadeVazia(aux1) == VAZIA);
 }
-
-/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: recursoGastoTotal

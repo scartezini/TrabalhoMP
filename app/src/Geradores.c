@@ -2,20 +2,39 @@
 #include <assert.h>
 
 /**
-*	Funcao: criaListaGerador
+*	Funcao: criaListaGerador (Iterador)
 *
 *	AssertivaSaida:
 *		NULL;
+*
+*	Requisitos:
+*		criacao de uma nova lista do tipo Gerador
+*
+*	Interfaces explicitas:
+*		Gerador*, criaListaGerador
 **/
 Gerador* criaListaGerador(){
 	return NULL;
 }
 
 /**
-*	Funcao: criaListaCidade
+*	Funcao: geradorVazio (Iterador)
 *
 *	AssertivaSaida:
 *		VAZIO || NAO_VAZIO;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		checar se a lista está vazia
+*
+*	Interfaces explicitas:
+*		Vazio, geradorVazio, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		Vazio - tipo de dado, indicando se a lista eh vazia ou nao
+*		listaAlvo - lista de geradores
 **/
 Vazio geradorVazio(Gerador *listaAlvo){
 	if(listaAlvo == NULL)
@@ -32,6 +51,20 @@ Vazio geradorVazio(Gerador *listaAlvo){
 *
 *	AssertivaEntrada:
 *		registro != NULL;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*		registro - string, nao vazia, contendo uma linha do arquivo txt de entrada
+*
+*	Requisitos:
+*		inserir um novo gerador na lista de geradores
+*
+*	Interfaces explicitas:
+*		Gerador*, insereGerador, char *registro, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		registro - representa uma linha do arquivo de entrada
+*		listaAlvo - lista de geradores
 **/
 Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 	assert(registro != NULL);
@@ -143,6 +176,17 @@ Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 *	AssertivaEntrada:
 *		geradorVazio(listaAlvo) == NAO_VAZIO;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		impressao da lista de geradores
+*
+*	Interfaces explicitas:
+*		void, imprimeListaGerador, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
 **/
 void imprimeListaGerador(Gerador *listaAlvo){
 	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
@@ -165,7 +209,7 @@ void imprimeListaGerador(Gerador *listaAlvo){
 }
 
 /**
-*	Funcao: liberaListaGerador
+*	Funcao: liberaListaGerador (Iterador)
 *
 *	AssertivaEntrada:
 *		geradorVazio(listaAlvo) == NAO_VAZIO;
@@ -173,6 +217,17 @@ void imprimeListaGerador(Gerador *listaAlvo){
 *	AssertivaSaida:
 *		geradorVazio(listaAlvo) == VAZIO;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		liberacao da lista de geradores
+*
+*	Interfaces explicitas:
+*		void, liberaListaGerador, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
 **/
 void liberaListaGerador(Gerador *listaAlvo){
 	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
