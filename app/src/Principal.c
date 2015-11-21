@@ -2,14 +2,25 @@
 
 int main()
 {
-	FILE *fp = fopen("teste.txt","r"); //!< Abre arquivo de entrada
+	FILE *fp ;
 	Cidade *listaCidades = criaListaCidade();
 	Gerador *listaGeradores = criaListaGerador();
 	Interconexao *listaInterconexoes = criaListaInterconexao();
 	Adaptador *listaAdaptadores = criaListaAdaptador();
 	Relatorio relatorio;
+	int tempoSimulacao;
+	char arquivo[100];
 
 	char str[100]; //!< String auxiliar para obter registros
+
+	printf("Digite o caminho para o arquivo:\n" );
+	scanf("%s\n",arquivo);
+	getchar();
+
+	printf("Digite o tempo desejado de simulacao\n" );
+	scanf("%d\n",&tempoSimulacao);
+
+	fp = fopen(arquivo,"r");//!< Abre arquivo de entrada
 
 	do{
 	//! AE: o arquivo nao chegou ao fim
@@ -63,13 +74,18 @@ int main()
 	printf("\n\n");
 	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 
+
+	int i;
+	for(i=0;i<tempoSimulacao;i++){
+		//TODO fazer todo o ciclo da maquina de estado
+	}
+
 	//! Comentarios de argumentacao
 		/**
 		*	Preenchimento do relatorio
 		**/
-
-	//relatorio.tempoTotalSimulacao = fornecido pelo usuario
-	relatorio.custoTotalSimulacao = custoGeradores(listaGeradores) + custoGastoComConcerto(listaInterconexoes);
+	relatorio.tempoTotalSimulacao = tempoSimulacao;
+	relatorio.custoTotalSimulacao = custoGeradores(listaGeradores)*tempoSimulacao + custoGastoComConcerto(listaInterconexoes);
 	relatorio.totalGeradores = numeroGeradores(listaGeradores);
 	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
 	relatorio.totalCidades = numeroCidades(listaCidades);

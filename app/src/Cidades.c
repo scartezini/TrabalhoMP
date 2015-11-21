@@ -272,7 +272,7 @@ void liberaListaCidade(Cidade *listaAlvo){
 **/
 
 int recursoGastoTotal(Cidade *cidade){
-	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+	assert(cidadeVazia(cidade) == NAO_VAZIA);
 
 	int somatorio = 0;
 
