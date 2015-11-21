@@ -250,3 +250,120 @@ void liberaListaGerador(Gerador *listaAlvo){
 
 	assert(geradorVazio(aux1) == VAZIO);
 }
+
+/**
+*	Funcao: numeroGeradores (Iterador)
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		realiza o calculo da energia total gerada
+*
+*	Interfaces explicitas:
+*		int, recursoProduzidoTotal, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+int recursoProduzidoTotal(Gerador *listaAlvo){
+	int total = 0;
+	
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Gerador *aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE: listaAlvo nao chegou ao fim
+	//! Comentarios de argumentacao
+		/**
+		*	Somando os recursos produzidos para obter a energia total gerada
+		**/
+		total += aux->recursoProduzido;
+		aux = aux->proximo;
+	}	
+
+	assert(total >= 0);
+
+	return total;
+}
+
+/**
+*	Funcao: custoGeradores 
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		realiza a soma dos custos dos geradores
+*
+*	Interfaces explicitas:
+*		int, custoGeradores, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+int custoGeradores(Gerador *listaAlvo){
+	int total = 0;
+	
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Gerador *aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE: listaAlvo nao chegou ao fim
+	//! Comentarios de argumentacao
+		/**
+		*	Somando os custos de cada gerador da lista de geradores
+		**/
+		total += aux->custo;
+		aux = aux->proximo;
+	}	
+
+	assert(total >= 0);
+
+	return total;
+}
+
+/**
+*	Funcao: numeroGeradores (Iterador)
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		conta o numero total de geradores em uma lista de geradores
+*
+*	Interfaces explicitas:
+*		int, numeroGeradores, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+int numeroGeradores(Gerador *listaAlvo){
+	int total = 0;
+	
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Gerador *aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE: listaAlvo nao chegou ao fim
+	//! Comentarios de argumentacao
+		/**
+		*	Contagem do numero de total de geradores na listaAlvo
+		**/
+		total++;
+		aux = aux->proximo;
+	}	
+
+	assert(total >= 0);
+
+	return total;
+}

@@ -1,7 +1,5 @@
 #include "Principal.h"
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
 *	Funcao: criaListaAdaptador
 *
@@ -94,8 +92,6 @@ void imprimeListaAdaptador(Adaptador *);
 *		A lista deve estar vazia
 **/
 void liberaListaAdaptador(Adaptador *);
-
-/** -----------------------Funcoes de Calculo---------------------------- */
 
 /** 
 *	

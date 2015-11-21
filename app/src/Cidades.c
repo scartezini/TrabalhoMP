@@ -258,3 +258,42 @@ void liberaListaCidade(Cidade *listaAlvo){
 int recursoGastoTotal(Cidade *cidade){
 	return 0;
 }
+
+/**
+*	Funcao: numeroCidades (Iterador)
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Cidade
+*
+*	Requisitos:
+*		conta o numero total de cidades em uma lista de cidades
+*
+*	Interfaces explicitas:
+*		int, numeroCidades, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
+**/
+int numeroCidades(Cidade *listaAlvo){
+	int total = 0;
+	
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Cidade *aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE: listaAlvo nao chegou ao fim
+	//! Comentarios de argumentacao
+		/**
+		*	Contagem do numero de total de cidades na listaAlvo
+		**/
+		total++;
+		aux = aux->proximo;
+	}	
+
+	assert(total >= 0);
+
+	return total;
+}
