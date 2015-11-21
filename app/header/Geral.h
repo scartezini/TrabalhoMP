@@ -1,7 +1,5 @@
 #include "Interconexoes.h"
 
-/** -----------------------Funcoes Gerais---------------------------- */
-
 /**
 *	Funcao: conecta
 *

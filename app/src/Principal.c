@@ -1,9 +1,5 @@
 #include "../header/Geral.h"
 
-
-
-
-
 int main()
 {
 	FILE *fp = fopen("teste.txt","r"); //!< Abre arquivo de entrada
@@ -12,7 +8,6 @@ int main()
 	Interconexao *listaInterconexoes = criaListaInterconexao();
 	Adaptador *listaAdaptadores = criaListaAdaptador();
 	Relatorio relatorio;
-
 
 	char str[100]; //!< String auxiliar para obter registros
 
@@ -69,13 +64,22 @@ int main()
 	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 
 	//! Comentarios de argumentacao
-	/**
-	*	Preenchimento do relatorio
-	**/
-	// relatorio.custoTotalSimulacao = custoGeradores(listaGeradores);
-	// relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
-	// relatorio.energiaGastaPelasCidades = recursoGastoTotal(listaCidades);
-	// relatorio.tamanhoTotalInterconexoes = tamanhoConexao(listaInterconexoes);
+		/**
+		*	Preenchimento do relatorio
+		**/
+
+	//relatorio.tempoTotalSimulacao = fornecido pelo usuario
+	//relatorio.custoTotalSimulacao = custoGeradores(listaGeradores) + custo de concerto, caso haja falha	
+	relatorio.totalGeradores = numeroGeradores(listaGeradores);
+	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
+	relatorio.totalCidades = numeroCidades(listaCidades);
+	//relatorio.energiaGastaCidades = 
+	relatorio.tamanhoTotalInterconexoes = tamanhoTotalConexao(listaInterconexoes);
+	//relatorio.numeroFalhaInterconexoes =
+	//relatorio.numeroCidadesNegativadas =
+	//relatorio.tempoSemRecurso =
+	//relatorio.numeroCidadesNoVermelho =
+	//relatorio.tempoCidadesNoVermelho =
 
 	//! Comentarios de argumentacao
 		/**

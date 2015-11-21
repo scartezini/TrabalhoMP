@@ -1,23 +1,40 @@
 #include "../header/Adaptadores.h"
 #include <assert.h>
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
-*	Funcao: criaListaAdaptador
+*	Funcao: criaListaAdaptador (Iterador)
 *
 *	AssertivaSaida:
-*		NULL;
+*		NULL;	
+*
+*	Requisitos:
+*		criacao de uma nova lista do tipo Adaptador
+*
+*	Interfaces explicitas:
+*		Adaptador*, criaListaAdaptador
 **/
 Adaptador* criaListaAdaptador(){
 	return NULL;
 }
 
 /**
-*	Funcao: adaptadorVazio
+*	Funcao: adaptadorVazio (Iterador)
 *
 *	AssertivaSaida:
 *		VAZIO || NAO_VAZIO;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Adaptador
+*
+*	Requisitos:
+*		checar se a lista está vazia
+*
+*	Interfaces explicitas:
+*		Vazio, adaptadorVazio, Adaptador *listaAlvo
+*
+*	Interfaces implicitas:
+*		Vazio - tipo de dado, indicando se a lista eh vazia ou nao
+*		listaAlvo - lista de adaptadores
 **/
 Vazio adaptadorVazio(Adaptador *listaAlvo){
 	if(listaAlvo == NULL)
@@ -34,6 +51,20 @@ Vazio adaptadorVazio(Adaptador *listaAlvo){
 *
 *	AssertivaEntrada:
 *		registro != NULL;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Adaptador
+*		registro - string, nao vazia, contendo uma linha do arquivo txt de entrada
+*
+*	Requisitos:
+*		inserir um novo adaptador na lista de adaptadores
+*
+*	Interfaces explicitas:
+*		Adaptador*, insereAdaptador, char *registro, Adaptador *listaAlvo
+*
+*	Interfaces implicitas:
+*		registro - representa uma linha do arquivo de entrada
+*		listaAlvo - lista de adaptadores
 **/
 Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 	assert(registro != NULL);
@@ -140,11 +171,22 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 }
 
 /**
-*	Funcao: imprimeListaAdaptador
+*	Funcao: imprimeListaAdaptador (Iterador)
 *
 *	AssertivaEntrada:
 *		adaptadorVazio(listaAlvo) == NAO_VAZIO;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Adaptador
+*
+*	Requisitos:
+*		impressao da lista de adaptadores
+*
+*	Interfaces explicitas:
+*		void, imprimeListaAdaptador, Adaptador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de adaptadores
 **/
 void imprimeListaAdaptador(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
@@ -167,14 +209,25 @@ void imprimeListaAdaptador(Adaptador *listaAlvo){
 }
 
 /**
-*	Funcao: liberaListaAdaptador
+*	Funcao: liberaListaAdaptador (Iterador)
 *
 *	AssertivaEntrada:
 *		adaptadorVazio(listaAlvo) == NAO_VAZIO;
 *
 *	AssertivaSaida:
-*		adaptadorVazio(listaAlvo) == VAZIO;
+*		adaptadorVazio(aux1) == VAZIO;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Adaptador
+*
+*	Requisitos:
+*		liberacao da lista de adaptadores
+*
+*	Interfaces explicitas:
+*		void, liberaListaAdaptador, Adaptador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de adaptadores
 **/
 void liberaListaAdaptador(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
@@ -191,16 +244,12 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 		**/
 		aux2 = aux1->proximo;
 		free(aux1->nome);
-		free(aux1->saidas);
-		free(aux1->entradas);
 		free(aux1);
 	}
 	//! AS: listaAlvo chegou ao fim
 
 	assert(adaptadorVazio(aux1) == VAZIO);
 }
-
-/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *
@@ -209,6 +258,18 @@ void liberaListaAdaptador(Adaptador *listaAlvo){
 *	AssertivaEntrada:
 *		adaptadorVazio(listaAlvo) == NAO_VAZIO;
 *		para cada adaptador da lista: adaptador->saidas[i] != null;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Adaptador
+*
+*	Requisitos:
+*		definicao da distribuicao do adaptador
+*
+*	Interfaces explicitas:
+*		void, defineDistribuicao, Adaptador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de adaptadores
 **/
 void defineDistribuicao(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);

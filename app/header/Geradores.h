@@ -1,7 +1,5 @@
 #include "Cidades.h"
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
 *	Funcao: criaListaGerador
 *
@@ -103,13 +101,12 @@ void imprimeListaGerador(Gerador *);
 **/
 void liberaListaGerador(Gerador *);
 
-/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: recursoProduzidoTotal
 *
 *	Calcula a soma do total de recursos produzido
-* pelas celulas.	
+* pelas celulas.
 *
 *	@param listaAlvo
 *		inicio da lista de geradores;
@@ -117,6 +114,8 @@ void liberaListaGerador(Gerador *);
 *	@return
 *		soma de todo o recurso produzido pelos geradores
 *
+*	Assertiva de saida:
+*		energia total produzida por todos os geradores
 **/
 int recursoProduzidoTotal(Gerador *);
 
@@ -132,6 +131,12 @@ int recursoProduzidoTotal(Gerador *);
 *
 *	@return
 *		Soma do custo por segundo de todos os geradores
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Gerador
+*
+*	Assertiva de saida:
+*		custo total dos geradores
 **/
 int custoGeradores(Gerador *);
 
@@ -144,7 +149,24 @@ int custoGeradores(Gerador *);
 *
 *	@param listaAlvo
 *		ponteiro para o inicio da lista de geradores
-*
-*
 **/
 void mandarRecursoProduzido(Gerador *);
+
+/**
+*	Funcao: numeroGeradores
+*
+*	Calcula o numero total de geradores na lista de geradores
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de geradores
+*
+*	@return
+*		Numero total de geradores
+*
+**	Assertiva de entrada:
+*		estrutura do tipo Gerador
+*
+*	Assertiva de saida:
+*		numero total de geradores na lista de geradores
+**/
+int numeroGeradores(Gerador *);
