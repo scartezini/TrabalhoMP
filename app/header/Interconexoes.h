@@ -6,19 +6,19 @@
 *	Inicia um ponteiro que sera para Interconexao
 *
 *	AssertivaSaida:
-*		NULL; 
+*		NULL;
 **/
 Interconexao* criaListaInterconexao();
 
 /**
 *	Funcao: interconexaoVazia
 *
-*	Verifica se a lista de interconexoes esta vazia	
+*	Verifica se a lista de interconexoes esta vazia
 *
 *	@param listaAlvo
 *		ponteiro para o inicio da lista de interconexoes
 *
-*	@return 
+*	@return
 *		variavel do tipo Vazia, indicando se a lista esta vazia
 *
 *	Assertiva de entrada:
@@ -39,7 +39,7 @@ Vazia interconexaoVazia(Interconexao *);
 *
 *	@param registro
 *		string que sera lida do arquivo representando Inteconexao
-*	@param listaAlvo 
+*	@param listaAlvo
 *		lista de interconexoes onde a nova celula sera inserida
 *
 *	@return
@@ -74,7 +74,7 @@ Interconexao* insereInterconexao(char *, Interconexao *);
 *
 *	@param listaAlvo
 *		lista que sera impressa
-*		 
+*
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
 *
@@ -91,7 +91,7 @@ void imprimeListaInterconexao(Interconexao *);
 /**
 *	Funcao: liberaListaInterconexao
 *
-*	Desaloca a memoria reservada para 
+*	Desaloca a memoria reservada para
 * toda celula pertecente a lista de interconexoes
 *
 *	@param listaAlvo
@@ -114,7 +114,7 @@ void liberaListaInterconexao(Interconexao *);
 *	@param listaAlvo
 *		ponteiro para a celula de interconexao
 *
-*	@return 
+*	@return
 *		tamanho da celula de conexao que foi passada
 *
 *	Assertiva de entrada:
@@ -130,7 +130,7 @@ float tamanhoConexao(Interconexao *);
 /**
 *	Funcao: tamanhoTotalConexao
 *
-*	Calcula o tamanho total das conexoes 
+*	Calcula o tamanho total das conexoes
 * da lista que eh passada
 *
 *	@param listaAlvo
@@ -152,7 +152,7 @@ float tamanhoTotalConexao(Interconexao *);
 /**
 *	Funcao: totalGastoConserto
 *
-*	Calcula o custo total gasto com conserto 
+*	Calcula o custo total gasto com conserto
 * de todas as celulas de conexao
 *
 *	@param listaAlvo
@@ -171,7 +171,7 @@ int totalGastoConserto(Interconexao *);
 *
 *	@return
 *		variavel do tipo Falha, indicando se houve falha
-* 
+*
 *	Assertiva de saida:
 *		Se a chance de falha for maior que 0 e maior que um numero aleatorio
 *		Entao
@@ -187,13 +187,13 @@ Falha calculaFalha();
 *
 *	Funcao: mandarRecursoTransportado
 *
-*	Muda cada referencia seja para adaptador ou 
+*	Muda cada referencia seja para adaptador ou
 * para cidade, dependenodo do em qual esta ligada,
-* alterando o valor do recurso atual. 
+* alterando o valor do recurso atual.
 *
 *	@param listaAlvo
 *		ponterio de referencia para o inicio da lista
-*		de interconexoes 
+*		de interconexoes
 *
 *	Assertiva de entrada:
 *		interconexao - eh uma lista de interconexoes nao vazia
@@ -207,3 +207,37 @@ Falha calculaFalha();
 *		FimSe
 **/
 void mandarRecursoTransportado(Interconexao *);
+
+
+
+/**
+* Funcao: custoGastoComConcerto
+*
+* Calcula o custo que foi gasto com o concerto das
+* interconexoes
+*
+*	@param listaAlvo
+*		ponterio de referencia para o inicio da lista
+*		de interconexoes
+*
+*	Assertiva de entrada:
+*		interconexao - eh uma lista de interconexoes nao vazia
+*
+**/
+int custoGastoComConcerto(Interconexao *);
+
+
+/**
+* Funcao: numeroTotalFalhas
+*
+* Faz a contabilidade de quantas falas teve durante toda a simulaca
+*
+*	@param listaAlvo
+*		ponterio de referencia para o inicio da lista
+*		de interconexoes
+*
+*	Assertiva de entrada:
+*		interconexao - eh uma lista de interconexoes nao vazia
+*
+**/
+int numeroTotalFalhas(Interconexao *);

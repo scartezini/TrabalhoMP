@@ -254,9 +254,43 @@ void liberaListaCidade(Cidade *listaAlvo){
 /**
 *	Funcao: recursoGastoTotal
 *
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade
+*		cidadeVazia(listaAlvo) == NAO_VAZIA;
+*
+*	Hipotese:
+*		cidade -> ponteiro para o inicio da lista de Cidades
+*
+*	Requisitos:
+*		Somar os recursos gatos por todas as cidades
+*
+*	Interfaces explicitas:
+*			int, recursoGastoTotal;
+*
+*	Interfaces implicitas:
+*			Cidade - refeencia para a struct Cidade
 **/
+
 int recursoGastoTotal(Cidade *cidade){
-	return 0;
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+
+	int somatorio = 0;
+
+	//! Assertiva estrutural : cidade é a lista de cidades a ser percorrida
+	while(cidade != NULL){
+		//! AE: lista nao chegou ao fim
+		//! Comentarios de argumentacao
+			/**
+			*	Incrementa o somatorio com o valor do recurso gasto pela celula atual
+			*	muda a referencia de cidade para a proxima celula
+			**/
+			somatorio += cidade->recursoGasto;
+			cidade = cidade->proximo;
+	}
+	//! AE: lista chegou ao fim
+
+	return somatorio;
+
 }
 
 /**
@@ -279,7 +313,7 @@ int recursoGastoTotal(Cidade *cidade){
 **/
 int numeroCidades(Cidade *listaAlvo){
 	int total = 0;
-	
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Cidade *aux = listaAlvo;
 
@@ -291,7 +325,7 @@ int numeroCidades(Cidade *listaAlvo){
 		**/
 		total++;
 		aux = aux->proximo;
-	}	
+	}
 
 	assert(total >= 0);
 
