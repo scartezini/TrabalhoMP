@@ -106,7 +106,7 @@ void liberaListaGerador(Gerador *);
 *	Funcao: recursoProduzidoTotal
 *
 *	Calcula a soma do total de recursos produzido
-* pelas celulas.	
+* pelas celulas.
 *
 *	@param listaAlvo
 *		inicio da lista de geradores;
