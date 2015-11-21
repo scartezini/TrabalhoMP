@@ -392,6 +392,9 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 /**
 *	Funcao: calculaFalha
 *
+*	AssertivaEntrada:
+*		conexao->chanceFalha >= 0 && conexao->chanceFalha <= 1
+*
 *	AssertivaSaida:
 *		FALHA || SEM_FALHA;
 *
@@ -404,21 +407,20 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 *	Interfaces implicitas:
 *		Falha - tipo de dado, indicando se houve falha ou nao
 **/
-Falha calculaFalha(){
+Falha calculaFalha(Interconexao *conexao){
+	assert(conexao->chanceFalha >= 0 && conexao->chanceFalha <= 1);
+
+	int numGerado;
 	float num;
-	float chance = 0.01;
+	float chance = conexao->chanceFalha;
 
 	//! Asseriva estrutural: num eh um numero gerado aleatoriamente
 	srand(1);
-	num = ((float)rand())/RAND_MAX;
+	numGerado = rand() % 101;
+	num = numGerado/100;
 
-	if ( (chance > 0) && (chance >= num) )
-	//! AE: chance deve ser maior que 0 e maior ou igual a num
-		return FALHA;
-	else
-	//! AE: chance deve ser menor que 0 ou menor que num
-		return SEM_FALHA;
-	//! AS: o retorno deve ser uma variavel do tipo Falha
+
+	return ( (chance > 0) && (chance >= num) ) ? FALHA : SEM_FALHA;
 }
 
 /**
@@ -478,7 +480,6 @@ void mandarRecursoTransportado(Interconexao *listaAlvo){
 }
 
 
-
 /**
 *
 *	Funcao: custoGastoComConcerto
@@ -516,7 +517,7 @@ int custoGastoComConcerto(Interconexao *listaAlvo){
 			*	muda a referencia de listaAlvo para a proxima celula
 			* da lista
 			**/
-		somatorio += listaAlvo->numeroFalha * listaAlvo->custoConcerto;
+		somatorio += listaAlvo->numeroFalha * listaAlvo->custoConserto;
 		listaAlvo = listaAlvo->proximo;
 	}
 	//! AE : listaAlvo chegou ao fim
@@ -565,5 +566,58 @@ int numeroTotalFalhas(Interconexao *listaAlvo){
 	}
 
 	return somatorio;
+
+}
+
+/**
+*
+*	Funcao: gerenciaFalhas
+*
+*	AssertivaEntrada:
+*		interconexaoVazia(listaAlvo) == NAO_VAZIA;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*		listaAlvo - ponterio para o inicio da lista do tipo Interconexao
+*
+*	Requisitos:
+*		marcar as celulas que falharam como falhas
+*		e contabilizar o concertos das celulas que estao paradas
+*
+*	Interfaces explicitas:
+*		int, numeroTotalFalhas
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
+**/
+void gerenciaFalhas(Interconexao *listaAlvo){
+	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
+
+	while(listaAlvo != NULL){
+
+		if(listaAlvo->tagFalha == SEM_FALHA){
+		//! Assertiva estrutural : celula sem falha
+
+			if(calculaFalha(listaAlvo) == FALHA) {
+				//! Assertiva estrutural : celula falhou
+				listaAlvo->contadorTempoConserto = 0;
+				listaAlvo->numeroFalha++;
+				listaAlvo->tagFalha = FALHA;
+			}
+
+		}
+		else{
+			//! Assertiva estrutural : celula com Falha
+			listaAlvo->contadorTempoConserto++;
+
+			if(listaAlvo->contadorTempoConserto >= listaAlvo->tempoConserto){
+				//! AE : terminou o conscerto
+				listaAlvo->tagFalha = SEM_FALHA;
+				listaAlvo->contadorTempoConserto = 0;
+			}
+		}
+
+		listaAlvo = listaAlvo->proximo;
+	}
 
 }

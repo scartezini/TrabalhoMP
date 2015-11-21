@@ -153,6 +153,9 @@ typedef struct adaptador{
 *	custoConcerto:
 *		custo do concerto em segundos
 *
+*	contadorTempoConserto:
+*		contabiliza quanto tempo ja esta no concerto
+*
 * 	numeroFalha:
 * 		total de falhas
 *
@@ -206,6 +209,7 @@ typedef struct interconexao{
 	int tempoConserto;
 	int custoConserto;
 
+	int contadorTempoConserto;
 	int numeroFalha;
 	Falha tagFalha;
 
