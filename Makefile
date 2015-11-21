@@ -30,6 +30,10 @@ cppcheck:
 	cd app/src; cppcheck *.c
 	cd test; cppcheck *.c
 
+# Make para checar memory leak com o Valgrind
+valgrind:
+	cd app/src; valgrind --track-origins=yes --leak-check=full ./trabalho.out
+
 # Make para limpar todos os arquivos gerados
 clean: 
 	rm app/src/*.gcno app/src/*.out app/src/*.c.gcov app/src/*.h.gcov app/src/*.gcov app/src/*.gcda test/*.gcno test/*.out test/*.c.gcov test/*.h.gcov test/*.gcov test/*.gcda

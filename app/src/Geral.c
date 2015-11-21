@@ -4,9 +4,23 @@
 /**
 *	Funcao: conecta
 *
-*	AssertivaEntrada:
+*	Hipóteses:
+*		cidades - ponteiro para uma lista do tipo Cidade
+*		geradores - ponteiro para uma lista do tipo Gerador
+*		interconexoes - ponteiro para uma lista do tipo Interconexao
+*		adaptadores - ponteiro para uma lista do tipo Adaptador	
 *
-*	AssertivaSaida:
+*	Requisitos:
+*		realizar a conexao entre as listas, para gerar a rede de distribuicao
+*
+*	Interfaces explicitas:
+*		void, conecta, Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores
+*
+*	Interfaces implicitas:
+*		cidades - lista de cidades
+*		geradores - lista de geradores
+*		interconexoes - lista de interconexoes
+*		adaptadores - lista de adaptadores
 **/
 void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores){
 	Cidade *auxC = NULL; //!< Ponteiro auxiliar para cidade
@@ -125,9 +139,23 @@ void conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, A
 /**
 *	Funcao: verfica
 *
-*	AssertivaEntrada:
+*	Hipóteses:
+*		cidades - ponteiro para uma lista do tipo Cidade
+*		geradores - ponteiro para uma lista do tipo Gerador
+*		interconexoes - ponteiro para uma lista do tipo Interconexao
+*		adaptadores - ponteiro para uma lista do tipo Adaptador	
 *
-*	AssertivaSaida:
+*	Requisitos:
+*		verificar as conexoes e gerar um arquivo com as inconsistencias encontradas
+*
+*	Interfaces explicitas:
+*		void, conecta, Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores
+*
+*	Interfaces implicitas:
+*		cidades - lista de cidades
+*		geradores - lista de geradores
+*		interconexoes - lista de interconexoes
+*		adaptadores - lista de adaptadores
 **/
 void verifica(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores)
 {

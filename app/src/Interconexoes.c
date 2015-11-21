@@ -1,23 +1,40 @@
 #include "../header/Interconexoes.h"
 #include <assert.h>
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
-*	Funcao: criaListaInterconexao
+*	Funcao: criaListaInterconexao (Iterador)
 *
 *	AssertivaSaida:
 *		NULL;
+*
+*	Requisitos:
+*		criacao de uma nova lista do tipo Interconexao
+*
+*	Interfaces explicitas:
+*		Interconexao*, criaListaInterconexao
 **/
 Interconexao* criaListaInterconexao(){
 	return NULL;
 }
 
 /**
-*	Funcao: interconexaoVazia
+*	Funcao: interconexaoVazia (Iterador)
 *
 *	AssertivaSaida:
 *		VAZIA || NAO_VAZIA;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*
+*	Requisitos:
+*		checar se a lista está vazia
+*
+*	Interfaces explicitas:
+*		Vazia, interconexaoVazia, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		Vazia - tipo de dado, indicando se a lista eh vazia ou nao
+*		listaAlvo - lista de interconexoes
 **/
 Vazia interconexaoVazia(Interconexao *listaAlvo){
 	if(listaAlvo == NULL)
@@ -30,10 +47,24 @@ Vazia interconexaoVazia(Interconexao *listaAlvo){
 }
 
 /**
-*	Funcao: insereInterconexao
+*	Funcao: insereInterconexao 
 *
 *	AssertivaEntrada:
 *		registro != NULL;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*		registro - string, nao vazia, contendo uma linha do arquivo txt de entrada
+*
+*	Requisitos:
+*		inserir um novo gerador na lista de interconexoes
+*
+*	Interfaces explicitas:
+*		Interconexao*, insereInterconexao, char *registro, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		registro - representa uma linha do arquivo de entrada
+*		listaAlvo - lista de interconexoes
 **/
 Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	assert(registro != NULL);
@@ -179,11 +210,22 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 }
 
 /**
-*	Funcao: imprimeListaInterconexao
+*	Funcao: imprimeListaInterconexao (Iterador)
 *
 *	AssertivaEntrada:
 *		interconexaoVazia(listaAlvo) == NAO_VAZIA;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*
+*	Requisitos:
+*		impressao da lista de interconexoes
+*
+*	Interfaces explicitas:
+*		void, imprimeListaInterconexao, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
 **/
 void imprimeListaInterconexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
@@ -206,7 +248,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 }
 
 /**
-*	Funcao: liberaListaInterconexao
+*	Funcao: liberaListaInterconexao (Iterador)
 *
 *	AssertivaEntrada:
 *		interconexaoVazia(listaAlvo) == NAO_VAZIA;
@@ -214,6 +256,17 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 *	AssertivaSaida:
 *		interconexaoVazia(listaAlvo) == VAZIA;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*
+*	Requisitos:
+*		liberacao da lista de interconexoes
+*
+*	Interfaces explicitas:
+*		void, liberaListaInterconexao, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
 **/
 void liberaListaInterconexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
@@ -237,8 +290,6 @@ void liberaListaInterconexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(aux1) == VAZIA);
 }
 
-/** -----------------------Funcoes de Calculo---------------------------- */
-
 /**
 *	Funcao: tamanhoConexao
 *
@@ -247,6 +298,19 @@ void liberaListaInterconexao(Interconexao *listaAlvo){
 *
 *	AssertivaSaida:
 *		distancia > 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*
+*	Requisitos:
+*		calculo da distancia entre a posicao final e inicial
+*
+*	Interfaces explicitas:
+*		float, tamanhoConexao, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		float - valor do tamanho
+*		listaAlvo - lista de interconexoes
 **/
 float tamanhoConexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
@@ -284,6 +348,19 @@ float tamanhoConexao(Interconexao *listaAlvo){
 *
 *	AssertivaSaida:
 *		resultado > 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*
+*	Requisitos:
+*		calculo da soma dos tamanhos das interconexoes
+*
+*	Interfaces explicitas:
+*		float, tamanhoTotalConexao, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		float - valor da soma dos tamanhos
+*		listaAlvo - lista de interconexoes
 **/
 float tamanhoTotalConexao(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
@@ -317,6 +394,15 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 *
 *	AssertivaSaida:
 *		FALHA || SEM_FALHA;
+*
+*	Requisitos:
+*		calculo da chance de falha
+*
+*	Interfaces explicitas:
+*		Falha, calculaFalha
+*
+*	Interfaces implicitas:
+*		Falha - tipo de dado, indicando se houve falha ou nao
 **/
 Falha calculaFalha(){
 	float num;
@@ -342,6 +428,17 @@ Falha calculaFalha(){
 *	AssertivaEntrada:
 *		interconexaoVazia(listaAlvo) == NAO_VAZIA;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*
+*	Requisitos:
+*		transporte dos recursos
+*
+*	Interfaces explicitas:
+*		void, mandarRecursoTransportado
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
 **/
 void mandarRecursoTransportado(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
