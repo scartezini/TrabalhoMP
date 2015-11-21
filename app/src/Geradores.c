@@ -271,7 +271,7 @@ void liberaListaGerador(Gerador *listaAlvo){
 **/
 int recursoProduzidoTotal(Gerador *listaAlvo){
 	int total = 0;
-	
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Gerador *aux = listaAlvo;
 
@@ -283,7 +283,7 @@ int recursoProduzidoTotal(Gerador *listaAlvo){
 		**/
 		total += aux->recursoProduzido;
 		aux = aux->proximo;
-	}	
+	}
 
 	assert(total >= 0);
 
@@ -291,7 +291,7 @@ int recursoProduzidoTotal(Gerador *listaAlvo){
 }
 
 /**
-*	Funcao: custoGeradores 
+*	Funcao: custoGeradores
 *
 *	AssertivaSaida:
 *		total >= 0;
@@ -310,7 +310,7 @@ int recursoProduzidoTotal(Gerador *listaAlvo){
 **/
 int custoGeradores(Gerador *listaAlvo){
 	int total = 0;
-	
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Gerador *aux = listaAlvo;
 
@@ -322,12 +322,51 @@ int custoGeradores(Gerador *listaAlvo){
 		**/
 		total += aux->custo;
 		aux = aux->proximo;
-	}	
+	}
 
 	assert(total >= 0);
 
 	return total;
 }
+
+/**
+*	Funcao: mandarRecursoProduzido
+*
+*	AssertivaEntrada:
+*		geradorVazio(listaAlvo) == NAO_VAZIO;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		alterar a interconexao ligada a cada celula da lista de geradores
+* com o valor que sera transportado;
+*
+*	Interfaces explicitas:
+*		void, mandarRecursoProduzido
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+void mandarRecursoProduzido(Gerador *listaAlvo){
+	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
+
+	//! Asseriva estrutural: laço para percorrer a lista de geradores
+	while(listaAlvo != NULL){
+
+		if(listaAlvo->saida->tagFalha == SEM_FALHA){
+			//! AE: interconexao ligada a essa celula nao teve falha
+			listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
+		}
+		else{
+			//! AE: interconexao ligada a essa celula falhou
+			listaAlvo->saida->recursoTransportado = 0;
+		}
+
+		listaAlvo = listaAlvo->proximo;
+	}
+}
+
 
 /**
 *	Funcao: numeroGeradores (Iterador)
@@ -349,7 +388,7 @@ int custoGeradores(Gerador *listaAlvo){
 **/
 int numeroGeradores(Gerador *listaAlvo){
 	int total = 0;
-	
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Gerador *aux = listaAlvo;
 
@@ -361,7 +400,7 @@ int numeroGeradores(Gerador *listaAlvo){
 		**/
 		total++;
 		aux = aux->proximo;
-	}	
+	}
 
 	assert(total >= 0);
 
