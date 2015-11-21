@@ -77,7 +77,8 @@ int main()
 
 	int i;
 	for(i=0;i<tempoSimulacao;i++){
-		//TODO fazer todo o ciclo da maquina de estado
+		gerenciaFalhas(listaInterconexoes);
+		mandarRecursoProduzido(listaGeradores);
 	}
 
 	//! Comentarios de argumentacao
