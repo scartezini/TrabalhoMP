@@ -277,58 +277,59 @@ typedef struct gerador{
 /** -----------------------Relatorio---------------------------- */
 
 /**
-*	Struct que sera armazenada as respostas paras as perguntas
-*do relatorio inicial
+*	Cabecalho onde serao armazenadas as respostas paras as perguntas
+* do relatorio inicial
 *
 *	tempoTotalSimulacao:
-*			Tempo total da simulação
+*		tempo total da simulacao
 *
 *	custoTotalSimulacao:
-*			Custo total na simulação
+*		custo total na simulacao
 *
 *	totalGeradores:
-*			Total de geradores
+*		total de geradores
 *
 *	energiaTotalGerada:
-*			Energia total gerada
+*		energia total gerada
 *
 *	totalCidades:
-*			Total de cidades
+*		total de cidades
 *
-*	energiaGastaPelasCidades:
-*			Energia total gasta pelas cidades
+*	energiaGastaCidades:
+*		energia total gasta pelas cidades
 *
-* tamanhoTotalInterconexoes:
-*			Tamanho total das interconexões
+*	tamanhoTotalInterconexoes:
+*		tamanho total das interconexoes
 *
 *	numeroFalhaInterconexoes:
-*			Número de falhas nas interconexões
+*		numero de falhas nas interconexoes
 *
 *	numeroCidadesNegativadas:
-*			Número de cidades que ficaram com menos recurso que o necessário
+*		numero de cidades que ficaram com menos recurso que o necessário
 *
 *	tempoSemRecurso:
-*			Tempo que ficaram sem recurso
+*		tempo que ficaram sem recurso
 *
 *	nomeroCidadesNoVermelho:
-*			Número de cidades que ficaram com menos de 30% dos recursos
+*		número de cidades que ficaram com menos de 30% dos recursos
 *
 *	tempoCidadesNoVermelho:
-*			empo que ficaram com menos de 30% de recurso
+*		tempo que ficaram com menos de 30% de recurso
 *
 **/
 
 typedef struct relatorio{
-		int tempoTotalSimulacao;
-		int custoTotalSimulacao;
-		int totalGeradores;
-		int energiaTotalGerada;
-		int totalCidades;
-		int energiaGastaPelasCidades;
-		float tamanhoTotalInterconexoes;
-		int numeroFalhaInterconexoes;
-		int numeroCidadesNegativadas;
-		int tempoSemRecurso;
-		int nomeroCidadesNoVermelho;
-		int tempoCidadesNoVermelho;
+	int tempoTotalSimulacao;
+	int custoTotalSimulacao;
+	int totalGeradores;
+	int energiaTotalGerada;
+	int totalCidades;
+	int energiaGastaCidades;
+	float tamanhoTotalInterconexoes;
+	int numeroFalhaInterconexoes;
+	int numeroCidadesNegativadas;
+	int tempoSemRecurso;
+	int numeroCidadesNoVermelho;
+	int tempoCidadesNoVermelho;
+
 }Relatorio;

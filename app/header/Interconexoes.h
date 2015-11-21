@@ -1,7 +1,5 @@
 #include "Geradores.h"
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
 *	Funcao: criaListaInterconexao
 *
@@ -106,8 +104,6 @@ void imprimeListaInterconexao(Interconexao *);
 *		A lista deve estar vazia
 **/
 void liberaListaInterconexao(Interconexao *);
-
-/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: tamanhoConexao
