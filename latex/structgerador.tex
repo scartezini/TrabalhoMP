@@ -1,0 +1,102 @@
+\hypertarget{structgerador}{\section{gerador Struct Reference}
+\label{structgerador}\index{gerador@{gerador}}
+}
+
+
+{\ttfamily \#include $<$Principal.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{structgerador_ae2a0f66178bb1c4d42e2b70ec9426ccb}{nome}
+\item 
+int \hyperlink{structgerador_a7e30d633898517077a4363ad6fade5b6}{posicao} \mbox{[}2\mbox{]}
+\item 
+int \hyperlink{structgerador_ac6d5c20bc66b992b34eaa1ab7bb1d813}{taxa\-Producao}
+\item 
+int \hyperlink{structgerador_a9e29959680201391763bfe25c54d3e7a}{recurso\-Produzido}
+\item 
+int \hyperlink{structgerador_a420b800f5434e6488ebc8a2b81d3b74b}{custo}
+\item 
+struct \hyperlink{structgerador}{gerador} $\ast$ \hyperlink{structgerador_afc2cefcafa0e3935e9e7641ef91e6b2d}{proximo}
+\item 
+struct \hyperlink{structinterconexao}{interconexao} $\ast$ \hyperlink{structgerador_aafa87c2fb8e43c550b83e0f109c2b7e5}{saida}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Geradores-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Cabecalho do elemento Gerador
+
+nome\-: nome do gerador
+
+posicao\-: vetor posicao, representando x na posicao\mbox{[}0\mbox{]} e y na posicao\mbox{[}1\mbox{]}, ambas em km, representando tambem a posicao do adaptador na interface
+
+taxa\-Producao\-: quantidade de recurso que a cidade precisa por segundo
+
+recurso\-Produzido\-: quantidade total de recurso produzido pelo gerador
+
+custo\-: custo de geração por segundo
+
+proximo\-: representa a proxima cidade da rede de cidades
+
+saida\-: representa as interconexoes realizadas/apontadas pelos adaptadores 
+
+Definition at line 263 of file Principal.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{structgerador_a420b800f5434e6488ebc8a2b81d3b74b}{\index{gerador@{gerador}!custo@{custo}}
+\index{custo@{custo}!gerador@{gerador}}
+\subsubsection[{custo}]{\setlength{\rightskip}{0pt plus 5cm}int custo}}\label{structgerador_a420b800f5434e6488ebc8a2b81d3b74b}
+
+
+Definition at line 269 of file Principal.\-h.
+
+\hypertarget{structgerador_ae2a0f66178bb1c4d42e2b70ec9426ccb}{\index{gerador@{gerador}!nome@{nome}}
+\index{nome@{nome}!gerador@{gerador}}
+\subsubsection[{nome}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ nome}}\label{structgerador_ae2a0f66178bb1c4d42e2b70ec9426ccb}
+
+
+Definition at line 264 of file Principal.\-h.
+
+\hypertarget{structgerador_a7e30d633898517077a4363ad6fade5b6}{\index{gerador@{gerador}!posicao@{posicao}}
+\index{posicao@{posicao}!gerador@{gerador}}
+\subsubsection[{posicao}]{\setlength{\rightskip}{0pt plus 5cm}int posicao\mbox{[}2\mbox{]}}}\label{structgerador_a7e30d633898517077a4363ad6fade5b6}
+
+
+Definition at line 265 of file Principal.\-h.
+
+\hypertarget{structgerador_afc2cefcafa0e3935e9e7641ef91e6b2d}{\index{gerador@{gerador}!proximo@{proximo}}
+\index{proximo@{proximo}!gerador@{gerador}}
+\subsubsection[{proximo}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gerador}$\ast$ proximo}}\label{structgerador_afc2cefcafa0e3935e9e7641ef91e6b2d}
+
+
+Definition at line 271 of file Principal.\-h.
+
+\hypertarget{structgerador_a9e29959680201391763bfe25c54d3e7a}{\index{gerador@{gerador}!recurso\-Produzido@{recurso\-Produzido}}
+\index{recurso\-Produzido@{recurso\-Produzido}!gerador@{gerador}}
+\subsubsection[{recurso\-Produzido}]{\setlength{\rightskip}{0pt plus 5cm}int recurso\-Produzido}}\label{structgerador_a9e29959680201391763bfe25c54d3e7a}
+
+
+Definition at line 268 of file Principal.\-h.
+
+\hypertarget{structgerador_aafa87c2fb8e43c550b83e0f109c2b7e5}{\index{gerador@{gerador}!saida@{saida}}
+\index{saida@{saida}!gerador@{gerador}}
+\subsubsection[{saida}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf interconexao}$\ast$ saida}}\label{structgerador_aafa87c2fb8e43c550b83e0f109c2b7e5}
+
+
+Definition at line 272 of file Principal.\-h.
+
+\hypertarget{structgerador_ac6d5c20bc66b992b34eaa1ab7bb1d813}{\index{gerador@{gerador}!taxa\-Producao@{taxa\-Producao}}
+\index{taxa\-Producao@{taxa\-Producao}!gerador@{gerador}}
+\subsubsection[{taxa\-Producao}]{\setlength{\rightskip}{0pt plus 5cm}int taxa\-Producao}}\label{structgerador_ac6d5c20bc66b992b34eaa1ab7bb1d813}
+
+
+Definition at line 267 of file Principal.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+app/header/\hyperlink{_principal_8h}{Principal.\-h}\end{DoxyCompactItemize}

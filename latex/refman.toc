@@ -1,0 +1,171 @@
+\contentsline {chapter}{\numberline {1}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Data Structure Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Data Structures}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Data Structure Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}adaptador Struct Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Field Documentation}{7}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}entradas}{7}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}nome}{8}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.3}posicao}{8}{subsubsection.4.1.2.3}
+\contentsline {subsubsection}{\numberline {4.1.2.4}proximo}{8}{subsubsection.4.1.2.4}
+\contentsline {subsubsection}{\numberline {4.1.2.5}quantidade\discretionary {-}{}{}Saidas}{8}{subsubsection.4.1.2.5}
+\contentsline {subsubsection}{\numberline {4.1.2.6}recurso\discretionary {-}{}{}Recebido}{8}{subsubsection.4.1.2.6}
+\contentsline {subsubsection}{\numberline {4.1.2.7}saidas}{8}{subsubsection.4.1.2.7}
+\contentsline {section}{\numberline {4.2}cidade Struct Reference}{8}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{8}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Field Documentation}{9}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}entradas}{9}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}nome}{9}{subsubsection.4.2.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.3}posicao}{9}{subsubsection.4.2.2.3}
+\contentsline {subsubsection}{\numberline {4.2.2.4}proximo}{9}{subsubsection.4.2.2.4}
+\contentsline {subsubsection}{\numberline {4.2.2.5}recurso\discretionary {-}{}{}Gasto}{9}{subsubsection.4.2.2.5}
+\contentsline {subsubsection}{\numberline {4.2.2.6}recurso\discretionary {-}{}{}Necessario}{9}{subsubsection.4.2.2.6}
+\contentsline {subsubsection}{\numberline {4.2.2.7}recurso\discretionary {-}{}{}Recebido}{9}{subsubsection.4.2.2.7}
+\contentsline {section}{\numberline {4.3}gerador Struct Reference}{9}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{10}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Field Documentation}{10}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}custo}{10}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}nome}{10}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}posicao}{10}{subsubsection.4.3.2.3}
+\contentsline {subsubsection}{\numberline {4.3.2.4}proximo}{10}{subsubsection.4.3.2.4}
+\contentsline {subsubsection}{\numberline {4.3.2.5}recurso\discretionary {-}{}{}Produzido}{10}{subsubsection.4.3.2.5}
+\contentsline {subsubsection}{\numberline {4.3.2.6}saida}{10}{subsubsection.4.3.2.6}
+\contentsline {subsubsection}{\numberline {4.3.2.7}taxa\discretionary {-}{}{}Producao}{11}{subsubsection.4.3.2.7}
+\contentsline {section}{\numberline {4.4}interconexao Struct Reference}{11}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{11}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Field Documentation}{12}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}capacidade\discretionary {-}{}{}Maxima}{12}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}chance\discretionary {-}{}{}Falha}{12}{subsubsection.4.4.2.2}
+\contentsline {subsubsection}{\numberline {4.4.2.3}custo\discretionary {-}{}{}Conserto}{12}{subsubsection.4.4.2.3}
+\contentsline {subsubsection}{\numberline {4.4.2.4}entrada\discretionary {-}{}{}Adaptador}{12}{subsubsection.4.4.2.4}
+\contentsline {subsubsection}{\numberline {4.4.2.5}entrada\discretionary {-}{}{}Gerador}{12}{subsubsection.4.4.2.5}
+\contentsline {subsubsection}{\numberline {4.4.2.6}entrada\discretionary {-}{}{}Interconexao}{12}{subsubsection.4.4.2.6}
+\contentsline {subsubsection}{\numberline {4.4.2.7}nome}{12}{subsubsection.4.4.2.7}
+\contentsline {subsubsection}{\numberline {4.4.2.8}numero\discretionary {-}{}{}Falha}{13}{subsubsection.4.4.2.8}
+\contentsline {subsubsection}{\numberline {4.4.2.9}posicao\discretionary {-}{}{}Final}{13}{subsubsection.4.4.2.9}
+\contentsline {subsubsection}{\numberline {4.4.2.10}posicao\discretionary {-}{}{}Inicial}{13}{subsubsection.4.4.2.10}
+\contentsline {subsubsection}{\numberline {4.4.2.11}proximo}{13}{subsubsection.4.4.2.11}
+\contentsline {subsubsection}{\numberline {4.4.2.12}proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador}{13}{subsubsection.4.4.2.12}
+\contentsline {subsubsection}{\numberline {4.4.2.13}proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade}{13}{subsubsection.4.4.2.13}
+\contentsline {subsubsection}{\numberline {4.4.2.14}proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador}{13}{subsubsection.4.4.2.14}
+\contentsline {subsubsection}{\numberline {4.4.2.15}recurso\discretionary {-}{}{}Transportado}{13}{subsubsection.4.4.2.15}
+\contentsline {subsubsection}{\numberline {4.4.2.16}saida\discretionary {-}{}{}Adaptador}{13}{subsubsection.4.4.2.16}
+\contentsline {subsubsection}{\numberline {4.4.2.17}saida\discretionary {-}{}{}Cidade}{13}{subsubsection.4.4.2.17}
+\contentsline {subsubsection}{\numberline {4.4.2.18}saida\discretionary {-}{}{}Interconexao}{13}{subsubsection.4.4.2.18}
+\contentsline {subsubsection}{\numberline {4.4.2.19}tag\discretionary {-}{}{}Destino}{13}{subsubsection.4.4.2.19}
+\contentsline {subsubsection}{\numberline {4.4.2.20}tag\discretionary {-}{}{}Falha}{14}{subsubsection.4.4.2.20}
+\contentsline {subsubsection}{\numberline {4.4.2.21}tempo\discretionary {-}{}{}Conserto}{14}{subsubsection.4.4.2.21}
+\contentsline {chapter}{\numberline {5}File Documentation}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}app/header/\discretionary {-}{}{}Adaptadores.h File Reference}{15}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Function Documentation}{15}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}adaptador\discretionary {-}{}{}Vazio}{15}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.2}cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}{16}{subsubsection.5.1.1.2}
+\contentsline {subsubsection}{\numberline {5.1.1.3}define\discretionary {-}{}{}Distribuicao}{16}{subsubsection.5.1.1.3}
+\contentsline {subsubsection}{\numberline {5.1.1.4}imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}{17}{subsubsection.5.1.1.4}
+\contentsline {subsubsection}{\numberline {5.1.1.5}insere\discretionary {-}{}{}Adaptador}{17}{subsubsection.5.1.1.5}
+\contentsline {subsubsection}{\numberline {5.1.1.6}libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}{18}{subsubsection.5.1.1.6}
+\contentsline {section}{\numberline {5.2}app/header/\discretionary {-}{}{}Cidades.h File Reference}{19}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Function Documentation}{19}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}cidade\discretionary {-}{}{}Vazia}{19}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}{19}{subsubsection.5.2.1.2}
+\contentsline {subsubsection}{\numberline {5.2.1.3}imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}{20}{subsubsection.5.2.1.3}
+\contentsline {subsubsection}{\numberline {5.2.1.4}insere\discretionary {-}{}{}Cidade}{20}{subsubsection.5.2.1.4}
+\contentsline {subsubsection}{\numberline {5.2.1.5}libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}{21}{subsubsection.5.2.1.5}
+\contentsline {subsubsection}{\numberline {5.2.1.6}recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}{22}{subsubsection.5.2.1.6}
+\contentsline {section}{\numberline {5.3}app/header/\discretionary {-}{}{}Geradores.h File Reference}{22}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Function Documentation}{22}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}{22}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}custo\discretionary {-}{}{}Geradores}{23}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}gerador\discretionary {-}{}{}Vazio}{23}{subsubsection.5.3.1.3}
+\contentsline {subsubsection}{\numberline {5.3.1.4}imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}{23}{subsubsection.5.3.1.4}
+\contentsline {subsubsection}{\numberline {5.3.1.5}insere\discretionary {-}{}{}Gerador}{24}{subsubsection.5.3.1.5}
+\contentsline {subsubsection}{\numberline {5.3.1.6}libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}{25}{subsubsection.5.3.1.6}
+\contentsline {subsubsection}{\numberline {5.3.1.7}mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}{25}{subsubsection.5.3.1.7}
+\contentsline {subsubsection}{\numberline {5.3.1.8}recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}{25}{subsubsection.5.3.1.8}
+\contentsline {section}{\numberline {5.4}app/header/\discretionary {-}{}{}Geral.h File Reference}{26}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{26}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}conecta}{26}{subsubsection.5.4.1.1}
+\contentsline {subsubsection}{\numberline {5.4.1.2}verifica}{27}{subsubsection.5.4.1.2}
+\contentsline {section}{\numberline {5.5}app/header/\discretionary {-}{}{}Interconexoes.h File Reference}{28}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Function Documentation}{29}{subsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.1.1}calcula\discretionary {-}{}{}Falha}{29}{subsubsection.5.5.1.1}
+\contentsline {subsubsection}{\numberline {5.5.1.2}cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}{29}{subsubsection.5.5.1.2}
+\contentsline {subsubsection}{\numberline {5.5.1.3}imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}{29}{subsubsection.5.5.1.3}
+\contentsline {subsubsection}{\numberline {5.5.1.4}insere\discretionary {-}{}{}Interconexao}{30}{subsubsection.5.5.1.4}
+\contentsline {subsubsection}{\numberline {5.5.1.5}interconexao\discretionary {-}{}{}Vazia}{31}{subsubsection.5.5.1.5}
+\contentsline {subsubsection}{\numberline {5.5.1.6}libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}{31}{subsubsection.5.5.1.6}
+\contentsline {subsubsection}{\numberline {5.5.1.7}mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}{32}{subsubsection.5.5.1.7}
+\contentsline {subsubsection}{\numberline {5.5.1.8}tamanho\discretionary {-}{}{}Conexao}{32}{subsubsection.5.5.1.8}
+\contentsline {subsubsection}{\numberline {5.5.1.9}tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}{33}{subsubsection.5.5.1.9}
+\contentsline {subsubsection}{\numberline {5.5.1.10}total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto}{33}{subsubsection.5.5.1.10}
+\contentsline {section}{\numberline {5.6}app/header/\discretionary {-}{}{}Principal.h File Reference}{34}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Typedef Documentation}{34}{subsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.1.1}Adaptador}{34}{subsubsection.5.6.1.1}
+\contentsline {subsubsection}{\numberline {5.6.1.2}Cidade}{35}{subsubsection.5.6.1.2}
+\contentsline {subsubsection}{\numberline {5.6.1.3}Destino}{35}{subsubsection.5.6.1.3}
+\contentsline {subsubsection}{\numberline {5.6.1.4}Falha}{35}{subsubsection.5.6.1.4}
+\contentsline {subsubsection}{\numberline {5.6.1.5}Gerador}{35}{subsubsection.5.6.1.5}
+\contentsline {subsubsection}{\numberline {5.6.1.6}Interconexao}{35}{subsubsection.5.6.1.6}
+\contentsline {subsubsection}{\numberline {5.6.1.7}Vazia}{36}{subsubsection.5.6.1.7}
+\contentsline {subsubsection}{\numberline {5.6.1.8}Vazio}{36}{subsubsection.5.6.1.8}
+\contentsline {subsection}{\numberline {5.6.2}Enumeration Type Documentation}{36}{subsection.5.6.2}
+\contentsline {subsubsection}{\numberline {5.6.2.1}destino}{36}{subsubsection.5.6.2.1}
+\contentsline {subsubsection}{\numberline {5.6.2.2}falha}{36}{subsubsection.5.6.2.2}
+\contentsline {subsubsection}{\numberline {5.6.2.3}vazia}{37}{subsubsection.5.6.2.3}
+\contentsline {subsubsection}{\numberline {5.6.2.4}vazio}{37}{subsubsection.5.6.2.4}
+\contentsline {section}{\numberline {5.7}app/src/\discretionary {-}{}{}Adaptadores.c File Reference}{37}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Function Documentation}{37}{subsection.5.7.1}
+\contentsline {subsubsection}{\numberline {5.7.1.1}adaptador\discretionary {-}{}{}Vazio}{37}{subsubsection.5.7.1.1}
+\contentsline {subsubsection}{\numberline {5.7.1.2}cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}{37}{subsubsection.5.7.1.2}
+\contentsline {subsubsection}{\numberline {5.7.1.3}define\discretionary {-}{}{}Distribuicao}{38}{subsubsection.5.7.1.3}
+\contentsline {subsubsection}{\numberline {5.7.1.4}imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}{38}{subsubsection.5.7.1.4}
+\contentsline {subsubsection}{\numberline {5.7.1.5}insere\discretionary {-}{}{}Adaptador}{38}{subsubsection.5.7.1.5}
+\contentsline {subsubsection}{\numberline {5.7.1.6}libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}{39}{subsubsection.5.7.1.6}
+\contentsline {section}{\numberline {5.8}app/src/\discretionary {-}{}{}Cidades.c File Reference}{40}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Function Documentation}{40}{subsection.5.8.1}
+\contentsline {subsubsection}{\numberline {5.8.1.1}cidade\discretionary {-}{}{}Vazia}{40}{subsubsection.5.8.1.1}
+\contentsline {subsubsection}{\numberline {5.8.1.2}cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}{40}{subsubsection.5.8.1.2}
+\contentsline {subsubsection}{\numberline {5.8.1.3}imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}{40}{subsubsection.5.8.1.3}
+\contentsline {subsubsection}{\numberline {5.8.1.4}insere\discretionary {-}{}{}Cidade}{40}{subsubsection.5.8.1.4}
+\contentsline {subsubsection}{\numberline {5.8.1.5}libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}{41}{subsubsection.5.8.1.5}
+\contentsline {subsubsection}{\numberline {5.8.1.6}recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}{42}{subsubsection.5.8.1.6}
+\contentsline {section}{\numberline {5.9}app/src/\discretionary {-}{}{}Geradores.c File Reference}{42}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Function Documentation}{42}{subsection.5.9.1}
+\contentsline {subsubsection}{\numberline {5.9.1.1}cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}{42}{subsubsection.5.9.1.1}
+\contentsline {subsubsection}{\numberline {5.9.1.2}gerador\discretionary {-}{}{}Vazio}{42}{subsubsection.5.9.1.2}
+\contentsline {subsubsection}{\numberline {5.9.1.3}imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}{42}{subsubsection.5.9.1.3}
+\contentsline {subsubsection}{\numberline {5.9.1.4}insere\discretionary {-}{}{}Gerador}{43}{subsubsection.5.9.1.4}
+\contentsline {subsubsection}{\numberline {5.9.1.5}libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}{43}{subsubsection.5.9.1.5}
+\contentsline {section}{\numberline {5.10}app/src/\discretionary {-}{}{}Geral.c File Reference}{44}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Function Documentation}{44}{subsection.5.10.1}
+\contentsline {subsubsection}{\numberline {5.10.1.1}conecta}{44}{subsubsection.5.10.1.1}
+\contentsline {subsubsection}{\numberline {5.10.1.2}verifica}{45}{subsubsection.5.10.1.2}
+\contentsline {section}{\numberline {5.11}app/src/\discretionary {-}{}{}Interconexoes.c File Reference}{46}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Function Documentation}{46}{subsection.5.11.1}
+\contentsline {subsubsection}{\numberline {5.11.1.1}calcula\discretionary {-}{}{}Falha}{46}{subsubsection.5.11.1.1}
+\contentsline {subsubsection}{\numberline {5.11.1.2}cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}{46}{subsubsection.5.11.1.2}
+\contentsline {subsubsection}{\numberline {5.11.1.3}imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}{47}{subsubsection.5.11.1.3}
+\contentsline {subsubsection}{\numberline {5.11.1.4}insere\discretionary {-}{}{}Interconexao}{47}{subsubsection.5.11.1.4}
+\contentsline {subsubsection}{\numberline {5.11.1.5}interconexao\discretionary {-}{}{}Vazia}{48}{subsubsection.5.11.1.5}
+\contentsline {subsubsection}{\numberline {5.11.1.6}libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}{48}{subsubsection.5.11.1.6}
+\contentsline {subsubsection}{\numberline {5.11.1.7}mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}{48}{subsubsection.5.11.1.7}
+\contentsline {subsubsection}{\numberline {5.11.1.8}tamanho\discretionary {-}{}{}Conexao}{49}{subsubsection.5.11.1.8}
+\contentsline {subsubsection}{\numberline {5.11.1.9}tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}{49}{subsubsection.5.11.1.9}
+\contentsline {section}{\numberline {5.12}app/src/\discretionary {-}{}{}Principal.c File Reference}{49}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}Function Documentation}{49}{subsection.5.12.1}
+\contentsline {subsubsection}{\numberline {5.12.1.1}main}{49}{subsubsection.5.12.1.1}
+\contentsline {section}{\numberline {5.13}app/test/\discretionary {-}{}{}Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.c File Reference}{50}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Function Documentation}{50}{subsection.5.13.1}
+\contentsline {subsubsection}{\numberline {5.13.1.1}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}{50}{subsubsection.5.13.1.1}
+\contentsline {subsubsection}{\numberline {5.13.1.2}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}{50}{subsubsection.5.13.1.2}
+\contentsline {subsubsection}{\numberline {5.13.1.3}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}{50}{subsubsection.5.13.1.3}
+\contentsline {subsubsection}{\numberline {5.13.1.4}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}{50}{subsubsection.5.13.1.4}
+\contentsline {subsubsection}{\numberline {5.13.1.5}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}{50}{subsubsection.5.13.1.5}
+\contentsline {section}{\numberline {5.14}app/test/\discretionary {-}{}{}Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.c File Reference}{51}{section.5.14}
+\contentsline {section}{\numberline {5.15}app/test/main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.c File Reference}{51}{section.5.15}
+\contentsline {subsection}{\numberline {5.15.1}Function Documentation}{51}{subsection.5.15.1}
+\contentsline {subsubsection}{\numberline {5.15.1.1}main}{51}{subsubsection.5.15.1.1}
+\contentsline {section}{\numberline {5.16}R\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}M\discretionary {-}{}{}E.\discretionary {-}{}{}md File Reference}{51}{section.5.16}

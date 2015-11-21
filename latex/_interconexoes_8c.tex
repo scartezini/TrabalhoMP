@@ -1,0 +1,269 @@
+\hypertarget{_interconexoes_8c}{\section{app/src/\-Interconexoes.c File Reference}
+\label{_interconexoes_8c}\index{app/src/\-Interconexoes.\-c@{app/src/\-Interconexoes.\-c}}
+}
+{\ttfamily \#include \char`\"{}../header/\-Interconexoes.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$ \hyperlink{_interconexoes_8c_a32eead8ad286c2fbbfe30be0cc7c7f4a}{cria\-Lista\-Interconexao} ()
+\item 
+\hyperlink{_principal_8h_a453af0716bcc535c4aa941283edbb273}{Vazia} \hyperlink{_interconexoes_8c_aa6bd174793c7c7b3180807a89dff383a}{interconexao\-Vazia} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$lista\-Alvo)
+\item 
+\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$ \hyperlink{_interconexoes_8c_a62026ec7f82ec37fc7d4fd8a7a896a9b}{insere\-Interconexao} (char $\ast$registro, \hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$lista\-Alvo)
+\item 
+void \hyperlink{_interconexoes_8c_a39074450c6823038037afb237c539e15}{imprime\-Lista\-Interconexao} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$lista\-Alvo)
+\item 
+void \hyperlink{_interconexoes_8c_a8b310c65b12665cba2b35af97053cb0a}{libera\-Lista\-Interconexao} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$lista\-Alvo)
+\item 
+float \hyperlink{_interconexoes_8c_acdc6ff55787a76bb84b6f48e975c6a66}{tamanho\-Conexao} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$lista\-Alvo)
+\item 
+float \hyperlink{_interconexoes_8c_a2cf32d3b1703ed7f27ee48f31d78a7d3}{tamanho\-Total\-Conexao} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$lista\-Alvo)
+\item 
+\hyperlink{_principal_8h_ab80478651cd53bf69168abd99c5b2afb}{Falha} \hyperlink{_interconexoes_8c_aa43f0898064194dfe857d84b131846e3}{calcula\-Falha} ()
+\item 
+void \hyperlink{_interconexoes_8c_a9fe0a3964db07bb25add21beec1b31f5}{mandar\-Recurso\-Transportado} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$lista\-Alvo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_interconexoes_8c_aa43f0898064194dfe857d84b131846e3}{\index{Interconexoes.\-c@{Interconexoes.\-c}!calcula\-Falha@{calcula\-Falha}}
+\index{calcula\-Falha@{calcula\-Falha}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{calcula\-Falha}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Falha} calcula\-Falha (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_aa43f0898064194dfe857d84b131846e3}
+Funcao\-: calcula\-Falha
+
+Assertiva\-Saida\-: F\-A\-L\-H\-A $|$$|$ S\-E\-M\-\_\-\-F\-A\-L\-H\-A; Asseriva estrutural\-: num eh um numero gerado aleatoriamente
+
+A\-E\-: chance deve ser maior que 0 e maior ou igual a num
+
+A\-E\-: chance deve ser menor que 0 ou menor que num
+
+A\-S\-: o retorno deve ser uma variavel do tipo Falha 
+
+Definition at line 322 of file Interconexoes.\-c.
+
+\hypertarget{_interconexoes_8c_a32eead8ad286c2fbbfe30be0cc7c7f4a}{\index{Interconexoes.\-c@{Interconexoes.\-c}!cria\-Lista\-Interconexao@{cria\-Lista\-Interconexao}}
+\index{cria\-Lista\-Interconexao@{cria\-Lista\-Interconexao}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{cria\-Lista\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interconexao}$\ast$ cria\-Lista\-Interconexao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_a32eead8ad286c2fbbfe30be0cc7c7f4a}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Funcoes Basicas-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Funcao\-: cria\-Lista\-Interconexao
+
+Assertiva\-Saida\-: N\-U\-L\-L; 
+
+Definition at line 12 of file Interconexoes.\-c.
+
+\hypertarget{_interconexoes_8c_a39074450c6823038037afb237c539e15}{\index{Interconexoes.\-c@{Interconexoes.\-c}!imprime\-Lista\-Interconexao@{imprime\-Lista\-Interconexao}}
+\index{imprime\-Lista\-Interconexao@{imprime\-Lista\-Interconexao}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{imprime\-Lista\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\-Lista\-Interconexao (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_a39074450c6823038037afb237c539e15}
+Funcao\-: imprime\-Lista\-Interconexao
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A; Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Imprime os atributos da interconexao corrente
+
+A\-S\-: lista\-Alvo chegou ao fim 
+
+Definition at line 189 of file Interconexoes.\-c.
+
+\hypertarget{_interconexoes_8c_a62026ec7f82ec37fc7d4fd8a7a896a9b}{\index{Interconexoes.\-c@{Interconexoes.\-c}!insere\-Interconexao@{insere\-Interconexao}}
+\index{insere\-Interconexao@{insere\-Interconexao}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{insere\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interconexao}$\ast$ insere\-Interconexao (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{registro, }
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_a62026ec7f82ec37fc7d4fd8a7a896a9b}
+Funcao\-: insere\-Interconexao
+
+Assertiva\-Entrada\-: registro != N\-U\-L\-L; $<$ Alocacao da nova Interconexao
+
+$<$ Variavel auxiliar para percorrer a lista e inserir o elemento no final
+
+$<$ Alocacao de um vetor do tamanho do registro
+
+$<$ Variaveis de auxilio
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Comecando de registro\mbox{[}2\mbox{]}, enquanto registro\mbox{[}i\mbox{]} for um caracter irrelevante, soma-\/se 1 a variavel de auxilio i
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante
+
+Asseriva estrutural\-: o nome da nova interconexao possui tamanho i-\/1
+
+A\-E\-: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos da interconexao
+
+A\-E\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-E\-: o valor de j eh igual a 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) recebe um caracter finalizador
+
+A\-S\-: o valor de j eh maior que 0
+
+A\-E\-: o valor de j eh maior que 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) do vetor num\-Char recebe um caracter finalizador
+
+Comentarios de argumentacao
+
+De acordo com o valor da variavel auxiliar j, armazena-\/se o vetor num\-Char no seu respectivo atributo lido
+
+A\-S\-: o valor de j eh maior que 8
+
+A\-S\-: a posicao corrente do registro possui um caracter relevante
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Se o valor da variavel de auxilio j for 0 Entao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do nome da interconexao Senao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do vetor num\-Char Fim\-Se
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-S\-: o valor da variavel auxiliar j ultrapassou o numero total de atributos lidos da interconexao
+
+Comentarios de argumentacao
+
+Os atributos nao lidos da inteconexao inserida recebem o valor nulo, e a proxima interconexao da lista que contem a nova inteconexao inserido na cabeca recebe a lista de interconexoes atual
+
+A\-E\-: se a lista\-Alvo nao for vazia
+
+A\-E\-: o aux nao chegou ao final da lista de interconexoes
+
+A\-E\-: se a lista\-Alvo for vazia 
+
+Definition at line 38 of file Interconexoes.\-c.
+
+\hypertarget{_interconexoes_8c_aa6bd174793c7c7b3180807a89dff383a}{\index{Interconexoes.\-c@{Interconexoes.\-c}!interconexao\-Vazia@{interconexao\-Vazia}}
+\index{interconexao\-Vazia@{interconexao\-Vazia}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{interconexao\-Vazia}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vazia} interconexao\-Vazia (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_aa6bd174793c7c7b3180807a89dff383a}
+Funcao\-: interconexao\-Vazia
+
+Assertiva\-Saida\-: V\-A\-Z\-I\-A $|$$|$ N\-A\-O\-\_\-\-V\-A\-Z\-I\-A; A\-E\-: lista\-Alvo eh vazia
+
+A\-E\-: lista\-Alvo nao eh vazia
+
+A\-S\-: o retorno deve ser uma variavel do tipo Vazia 
+
+Definition at line 22 of file Interconexoes.\-c.
+
+\hypertarget{_interconexoes_8c_a8b310c65b12665cba2b35af97053cb0a}{\index{Interconexoes.\-c@{Interconexoes.\-c}!libera\-Lista\-Interconexao@{libera\-Lista\-Interconexao}}
+\index{libera\-Lista\-Interconexao@{libera\-Lista\-Interconexao}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{libera\-Lista\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}void libera\-Lista\-Interconexao (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_a8b310c65b12665cba2b35af97053cb0a}
+Funcao\-: libera\-Lista\-Interconexao
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: interconexao\-Vazia(lista\-Alvo) == V\-A\-Z\-I\-A; Assertiva estrutural\-: aux1 é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Liberam os atributos alocados dinamicamente do elemento Interconexao corrente
+
+A\-S\-: lista\-Alvo chegou ao fim 
+
+Definition at line 219 of file Interconexoes.\-c.
+
+\hypertarget{_interconexoes_8c_a9fe0a3964db07bb25add21beec1b31f5}{\index{Interconexoes.\-c@{Interconexoes.\-c}!mandar\-Recurso\-Transportado@{mandar\-Recurso\-Transportado}}
+\index{mandar\-Recurso\-Transportado@{mandar\-Recurso\-Transportado}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{mandar\-Recurso\-Transportado}]{\setlength{\rightskip}{0pt plus 5cm}void mandar\-Recurso\-Transportado (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_a9fe0a3964db07bb25add21beec1b31f5}
+Funcao\-: mandar\-Recurso\-Transportado
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A; Asseriva estrutural\-: aux é a lista nao-\/nula de interconexoes
+
+A\-E\-: aux nao chegou ao fim da lista de inteconexoes
+
+A\-E\-: a interconexao corrente nao possui falha
+
+Comentarios de argumentacao
+
+Enqaunto a lista de interconexoes eh percorrida, dependendo do destino da interconexao, soma-\/se o recurso ao respectivo destino
+
+A\-E\-: o destino da interconexao eh um Adaptador
+
+A\-E\-: o destino da interconexao eh uma Cidade
+
+A\-S\-: a lista de interconexoes chegou ao fim 
+
+Definition at line 347 of file Interconexoes.\-c.
+
+\hypertarget{_interconexoes_8c_acdc6ff55787a76bb84b6f48e975c6a66}{\index{Interconexoes.\-c@{Interconexoes.\-c}!tamanho\-Conexao@{tamanho\-Conexao}}
+\index{tamanho\-Conexao@{tamanho\-Conexao}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{tamanho\-Conexao}]{\setlength{\rightskip}{0pt plus 5cm}float tamanho\-Conexao (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_acdc6ff55787a76bb84b6f48e975c6a66}
+-----------------------Funcoes de Calculo-\/-\/-\/-\/------------------------ Funcao\-: tamanho\-Conexao
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: distancia $>$ 0; $<$ Valor no eixo x da posicao inicial
+
+$<$ Valor no eixo y da posicao inicial
+
+$<$ Valor no eixo x da posicao final
+
+$<$ Valor no eixo y da posicao final
+
+Comentarios de argumentacao
+
+Calculando a distancia utilizando ((xb-\/xa)$^\wedge$2 + (yb-\/ya)$^\wedge$2)$^\wedge$(1/2)
+
+Definition at line 252 of file Interconexoes.\-c.
+
+\hypertarget{_interconexoes_8c_a2cf32d3b1703ed7f27ee48f31d78a7d3}{\index{Interconexoes.\-c@{Interconexoes.\-c}!tamanho\-Total\-Conexao@{tamanho\-Total\-Conexao}}
+\index{tamanho\-Total\-Conexao@{tamanho\-Total\-Conexao}!Interconexoes.c@{Interconexoes.\-c}}
+\subsubsection[{tamanho\-Total\-Conexao}]{\setlength{\rightskip}{0pt plus 5cm}float tamanho\-Total\-Conexao (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8c_a2cf32d3b1703ed7f27ee48f31d78a7d3}
+Funcao\-: tamanho\-Total\-Conexao
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: resultado $>$ 0; Asseriva estrutural\-: aux é a lista nao-\/nula de interconexoes
+
+A\-E\-: aux nao chegou ao fim da lista de inteconexoes
+
+Comentarios de argumentacao
+
+Enquanto a lista de interconexoes eh percorrida, o tamanho das conexoes sao somados e armazenados na variavel resultado
+
+A\-S\-: a lista de interconexoes chegou ao fim 
+
+Definition at line 289 of file Interconexoes.\-c.
+
