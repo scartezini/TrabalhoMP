@@ -1,9 +1,5 @@
 #include "../header/Geral.h"
 
-
-
-
-
 int main()
 {
 	FILE *fp = fopen("teste.txt","r"); //!< Abre arquivo de entrada
