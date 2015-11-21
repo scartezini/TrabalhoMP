@@ -14,22 +14,22 @@ rodar:
 
 # Criando o executavel de testes
 teste:
-	cd app/test; make
+	cd test; make
 
 # Make para rodar o executavel de teste
 testar:
-	cd app/test; ./teste.out
+	cd test; ./teste.out
 
 # Make para executar o gcov
 gcov:
 	cd app/src; gcov *.c
-	cd app/test; gcov *.c
+	cd test; gcov *.c
 
 # Make para realizar o cppcheck
 cppcheck:
 	cd app/src; cppcheck *.c
-	cd app/test; cppcheck *.c
+	cd test; cppcheck *.c
 
 # Make para limpar todos os arquivos gerados
 clean: 
-	rm app/src/*.gcno app/src/*.out app/src/*.c.gcov app/src/*.h.gcov app/src/*.gcov app/src/*.gcda app/test/*.gcno app/test/*.out app/test/*.c.gcov app/test/*.h.gcov app/test/*.gcov app/test/*.gcda
+	rm app/src/*.gcno app/src/*.out app/src/*.c.gcov app/src/*.h.gcov app/src/*.gcov app/src/*.gcda test/*.gcno test/*.out test/*.c.gcov test/*.h.gcov test/*.gcov test/*.gcda

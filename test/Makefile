@@ -25,8 +25,3 @@ default: teste
 # Para criar o executável, precisamos dos .cpp
 teste: *.c
 	$(CC) $(SRCS) *.c $(CFLAGS) $(GCOVFLAGS) $(TESTFLAGS) -o teste.out
-
-clean:
-	rm *.out
-	rm *.gcno
-	rm *.gcda
