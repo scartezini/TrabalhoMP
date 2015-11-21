@@ -69,13 +69,13 @@ int main()
 		**/
 
 	//relatorio.tempoTotalSimulacao = fornecido pelo usuario
-	//relatorio.custoTotalSimulacao = custoGeradores(listaGeradores) + custo de concerto, caso haja falha	
+	relatorio.custoTotalSimulacao = custoGeradores(listaGeradores) + custoGastoComConcerto(listaInterconexoes);
 	relatorio.totalGeradores = numeroGeradores(listaGeradores);
 	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
 	relatorio.totalCidades = numeroCidades(listaCidades);
-	//relatorio.energiaGastaCidades = 
+	relatorio.energiaGastaCidades = recursoGastoTotal(listaCidades);
 	relatorio.tamanhoTotalInterconexoes = tamanhoTotalConexao(listaInterconexoes);
-	//relatorio.numeroFalhaInterconexoes =
+	relatorio.numeroFalhaInterconexoes = numeroTotalFalhas(listaInterconexoes);
 	//relatorio.numeroCidadesNegativadas =
 	//relatorio.tempoSemRecurso =
 	//relatorio.numeroCidadesNoVermelho =

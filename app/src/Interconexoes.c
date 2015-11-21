@@ -47,7 +47,7 @@ Vazia interconexaoVazia(Interconexao *listaAlvo){
 }
 
 /**
-*	Funcao: insereInterconexao 
+*	Funcao: insereInterconexao
 *
 *	AssertivaEntrada:
 *		registro != NULL;
@@ -177,33 +177,33 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 
 	novo->entradaAdaptador = NULL;
 	novo->saidaAdaptador = NULL;
-	
+
 	novo->entradaInterconexao = NULL;
 	novo->saidaInterconexao = NULL;
-	
+
 	novo->proximoEntradaAdaptador = NULL;
 	novo->proximoSaidaAdaptador = NULL;
-	
+
 	novo->proximoEntradaCidade = NULL;
-	
+
 	novo->entradaGerador = NULL;
-	
+
 	novo->saidaCidade = NULL;
 
 	novo->proximo = NULL;
-	
+
 	if(interconexaoVazia(listaAlvo) == NAO_VAZIA){
 	//! AE: se a listaAlvo nao for vazia
-	
+
 		for(aux=listaAlvo;aux->proximo!=NULL;aux=aux->proximo);
 		//! AE: o aux nao chegou ao final da lista de interconexoes
-		
+
 		aux->proximo = novo;
 	}
 	else{
 	//! AE: se a listaAlvo for vazia
-		
-		listaAlvo = novo;	
+
+		listaAlvo = novo;
 	}
 
 	return listaAlvo;
@@ -475,4 +475,95 @@ void mandarRecursoTransportado(Interconexao *listaAlvo){
 		aux = aux->proximo;
 	}
 	//! AS: a lista de interconexoes chegou ao fim
+}
+
+
+
+/**
+*
+*	Funcao: custoGastoComConcerto
+*
+*	AssertivaEntrada:
+*		interconexaoVazia(listaAlvo) == NAO_VAZIA;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*		listaAlvo - ponterio para o inicio da lista do tipo Interconexao
+*
+*	Requisitos:
+*		calcular o quanto foi gasto com concerto das interconexoes
+*
+*	Interfaces explicitas:
+*		int, custoGastoComConcerto
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
+**/
+int custoGastoComConcerto(Interconexao *listaAlvo){
+	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
+	int somatorio = 0;
+
+	//! Asseriva estrutural: laço que ira percorrer a listaAlvo
+	while(listaAlvo != NULL){
+		//! AE : listaAlvo nao chegou ao fim
+
+		//! Comentarios de argumentacao
+			/**
+			*	incrementa o somatorio com o resultado da multipicaçao
+			* do numero de falhas com o custo gasto com o concerto de
+			* cada falha
+			*
+			*	muda a referencia de listaAlvo para a proxima celula
+			* da lista
+			**/
+		somatorio += listaAlvo->numeroFalha * listaAlvo->custoConcerto;
+		listaAlvo = listaAlvo->proximo;
+	}
+	//! AE : listaAlvo chegou ao fim
+
+	return somatorio;
+}
+
+
+/**
+*
+*	Funcao: numeroTotalFalhas
+*
+*	AssertivaEntrada:
+*		interconexaoVazia(listaAlvo) == NAO_VAZIA;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Interconexao
+*		listaAlvo - ponterio para o inicio da lista do tipo Interconexao
+*
+*	Requisitos:
+*		contabilizar a quantidade de falhas
+*
+*	Interfaces explicitas:
+*		int, numeroTotalFalhas
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
+**/
+int numeroTotalFalhas(Interconexao *listaAlvo){
+	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
+	int somatorio = 0;
+
+	//! Assertiva estrutural: laço para percorrer a listaAlvo
+	while (listaAlvo != NULL) {
+		//! AE: listaAlvo ainda nao acabou
+
+		//! Comentarios de argumentacao
+			/**
+			*	Incrementa o somatorio com o numero de falhas da celula atual
+			*
+			*	Muda a referencia de listaAlvo para a proxima celula
+			* da lista
+			**/
+		somatorio += listaAlvo->numeroFalha;
+		listaAlvo = listaAlvo->proximo;
+	}
+
+	return somatorio;
+
 }
