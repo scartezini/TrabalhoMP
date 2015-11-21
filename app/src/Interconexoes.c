@@ -142,7 +142,6 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 		**/
 	novo->tagFalha = SEM_FALHA;
 	novo->numeroFalha = 0;
-	novo->capacidadeMaxima = 0;
 	novo->recursoTransportado = 0;
 
 	novo->entradaAdaptador = NULL;
