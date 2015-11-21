@@ -1,8 +1,10 @@
 # TrabalhoMP
 Projeto da disciplina de Métodos de Programação (2/2015) na Universidade de Brasília 
+
 Rede de distribuição
 
 Obs.: Todos os comandos a seguir devem ser executados no diretório raiz do projeto
+
 	-> Para compilar o programa, execute o comando "make"
 	-> Para rodar o programa, execute o comando "make rodar"
 	-> Para compilar o teste, execute o comando "make teste"
