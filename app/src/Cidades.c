@@ -167,6 +167,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 
+	free(numChar);
 	return listaAlvo;
 }
 

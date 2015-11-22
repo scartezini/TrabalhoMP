@@ -69,7 +69,7 @@ Vazia interconexaoVazia(Interconexao *listaAlvo){
 Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	assert(registro != NULL);
 
-	Interconexao *novo = (Interconexao *)malloc(sizeof(Interconexao)); //!< Alocacao da nova Interconexao
+	Interconexao *novo = (Interconexao *)calloc(sizeof(Interconexao), 1); //!< Alocacao da nova Interconexao
 	Interconexao *aux = NULL; //!< Variavel auxiliar para percorrer a lista e inserir o elemento no final
 	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
@@ -206,6 +206,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 		listaAlvo = novo;
 	}
 
+	free(numChar);
 	return listaAlvo;
 }
 

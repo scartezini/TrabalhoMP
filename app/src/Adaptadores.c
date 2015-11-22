@@ -167,6 +167,7 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 
+	free(numChar);
 	return listaAlvo;
 }
 

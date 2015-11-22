@@ -15,14 +15,20 @@ int main()
 
 	printf("Rede de distribuicao\n");
 
-	printf("Digite o caminho para o arquivo (a partir de ./app/src):\n");
-	scanf("%s",arquivo);
-	getchar();
+	do{
+	//! AE: o nome do arquivo nao eh valido 
+
+		printf("Digite o caminho para o arquivo (a partir de ./app/src):\n");
+		scanf("%s",arquivo);
+		getchar();
+
+		fp = fopen(arquivo,"r");//!< Abre arquivo de entrada
+	
+	} while(fp == NULL);
+	//! AE: o nome do arquivo eh valido 
 
 	printf("Digite o tempo desejado de simulacao\n");
 	scanf("%d",&tempoSimulacao);
-
-	fp = fopen(arquivo,"r");//!< Abre arquivo de entrada
 
 	do{
 	//! AE: o arquivo nao chegou ao fim
