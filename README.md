@@ -13,3 +13,7 @@ Obs.: Todos os comandos a seguir devem ser executados no diretório raiz do proj
 	-> Para usar a ferramenta cppcheck, execute o comando "make cppcheck"
 	-> Para usar a ferramenta valgrind, execute o comando "make valgrind"
 	-> Para limpar todos os arquivos gerados pelos comandos acima, execute o comando "make clean"
+
+Obs2.: Dependendo do SO utilizado, se faz necessário pular uma linha no arquivo de teste, para o programa poder funcionar corretamente
+	
+	Ex.: elementary OS, versão 0.2.1 "Luna" (64-bit)
