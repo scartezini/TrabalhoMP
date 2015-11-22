@@ -194,8 +194,6 @@ void imprimeListaCidade(Cidade *listaAlvo){
 
 	Cidade *aux = NULL;
 
-	printf("Lista de cidades:\n");
-
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	for(aux=listaAlvo;aux!=NULL;aux=aux->proximo){
 	//! AE: listaAlvo nao chegou ao fim

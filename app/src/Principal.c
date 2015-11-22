@@ -85,15 +85,17 @@ int main()
 		/**
 		*	Imprimindo as listas obtidas a partir do arquivo de entrada
 		**/
-	imprimeListaCidade(listaCidades);
-	imprimeListaGerador(listaGeradores);
-	imprimeListaInterconexao(listaInterconexoes);
-	imprimeListaAdaptador(listaAdaptadores);
+	printf("\nLista de cidades:\n");imprimeListaCidade(listaCidades);
+	printf("\nLista de geradores:\n");imprimeListaGerador(listaGeradores);
+	printf("\nLista de interconexões:\n");imprimeListaInterconexao(listaInterconexoes);
+	printf("\nLista de adaptadores:\n");imprimeListaAdaptador(listaAdaptadores);
 
 	//! Comentarios de argumentacao
 		/**
 		*	Preenchimento do relatorio
 		**/
+	printf("\nRelatório:\n");
+		
 	relatorio.tempoTotalSimulacao = tempoSimulacao;
 	printf("Tempo total da simulação: %d segundos\n", relatorio.tempoTotalSimulacao);
 	
@@ -113,10 +115,10 @@ int main()
 	printf("Energia total gasta pelas cidades: %d\n", relatorio.energiaGastaCidades);
 	
 	relatorio.tamanhoTotalInterconexoes = tamanhoTotalConexao(listaInterconexoes);
-	printf("Tamanho total das interconexões: %f\n", relatorio.tamanhoTotalInterconexoes);
+	printf("Tamanho total das interconexões: %.2f\n", relatorio.tamanhoTotalInterconexoes);
 	
 	relatorio.numeroFalhaInterconexoes = numeroTotalFalhas(listaInterconexoes);
-	printf("Número de falhas nas interconexões: %d\n", relatorio.numeroFalhaInterconexoes);
+	printf("Número de falhas nas interconexões: %d\n\n", relatorio.numeroFalhaInterconexoes);
 	//relatorio.numeroCidadesNegativadas =
 	//relatorio.tempoSemRecurso =
 	//relatorio.numeroCidadesNoVermelho =
