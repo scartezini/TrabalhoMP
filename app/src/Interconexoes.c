@@ -506,8 +506,6 @@ int custoGastoComConserto(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 
 	int total = 0;
-	
-	Interconexao *aux;	
 
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Interconexao *aux = listaAlvo;
@@ -558,8 +556,6 @@ int numeroTotalFalhas(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 	
 	int total = 0;
-	
-	Interconexao *aux;	
 
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Interconexao *aux = listaAlvo;

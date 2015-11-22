@@ -2,29 +2,31 @@
 
 int main()
 {
-	FILE *fp ;
+	FILE *fp;
 	Cidade *listaCidades = criaListaCidade();
 	Gerador *listaGeradores = criaListaGerador();
 	Interconexao *listaInterconexoes = criaListaInterconexao();
 	Adaptador *listaAdaptadores = criaListaAdaptador();
 	Relatorio relatorio;
-	int tempoSimulacao;
+	int i, tempoSimulacao = 2;
 	char arquivo[100];
 
 	char str[100]; //!< String auxiliar para obter registros
 
-	printf("Digite o caminho para o arquivo:\n" );
-	scanf("%s\n",arquivo);
+	printf("Rede de distribuicao\n");
+
+	printf("Digite o caminho para o arquivo (a partir de ./app/src):\n");
+	scanf("%s",arquivo);
 	getchar();
 
-	printf("Digite o tempo desejado de simulacao\n" );
-	scanf("%d\n",&tempoSimulacao);
+	printf("Digite o tempo desejado de simulacao\n");
+	scanf("%d",&tempoSimulacao);
 
 	fp = fopen(arquivo,"r");//!< Abre arquivo de entrada
 
 	do{
 	//! AE: o arquivo nao chegou ao fim
-
+	
 		if(fgets(str,100,fp)!=NULL){
 		//! AE: a linha (registro) obtido do arquivo possui conteudo
 
@@ -47,7 +49,10 @@ int main()
 				case 'A':
 				//! AE: O registro obtido eh do tipo Adaptador
 					listaAdaptadores = insereAdaptador(str,listaAdaptadores);
+					break;
 
+				default:
+					break;
 			}
 		}
 		//! AS: a linha (registro) obtido do arquivo nao possui conteudo, ou seja, o arquivo chegou ao fim
@@ -74,11 +79,9 @@ int main()
 	printf("\n\n");
 	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 
-
-	int i;
 	for(i=0;i<tempoSimulacao;i++){
 		gerenciaFalhas(listaInterconexoes);
-		mandarRecursoProduzido(listaGeradores);
+		mandarRecursoProduzido(listaGeradores); //Seg
 	}
 
 	//! Comentarios de argumentacao
@@ -86,7 +89,7 @@ int main()
 		*	Preenchimento do relatorio
 		**/
 	relatorio.tempoTotalSimulacao = tempoSimulacao;
-	relatorio.custoTotalSimulacao = custoGeradores(listaGeradores)*tempoSimulacao + custoGastoComConcerto(listaInterconexoes);
+	relatorio.custoTotalSimulacao = custoGeradores(listaGeradores)*tempoSimulacao + custoGastoComConserto(listaInterconexoes);
 	relatorio.totalGeradores = numeroGeradores(listaGeradores);
 	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
 	relatorio.totalCidades = numeroCidades(listaCidades);
