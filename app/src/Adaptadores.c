@@ -163,7 +163,6 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 	novo->entradas = NULL;
 	novo->quantidadeSaidas = 0;
 
-
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 
@@ -194,6 +193,8 @@ void imprimeListaAdaptador(Adaptador *listaAlvo){
 
 	Adaptador *aux = NULL;
 
+	printf("Lista de adaptadores:\n");
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	for(aux=listaAlvo;aux!=NULL;aux=aux->proximo){
 	//! AE: listaAlvo nao chegou ao fim
@@ -201,7 +202,7 @@ void imprimeListaAdaptador(Adaptador *listaAlvo){
 		/**
 		*	Imprime os atributos do adaptador corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso recebido%d quantidade de saidas%d\n"
+		printf("nome: %s pos_x: %d pos_y: %d recurso recebido: %d quantidade de saídas: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoRecebido
 				,aux->quantidadeSaidas);

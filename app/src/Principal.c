@@ -70,15 +70,6 @@ int main()
 
 	//! Comentarios de argumentacao
 		/**
-		*	Imprimindo as listas obtidas a partir do arquivo de entrada
-		**/
-	printf("\nlistaCidades:\n");imprimeListaCidade(listaCidades);
-	printf("\nlistaGeradores:\n");imprimeListaGerador(listaGeradores);
-	printf("\nlistaInterconexoes:\n");imprimeListaInterconexao(listaInterconexoes);
-	printf("\nlistaAdaptadores:\n");imprimeListaAdaptador(listaAdaptadores);
-
-	//! Comentarios de argumentacao
-		/**
 		*	Conectando e verificando as listas
 		**/
 	conecta(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
@@ -87,21 +78,45 @@ int main()
 
 	for(i=0;i<tempoSimulacao;i++){
 		gerenciaFalhas(listaInterconexoes);
-		mandarRecursoProduzido(listaGeradores); //Seg
+		mandarRecursoProduzido(listaGeradores);
 	}
+
+	//! Comentarios de argumentacao
+		/**
+		*	Imprimindo as listas obtidas a partir do arquivo de entrada
+		**/
+	imprimeListaCidade(listaCidades);
+	imprimeListaGerador(listaGeradores);
+	imprimeListaInterconexao(listaInterconexoes);
+	imprimeListaAdaptador(listaAdaptadores);
 
 	//! Comentarios de argumentacao
 		/**
 		*	Preenchimento do relatorio
 		**/
 	relatorio.tempoTotalSimulacao = tempoSimulacao;
+	printf("Tempo total da simulação: %d segundos\n", relatorio.tempoTotalSimulacao);
+	
 	relatorio.custoTotalSimulacao = custoGeradores(listaGeradores)*tempoSimulacao + custoGastoComConserto(listaInterconexoes);
+	printf("Custo total na simulação: %d\n", relatorio.custoTotalSimulacao);
+
 	relatorio.totalGeradores = numeroGeradores(listaGeradores);
+	printf("Total de geradores: %d\n", relatorio.totalGeradores);
+	
 	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
+	printf("Energia total gerada: %d\n", relatorio.energiaTotalGerada);
+	
 	relatorio.totalCidades = numeroCidades(listaCidades);
+	printf("Total de cidades: %d\n", relatorio.totalCidades);
+	
 	relatorio.energiaGastaCidades = recursoGastoTotal(listaCidades);
+	printf("Energia total gasta pelas cidades: %d\n", relatorio.energiaGastaCidades);
+	
 	relatorio.tamanhoTotalInterconexoes = tamanhoTotalConexao(listaInterconexoes);
+	printf("Tamanho total das interconexões: %f\n", relatorio.tamanhoTotalInterconexoes);
+	
 	relatorio.numeroFalhaInterconexoes = numeroTotalFalhas(listaInterconexoes);
+	printf("Número de falhas nas interconexões: %d\n", relatorio.numeroFalhaInterconexoes);
 	//relatorio.numeroCidadesNegativadas =
 	//relatorio.tempoSemRecurso =
 	//relatorio.numeroCidadesNoVermelho =
