@@ -16,7 +16,7 @@ typedef enum vazia{
 
 /**
 *	Enumeracao para detectar se a lista esta vazia ou nao
-*	
+*
 **/
 typedef enum vazio{
 	VAZIO, NAO_VAZIO
@@ -153,6 +153,9 @@ typedef struct adaptador{
 *	custoConcerto:
 *		custo do concerto em segundos
 *
+*	contadorTempoConserto:
+*		contabiliza quanto tempo ja esta no concerto
+*
 * 	numeroFalha:
 * 		total de falhas
 *
@@ -175,16 +178,16 @@ typedef struct adaptador{
 *		aponta, caso a saida seja um adaptador, para o adaptador cuja entrada eh esta interconexao
 *
 *	entradaInterconexao:
-*		aponta, caso a entrada seja interconexao, para a interconexao cuja saida eh esta interconexao		
+*		aponta, caso a entrada seja interconexao, para a interconexao cuja saida eh esta interconexao
 *
 *	saidaInterconexao:
 *		aponta, caso a saida seja interconexao, para a interconexao cuja entrada eh esta interconexao
 *
 *	proximoEntradaAdaptador:
-*		ponteiro para a proxima entrada do adaptador relacionado a interconexao			
+*		ponteiro para a proxima entrada do adaptador relacionado a interconexao
 *
 *	proximoSaidaAdaptador:
-*		ponteiro para a proxima saida do adaptador relacionado a interconexao	
+*		ponteiro para a proxima saida do adaptador relacionado a interconexao
 *
 *	proximoEntradaCidade:
 *		ponteiro para a proxima cidade de destino
@@ -206,6 +209,7 @@ typedef struct interconexao{
 	int tempoConserto;
 	int custoConserto;
 
+	int contadorTempoConserto;
 	int numeroFalha;
 	Falha tagFalha;
 
@@ -213,22 +217,22 @@ typedef struct interconexao{
 	int recursoTransportado;
 
 	struct interconexao *proximo;
-	
+
 	struct adaptador *entradaAdaptador;
 	struct adaptador *saidaAdaptador;
-	
+
 	struct interconexao *entradaInterconexao;
 	struct interconexao *saidaInterconexao;
-	
+
 	struct interconexao *proximoEntradaAdaptador;
 	struct interconexao *proximoSaidaAdaptador;
-	
+
 	struct interconexao *proximoEntradaCidade;
-	
+
 	struct gerador *entradaGerador;
-	
+
 	struct cidade *saidaCidade;
-	
+
 }Interconexao;
 
 
@@ -272,3 +276,64 @@ typedef struct gerador{
 	struct interconexao *saida;
 
 }Gerador;
+
+
+/** -----------------------Relatorio---------------------------- */
+
+/**
+*	Cabecalho onde serao armazenadas as respostas paras as perguntas
+* do relatorio inicial
+*
+*	tempoTotalSimulacao:
+*		tempo total da simulacao
+*
+*	custoTotalSimulacao:
+*		custo total na simulacao
+*
+*	totalGeradores:
+*		total de geradores
+*
+*	energiaTotalGerada:
+*		energia total gerada
+*
+*	totalCidades:
+*		total de cidades
+*
+*	energiaGastaCidades:
+*		energia total gasta pelas cidades
+*
+*	tamanhoTotalInterconexoes:
+*		tamanho total das interconexoes
+*
+*	numeroFalhaInterconexoes:
+*		numero de falhas nas interconexoes
+*
+*	numeroCidadesNegativadas:
+*		numero de cidades que ficaram com menos recurso que o necessário
+*
+*	tempoSemRecurso:
+*		tempo que ficaram sem recurso
+*
+*	nomeroCidadesNoVermelho:
+*		número de cidades que ficaram com menos de 30% dos recursos
+*
+*	tempoCidadesNoVermelho:
+*		tempo que ficaram com menos de 30% de recurso
+*
+**/
+
+typedef struct relatorio{
+	int tempoTotalSimulacao;
+	int custoTotalSimulacao;
+	int totalGeradores;
+	int energiaTotalGerada;
+	int totalCidades;
+	int energiaGastaCidades;
+	float tamanhoTotalInterconexoes;
+	int numeroFalhaInterconexoes;
+	int numeroCidadesNegativadas;
+	int tempoSemRecurso;
+	int numeroCidadesNoVermelho;
+	int tempoCidadesNoVermelho;
+
+}Relatorio;

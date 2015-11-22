@@ -2,20 +2,39 @@
 #include <assert.h>
 
 /**
-*	Funcao: criaListaGerador
+*	Funcao: criaListaGerador (Iterador)
 *
 *	AssertivaSaida:
 *		NULL;
+*
+*	Requisitos:
+*		criacao de uma nova lista do tipo Gerador
+*
+*	Interfaces explicitas:
+*		Gerador*, criaListaGerador
 **/
 Gerador* criaListaGerador(){
 	return NULL;
 }
 
 /**
-*	Funcao: criaListaCidade
+*	Funcao: geradorVazio (Iterador)
 *
 *	AssertivaSaida:
 *		VAZIO || NAO_VAZIO;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		checar se a lista está vazia
+*
+*	Interfaces explicitas:
+*		Vazio, geradorVazio, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		Vazio - tipo de dado, indicando se a lista eh vazia ou nao
+*		listaAlvo - lista de geradores
 **/
 Vazio geradorVazio(Gerador *listaAlvo){
 	if(listaAlvo == NULL)
@@ -32,6 +51,20 @@ Vazio geradorVazio(Gerador *listaAlvo){
 *
 *	AssertivaEntrada:
 *		registro != NULL;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*		registro - string, nao vazia, contendo uma linha do arquivo txt de entrada
+*
+*	Requisitos:
+*		inserir um novo gerador na lista de geradores
+*
+*	Interfaces explicitas:
+*		Gerador*, insereGerador, char *registro, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		registro - representa uma linha do arquivo de entrada
+*		listaAlvo - lista de geradores
 **/
 Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 	assert(registro != NULL);
@@ -143,6 +176,17 @@ Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 *	AssertivaEntrada:
 *		geradorVazio(listaAlvo) == NAO_VAZIO;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		impressao da lista de geradores
+*
+*	Interfaces explicitas:
+*		void, imprimeListaGerador, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
 **/
 void imprimeListaGerador(Gerador *listaAlvo){
 	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
@@ -165,7 +209,7 @@ void imprimeListaGerador(Gerador *listaAlvo){
 }
 
 /**
-*	Funcao: liberaListaGerador
+*	Funcao: liberaListaGerador (Iterador)
 *
 *	AssertivaEntrada:
 *		geradorVazio(listaAlvo) == NAO_VAZIO;
@@ -173,6 +217,17 @@ void imprimeListaGerador(Gerador *listaAlvo){
 *	AssertivaSaida:
 *		geradorVazio(listaAlvo) == VAZIO;
 *
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		liberacao da lista de geradores
+*
+*	Interfaces explicitas:
+*		void, liberaListaGerador, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
 **/
 void liberaListaGerador(Gerador *listaAlvo){
 	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
@@ -194,4 +249,163 @@ void liberaListaGerador(Gerador *listaAlvo){
 	//! AS: listaAlvo chegou ao fim
 
 	assert(geradorVazio(aux1) == VAZIO);
+}
+
+/**
+*	Funcao: numeroGeradores (Iterador)
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		realiza o calculo da energia total gerada
+*
+*	Interfaces explicitas:
+*		int, recursoProduzidoTotal, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+int recursoProduzidoTotal(Gerador *listaAlvo){
+	int total = 0;
+
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Gerador *aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE: listaAlvo nao chegou ao fim
+	//! Comentarios de argumentacao
+		/**
+		*	Somando os recursos produzidos para obter a energia total gerada
+		**/
+		total += aux->recursoProduzido;
+		aux = aux->proximo;
+	}
+
+	assert(total >= 0);
+
+	return total;
+}
+
+/**
+*	Funcao: custoGeradores
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		realiza a soma dos custos dos geradores
+*
+*	Interfaces explicitas:
+*		int, custoGeradores, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+int custoGeradores(Gerador *listaAlvo){
+	int total = 0;
+
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Gerador *aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE: listaAlvo nao chegou ao fim
+	
+	//! Comentarios de argumentacao
+		/**
+		*	Somando os custos de cada gerador da lista de geradores
+		**/
+		total += aux->custo;
+		aux = aux->proximo;
+	}
+
+	assert(total >= 0);
+
+	return total;
+}
+
+/**
+*	Funcao: mandarRecursoProduzido
+*
+*	AssertivaEntrada:
+*		geradorVazio(listaAlvo) == NAO_VAZIO;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		alterar a interconexao ligada a cada celula da lista de geradores
+* com o valor que sera transportado
+*
+*	Interfaces explicitas:
+*		void, mandarRecursoProduzido, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+void mandarRecursoProduzido(Gerador *listaAlvo){
+	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
+
+	while(listaAlvo != NULL){
+	//! AE: nao chegou ao final da listaAlvo	
+	
+		if(listaAlvo->saida->tagFalha == SEM_FALHA){
+		//! AE: interconexao ligada a essa celula nao teve falha
+			listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
+		}
+		else{
+		//! AE: interconexao ligada a essa celula falhou
+			listaAlvo->saida->recursoTransportado = 0;
+		}
+
+		listaAlvo = listaAlvo->proximo;
+	}
+	//! AS: chegou ao final da listaAlvo
+}
+
+
+/**
+*	Funcao: numeroGeradores (Iterador)
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		conta o numero total de geradores em uma lista de geradores
+*
+*	Interfaces explicitas:
+*		int, numeroGeradores, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+int numeroGeradores(Gerador *listaAlvo){
+	int total = 0;
+
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Gerador *aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE: listaAlvo nao chegou ao fim
+	
+	//! Comentarios de argumentacao
+		/**
+		*	Contagem do numero de total de geradores na listaAlvo
+		**/
+		total++;
+		aux = aux->proximo;
+	}
+
+	assert(total >= 0);
+
+	return total;
 }

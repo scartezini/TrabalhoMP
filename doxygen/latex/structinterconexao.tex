@@ -1,0 +1,256 @@
+\hypertarget{structinterconexao}{\section{interconexao Struct Reference}
+\label{structinterconexao}\index{interconexao@{interconexao}}
+}
+
+
+{\ttfamily \#include $<$Principal.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{structinterconexao_ae2a0f66178bb1c4d42e2b70ec9426ccb}{nome}
+\item 
+int \hyperlink{structinterconexao_a2584a890a5daa3979c8f5def66b37a93}{posicao\-Inicial} \mbox{[}2\mbox{]}
+\item 
+int \hyperlink{structinterconexao_a744a0aae2f2c8216f4e62181f4eef596}{posicao\-Final} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{_principal_8h_a25b25bd9b7208df5558e2c89bb31469f}{Destino} \hyperlink{structinterconexao_a14094f7ac62c8b911b9218533444f891}{tag\-Destino}
+\item 
+float \hyperlink{structinterconexao_aa8ab52bccf94e202dc5c2b5c6a1c031b}{chance\-Falha}
+\item 
+int \hyperlink{structinterconexao_aadac5447051c1979a90f047e50e1119f}{tempo\-Conserto}
+\item 
+int \hyperlink{structinterconexao_aa3f746c0d39f7be1ecded1e29cf8dc9a}{custo\-Conserto}
+\item 
+int \hyperlink{structinterconexao_a131582956c0866fc51a6855fef6a3cb5}{numero\-Falha}
+\item 
+\hyperlink{_principal_8h_ab80478651cd53bf69168abd99c5b2afb}{Falha} \hyperlink{structinterconexao_ab6bff15141ec55edeb4370cdee3fe3d8}{tag\-Falha}
+\item 
+int \hyperlink{structinterconexao_abe24567e8cdbfefa8ffa9d6911078a7a}{capacidade\-Maxima}
+\item 
+int \hyperlink{structinterconexao_aa7760e925040fa4b54d3a847e27c0f82}{recurso\-Transportado}
+\item 
+struct \hyperlink{structinterconexao}{interconexao} $\ast$ \hyperlink{structinterconexao_a1cf2ab988ac89d1e06938f7149fb2b39}{proximo}
+\item 
+struct \hyperlink{structadaptador}{adaptador} $\ast$ \hyperlink{structinterconexao_a14e2e66fac149b7994e268306d30326f}{entrada\-Adaptador}
+\item 
+struct \hyperlink{structadaptador}{adaptador} $\ast$ \hyperlink{structinterconexao_a89f6d0b2c88bb33283e80d439c01c575}{saida\-Adaptador}
+\item 
+struct \hyperlink{structinterconexao}{interconexao} $\ast$ \hyperlink{structinterconexao_a4e737e84160630dcb4b4a314d068361d}{entrada\-Interconexao}
+\item 
+struct \hyperlink{structinterconexao}{interconexao} $\ast$ \hyperlink{structinterconexao_ab5e0438b9abf57d318825660da5cb279}{saida\-Interconexao}
+\item 
+struct \hyperlink{structinterconexao}{interconexao} $\ast$ \hyperlink{structinterconexao_a3378cab97ff6faca1fed5284f60899ee}{proximo\-Entrada\-Adaptador}
+\item 
+struct \hyperlink{structinterconexao}{interconexao} $\ast$ \hyperlink{structinterconexao_a0f78c20456e02f17b9c66806392b7f80}{proximo\-Saida\-Adaptador}
+\item 
+struct \hyperlink{structinterconexao}{interconexao} $\ast$ \hyperlink{structinterconexao_a12754d0ee6ed8698342735cb34b9abae}{proximo\-Entrada\-Cidade}
+\item 
+struct \hyperlink{structgerador}{gerador} $\ast$ \hyperlink{structinterconexao_a84fba959cbecb5e3c55e9bd2907c8a82}{entrada\-Gerador}
+\item 
+struct \hyperlink{structcidade}{cidade} $\ast$ \hyperlink{structinterconexao_aa1457ad6c3cc7f9f64db35f10bda7133}{saida\-Cidade}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Interconexoes-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Cabecalho do elemento Inerconexao
+
+nome\-: nome da interconexao
+
+posicao\-Inicial\-: vetor posicao\-Inicial, representando x na posicao\mbox{[}0\mbox{]} e y na posicao\mbox{[}1\mbox{]}, ambas em km, representando tambem a posicao do adaptador na interface
+
+posicao\-Final\-: vetor posicao\-Final, representando x na posicao\mbox{[}0\mbox{]} e y na posicao\mbox{[}1\mbox{]}, ambas em km, representando tambem a posicao do adaptador na interface
+
+tag\-Destino\-: tag para indentificar qual é a ligaçao final de cada conexao, seja cidade ou adaptador
+
+chance\-Falha\-: chance de falha por segundo
+
+tempo\-Concerto\-: tempo de concerto em caso de falha em segundos
+
+custo\-Concerto\-: custo do concerto em segundos
+
+numero\-Falha\-: total de falhas
+
+tag\-Falha\-: indica se houve falha
+
+capacidade\-Maxima\-: capacidade maxima da interconexao
+
+recurso\-Transtortado\-: quantidade de recuso que esta sendo transportado pela conexao no turno
+
+proximo\-: representa a proxima interconexao na lista de interconexoes
+
+entrada\-Adaptador\-: aponta, caso a entrada seja um adaptador, para o adaptador cuja saída eh esta interconexao
+
+saida\-Adaptador\-: aponta, caso a saida seja um adaptador, para o adaptador cuja entrada eh esta interconexao
+
+entrada\-Interconexao\-: aponta, caso a entrada seja interconexao, para a interconexao cuja saida eh esta interconexao
+
+saida\-Interconexao\-: aponta, caso a saida seja interconexao, para a interconexao cuja entrada eh esta interconexao
+
+proximo\-Entrada\-Adaptador\-: ponteiro para a proxima entrada do adaptador relacionado a interconexao
+
+proximo\-Saida\-Adaptador\-: ponteiro para a proxima saida do adaptador relacionado a interconexao
+
+proximo\-Entrada\-Cidade\-: ponteiro para a proxima cidade de destino
+
+entrada\-Gerador\-: aponta, caso a entrada seja um gerador, para o gerador cuja saida eh esta interconexao
+
+saida\-Cidade\-: aponta, caso a saida seja uma cidade, para a cidade cuja entrada eh esta interconexao 
+
+Definition at line 199 of file Principal.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{structinterconexao_abe24567e8cdbfefa8ffa9d6911078a7a}{\index{interconexao@{interconexao}!capacidade\-Maxima@{capacidade\-Maxima}}
+\index{capacidade\-Maxima@{capacidade\-Maxima}!interconexao@{interconexao}}
+\subsubsection[{capacidade\-Maxima}]{\setlength{\rightskip}{0pt plus 5cm}int capacidade\-Maxima}}\label{structinterconexao_abe24567e8cdbfefa8ffa9d6911078a7a}
+
+
+Definition at line 212 of file Principal.\-h.
+
+\hypertarget{structinterconexao_aa8ab52bccf94e202dc5c2b5c6a1c031b}{\index{interconexao@{interconexao}!chance\-Falha@{chance\-Falha}}
+\index{chance\-Falha@{chance\-Falha}!interconexao@{interconexao}}
+\subsubsection[{chance\-Falha}]{\setlength{\rightskip}{0pt plus 5cm}float chance\-Falha}}\label{structinterconexao_aa8ab52bccf94e202dc5c2b5c6a1c031b}
+
+
+Definition at line 205 of file Principal.\-h.
+
+\hypertarget{structinterconexao_aa3f746c0d39f7be1ecded1e29cf8dc9a}{\index{interconexao@{interconexao}!custo\-Conserto@{custo\-Conserto}}
+\index{custo\-Conserto@{custo\-Conserto}!interconexao@{interconexao}}
+\subsubsection[{custo\-Conserto}]{\setlength{\rightskip}{0pt plus 5cm}int custo\-Conserto}}\label{structinterconexao_aa3f746c0d39f7be1ecded1e29cf8dc9a}
+
+
+Definition at line 207 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a14e2e66fac149b7994e268306d30326f}{\index{interconexao@{interconexao}!entrada\-Adaptador@{entrada\-Adaptador}}
+\index{entrada\-Adaptador@{entrada\-Adaptador}!interconexao@{interconexao}}
+\subsubsection[{entrada\-Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf adaptador}$\ast$ entrada\-Adaptador}}\label{structinterconexao_a14e2e66fac149b7994e268306d30326f}
+
+
+Definition at line 217 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a84fba959cbecb5e3c55e9bd2907c8a82}{\index{interconexao@{interconexao}!entrada\-Gerador@{entrada\-Gerador}}
+\index{entrada\-Gerador@{entrada\-Gerador}!interconexao@{interconexao}}
+\subsubsection[{entrada\-Gerador}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gerador}$\ast$ entrada\-Gerador}}\label{structinterconexao_a84fba959cbecb5e3c55e9bd2907c8a82}
+
+
+Definition at line 228 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a4e737e84160630dcb4b4a314d068361d}{\index{interconexao@{interconexao}!entrada\-Interconexao@{entrada\-Interconexao}}
+\index{entrada\-Interconexao@{entrada\-Interconexao}!interconexao@{interconexao}}
+\subsubsection[{entrada\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf interconexao}$\ast$ entrada\-Interconexao}}\label{structinterconexao_a4e737e84160630dcb4b4a314d068361d}
+
+
+Definition at line 220 of file Principal.\-h.
+
+\hypertarget{structinterconexao_ae2a0f66178bb1c4d42e2b70ec9426ccb}{\index{interconexao@{interconexao}!nome@{nome}}
+\index{nome@{nome}!interconexao@{interconexao}}
+\subsubsection[{nome}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ nome}}\label{structinterconexao_ae2a0f66178bb1c4d42e2b70ec9426ccb}
+
+
+Definition at line 200 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a131582956c0866fc51a6855fef6a3cb5}{\index{interconexao@{interconexao}!numero\-Falha@{numero\-Falha}}
+\index{numero\-Falha@{numero\-Falha}!interconexao@{interconexao}}
+\subsubsection[{numero\-Falha}]{\setlength{\rightskip}{0pt plus 5cm}int numero\-Falha}}\label{structinterconexao_a131582956c0866fc51a6855fef6a3cb5}
+
+
+Definition at line 209 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a744a0aae2f2c8216f4e62181f4eef596}{\index{interconexao@{interconexao}!posicao\-Final@{posicao\-Final}}
+\index{posicao\-Final@{posicao\-Final}!interconexao@{interconexao}}
+\subsubsection[{posicao\-Final}]{\setlength{\rightskip}{0pt plus 5cm}int posicao\-Final\mbox{[}2\mbox{]}}}\label{structinterconexao_a744a0aae2f2c8216f4e62181f4eef596}
+
+
+Definition at line 202 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a2584a890a5daa3979c8f5def66b37a93}{\index{interconexao@{interconexao}!posicao\-Inicial@{posicao\-Inicial}}
+\index{posicao\-Inicial@{posicao\-Inicial}!interconexao@{interconexao}}
+\subsubsection[{posicao\-Inicial}]{\setlength{\rightskip}{0pt plus 5cm}int posicao\-Inicial\mbox{[}2\mbox{]}}}\label{structinterconexao_a2584a890a5daa3979c8f5def66b37a93}
+
+
+Definition at line 201 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a1cf2ab988ac89d1e06938f7149fb2b39}{\index{interconexao@{interconexao}!proximo@{proximo}}
+\index{proximo@{proximo}!interconexao@{interconexao}}
+\subsubsection[{proximo}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf interconexao}$\ast$ proximo}}\label{structinterconexao_a1cf2ab988ac89d1e06938f7149fb2b39}
+
+
+Definition at line 215 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a3378cab97ff6faca1fed5284f60899ee}{\index{interconexao@{interconexao}!proximo\-Entrada\-Adaptador@{proximo\-Entrada\-Adaptador}}
+\index{proximo\-Entrada\-Adaptador@{proximo\-Entrada\-Adaptador}!interconexao@{interconexao}}
+\subsubsection[{proximo\-Entrada\-Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf interconexao}$\ast$ proximo\-Entrada\-Adaptador}}\label{structinterconexao_a3378cab97ff6faca1fed5284f60899ee}
+
+
+Definition at line 223 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a12754d0ee6ed8698342735cb34b9abae}{\index{interconexao@{interconexao}!proximo\-Entrada\-Cidade@{proximo\-Entrada\-Cidade}}
+\index{proximo\-Entrada\-Cidade@{proximo\-Entrada\-Cidade}!interconexao@{interconexao}}
+\subsubsection[{proximo\-Entrada\-Cidade}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf interconexao}$\ast$ proximo\-Entrada\-Cidade}}\label{structinterconexao_a12754d0ee6ed8698342735cb34b9abae}
+
+
+Definition at line 226 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a0f78c20456e02f17b9c66806392b7f80}{\index{interconexao@{interconexao}!proximo\-Saida\-Adaptador@{proximo\-Saida\-Adaptador}}
+\index{proximo\-Saida\-Adaptador@{proximo\-Saida\-Adaptador}!interconexao@{interconexao}}
+\subsubsection[{proximo\-Saida\-Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf interconexao}$\ast$ proximo\-Saida\-Adaptador}}\label{structinterconexao_a0f78c20456e02f17b9c66806392b7f80}
+
+
+Definition at line 224 of file Principal.\-h.
+
+\hypertarget{structinterconexao_aa7760e925040fa4b54d3a847e27c0f82}{\index{interconexao@{interconexao}!recurso\-Transportado@{recurso\-Transportado}}
+\index{recurso\-Transportado@{recurso\-Transportado}!interconexao@{interconexao}}
+\subsubsection[{recurso\-Transportado}]{\setlength{\rightskip}{0pt plus 5cm}int recurso\-Transportado}}\label{structinterconexao_aa7760e925040fa4b54d3a847e27c0f82}
+
+
+Definition at line 213 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a89f6d0b2c88bb33283e80d439c01c575}{\index{interconexao@{interconexao}!saida\-Adaptador@{saida\-Adaptador}}
+\index{saida\-Adaptador@{saida\-Adaptador}!interconexao@{interconexao}}
+\subsubsection[{saida\-Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf adaptador}$\ast$ saida\-Adaptador}}\label{structinterconexao_a89f6d0b2c88bb33283e80d439c01c575}
+
+
+Definition at line 218 of file Principal.\-h.
+
+\hypertarget{structinterconexao_aa1457ad6c3cc7f9f64db35f10bda7133}{\index{interconexao@{interconexao}!saida\-Cidade@{saida\-Cidade}}
+\index{saida\-Cidade@{saida\-Cidade}!interconexao@{interconexao}}
+\subsubsection[{saida\-Cidade}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf cidade}$\ast$ saida\-Cidade}}\label{structinterconexao_aa1457ad6c3cc7f9f64db35f10bda7133}
+
+
+Definition at line 230 of file Principal.\-h.
+
+\hypertarget{structinterconexao_ab5e0438b9abf57d318825660da5cb279}{\index{interconexao@{interconexao}!saida\-Interconexao@{saida\-Interconexao}}
+\index{saida\-Interconexao@{saida\-Interconexao}!interconexao@{interconexao}}
+\subsubsection[{saida\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf interconexao}$\ast$ saida\-Interconexao}}\label{structinterconexao_ab5e0438b9abf57d318825660da5cb279}
+
+
+Definition at line 221 of file Principal.\-h.
+
+\hypertarget{structinterconexao_a14094f7ac62c8b911b9218533444f891}{\index{interconexao@{interconexao}!tag\-Destino@{tag\-Destino}}
+\index{tag\-Destino@{tag\-Destino}!interconexao@{interconexao}}
+\subsubsection[{tag\-Destino}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Destino} tag\-Destino}}\label{structinterconexao_a14094f7ac62c8b911b9218533444f891}
+
+
+Definition at line 203 of file Principal.\-h.
+
+\hypertarget{structinterconexao_ab6bff15141ec55edeb4370cdee3fe3d8}{\index{interconexao@{interconexao}!tag\-Falha@{tag\-Falha}}
+\index{tag\-Falha@{tag\-Falha}!interconexao@{interconexao}}
+\subsubsection[{tag\-Falha}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Falha} tag\-Falha}}\label{structinterconexao_ab6bff15141ec55edeb4370cdee3fe3d8}
+
+
+Definition at line 210 of file Principal.\-h.
+
+\hypertarget{structinterconexao_aadac5447051c1979a90f047e50e1119f}{\index{interconexao@{interconexao}!tempo\-Conserto@{tempo\-Conserto}}
+\index{tempo\-Conserto@{tempo\-Conserto}!interconexao@{interconexao}}
+\subsubsection[{tempo\-Conserto}]{\setlength{\rightskip}{0pt plus 5cm}int tempo\-Conserto}}\label{structinterconexao_aadac5447051c1979a90f047e50e1119f}
+
+
+Definition at line 206 of file Principal.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+app/header/\hyperlink{_principal_8h}{Principal.\-h}\end{DoxyCompactItemize}

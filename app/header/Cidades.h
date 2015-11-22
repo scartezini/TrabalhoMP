@@ -1,7 +1,5 @@
 #include "Adaptadores.h"
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
 *	Funcao: criaListaCidade
 *
@@ -95,15 +93,13 @@ void imprimeListaCidade(Cidade *);
 *	@param listaAlvo
 *		lista a ser desalocada
 *
-*	AssertivaEntrada:
+*	Assertiva de entrada:
 *		A lista nao deve ser vazia
 *
-*	AssertivaSaida:
+*	Assertiva de saida:
 *		A lista deve estar vazia
 **/
 void liberaListaCidade(Cidade *);
-
-/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: recursoGastoTotal
@@ -118,8 +114,28 @@ void liberaListaCidade(Cidade *);
 *		total de recursos gasto pelas cidades
 *
 *	Assertiva de entrada:
+*		estrutura do tipo Cidade
 *
 *	Assertiva de saida:
 *
 **/
 int recursoGastoTotal(Cidade *);
+
+/**
+*	Funcao: numeroCidades
+*
+*	Calcula o numero total de cidades na lista de cidades
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return
+*		Numero total de cidades
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade
+*
+*	Assertiva de saida:
+*		numero total de cidades na lista de cidades
+**/
+int numeroCidades(Cidade *);

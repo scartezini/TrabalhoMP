@@ -1,7 +1,5 @@
 #include "Principal.h"
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
 *	Funcao: criaListaAdaptador
 *
@@ -66,10 +64,10 @@ Adaptador* insereAdaptador(char *, Adaptador *);
 *	@param listaAlvo
 *		lista que sera impressa
 *		 
-*	AssertivaEntrada:
+*	Assertiva de entrada:
 *		A lista nao deve ser vazia
 *
-*	AssertivaSaida:
+*	Assertiva de saida:
 *		Se a lista de adaptadores a ser imprimida nao eh vazia
 *		Entao
 *			ela eh imprimida
@@ -87,15 +85,13 @@ void imprimeListaAdaptador(Adaptador *);
 *	@param listaAlvo 
 *		lista a qual sera desalocada
 *
-*	AssertivaEntrada:
+*	Assertiva de entrada:
 *		A lista nao deve ser vazia
 *
-*	AssertivaSaida:
+*	Assertiva de saida:
 *		A lista deve estar vazia
 **/
 void liberaListaAdaptador(Adaptador *);
-
-/** -----------------------Funcoes de Calculo---------------------------- */
 
 /** 
 *	

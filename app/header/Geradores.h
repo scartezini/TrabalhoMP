@@ -1,7 +1,5 @@
 #include "Cidades.h"
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
 *	Funcao: criaListaGerador
 *
@@ -18,12 +16,12 @@ Gerador* criaListaGerador();
 /**
 *	Funcao: geradorVazio
 *
-*	Verifica se a lista de geradores esta vazia	
+*	Verifica se a lista de geradores esta vazia
 *
 *	@param listaAlvo
 *		ponteiro para o inicio da lista de geradores
 *
-*	@return 
+*	@return
 *		variavel do tipo Vazio, indicando se a lista esta vazia
 *
 *	Assertiva de entrada:
@@ -44,7 +42,7 @@ Vazio geradorVazio(Gerador *);
 *
 *	@param registro
 *		string que sera lida do arquivo representando Gerador
-*	@param listaAlvo 
+*	@param listaAlvo
 *		lista de cidade a qual a nova celula sera inserida
 *
 *	@return
@@ -71,8 +69,8 @@ Gerador* insereGerador(char *, Gerador *);
 *	custo
 *
 *	@param listaAlvo
-*		lista que sera impressa 
-*		 
+*		lista que sera impressa
+*
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
 *
@@ -89,7 +87,7 @@ void imprimeListaGerador(Gerador *);
 /**
 *	Funcao: liberaListaGerador
 *
-*	Desaloca a memoria reservada para 
+*	Desaloca a memoria reservada para
 * toda celula pertecente a lista de geradores
 *
 *	@param listaAlvo
@@ -103,20 +101,21 @@ void imprimeListaGerador(Gerador *);
 **/
 void liberaListaGerador(Gerador *);
 
-/** -----------------------Funcoes de Calculo---------------------------- */
 
 /**
 *	Funcao: recursoProduzidoTotal
 *
 *	Calcula a soma do total de recursos produzido
-* pelas celualas.	
+* pelas celulas.
 *
 *	@param listaAlvo
 *		inicio da lista de geradores;
 *
-*	@return 
+*	@return
 *		soma de todo o recurso produzido pelos geradores
 *
+*	Assertiva de saida:
+*		energia total produzida por todos os geradores
 **/
 int recursoProduzidoTotal(Gerador *);
 
@@ -125,26 +124,49 @@ int recursoProduzidoTotal(Gerador *);
 *	Funcao: custoGeradores
 *
 *	Calcula a soma de custo por segundo de todos
-* os geradores da lista 
+* os geradores da lista
 *
-*	@param listaAlvo 
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de geradores
-*	
-*	@return 
+*
+*	@return
 *		Soma do custo por segundo de todos os geradores
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Gerador
+*
+*	Assertiva de saida:
+*		custo total dos geradores
 **/
 int custoGeradores(Gerador *);
 
 
 /**
 *	Funcao: mandarRecursoProduzido
-*	
+*
 *	Altera os nos de conexão do grafo com o recurso
 * enviado
 *
 *	@param listaAlvo
 *		ponteiro para o inicio da lista de geradores
-*
-*
 **/
 void mandarRecursoProduzido(Gerador *);
+
+/**
+*	Funcao: numeroGeradores
+*
+*	Calcula o numero total de geradores na lista de geradores
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de geradores
+*
+*	@return
+*		Numero total de geradores
+*
+**	Assertiva de entrada:
+*		estrutura do tipo Gerador
+*
+*	Assertiva de saida:
+*		numero total de geradores na lista de geradores
+**/
+int numeroGeradores(Gerador *);
