@@ -162,11 +162,12 @@ Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 		*	Os atributos nao lidos do gerador inserido recebem o valor nulo, e o proximo gerador
 		* da lista que contem o novo gerador inserido na cabeca recebe a lista de geradores atual
 		**/
+	novo->saida = NULL;
 	novo->taxaProducao = 0;
 	novo->proximo = listaAlvo;
-	novo->saida = NULL;
 	listaAlvo = novo;
 
+	free(numChar);
 	return listaAlvo;
 }
 
@@ -200,10 +201,10 @@ void imprimeListaGerador(Gerador *listaAlvo){
 		/**
 		*	Imprime os atributos do gerador corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso recebido%d quantidade de saidas%d\n"
+		printf("nome: %s pos_x: %d pos_y: %d recurso recebido: %d custo: %d taxa de produção: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoProduzido
-				,aux->custo);
+				,aux->custo, aux->taxaProducao);
 	}
 	//! AS: listaAlvo chegou ao fim
 }
@@ -271,7 +272,7 @@ void liberaListaGerador(Gerador *listaAlvo){
 **/
 int recursoProduzidoTotal(Gerador *listaAlvo){
 	int total = 0;
-	
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Gerador *aux = listaAlvo;
 
@@ -283,7 +284,7 @@ int recursoProduzidoTotal(Gerador *listaAlvo){
 		**/
 		total += aux->recursoProduzido;
 		aux = aux->proximo;
-	}	
+	}
 
 	assert(total >= 0);
 
@@ -291,7 +292,7 @@ int recursoProduzidoTotal(Gerador *listaAlvo){
 }
 
 /**
-*	Funcao: custoGeradores 
+*	Funcao: custoGeradores
 *
 *	AssertivaSaida:
 *		total >= 0;
@@ -310,24 +311,73 @@ int recursoProduzidoTotal(Gerador *listaAlvo){
 **/
 int custoGeradores(Gerador *listaAlvo){
 	int total = 0;
-	
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Gerador *aux = listaAlvo;
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Somando os custos de cada gerador da lista de geradores
 		**/
 		total += aux->custo;
 		aux = aux->proximo;
-	}	
+	}
 
 	assert(total >= 0);
 
 	return total;
 }
+
+/**
+*	Funcao: mandarRecursoProduzido
+*
+*	AssertivaEntrada:
+*		geradorVazio(listaAlvo) == NAO_VAZIO;
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para uma lista do tipo Gerador
+*
+*	Requisitos:
+*		alterar a interconexao ligada a cada celula da lista de geradores
+* com o valor que sera transportado
+*
+*	Interfaces explicitas:
+*		void, mandarRecursoProduzido, Gerador *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de geradores
+**/
+void mandarRecursoProduzido(Gerador *listaAlvo){
+	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
+
+	while(listaAlvo != NULL){
+	//! AE: nao chegou ao final da listaAlvo	
+	
+		if(listaAlvo->saida != NULL){
+		//! AE: o elemento possui saidas	
+			
+			if(listaAlvo->saida->tagFalha == SEM_FALHA){
+			//! AE: interconexao ligada a essa celula nao teve falha
+				listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
+			}
+			else{
+			//! AE: interconexao ligada a essa celula falhou
+				listaAlvo->saida->recursoTransportado = 0;
+			}
+
+			listaAlvo = listaAlvo->proximo;
+		}
+		else{
+		//! AE: o elemento nao possui saidas
+			return;
+		}
+	}
+	//! AS: chegou ao final da listaAlvo
+}
+
 
 /**
 *	Funcao: numeroGeradores (Iterador)
@@ -349,19 +399,20 @@ int custoGeradores(Gerador *listaAlvo){
 **/
 int numeroGeradores(Gerador *listaAlvo){
 	int total = 0;
-	
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Gerador *aux = listaAlvo;
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Contagem do numero de total de geradores na listaAlvo
 		**/
 		total++;
 		aux = aux->proximo;
-	}	
+	}
 
 	assert(total >= 0);
 

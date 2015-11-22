@@ -167,6 +167,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 
+	free(numChar);
 	return listaAlvo;
 }
 
@@ -196,11 +197,12 @@ void imprimeListaCidade(Cidade *listaAlvo){
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	for(aux=listaAlvo;aux!=NULL;aux=aux->proximo){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Imprime os atributos da cidade corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d recurso recebido%d recurso gasto%d\n "
+		printf("nome: %s pos_x: %d pos_y: %d recurso necessario: %d recurso recebido: %d recurso gasto: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoNecessario,aux->recursoRecebido
 				,aux->recursoGasto);
@@ -238,6 +240,7 @@ void liberaListaCidade(Cidade *listaAlvo){
 	//! Asseriva estrutural: aux1 é a listaAlvo, porem sendo percorrida
 	for(aux1=listaAlvo;aux1!=NULL;aux1=aux2){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Liberam os atributos alocados dinamicamente do elemento Cidade corrente
@@ -254,9 +257,48 @@ void liberaListaCidade(Cidade *listaAlvo){
 /**
 *	Funcao: recursoGastoTotal
 *
+*	AssertivaEntrada:
+*		cidadeVazia(listaAlvo) == NAO_VAZIA;
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipotese:
+*		cidade - ponteiro para o inicio da lista de cidades
+*
+*	Requisitos:
+*		Somar os recursos gatos por todas as cidades
+*
+*	Interfaces explicitas:
+*		int, recursoGastoTotal, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
 **/
-int recursoGastoTotal(Cidade *cidade){
-	return 0;
+int recursoGastoTotal(Cidade *listaAlvo){
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+
+	int total = 0;
+
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Cidade *aux = listaAlvo;
+	
+	while(aux != NULL){
+	//! AE: lista nao chegou ao fim
+	
+	//! Comentarios de argumentacao
+		/**
+		*	Incrementa o somatorio com o valor do recurso gasto pela celula atual
+		*	muda a referencia de cidade para a proxima celula
+		**/
+		total += aux->recursoGasto;
+		aux = aux->proximo;
+	}
+	//! AS: lista chegou ao fim
+
+	assert(total >= 0);
+	
+	return total;
 }
 
 /**
@@ -279,20 +321,22 @@ int recursoGastoTotal(Cidade *cidade){
 **/
 int numeroCidades(Cidade *listaAlvo){
 	int total = 0;
-	
+
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Cidade *aux = listaAlvo;
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Contagem do numero de total de cidades na listaAlvo
 		**/
 		total++;
 		aux = aux->proximo;
-	}	
-
+	}
+	//! AS: listaAlvo chegou ao fim
+	
 	assert(total >= 0);
 
 	return total;

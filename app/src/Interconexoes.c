@@ -47,7 +47,7 @@ Vazia interconexaoVazia(Interconexao *listaAlvo){
 }
 
 /**
-*	Funcao: insereInterconexao 
+*	Funcao: insereInterconexao
 *
 *	AssertivaEntrada:
 *		registro != NULL;
@@ -69,7 +69,7 @@ Vazia interconexaoVazia(Interconexao *listaAlvo){
 Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	assert(registro != NULL);
 
-	Interconexao *novo = (Interconexao *)malloc(sizeof(Interconexao)); //!< Alocacao da nova Interconexao
+	Interconexao *novo = (Interconexao *)calloc(sizeof(Interconexao), 1); //!< Alocacao da nova Interconexao
 	Interconexao *aux = NULL; //!< Variavel auxiliar para percorrer a lista e inserir o elemento no final
 	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
@@ -177,35 +177,36 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 
 	novo->entradaAdaptador = NULL;
 	novo->saidaAdaptador = NULL;
-	
+
 	novo->entradaInterconexao = NULL;
 	novo->saidaInterconexao = NULL;
-	
+
 	novo->proximoEntradaAdaptador = NULL;
 	novo->proximoSaidaAdaptador = NULL;
-	
+
 	novo->proximoEntradaCidade = NULL;
-	
+
 	novo->entradaGerador = NULL;
-	
+
 	novo->saidaCidade = NULL;
 
 	novo->proximo = NULL;
-	
+
 	if(interconexaoVazia(listaAlvo) == NAO_VAZIA){
 	//! AE: se a listaAlvo nao for vazia
-	
+
 		for(aux=listaAlvo;aux->proximo!=NULL;aux=aux->proximo);
 		//! AE: o aux nao chegou ao final da lista de interconexoes
-		
+
 		aux->proximo = novo;
 	}
 	else{
 	//! AE: se a listaAlvo for vazia
-		
-		listaAlvo = novo;	
+
+		listaAlvo = novo;
 	}
 
+	free(numChar);
 	return listaAlvo;
 }
 
@@ -239,7 +240,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 		/**
 		*	Imprime os atributos da interconexao corrente
 		**/
-		printf("nome: %s posI_x: %d posI_y: %d posF_x: %d posF_y: %d tag destino%d chance falha%f tempo concerto%d custo concerto%d numero falha%d tag falha: %d capacidade maxima%d recurso transportado%d\n"
+		printf("nome: %s posI_x: %d posI_y: %d posF_x: %d posF_y: %d tag destino: %d chance falha: %.2f tempo conserto: %d custo conserto: %d número falha: %d tag falha: %d capacidade máxima: %d recurso transportado: %d\n"
 				,aux->nome,aux->posicaoInicial[0],aux->posicaoInicial[1],aux->posicaoFinal[0],aux->posicaoFinal[1]
 				,aux->tagDestino, aux->chanceFalha, aux->tempoConserto, aux->custoConserto, aux->numeroFalha
 				,aux->tagFalha, aux->capacidadeMaxima, aux->recursoTransportado);
@@ -374,11 +375,11 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 	while(aux != NULL){
 	//! AE: aux nao chegou ao fim da lista de inteconexoes
 
-		//! Comentarios de argumentacao
-			/**
-			*	Enquanto a lista de interconexoes eh percorrida, o tamanho
-			* das conexoes sao somados e armazenados na variavel resultado
-			**/
+	//! Comentarios de argumentacao
+		/**
+		*	Enquanto a lista de interconexoes eh percorrida, o tamanho
+		* das conexoes sao somados e armazenados na variavel resultado
+		**/
 
 		resultado += tamanhoConexao(aux);
 		aux = aux->proximo;
@@ -392,6 +393,9 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 /**
 *	Funcao: calculaFalha
 *
+*	AssertivaEntrada:
+*		conexao->chanceFalha >= 0 && conexao->chanceFalha <= 1;
+*
 *	AssertivaSaida:
 *		FALHA || SEM_FALHA;
 *
@@ -399,26 +403,25 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 *		calculo da chance de falha
 *
 *	Interfaces explicitas:
-*		Falha, calculaFalha
+*		Falha, calculaFalha, Interconexao *conexao
 *
 *	Interfaces implicitas:
 *		Falha - tipo de dado, indicando se houve falha ou nao
+*		listaAlvo - lista de interconexoes
 **/
-Falha calculaFalha(){
+Falha calculaFalha(Interconexao *listaAlvo){
+	assert(listaAlvo->chanceFalha >= 0 && listaAlvo->chanceFalha <= 1);
+
+	int numGerado;
 	float num;
-	float chance = 0.01;
+	float chance = listaAlvo->chanceFalha;
 
 	//! Asseriva estrutural: num eh um numero gerado aleatoriamente
 	srand(1);
-	num = ((float)rand())/RAND_MAX;
+	numGerado = rand() % 101;
+	num = numGerado/100;
 
-	if ( (chance > 0) && (chance >= num) )
-	//! AE: chance deve ser maior que 0 e maior ou igual a num
-		return FALHA;
-	else
-	//! AE: chance deve ser menor que 0 ou menor que num
-		return SEM_FALHA;
-	//! AS: o retorno deve ser uma variavel do tipo Falha
+	return ( (chance > 0) && (chance >= num) ) ? FALHA : SEM_FALHA;
 }
 
 /**
@@ -435,7 +438,7 @@ Falha calculaFalha(){
 *		transporte dos recursos
 *
 *	Interfaces explicitas:
-*		void, mandarRecursoTransportado
+*		void, mandarRecursoTransportado, Interconexao *listaAlvo
 *
 *	Interfaces implicitas:
 *		listaAlvo - lista de interconexoes
@@ -475,4 +478,152 @@ void mandarRecursoTransportado(Interconexao *listaAlvo){
 		aux = aux->proximo;
 	}
 	//! AS: a lista de interconexoes chegou ao fim
+}
+
+
+/**
+*
+*	Funcao: custoGastoComConserto
+*
+*	AssertivaEntrada:
+*		interconexaoVazia(listaAlvo) == NAO_VAZIA;
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponterio para o inicio da lista do tipo Interconexao
+*
+*	Requisitos:
+*		calcular o quanto foi gasto com concerto das interconexoes
+*
+*	Interfaces explicitas:
+*		int, custoGastoComConcerto, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
+**/
+int custoGastoComConserto(Interconexao *listaAlvo){
+	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
+
+	int total = 0;
+
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Interconexao *aux = listaAlvo;
+
+	while(aux != NULL){
+	//! AE : listaAlvo nao chegou ao fim
+	
+	//! Comentarios de argumentacao
+		/**
+		*	Incrementa o total com o resultado da multiplicacao
+		* do numero de falhas com o custo gasto com o conserto de
+		* cada falha
+		**/
+		total += aux->numeroFalha * aux->custoConserto;
+		aux = aux->proximo;
+	}
+	//! AS: listaAlvo chegou ao fim
+
+	assert(total >= 0);
+	
+	return total;
+}
+
+
+/**
+*
+*	Funcao: numeroTotalFalhas
+*
+*	AssertivaEntrada:
+*		interconexaoVazia(listaAlvo) == NAO_VAZIA;
+*
+*	AssertivaSaida:
+*		total >= 0;
+*
+*	Hipóteses:
+*		listaAlvo - ponterio para o inicio da lista do tipo Interconexao
+*
+*	Requisitos:
+*		contabilizar a quantidade de falhas
+*
+*	Interfaces explicitas:
+*		int, numeroTotalFalhas, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
+**/
+int numeroTotalFalhas(Interconexao *listaAlvo){
+	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
+	
+	int total = 0;
+
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Interconexao *aux = listaAlvo;
+
+	while (aux != NULL) {
+	//! AE: listaAlvo ainda nao acabou
+	//! Comentarios de argumentacao
+		/**
+		*	Incrementa o somatorio com o numero de falhas da celula atual
+		**/
+		total += aux->numeroFalha;
+		aux = aux->proximo;
+	}
+
+	assert(total >= 0);
+
+	return total;
+}
+
+/**
+*
+*	Funcao: gerenciaFalhas
+*
+*	AssertivaEntrada:
+*		interconexaoVazia(listaAlvo) == NAO_VAZIA;
+*
+*	Hipóteses:
+*		listaAlvo - ponterio para o inicio da lista do tipo Interconexao
+*
+*	Requisitos:
+*		marcar as celulas que falharam como falhas e contabilizar o concertos das celulas que estao paradas
+*
+*	Interfaces explicitas:
+*		int, numeroTotalFalhas, Interconexao *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de interconexoes
+**/
+void gerenciaFalhas(Interconexao *listaAlvo){
+	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
+
+	while(listaAlvo != NULL){
+	//! AE: listaAlvo nao chegou ao fim
+
+		if(listaAlvo->tagFalha == SEM_FALHA){
+		//! AE: interconexao corrente nao falhou
+
+			if(calculaFalha(listaAlvo) == FALHA) {
+				//! AE: chance falha da interconexao corrente eh FALHA
+				listaAlvo->contadorTempoConserto = 0;
+				listaAlvo->numeroFalha++;
+				listaAlvo->tagFalha = FALHA;
+			}
+		}
+		else{
+		//! AE: interconexao corrente falhou
+		
+			listaAlvo->contadorTempoConserto++;
+
+			if(listaAlvo->contadorTempoConserto >= listaAlvo->tempoConserto){
+				//! AE: tempo de conserto foi atingido pelo contador
+				listaAlvo->tagFalha = SEM_FALHA;
+				listaAlvo->contadorTempoConserto = 0;
+			}
+		}
+
+		listaAlvo = listaAlvo->proximo;
+	}
+	//! AS: listaAlvo chegou ao fim
 }
