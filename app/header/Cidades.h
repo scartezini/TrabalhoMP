@@ -93,10 +93,10 @@ void imprimeListaCidade(Cidade *);
 *	@param listaAlvo
 *		lista a ser desalocada
 *
-*	AssertivaEntrada:
+*	Assertiva de entrada:
 *		A lista nao deve ser vazia
 *
-*	AssertivaSaida:
+*	Assertiva de saida:
 *		A lista deve estar vazia
 **/
 void liberaListaCidade(Cidade *);

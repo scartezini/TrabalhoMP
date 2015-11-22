@@ -277,7 +277,6 @@ void defineDistribuicao(Adaptador *listaAlvo){
 	Adaptador *aux;
 	Interconexao *conexao; //!< conexoes do adaptador
 
-	
 	int somatorio;
 	int recursoTransportado; //!< quantidade de recurso transportado
 

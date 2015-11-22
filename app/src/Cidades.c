@@ -196,6 +196,7 @@ void imprimeListaCidade(Cidade *listaAlvo){
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	for(aux=listaAlvo;aux!=NULL;aux=aux->proximo){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Imprime os atributos da cidade corrente
@@ -238,6 +239,7 @@ void liberaListaCidade(Cidade *listaAlvo){
 	//! Asseriva estrutural: aux1 é a listaAlvo, porem sendo percorrida
 	for(aux1=listaAlvo;aux1!=NULL;aux1=aux2){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Liberam os atributos alocados dinamicamente do elemento Cidade corrente
@@ -254,43 +256,48 @@ void liberaListaCidade(Cidade *listaAlvo){
 /**
 *	Funcao: recursoGastoTotal
 *
-*	Assertiva de entrada:
-*		estrutura do tipo Cidade
+*	AssertivaEntrada:
 *		cidadeVazia(listaAlvo) == NAO_VAZIA;
 *
+*	AssertivaSaida:
+*		total >= 0;
+*
 *	Hipotese:
-*		cidade -> ponteiro para o inicio da lista de Cidades
+*		cidade - ponteiro para o inicio da lista de cidades
 *
 *	Requisitos:
 *		Somar os recursos gatos por todas as cidades
 *
 *	Interfaces explicitas:
-*			int, recursoGastoTotal;
+*		int, recursoGastoTotal, Cidade *listaAlvo
 *
 *	Interfaces implicitas:
-*			Cidade - refeencia para a struct Cidade
+*		listaAlvo - lista de cidades
 **/
+int recursoGastoTotal(Cidade *listaAlvo){
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 
-int recursoGastoTotal(Cidade *cidade){
-	assert(cidadeVazia(cidade) == NAO_VAZIA);
+	int total = 0;
 
-	int somatorio = 0;
-
-	//! Assertiva estrutural : cidade é a lista de cidades a ser percorrida
-	while(cidade != NULL){
-		//! AE: lista nao chegou ao fim
-		//! Comentarios de argumentacao
-			/**
-			*	Incrementa o somatorio com o valor do recurso gasto pela celula atual
-			*	muda a referencia de cidade para a proxima celula
-			**/
-			somatorio += cidade->recursoGasto;
-			cidade = cidade->proximo;
+	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
+	Cidade *aux = listaAlvo;
+	
+	while(aux != NULL){
+	//! AE: lista nao chegou ao fim
+	
+	//! Comentarios de argumentacao
+		/**
+		*	Incrementa o somatorio com o valor do recurso gasto pela celula atual
+		*	muda a referencia de cidade para a proxima celula
+		**/
+		total += aux->recursoGasto;
+		aux = aux->proximo;
 	}
-	//! AE: lista chegou ao fim
+	//! AS: lista chegou ao fim
 
-	return somatorio;
-
+	assert(total >= 0);
+	
+	return total;
 }
 
 /**
@@ -319,6 +326,7 @@ int numeroCidades(Cidade *listaAlvo){
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Contagem do numero de total de cidades na listaAlvo
@@ -326,7 +334,8 @@ int numeroCidades(Cidade *listaAlvo){
 		total++;
 		aux = aux->proximo;
 	}
-
+	//! AS: listaAlvo chegou ao fim
+	
 	assert(total >= 0);
 
 	return total;

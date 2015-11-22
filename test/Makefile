@@ -1,4 +1,4 @@
-# Este eh o Makefile para compilar o trabalho
+# Este eh o Makefile para compilar o teste
 #
 # Digite 'make' para criar o executável com o programa
 # e 'make clean' para  excluir o ultimo executavel criado.

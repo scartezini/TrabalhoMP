@@ -316,6 +316,7 @@ int custoGeradores(Gerador *listaAlvo){
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Somando os custos de cada gerador da lista de geradores
@@ -340,10 +341,10 @@ int custoGeradores(Gerador *listaAlvo){
 *
 *	Requisitos:
 *		alterar a interconexao ligada a cada celula da lista de geradores
-* com o valor que sera transportado;
+* com o valor que sera transportado
 *
 *	Interfaces explicitas:
-*		void, mandarRecursoProduzido
+*		void, mandarRecursoProduzido, Gerador *listaAlvo
 *
 *	Interfaces implicitas:
 *		listaAlvo - lista de geradores
@@ -351,20 +352,21 @@ int custoGeradores(Gerador *listaAlvo){
 void mandarRecursoProduzido(Gerador *listaAlvo){
 	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
 
-	//! Asseriva estrutural: laço para percorrer a lista de geradores
 	while(listaAlvo != NULL){
-
+	//! AE: nao chegou ao final da listaAlvo	
+	
 		if(listaAlvo->saida->tagFalha == SEM_FALHA){
-			//! AE: interconexao ligada a essa celula nao teve falha
+		//! AE: interconexao ligada a essa celula nao teve falha
 			listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
 		}
 		else{
-			//! AE: interconexao ligada a essa celula falhou
+		//! AE: interconexao ligada a essa celula falhou
 			listaAlvo->saida->recursoTransportado = 0;
 		}
 
 		listaAlvo = listaAlvo->proximo;
 	}
+	//! AS: chegou ao final da listaAlvo
 }
 
 
@@ -394,6 +396,7 @@ int numeroGeradores(Gerador *listaAlvo){
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Contagem do numero de total de geradores na listaAlvo
