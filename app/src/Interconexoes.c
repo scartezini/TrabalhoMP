@@ -69,7 +69,7 @@ Vazia interconexaoVazia(Interconexao *listaAlvo){
 Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 	assert(registro != NULL);
 
-	Interconexao *novo = (Interconexao *)malloc(sizeof(Interconexao)); //!< Alocacao da nova Interconexao
+	Interconexao *novo = (Interconexao *)calloc(sizeof(Interconexao), 1); //!< Alocacao da nova Interconexao
 	Interconexao *aux = NULL; //!< Variavel auxiliar para percorrer a lista e inserir o elemento no final
 	char *numChar = (char*) malloc (strlen(registro)*sizeof(char)); //!< Alocacao de um vetor do tamanho do registro
 	int i,j=0,k=2; //!< Variaveis de auxilio
@@ -206,6 +206,7 @@ Interconexao* insereInterconexao(char *registro, Interconexao *listaAlvo){
 		listaAlvo = novo;
 	}
 
+	free(numChar);
 	return listaAlvo;
 }
 
@@ -239,7 +240,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 		/**
 		*	Imprime os atributos da interconexao corrente
 		**/
-		printf("nome: %s posI_x: %d posI_y: %d posF_x: %d posF_y: %d tag destino%d chance falha%f tempo concerto%d custo concerto%d numero falha%d tag falha: %d capacidade maxima%d recurso transportado%d\n"
+		printf("nome: %s posI_x: %d posI_y: %d posF_x: %d posF_y: %d tag destino: %d chance falha: %.2f tempo conserto: %d custo conserto: %d número falha: %d tag falha: %d capacidade máxima: %d recurso transportado: %d\n"
 				,aux->nome,aux->posicaoInicial[0],aux->posicaoInicial[1],aux->posicaoFinal[0],aux->posicaoFinal[1]
 				,aux->tagDestino, aux->chanceFalha, aux->tempoConserto, aux->custoConserto, aux->numeroFalha
 				,aux->tagFalha, aux->capacidadeMaxima, aux->recursoTransportado);
@@ -506,8 +507,6 @@ int custoGastoComConserto(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 
 	int total = 0;
-	
-	Interconexao *aux;	
 
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Interconexao *aux = listaAlvo;
@@ -558,8 +557,6 @@ int numeroTotalFalhas(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
 	
 	int total = 0;
-	
-	Interconexao *aux;	
 
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Interconexao *aux = listaAlvo;

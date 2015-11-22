@@ -167,6 +167,7 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
 
+	free(numChar);
 	return listaAlvo;
 }
 
@@ -201,7 +202,7 @@ void imprimeListaCidade(Cidade *listaAlvo){
 		/**
 		*	Imprime os atributos da cidade corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso necessario%d recurso recebido%d recurso gasto%d\n "
+		printf("nome: %s pos_x: %d pos_y: %d recurso necessario: %d recurso recebido: %d recurso gasto: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoNecessario,aux->recursoRecebido
 				,aux->recursoGasto);

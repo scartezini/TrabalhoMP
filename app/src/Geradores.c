@@ -162,11 +162,12 @@ Gerador* insereGerador(char *registro, Gerador *listaAlvo){
 		*	Os atributos nao lidos do gerador inserido recebem o valor nulo, e o proximo gerador
 		* da lista que contem o novo gerador inserido na cabeca recebe a lista de geradores atual
 		**/
+	novo->saida = NULL;
 	novo->taxaProducao = 0;
 	novo->proximo = listaAlvo;
-	novo->saida = NULL;
 	listaAlvo = novo;
 
+	free(numChar);
 	return listaAlvo;
 }
 
@@ -200,10 +201,10 @@ void imprimeListaGerador(Gerador *listaAlvo){
 		/**
 		*	Imprime os atributos do gerador corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso recebido%d quantidade de saidas%d\n"
+		printf("nome: %s pos_x: %d pos_y: %d recurso recebido: %d custo: %d taxa de produção: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoProduzido
-				,aux->custo);
+				,aux->custo, aux->taxaProducao);
 	}
 	//! AS: listaAlvo chegou ao fim
 }
@@ -355,16 +356,24 @@ void mandarRecursoProduzido(Gerador *listaAlvo){
 	while(listaAlvo != NULL){
 	//! AE: nao chegou ao final da listaAlvo	
 	
-		if(listaAlvo->saida->tagFalha == SEM_FALHA){
-		//! AE: interconexao ligada a essa celula nao teve falha
-			listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
+		if(listaAlvo->saida != NULL){
+		//! AE: o elemento possui saidas	
+			
+			if(listaAlvo->saida->tagFalha == SEM_FALHA){
+			//! AE: interconexao ligada a essa celula nao teve falha
+				listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
+			}
+			else{
+			//! AE: interconexao ligada a essa celula falhou
+				listaAlvo->saida->recursoTransportado = 0;
+			}
+
+			listaAlvo = listaAlvo->proximo;
 		}
 		else{
-		//! AE: interconexao ligada a essa celula falhou
-			listaAlvo->saida->recursoTransportado = 0;
+		//! AE: o elemento nao possui saidas
+			return;
 		}
-
-		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: chegou ao final da listaAlvo
 }
