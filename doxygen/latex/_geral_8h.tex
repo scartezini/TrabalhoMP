@@ -1,7 +1,9 @@
-\hypertarget{_geral_8h}{\section{app/header/\-Geral.h File Reference}
-\label{_geral_8h}\index{app/header/\-Geral.\-h@{app/header/\-Geral.\-h}}
+\hypertarget{_geral_8h}{\section{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Geral.h File Reference}
+\label{_geral_8h}\index{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Geral.\-h@{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Geral.\-h}}
 }
 {\ttfamily \#include \char`\"{}Interconexoes.\-h\char`\"{}}\\*
+Include dependency graph for Geral.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,7 +24,7 @@ void \hyperlink{_geral_8h_a8d75da29860948b975b218935f7ea965}{verifica} (\hyperli
 \item[{{\bf Adaptador} $\ast$}]{adaptadores}
 \end{DoxyParamCaption}
 )}}\label{_geral_8h_a08dca79b2cd050d67f007912fa6db8db}
--\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Funcoes Gerais-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Funcao\-: conecta
+Funcao\-: conecta
 
 Realiza a conexao entre as listas
 
@@ -43,9 +45,13 @@ Assertiva de saida\-:
 
 Funcao\-: conecta
 
-Assertiva\-Entrada\-:
+Hipóteses\-: cidades -\/ ponteiro para uma lista do tipo Cidade geradores -\/ ponteiro para uma lista do tipo Gerador interconexoes -\/ ponteiro para uma lista do tipo Interconexao adaptadores -\/ ponteiro para uma lista do tipo Adaptador
 
-Assertiva\-Saida\-: $<$ Ponteiro auxiliar para cidade
+Requisitos\-: realizar a conexao entre as listas, para gerar a rede de distribuicao
+
+Interfaces explicitas\-: void, conecta, Cidade $\ast$cidades, Gerador $\ast$geradores, Interconexao $\ast$interconexoes, Adaptador $\ast$adaptadores
+
+Interfaces implicitas\-: cidades -\/ lista de cidades geradores -\/ lista de geradores interconexoes -\/ lista de interconexoes adaptadores -\/ lista de adaptadores $<$ Ponteiro auxiliar para cidade
 
 $<$ Ponteiro auxiliar para gerador
 
@@ -109,11 +115,7 @@ insere-\/se a interconexao aux\-I2 como saida da interconexao aux\-I1 insere-\/s
 
 A\-S\-: o aux\-I2 chegou ao fim da lista de interconexoes
 
-A\-S\-: o aux\-I1 chegou ao fim da lista de interconexoes 
-
-Definition at line 11 of file Geral.\-c.
-
-\hypertarget{_geral_8h_a8d75da29860948b975b218935f7ea965}{\index{Geral.\-h@{Geral.\-h}!verifica@{verifica}}
+A\-S\-: o aux\-I1 chegou ao fim da lista de interconexoes \hypertarget{_geral_8h_a8d75da29860948b975b218935f7ea965}{\index{Geral.\-h@{Geral.\-h}!verifica@{verifica}}
 \index{verifica@{verifica}!Geral.h@{Geral.\-h}}
 \subsubsection[{verifica}]{\setlength{\rightskip}{0pt plus 5cm}void verifica (
 \begin{DoxyParamCaption}
@@ -144,9 +146,13 @@ Assertiva de saida\-:
 
 Funcao\-: verfica
 
-Assertiva\-Entrada\-:
+Hipóteses\-: cidades -\/ ponteiro para uma lista do tipo Cidade geradores -\/ ponteiro para uma lista do tipo Gerador interconexoes -\/ ponteiro para uma lista do tipo Interconexao adaptadores -\/ ponteiro para uma lista do tipo Adaptador
 
-Assertiva\-Saida\-: $<$ Ponteiro auxiliar para cidade
+Requisitos\-: verificar as conexoes e gerar um arquivo com as inconsistencias encontradas
+
+Interfaces explicitas\-: void, conecta, Cidade $\ast$cidades, Gerador $\ast$geradores, Interconexao $\ast$interconexoes, Adaptador $\ast$adaptadores
+
+Interfaces implicitas\-: cidades -\/ lista de cidades geradores -\/ lista de geradores interconexoes -\/ lista de interconexoes adaptadores -\/ lista de adaptadores $<$ Ponteiro auxiliar para cidade
 
 $<$ Ponteiro auxiliar para gerador
 
@@ -197,6 +203,3 @@ A\-E\-: o adaptador corrente nao posssui saidas
 A\-S\-: o aux\-A chegou ao fim da lista de adaptadores
 
 A\-E\-: a lista de adaptadores eh vazia 
-
-Definition at line 132 of file Geral.\-c.
-

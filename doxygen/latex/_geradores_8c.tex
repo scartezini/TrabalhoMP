@@ -1,8 +1,9 @@
-\hypertarget{_geradores_8c}{\section{app/src/\-Geradores.c File Reference}
-\label{_geradores_8c}\index{app/src/\-Geradores.\-c@{app/src/\-Geradores.\-c}}
+\hypertarget{_geradores_8c}{\section{/home/eduardo/\-Trabalho\-M\-P/app/src/\-Geradores.c File Reference}
+\label{_geradores_8c}\index{/home/eduardo/\-Trabalho\-M\-P/app/src/\-Geradores.\-c@{/home/eduardo/\-Trabalho\-M\-P/app/src/\-Geradores.\-c}}
 }
 {\ttfamily \#include \char`\"{}../header/\-Geradores.\-h\char`\"{}}\\*
 {\ttfamily \#include $<$assert.\-h$>$}\\*
+Include dependency graph for Geradores.\-c\-:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,6 +16,14 @@
 void \hyperlink{_geradores_8c_aef7a9a2180717f987a4fcc599f401f17}{imprime\-Lista\-Gerador} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
 \item 
 void \hyperlink{_geradores_8c_a2252c63cf393825b7ceef5cfc7309436}{libera\-Lista\-Gerador} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
+\item 
+int \hyperlink{_geradores_8c_a33571540a41bdf1ce7ce762be2027ebe}{recurso\-Produzido\-Total} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
+\item 
+int \hyperlink{_geradores_8c_ab7c5b04338f4fc33b038e1cfa3319f90}{custo\-Geradores} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
+\item 
+void \hyperlink{_geradores_8c_a0b41495b4b1a1bf08c8bc44c21f4b0b2}{mandar\-Recurso\-Produzido} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
+\item 
+int \hyperlink{_geradores_8c_accc5de2fd87410c1ff1adee11312dea1}{numero\-Geradores} (\hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$lista\-Alvo)
 \end{DoxyCompactItemize}
 
 
@@ -26,30 +35,57 @@ void \hyperlink{_geradores_8c_a2252c63cf393825b7ceef5cfc7309436}{libera\-Lista\-
 {}
 \end{DoxyParamCaption}
 )}}\label{_geradores_8c_a7f89ea89ba76e15879bedcc213c09170}
-Funcao\-: cria\-Lista\-Gerador
+Funcao\-: cria\-Lista\-Gerador (Iterador)
 
-Assertiva\-Saida\-: N\-U\-L\-L; 
+Assertiva\-Saida\-: N\-U\-L\-L;
 
-Definition at line 10 of file Geradores.\-c.
+Requisitos\-: criacao de uma nova lista do tipo Gerador
 
-\hypertarget{_geradores_8c_a4fe02cd9b5a0c028996b432a20c5617b}{\index{Geradores.\-c@{Geradores.\-c}!gerador\-Vazio@{gerador\-Vazio}}
+Interfaces explicitas\-: Gerador$\ast$, cria\-Lista\-Gerador \hypertarget{_geradores_8c_ab7c5b04338f4fc33b038e1cfa3319f90}{\index{Geradores.\-c@{Geradores.\-c}!custo\-Geradores@{custo\-Geradores}}
+\index{custo\-Geradores@{custo\-Geradores}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{custo\-Geradores}]{\setlength{\rightskip}{0pt plus 5cm}int custo\-Geradores (
+\begin{DoxyParamCaption}
+\item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_ab7c5b04338f4fc33b038e1cfa3319f90}
+Funcao\-: custo\-Geradores
+
+Assertiva\-Saida\-: total $>$= 0;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Gerador
+
+Requisitos\-: realiza a soma dos custos dos geradores
+
+Interfaces explicitas\-: int, custo\-Geradores, Gerador $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de geradores Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim
+
+Comentarios de argumentacao
+
+Somando os custos de cada gerador da lista de geradores\hypertarget{_geradores_8c_a4fe02cd9b5a0c028996b432a20c5617b}{\index{Geradores.\-c@{Geradores.\-c}!gerador\-Vazio@{gerador\-Vazio}}
 \index{gerador\-Vazio@{gerador\-Vazio}!Geradores.c@{Geradores.\-c}}
 \subsubsection[{gerador\-Vazio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vazio} gerador\-Vazio (
 \begin{DoxyParamCaption}
 \item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
 \end{DoxyParamCaption}
 )}}\label{_geradores_8c_a4fe02cd9b5a0c028996b432a20c5617b}
-Funcao\-: cria\-Lista\-Cidade
+Funcao\-: gerador\-Vazio (Iterador)
 
-Assertiva\-Saida\-: V\-A\-Z\-I\-O $|$$|$ N\-A\-O\-\_\-\-V\-A\-Z\-I\-O; A\-E\-: lista\-Alvo eh vazia
+Assertiva\-Saida\-: V\-A\-Z\-I\-O $|$$|$ N\-A\-O\-\_\-\-V\-A\-Z\-I\-O;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Gerador
+
+Requisitos\-: checar se a lista está vazia
+
+Interfaces explicitas\-: Vazio, gerador\-Vazio, Gerador $\ast$lista\-Alvo
+
+Interfaces implicitas\-: Vazio -\/ tipo de dado, indicando se a lista eh vazia ou nao lista\-Alvo -\/ lista de geradores A\-E\-: lista\-Alvo eh vazia
 
 A\-E\-: lista\-Alvo nao eh vazia
 
-A\-S\-: o retorno deve ser uma variavel do tipo Vazia 
-
-Definition at line 20 of file Geradores.\-c.
-
-\hypertarget{_geradores_8c_aef7a9a2180717f987a4fcc599f401f17}{\index{Geradores.\-c@{Geradores.\-c}!imprime\-Lista\-Gerador@{imprime\-Lista\-Gerador}}
+A\-S\-: o retorno deve ser uma variavel do tipo Vazia \hypertarget{_geradores_8c_aef7a9a2180717f987a4fcc599f401f17}{\index{Geradores.\-c@{Geradores.\-c}!imprime\-Lista\-Gerador@{imprime\-Lista\-Gerador}}
 \index{imprime\-Lista\-Gerador@{imprime\-Lista\-Gerador}!Geradores.c@{Geradores.\-c}}
 \subsubsection[{imprime\-Lista\-Gerador}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\-Lista\-Gerador (
 \begin{DoxyParamCaption}
@@ -58,17 +94,21 @@ Definition at line 20 of file Geradores.\-c.
 )}}\label{_geradores_8c_aef7a9a2180717f987a4fcc599f401f17}
 Funcao\-: imprime\-Lista\-Gerador
 
-Assertiva\-Entrada\-: gerador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O; Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+Assertiva\-Entrada\-: gerador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Gerador
+
+Requisitos\-: impressao da lista de geradores
+
+Interfaces explicitas\-: void, imprime\-Lista\-Gerador, Gerador $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de geradores Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
 
 A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
 
 Imprime os atributos do gerador corrente
 
-A\-S\-: lista\-Alvo chegou ao fim 
-
-Definition at line 147 of file Geradores.\-c.
-
-\hypertarget{_geradores_8c_a0dc4284717529572626295e68bbaef8b}{\index{Geradores.\-c@{Geradores.\-c}!insere\-Gerador@{insere\-Gerador}}
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_geradores_8c_a0dc4284717529572626295e68bbaef8b}{\index{Geradores.\-c@{Geradores.\-c}!insere\-Gerador@{insere\-Gerador}}
 \index{insere\-Gerador@{insere\-Gerador}!Geradores.c@{Geradores.\-c}}
 \subsubsection[{insere\-Gerador}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gerador}$\ast$ insere\-Gerador (
 \begin{DoxyParamCaption}
@@ -78,7 +118,15 @@ Definition at line 147 of file Geradores.\-c.
 )}}\label{_geradores_8c_a0dc4284717529572626295e68bbaef8b}
 Funcao\-: insere\-Gerador
 
-Assertiva\-Entrada\-: registro != N\-U\-L\-L; $<$ Alocacao de um novo gerador
+Assertiva\-Entrada\-: registro != N\-U\-L\-L;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Gerador registro -\/ string, nao vazia, contendo uma linha do arquivo txt de entrada
+
+Requisitos\-: inserir um novo gerador na lista de geradores
+
+Interfaces explicitas\-: Gerador$\ast$, insere\-Gerador, char $\ast$registro, Gerador $\ast$lista\-Alvo
+
+Interfaces implicitas\-: registro -\/ representa uma linha do arquivo de entrada lista\-Alvo -\/ lista de geradores $<$ Alocacao de um novo gerador
 
 $<$ Alocacao de um vetor do tamanho do registro
 
@@ -132,28 +180,124 @@ A\-S\-: o valor da variavel auxiliar j ultrapassou o numero total de atributos l
 
 Comentarios de argumentacao
 
-Os atributos nao lidos do gerador inserido recebem o valor nulo, e o proximo gerador da lista que contem o novo gerador inserido na cabeca recebe a lista de geradores atual
-
-Definition at line 36 of file Geradores.\-c.
-
-\hypertarget{_geradores_8c_a2252c63cf393825b7ceef5cfc7309436}{\index{Geradores.\-c@{Geradores.\-c}!libera\-Lista\-Gerador@{libera\-Lista\-Gerador}}
+Os atributos nao lidos do gerador inserido recebem o valor nulo, e o proximo gerador da lista que contem o novo gerador inserido na cabeca recebe a lista de geradores atual\hypertarget{_geradores_8c_a2252c63cf393825b7ceef5cfc7309436}{\index{Geradores.\-c@{Geradores.\-c}!libera\-Lista\-Gerador@{libera\-Lista\-Gerador}}
 \index{libera\-Lista\-Gerador@{libera\-Lista\-Gerador}!Geradores.c@{Geradores.\-c}}
 \subsubsection[{libera\-Lista\-Gerador}]{\setlength{\rightskip}{0pt plus 5cm}void libera\-Lista\-Gerador (
 \begin{DoxyParamCaption}
 \item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
 \end{DoxyParamCaption}
 )}}\label{_geradores_8c_a2252c63cf393825b7ceef5cfc7309436}
-Funcao\-: libera\-Lista\-Gerador
+Funcao\-: libera\-Lista\-Gerador (Iterador)
 
 Assertiva\-Entrada\-: gerador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O;
 
-Assertiva\-Saida\-: gerador\-Vazio(lista\-Alvo) == V\-A\-Z\-I\-O; Asseriva estrutural\-: aux1 é a lista\-Alvo, porem sendo percorrida
+Assertiva\-Saida\-: gerador\-Vazio(lista\-Alvo) == V\-A\-Z\-I\-O;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Gerador
+
+Requisitos\-: liberacao da lista de geradores
+
+Interfaces explicitas\-: void, libera\-Lista\-Gerador, Gerador $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de geradores Asseriva estrutural\-: aux1 é a lista\-Alvo, porem sendo percorrida
 
 A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
 
 Liberam os atributos alocados dinamicamente do elemento Gerador corrente
 
-A\-S\-: lista\-Alvo chegou ao fim 
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_geradores_8c_a0b41495b4b1a1bf08c8bc44c21f4b0b2}{\index{Geradores.\-c@{Geradores.\-c}!mandar\-Recurso\-Produzido@{mandar\-Recurso\-Produzido}}
+\index{mandar\-Recurso\-Produzido@{mandar\-Recurso\-Produzido}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{mandar\-Recurso\-Produzido}]{\setlength{\rightskip}{0pt plus 5cm}void mandar\-Recurso\-Produzido (
+\begin{DoxyParamCaption}
+\item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_a0b41495b4b1a1bf08c8bc44c21f4b0b2}
+Funcao\-: mandar\-Recurso\-Produzido
 
-Definition at line 177 of file Geradores.\-c.
+Assertiva\-Entrada\-: gerador\-Vazio(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-O;
 
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Gerador
+
+Requisitos\-: alterar a interconexao ligada a cada celula da lista de geradores com o valor que sera transportado Altera o adaptador de destino com o recurso que sera recebido
+
+Interfaces explicitas\-: void, mandar\-Recurso\-Produzido, Gerador $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de geradores A\-E\-: nao chegou ao final da lista\-Alvo
+
+A\-E\-: o elemento possui saidas
+
+A\-E\-: interconexao ligada a essa celula nao teve falha
+
+A\-E\-: gerador possui uma saida
+
+A\-E\-: laço que cobre os casos de uma interconexao apontar para outra antes
+
+A\-E\-: uma interconexao aponta para outra;
+
+Assertiva de argumentacao
+
+Verifica se a proxima Interconexao nao esta falha se nao esta define o recurso que ela ira transportar
+
+A\-E \-: verifica se a proxima interconexao nao esta falha
+
+A\-E\-: conexao nao falha
+
+A\-E \-: conexao Falha transporta 0 de recurso
+
+A\-E\-: chegou na ultima interconexao depois do gerador;
+
+A\-E\-: a interconexao aponta para o adaptador
+
+A\-E\-: interconexao ligada a essa celula falhou
+
+A\-E\-: tem saida
+
+A\-E\-: percorrrer a lista de inteconexao das saidas
+
+A\-E\-: a interconexao aponta para o adaptador
+
+A\-S\-: chegou ao final da lista\-Alvo \hypertarget{_geradores_8c_accc5de2fd87410c1ff1adee11312dea1}{\index{Geradores.\-c@{Geradores.\-c}!numero\-Geradores@{numero\-Geradores}}
+\index{numero\-Geradores@{numero\-Geradores}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{numero\-Geradores}]{\setlength{\rightskip}{0pt plus 5cm}int numero\-Geradores (
+\begin{DoxyParamCaption}
+\item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_accc5de2fd87410c1ff1adee11312dea1}
+Funcao\-: numero\-Geradores (Iterador)
+
+Assertiva\-Saida\-: total $>$= 0;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Gerador
+
+Requisitos\-: conta o numero total de geradores em uma lista de geradores
+
+Interfaces explicitas\-: int, numero\-Geradores, Gerador $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de geradores Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim
+
+Comentarios de argumentacao
+
+Contagem do numero de total de geradores na lista\-Alvo\hypertarget{_geradores_8c_a33571540a41bdf1ce7ce762be2027ebe}{\index{Geradores.\-c@{Geradores.\-c}!recurso\-Produzido\-Total@{recurso\-Produzido\-Total}}
+\index{recurso\-Produzido\-Total@{recurso\-Produzido\-Total}!Geradores.c@{Geradores.\-c}}
+\subsubsection[{recurso\-Produzido\-Total}]{\setlength{\rightskip}{0pt plus 5cm}int recurso\-Produzido\-Total (
+\begin{DoxyParamCaption}
+\item[{{\bf Gerador} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_geradores_8c_a33571540a41bdf1ce7ce762be2027ebe}
+Funcao\-: numero\-Geradores (Iterador)
+
+Assertiva\-Saida\-: total $>$= 0;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Gerador
+
+Requisitos\-: realiza o calculo da energia total gerada
+
+Interfaces explicitas\-: int, recurso\-Produzido\-Total, Gerador $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de geradores Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Somando os recursos produzidos para obter a energia total gerada
