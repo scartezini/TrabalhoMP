@@ -1,87 +1,102 @@
 \begin{theindex}
 
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}M\discretionary {-}{}{}E.\discretionary {-}{}{}md}, 
+		\hyperpage{66}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}h}, 
+		\hyperpage{15}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}h}, 
+		\hyperpage{20}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}h}, 
+		\hyperpage{26}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Geral.\discretionary {-}{}{}h}, 
+		\hyperpage{32}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}h}, 
+		\hyperpage{35}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Principal.\discretionary {-}{}{}h}, 
+		\hyperpage{42}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}c}, 
+		\hyperpage{47}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}c}, 
+		\hyperpage{50}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}c}, 
+		\hyperpage{54}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Geral.\discretionary {-}{}{}c}, 
+		\hyperpage{58}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}c}, 
+		\hyperpage{60}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Principal.\discretionary {-}{}{}c}, 
+		\hyperpage{65}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
+		\hyperpage{66}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
+		\hyperpage{67}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
+		\hyperpage{68}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
+		\hyperpage{70}
+  \item {/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
+		\hyperpage{71}
+
+  \indexspace
+
   \item {A\-D\-A\-P\-T\-A\-D\-O\-R}
-    \subitem {Principal.\-h}, \hyperpage{36}
+    \subitem {Principal.\-h}, \hyperpage{46}
+  \item {A\-M\-A\-R\-E\-L\-O}
+    \subitem {Principal.\-h}, \hyperpage{46}
   \item {Adaptador}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{34}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{43}
   \item {adaptador}, \hyperpage{7}
     \subitem {entradas}, \hyperpage{7}
     \subitem {nome}, \hyperpage{7}
-    \subitem {posicao}, \hyperpage{8}
-    \subitem {proximo}, \hyperpage{8}
+    \subitem {posicao}, \hyperpage{7}
+    \subitem {proximo}, \hyperpage{7}
     \subitem {quantidade\discretionary {-}{}{}Saidas}, \hyperpage{8}
     \subitem {recurso\discretionary {-}{}{}Recebido}, \hyperpage{8}
     \subitem {saidas}, \hyperpage{8}
   \item {adaptador\discretionary {-}{}{}Vazio}
-    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{37}
+    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{47}
     \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{15}
   \item {Adaptadores.\discretionary {-}{}{}c}
-    \subitem {adaptador\discretionary {-}{}{}Vazio}, \hyperpage{37}
+    \subitem {adaptador\discretionary {-}{}{}Vazio}, \hyperpage{47}
     \subitem {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}, 
-		\hyperpage{37}
-    \subitem {define\discretionary {-}{}{}Distribuicao}, \hyperpage{37}
+		\hyperpage{47}
+    \subitem {define\discretionary {-}{}{}Distribuicao}, \hyperpage{47}
     \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}, 
-		\hyperpage{38}
-    \subitem {insere\discretionary {-}{}{}Adaptador}, \hyperpage{38}
+		\hyperpage{48}
+    \subitem {insere\discretionary {-}{}{}Adaptador}, \hyperpage{48}
     \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}, 
-		\hyperpage{39}
+		\hyperpage{49}
+    \subitem {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado}, 
+		\hyperpage{50}
   \item {Adaptadores.\discretionary {-}{}{}h}
     \subitem {adaptador\discretionary {-}{}{}Vazio}, \hyperpage{15}
     \subitem {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}, 
-		\hyperpage{15}
+		\hyperpage{16}
     \subitem {define\discretionary {-}{}{}Distribuicao}, \hyperpage{16}
     \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}, 
 		\hyperpage{17}
     \subitem {insere\discretionary {-}{}{}Adaptador}, \hyperpage{17}
     \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}, 
-		\hyperpage{18}
+		\hyperpage{19}
+    \subitem {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado}, 
+		\hyperpage{19}
   \item {Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}
     \subitem {T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}, 
-		\hyperpage{50}
-  \item {app/header/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}h}, 
-		\hyperpage{15}
-  \item {app/header/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}h}, 
-		\hyperpage{19}
-  \item {app/header/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}h}, 
-		\hyperpage{22}
-  \item {app/header/\discretionary {-}{}{}Geral.\discretionary {-}{}{}h}, 
-		\hyperpage{26}
-  \item {app/header/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}h}, 
-		\hyperpage{28}
-  \item {app/header/\discretionary {-}{}{}Principal.\discretionary {-}{}{}h}, 
-		\hyperpage{34}
-  \item {app/src/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}c}, 
-		\hyperpage{37}
-  \item {app/src/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}c}, 
-		\hyperpage{40}
-  \item {app/src/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}c}, 
-		\hyperpage{42}
-  \item {app/src/\discretionary {-}{}{}Geral.\discretionary {-}{}{}c}, 
-		\hyperpage{44}
-  \item {app/src/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}c}, 
-		\hyperpage{46}
-  \item {app/src/\discretionary {-}{}{}Principal.\discretionary {-}{}{}c}, 
-		\hyperpage{49}
-  \item {app/test/\discretionary {-}{}{}Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
-		\hyperpage{50}
-  \item {app/test/\discretionary {-}{}{}Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
-		\hyperpage{51}
-  \item {app/test/main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
-		\hyperpage{51}
+		\hyperpage{67}
 
   \indexspace
 
   \item {C\-I\-D\-A\-D\-E}
-    \subitem {Principal.\-h}, \hyperpage{36}
+    \subitem {Principal.\-h}, \hyperpage{46}
   \item {calcula\discretionary {-}{}{}Falha}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{46}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{29}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{61}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{35}
   \item {capacidade\discretionary {-}{}{}Maxima}
-    \subitem {interconexao}, \hyperpage{12}
+    \subitem {interconexao}, \hyperpage{11}
   \item {chance\discretionary {-}{}{}Falha}
-    \subitem {interconexao}, \hyperpage{12}
+    \subitem {interconexao}, \hyperpage{11}
   \item {Cidade}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{34}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{43}
   \item {cidade}, \hyperpage{8}
     \subitem {entradas}, \hyperpage{9}
     \subitem {nome}, \hyperpage{9}
@@ -90,71 +105,116 @@
     \subitem {recurso\discretionary {-}{}{}Gasto}, \hyperpage{9}
     \subitem {recurso\discretionary {-}{}{}Necessario}, \hyperpage{9}
     \subitem {recurso\discretionary {-}{}{}Recebido}, \hyperpage{9}
+    \subitem {tag\discretionary {-}{}{}Estado}, \hyperpage{9}
+    \subitem {turnos\discretionary {-}{}{}Negativados}, \hyperpage{9}
+    \subitem {turnos\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}, 
+		\hyperpage{9}
   \item {cidade\discretionary {-}{}{}Vazia}
-    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{40}
-    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{19}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{51}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{20}
   \item {Cidades.\discretionary {-}{}{}c}
-    \subitem {cidade\discretionary {-}{}{}Vazia}, \hyperpage{40}
+    \subitem {cidade\discretionary {-}{}{}Vazia}, \hyperpage{51}
     \subitem {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}, 
-		\hyperpage{40}
+		\hyperpage{51}
+    \subitem {gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido}, 
+		\hyperpage{51}
     \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}, 
-		\hyperpage{40}
-    \subitem {insere\discretionary {-}{}{}Cidade}, \hyperpage{40}
+		\hyperpage{51}
+    \subitem {insere\discretionary {-}{}{}Cidade}, \hyperpage{51}
     \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}, 
-		\hyperpage{41}
+		\hyperpage{52}
+    \subitem {numero\discretionary {-}{}{}Cidades}, \hyperpage{53}
+    \subitem {numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}, 
+		\hyperpage{53}
+    \subitem {numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}, 
+		\hyperpage{53}
     \subitem {recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}, 
-		\hyperpage{42}
+		\hyperpage{54}
+    \subitem {tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}, 
+		\hyperpage{54}
+    \subitem {tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario}, 
+		\hyperpage{54}
   \item {Cidades.\discretionary {-}{}{}h}
-    \subitem {cidade\discretionary {-}{}{}Vazia}, \hyperpage{19}
+    \subitem {cidade\discretionary {-}{}{}Vazia}, \hyperpage{20}
     \subitem {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}, 
-		\hyperpage{19}
-    \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}, 
-		\hyperpage{20}
-    \subitem {insere\discretionary {-}{}{}Cidade}, \hyperpage{20}
-    \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}, 
 		\hyperpage{21}
+    \subitem {gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido}, 
+		\hyperpage{21}
+    \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}, 
+		\hyperpage{21}
+    \subitem {insere\discretionary {-}{}{}Cidade}, \hyperpage{22}
+    \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}, 
+		\hyperpage{23}
+    \subitem {numero\discretionary {-}{}{}Cidades}, \hyperpage{24}
+    \subitem {numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}, 
+		\hyperpage{24}
+    \subitem {numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}, 
+		\hyperpage{24}
     \subitem {recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}, 
-		\hyperpage{22}
+		\hyperpage{25}
+    \subitem {tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}, 
+		\hyperpage{25}
+    \subitem {tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario}, 
+		\hyperpage{26}
+  \item {Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}
+    \subitem {T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}, 
+		\hyperpage{68}
+  \item {Condicao\discretionary {-}{}{}Cidade}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{44}
+  \item {condicao\discretionary {-}{}{}Cidade}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{46}
   \item {conecta}
-    \subitem {Geral.\discretionary {-}{}{}c}, \hyperpage{44}
-    \subitem {Geral.\discretionary {-}{}{}h}, \hyperpage{26}
+    \subitem {Geral.\discretionary {-}{}{}c}, \hyperpage{58}
+    \subitem {Geral.\discretionary {-}{}{}h}, \hyperpage{32}
+  \item {contador\discretionary {-}{}{}Tempo\discretionary {-}{}{}Conserto}
+    \subitem {interconexao}, \hyperpage{11}
   \item {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}
-    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{37}
-    \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{15}
+    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{47}
+    \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{16}
   \item {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}
-    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{40}
-    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{19}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{51}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{21}
   \item {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}
-    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{42}
-    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{22}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{55}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{27}
   \item {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{46}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{29}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{61}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{36}
   \item {custo}
     \subitem {gerador}, \hyperpage{10}
   \item {custo\discretionary {-}{}{}Conserto}
-    \subitem {interconexao}, \hyperpage{12}
+    \subitem {interconexao}, \hyperpage{11}
+  \item {custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{61}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{36}
   \item {custo\discretionary {-}{}{}Geradores}
-    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{22}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{55}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{27}
+  \item {custo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao}
+    \subitem {relatorio}, \hyperpage{13}
 
   \indexspace
 
   \item {define\discretionary {-}{}{}Distribuicao}
-    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{37}
+    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{47}
     \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{16}
   \item {Destino}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{35}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{44}
   \item {destino}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{36}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{46}
 
   \indexspace
 
+  \item {energia\discretionary {-}{}{}Gasta\discretionary {-}{}{}Cidades}
+    \subitem {relatorio}, \hyperpage{13}
+  \item {energia\discretionary {-}{}{}Total\discretionary {-}{}{}Gerada}
+    \subitem {relatorio}, \hyperpage{13}
   \item {entrada\discretionary {-}{}{}Adaptador}
-    \subitem {interconexao}, \hyperpage{12}
+    \subitem {interconexao}, \hyperpage{11}
   \item {entrada\discretionary {-}{}{}Gerador}
-    \subitem {interconexao}, \hyperpage{12}
+    \subitem {interconexao}, \hyperpage{11}
   \item {entrada\discretionary {-}{}{}Interconexao}
-    \subitem {interconexao}, \hyperpage{12}
+    \subitem {interconexao}, \hyperpage{11}
   \item {entradas}
     \subitem {adaptador}, \hyperpage{7}
     \subitem {cidade}, \hyperpage{9}
@@ -162,16 +222,16 @@
   \indexspace
 
   \item {F\-A\-L\-H\-A}
-    \subitem {Principal.\-h}, \hyperpage{36}
+    \subitem {Principal.\-h}, \hyperpage{46}
   \item {Falha}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{35}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{44}
   \item {falha}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{36}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{46}
 
   \indexspace
 
   \item {Gerador}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{35}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{44}
   \item {gerador}, \hyperpage{9}
     \subitem {custo}, \hyperpage{10}
     \subitem {nome}, \hyperpage{10}
@@ -181,217 +241,277 @@
     \subitem {saida}, \hyperpage{10}
     \subitem {taxa\discretionary {-}{}{}Producao}, \hyperpage{10}
   \item {gerador\discretionary {-}{}{}Vazio}
-    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{42}
-    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{23}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{55}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{27}
   \item {Geradores.\discretionary {-}{}{}c}
     \subitem {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}, 
-		\hyperpage{42}
-    \subitem {gerador\discretionary {-}{}{}Vazio}, \hyperpage{42}
+		\hyperpage{55}
+    \subitem {custo\discretionary {-}{}{}Geradores}, \hyperpage{55}
+    \subitem {gerador\discretionary {-}{}{}Vazio}, \hyperpage{55}
     \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}, 
-		\hyperpage{42}
-    \subitem {insere\discretionary {-}{}{}Gerador}, \hyperpage{42}
+		\hyperpage{55}
+    \subitem {insere\discretionary {-}{}{}Gerador}, \hyperpage{56}
     \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}, 
-		\hyperpage{43}
+		\hyperpage{57}
+    \subitem {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}, 
+		\hyperpage{57}
+    \subitem {numero\discretionary {-}{}{}Geradores}, \hyperpage{58}
+    \subitem {recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}, 
+		\hyperpage{58}
   \item {Geradores.\discretionary {-}{}{}h}
     \subitem {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}, 
-		\hyperpage{22}
-    \subitem {custo\discretionary {-}{}{}Geradores}, \hyperpage{22}
-    \subitem {gerador\discretionary {-}{}{}Vazio}, \hyperpage{23}
+		\hyperpage{27}
+    \subitem {custo\discretionary {-}{}{}Geradores}, \hyperpage{27}
+    \subitem {gerador\discretionary {-}{}{}Vazio}, \hyperpage{27}
     \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}, 
-		\hyperpage{23}
-    \subitem {insere\discretionary {-}{}{}Gerador}, \hyperpage{24}
+		\hyperpage{28}
+    \subitem {insere\discretionary {-}{}{}Gerador}, \hyperpage{28}
     \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}, 
-		\hyperpage{25}
+		\hyperpage{30}
     \subitem {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}, 
-		\hyperpage{25}
+		\hyperpage{30}
+    \subitem {numero\discretionary {-}{}{}Geradores}, \hyperpage{31}
     \subitem {recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}, 
-		\hyperpage{25}
+		\hyperpage{31}
+  \item {Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}
+    \subitem {T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}, 
+		\hyperpage{69}
   \item {Geral.\discretionary {-}{}{}c}
-    \subitem {conecta}, \hyperpage{44}
-    \subitem {verifica}, \hyperpage{45}
+    \subitem {conecta}, \hyperpage{58}
+    \subitem {verifica}, \hyperpage{59}
   \item {Geral.\discretionary {-}{}{}h}
-    \subitem {conecta}, \hyperpage{26}
-    \subitem {verifica}, \hyperpage{27}
+    \subitem {conecta}, \hyperpage{32}
+    \subitem {verifica}, \hyperpage{34}
+  \item {gerencia\discretionary {-}{}{}Falhas}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{62}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{36}
+  \item {gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{51}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{21}
 
   \indexspace
 
   \item {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}
-    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{38}
+    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{48}
     \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{17}
   \item {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}
-    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{40}
-    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{20}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{51}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{21}
   \item {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}
-    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{42}
-    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{23}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{55}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{28}
   \item {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{46}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{29}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{62}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{37}
   \item {insere\discretionary {-}{}{}Adaptador}
-    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{38}
+    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{48}
     \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{17}
   \item {insere\discretionary {-}{}{}Cidade}
-    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{40}
-    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{20}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{51}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{22}
   \item {insere\discretionary {-}{}{}Gerador}
-    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{42}
-    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{24}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{56}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{28}
   \item {insere\discretionary {-}{}{}Interconexao}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{47}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{30}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{62}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{37}
   \item {Interconexao}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{35}
-  \item {interconexao}, \hyperpage{11}
-    \subitem {capacidade\discretionary {-}{}{}Maxima}, \hyperpage{12}
-    \subitem {chance\discretionary {-}{}{}Falha}, \hyperpage{12}
-    \subitem {custo\discretionary {-}{}{}Conserto}, \hyperpage{12}
-    \subitem {entrada\discretionary {-}{}{}Adaptador}, \hyperpage{12}
-    \subitem {entrada\discretionary {-}{}{}Gerador}, \hyperpage{12}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{44}
+  \item {interconexao}, \hyperpage{10}
+    \subitem {capacidade\discretionary {-}{}{}Maxima}, \hyperpage{11}
+    \subitem {chance\discretionary {-}{}{}Falha}, \hyperpage{11}
+    \subitem {contador\discretionary {-}{}{}Tempo\discretionary {-}{}{}Conserto}, 
+		\hyperpage{11}
+    \subitem {custo\discretionary {-}{}{}Conserto}, \hyperpage{11}
+    \subitem {entrada\discretionary {-}{}{}Adaptador}, \hyperpage{11}
+    \subitem {entrada\discretionary {-}{}{}Gerador}, \hyperpage{11}
     \subitem {entrada\discretionary {-}{}{}Interconexao}, 
-		\hyperpage{12}
-    \subitem {nome}, \hyperpage{12}
-    \subitem {numero\discretionary {-}{}{}Falha}, \hyperpage{12}
-    \subitem {posicao\discretionary {-}{}{}Final}, \hyperpage{13}
-    \subitem {posicao\discretionary {-}{}{}Inicial}, \hyperpage{13}
-    \subitem {proximo}, \hyperpage{13}
+		\hyperpage{11}
+    \subitem {nome}, \hyperpage{11}
+    \subitem {numero\discretionary {-}{}{}Falha}, \hyperpage{11}
+    \subitem {posicao\discretionary {-}{}{}Final}, \hyperpage{12}
+    \subitem {posicao\discretionary {-}{}{}Inicial}, \hyperpage{12}
+    \subitem {proximo}, \hyperpage{12}
     \subitem {proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador}, 
-		\hyperpage{13}
+		\hyperpage{12}
     \subitem {proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade}, 
-		\hyperpage{13}
+		\hyperpage{12}
     \subitem {proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador}, 
-		\hyperpage{13}
+		\hyperpage{12}
     \subitem {recurso\discretionary {-}{}{}Transportado}, 
-		\hyperpage{13}
-    \subitem {saida\discretionary {-}{}{}Adaptador}, \hyperpage{13}
-    \subitem {saida\discretionary {-}{}{}Cidade}, \hyperpage{13}
-    \subitem {saida\discretionary {-}{}{}Interconexao}, \hyperpage{13}
-    \subitem {tag\discretionary {-}{}{}Destino}, \hyperpage{13}
-    \subitem {tag\discretionary {-}{}{}Falha}, \hyperpage{13}
-    \subitem {tempo\discretionary {-}{}{}Conserto}, \hyperpage{14}
+		\hyperpage{12}
+    \subitem {saida\discretionary {-}{}{}Adaptador}, \hyperpage{12}
+    \subitem {saida\discretionary {-}{}{}Cidade}, \hyperpage{12}
+    \subitem {saida\discretionary {-}{}{}Interconexao}, \hyperpage{12}
+    \subitem {tag\discretionary {-}{}{}Destino}, \hyperpage{12}
+    \subitem {tag\discretionary {-}{}{}Falha}, \hyperpage{12}
+    \subitem {tempo\discretionary {-}{}{}Conserto}, \hyperpage{12}
   \item {interconexao\discretionary {-}{}{}Vazia}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{48}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{31}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{63}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{39}
   \item {Interconexoes.\discretionary {-}{}{}c}
-    \subitem {calcula\discretionary {-}{}{}Falha}, \hyperpage{46}
+    \subitem {calcula\discretionary {-}{}{}Falha}, \hyperpage{61}
     \subitem {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}, 
-		\hyperpage{46}
+		\hyperpage{61}
+    \subitem {custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto}, 
+		\hyperpage{61}
+    \subitem {gerencia\discretionary {-}{}{}Falhas}, \hyperpage{62}
     \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}, 
-		\hyperpage{46}
-    \subitem {insere\discretionary {-}{}{}Interconexao}, \hyperpage{47}
-    \subitem {interconexao\discretionary {-}{}{}Vazia}, \hyperpage{48}
+		\hyperpage{62}
+    \subitem {insere\discretionary {-}{}{}Interconexao}, \hyperpage{62}
+    \subitem {interconexao\discretionary {-}{}{}Vazia}, \hyperpage{63}
     \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}, 
-		\hyperpage{48}
+		\hyperpage{63}
     \subitem {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}, 
-		\hyperpage{48}
-    \subitem {tamanho\discretionary {-}{}{}Conexao}, \hyperpage{48}
+		\hyperpage{64}
+    \subitem {numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas}, 
+		\hyperpage{64}
+    \subitem {tamanho\discretionary {-}{}{}Conexao}, \hyperpage{64}
     \subitem {tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}, 
-		\hyperpage{49}
+		\hyperpage{65}
   \item {Interconexoes.\discretionary {-}{}{}h}
-    \subitem {calcula\discretionary {-}{}{}Falha}, \hyperpage{29}
+    \subitem {calcula\discretionary {-}{}{}Falha}, \hyperpage{35}
     \subitem {cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}, 
-		\hyperpage{29}
+		\hyperpage{36}
+    \subitem {custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto}, 
+		\hyperpage{36}
+    \subitem {gerencia\discretionary {-}{}{}Falhas}, \hyperpage{36}
     \subitem {imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}, 
-		\hyperpage{29}
-    \subitem {insere\discretionary {-}{}{}Interconexao}, \hyperpage{30}
-    \subitem {interconexao\discretionary {-}{}{}Vazia}, \hyperpage{31}
+		\hyperpage{37}
+    \subitem {insere\discretionary {-}{}{}Interconexao}, \hyperpage{37}
+    \subitem {interconexao\discretionary {-}{}{}Vazia}, \hyperpage{39}
     \subitem {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}, 
-		\hyperpage{31}
+		\hyperpage{39}
     \subitem {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}, 
-		\hyperpage{32}
-    \subitem {tamanho\discretionary {-}{}{}Conexao}, \hyperpage{32}
+		\hyperpage{40}
+    \subitem {numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas}, 
+		\hyperpage{40}
+    \subitem {tamanho\discretionary {-}{}{}Conexao}, \hyperpage{41}
     \subitem {tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}, 
-		\hyperpage{33}
+		\hyperpage{42}
     \subitem {total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto}, 
-		\hyperpage{33}
+		\hyperpage{42}
+  \item {Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}
+    \subitem {T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}, 
+		\hyperpage{70, 71}
 
   \indexspace
 
   \item {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}
-    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{39}
-    \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{18}
+    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{49}
+    \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{19}
   \item {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}
-    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{41}
-    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{21}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{52}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{23}
   \item {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}
-    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{43}
-    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{25}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{57}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{30}
   \item {libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{48}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{31}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{63}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{39}
 
   \indexspace
 
   \item {main}
     \subitem {main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
-		\hyperpage{51}
-    \subitem {Principal.\discretionary {-}{}{}c}, \hyperpage{49}
+		\hyperpage{71}
+    \subitem {Principal.\discretionary {-}{}{}c}, \hyperpage{65}
   \item {main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}
-    \subitem {main}, \hyperpage{51}
+    \subitem {main}, \hyperpage{71}
+  \item {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado}
+    \subitem {Adaptadores.\discretionary {-}{}{}c}, \hyperpage{50}
+    \subitem {Adaptadores.\discretionary {-}{}{}h}, \hyperpage{19}
   \item {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}
-    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{25}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{57}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{30}
   \item {mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{48}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{32}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{64}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{40}
 
   \indexspace
 
   \item {N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}
-    \subitem {Principal.\-h}, \hyperpage{37}
+    \subitem {Principal.\-h}, \hyperpage{46}
   \item {N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}
-    \subitem {Principal.\-h}, \hyperpage{37}
+    \subitem {Principal.\-h}, \hyperpage{46}
   \item {nome}
     \subitem {adaptador}, \hyperpage{7}
     \subitem {cidade}, \hyperpage{9}
     \subitem {gerador}, \hyperpage{10}
-    \subitem {interconexao}, \hyperpage{12}
+    \subitem {interconexao}, \hyperpage{11}
+  \item {numero\discretionary {-}{}{}Cidades}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{53}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{24}
+  \item {numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{53}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{24}
+    \subitem {relatorio}, \hyperpage{13}
+  \item {numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{53}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{24}
+    \subitem {relatorio}, \hyperpage{13}
   \item {numero\discretionary {-}{}{}Falha}
-    \subitem {interconexao}, \hyperpage{12}
+    \subitem {interconexao}, \hyperpage{11}
+  \item {numero\discretionary {-}{}{}Falha\discretionary {-}{}{}Interconexoes}
+    \subitem {relatorio}, \hyperpage{13}
+  \item {numero\discretionary {-}{}{}Geradores}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{58}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{31}
+  \item {numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{64}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{40}
 
   \indexspace
 
   \item {posicao}
-    \subitem {adaptador}, \hyperpage{8}
+    \subitem {adaptador}, \hyperpage{7}
     \subitem {cidade}, \hyperpage{9}
     \subitem {gerador}, \hyperpage{10}
   \item {posicao\discretionary {-}{}{}Final}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {posicao\discretionary {-}{}{}Inicial}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {Principal.\-h}
-    \subitem {A\-D\-A\-P\-T\-A\-D\-O\-R}, \hyperpage{36}
-    \subitem {C\-I\-D\-A\-D\-E}, \hyperpage{36}
-    \subitem {F\-A\-L\-H\-A}, \hyperpage{36}
-    \subitem {N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}, \hyperpage{37}
-    \subitem {N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}, \hyperpage{37}
-    \subitem {S\-E\-M\-\_\-\-F\-A\-L\-H\-A}, \hyperpage{36}
-    \subitem {V\-A\-Z\-I\-A}, \hyperpage{37}
-    \subitem {V\-A\-Z\-I\-O}, \hyperpage{37}
+    \subitem {A\-D\-A\-P\-T\-A\-D\-O\-R}, \hyperpage{46}
+    \subitem {A\-M\-A\-R\-E\-L\-O}, \hyperpage{46}
+    \subitem {C\-I\-D\-A\-D\-E}, \hyperpage{46}
+    \subitem {F\-A\-L\-H\-A}, \hyperpage{46}
+    \subitem {N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}, \hyperpage{46}
+    \subitem {N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}, \hyperpage{46}
+    \subitem {S\-E\-M\-\_\-\-F\-A\-L\-H\-A}, \hyperpage{46}
+    \subitem {V\-A\-Z\-I\-A}, \hyperpage{46}
+    \subitem {V\-A\-Z\-I\-O}, \hyperpage{46}
+    \subitem {V\-E\-R\-D\-E}, \hyperpage{46}
+    \subitem {V\-E\-R\-M\-E\-L\-H\-O}, \hyperpage{46}
   \item {Principal.\discretionary {-}{}{}c}
-    \subitem {main}, \hyperpage{49}
+    \subitem {main}, \hyperpage{65}
   \item {Principal.\discretionary {-}{}{}h}
-    \subitem {Adaptador}, \hyperpage{34}
-    \subitem {Cidade}, \hyperpage{34}
-    \subitem {Destino}, \hyperpage{35}
-    \subitem {destino}, \hyperpage{36}
-    \subitem {Falha}, \hyperpage{35}
-    \subitem {falha}, \hyperpage{36}
-    \subitem {Gerador}, \hyperpage{35}
-    \subitem {Interconexao}, \hyperpage{35}
-    \subitem {Vazia}, \hyperpage{36}
-    \subitem {vazia}, \hyperpage{36}
-    \subitem {Vazio}, \hyperpage{36}
-    \subitem {vazio}, \hyperpage{37}
+    \subitem {Adaptador}, \hyperpage{43}
+    \subitem {Cidade}, \hyperpage{43}
+    \subitem {Condicao\discretionary {-}{}{}Cidade}, \hyperpage{44}
+    \subitem {condicao\discretionary {-}{}{}Cidade}, \hyperpage{46}
+    \subitem {Destino}, \hyperpage{44}
+    \subitem {destino}, \hyperpage{46}
+    \subitem {Falha}, \hyperpage{44}
+    \subitem {falha}, \hyperpage{46}
+    \subitem {Gerador}, \hyperpage{44}
+    \subitem {Interconexao}, \hyperpage{44}
+    \subitem {Relatorio}, \hyperpage{45}
+    \subitem {Vazia}, \hyperpage{45}
+    \subitem {vazia}, \hyperpage{46}
+    \subitem {Vazio}, \hyperpage{46}
+    \subitem {vazio}, \hyperpage{46}
   \item {proximo}
-    \subitem {adaptador}, \hyperpage{8}
+    \subitem {adaptador}, \hyperpage{7}
     \subitem {cidade}, \hyperpage{9}
     \subitem {gerador}, \hyperpage{10}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
 
   \indexspace
 
@@ -400,37 +520,61 @@
 
   \indexspace
 
-  \item {R\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}M\discretionary {-}{}{}E.\discretionary {-}{}{}md}, 
-		\hyperpage{51}
   \item {recurso\discretionary {-}{}{}Gasto}
     \subitem {cidade}, \hyperpage{9}
   \item {recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}
-    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{42}
-    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{22}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{54}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{25}
   \item {recurso\discretionary {-}{}{}Necessario}
     \subitem {cidade}, \hyperpage{9}
   \item {recurso\discretionary {-}{}{}Produzido}
     \subitem {gerador}, \hyperpage{10}
   \item {recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}
-    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{25}
+    \subitem {Geradores.\discretionary {-}{}{}c}, \hyperpage{58}
+    \subitem {Geradores.\discretionary {-}{}{}h}, \hyperpage{31}
   \item {recurso\discretionary {-}{}{}Recebido}
     \subitem {adaptador}, \hyperpage{8}
     \subitem {cidade}, \hyperpage{9}
   \item {recurso\discretionary {-}{}{}Transportado}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
+  \item {Relatorio}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{45}
+  \item {relatorio}, \hyperpage{12}
+    \subitem {custo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao}, 
+		\hyperpage{13}
+    \subitem {energia\discretionary {-}{}{}Gasta\discretionary {-}{}{}Cidades}, 
+		\hyperpage{13}
+    \subitem {energia\discretionary {-}{}{}Total\discretionary {-}{}{}Gerada}, 
+		\hyperpage{13}
+    \subitem {numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}, 
+		\hyperpage{13}
+    \subitem {numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}, 
+		\hyperpage{13}
+    \subitem {numero\discretionary {-}{}{}Falha\discretionary {-}{}{}Interconexoes}, 
+		\hyperpage{13}
+    \subitem {tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Interconexoes}, 
+		\hyperpage{13}
+    \subitem {tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}, 
+		\hyperpage{13}
+    \subitem {tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso}, 
+		\hyperpage{13}
+    \subitem {tempo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao}, 
+		\hyperpage{13}
+    \subitem {total\discretionary {-}{}{}Cidades}, \hyperpage{13}
+    \subitem {total\discretionary {-}{}{}Geradores}, \hyperpage{13}
 
   \indexspace
 
   \item {S\-E\-M\-\_\-\-F\-A\-L\-H\-A}
-    \subitem {Principal.\-h}, \hyperpage{36}
+    \subitem {Principal.\-h}, \hyperpage{46}
   \item {saida}
     \subitem {gerador}, \hyperpage{10}
   \item {saida\discretionary {-}{}{}Adaptador}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {saida\discretionary {-}{}{}Cidade}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {saida\discretionary {-}{}{}Interconexao}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {saidas}
     \subitem {adaptador}, \hyperpage{8}
 
@@ -438,40 +582,73 @@
 
   \item {T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}
     \subitem {Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
-		\hyperpage{50}
+		\hyperpage{67}
+    \subitem {Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
+		\hyperpage{68}
+    \subitem {Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
+		\hyperpage{69}
+    \subitem {Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}, 
+		\hyperpage{70, 71}
   \item {tag\discretionary {-}{}{}Destino}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
+  \item {tag\discretionary {-}{}{}Estado}
+    \subitem {cidade}, \hyperpage{9}
   \item {tag\discretionary {-}{}{}Falha}
-    \subitem {interconexao}, \hyperpage{13}
+    \subitem {interconexao}, \hyperpage{12}
   \item {tamanho\discretionary {-}{}{}Conexao}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{48}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{32}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{64}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{41}
   \item {tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}
-    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{49}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{33}
+    \subitem {Interconexoes.\discretionary {-}{}{}c}, \hyperpage{65}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{42}
+  \item {tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Interconexoes}
+    \subitem {relatorio}, \hyperpage{13}
   \item {taxa\discretionary {-}{}{}Producao}
     \subitem {gerador}, \hyperpage{10}
+  \item {tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{54}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{25}
+    \subitem {relatorio}, \hyperpage{13}
   \item {tempo\discretionary {-}{}{}Conserto}
-    \subitem {interconexao}, \hyperpage{14}
+    \subitem {interconexao}, \hyperpage{12}
+  \item {tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso}
+    \subitem {relatorio}, \hyperpage{13}
+  \item {tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario}
+    \subitem {Cidades.\discretionary {-}{}{}c}, \hyperpage{54}
+    \subitem {Cidades.\discretionary {-}{}{}h}, \hyperpage{26}
+  \item {tempo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao}
+    \subitem {relatorio}, \hyperpage{13}
+  \item {total\discretionary {-}{}{}Cidades}
+    \subitem {relatorio}, \hyperpage{13}
   \item {total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto}
-    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{33}
+    \subitem {Interconexoes.\discretionary {-}{}{}h}, \hyperpage{42}
+  \item {total\discretionary {-}{}{}Geradores}
+    \subitem {relatorio}, \hyperpage{13}
+  \item {turnos\discretionary {-}{}{}Negativados}
+    \subitem {cidade}, \hyperpage{9}
+  \item {turnos\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}
+    \subitem {cidade}, \hyperpage{9}
 
   \indexspace
 
   \item {V\-A\-Z\-I\-A}
-    \subitem {Principal.\-h}, \hyperpage{37}
+    \subitem {Principal.\-h}, \hyperpage{46}
   \item {V\-A\-Z\-I\-O}
-    \subitem {Principal.\-h}, \hyperpage{37}
+    \subitem {Principal.\-h}, \hyperpage{46}
+  \item {V\-E\-R\-D\-E}
+    \subitem {Principal.\-h}, \hyperpage{46}
+  \item {V\-E\-R\-M\-E\-L\-H\-O}
+    \subitem {Principal.\-h}, \hyperpage{46}
   \item {Vazia}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{36}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{45}
   \item {vazia}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{36}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{46}
   \item {Vazio}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{36}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{46}
   \item {vazio}
-    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{37}
+    \subitem {Principal.\discretionary {-}{}{}h}, \hyperpage{46}
   \item {verifica}
-    \subitem {Geral.\discretionary {-}{}{}c}, \hyperpage{45}
-    \subitem {Geral.\discretionary {-}{}{}h}, \hyperpage{27}
+    \subitem {Geral.\discretionary {-}{}{}c}, \hyperpage{59}
+    \subitem {Geral.\discretionary {-}{}{}h}, \hyperpage{34}
 
 \end{theindex}

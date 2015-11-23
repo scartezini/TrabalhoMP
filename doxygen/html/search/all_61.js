@@ -4,5 +4,6 @@ var searchData=
   ['adaptadores_2ec',['Adaptadores.c',['../_adaptadores_8c.html',1,'']]],
   ['adaptadores_2eh',['Adaptadores.h',['../_adaptadores_8h.html',1,'']]],
   ['adaptadores_5funittest_2ec',['Adaptadores_unittest.c',['../_adaptadores__unittest_8c.html',1,'']]],
-  ['adaptadorvazio',['adaptadorVazio',['../_adaptadores_8h.html#af4780437ee94f4b16db1ffae475eb948',1,'adaptadorVazio(Adaptador *):&#160;Adaptadores.c'],['../_adaptadores_8c.html#ac0f5508ecf07c7d275a6701a60f32c78',1,'adaptadorVazio(Adaptador *listaAlvo):&#160;Adaptadores.c']]]
+  ['adaptadorvazio',['adaptadorVazio',['../_adaptadores_8h.html#af4780437ee94f4b16db1ffae475eb948',1,'adaptadorVazio(Adaptador *):&#160;Adaptadores.c'],['../_adaptadores_8c.html#ac0f5508ecf07c7d275a6701a60f32c78',1,'adaptadorVazio(Adaptador *listaAlvo):&#160;Adaptadores.c']]],
+  ['amarelo',['AMARELO',['../_principal_8h.html#a385a14573e75e4c37ebcde69926dfc8ca968fd04270855d4f614b4650f33e5f9f',1,'Principal.h']]]
 ];
