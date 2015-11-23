@@ -352,21 +352,19 @@ void defineDistribuicao(Adaptador *listaAlvo){
 *
 *	Hipóteses:
 *		listaAlvo - ponteiro para o inicio da lista do tipo Adaptador
-*
 *		A estrategia de distribuicao ja foi previamente definida e as
-*		interconxoes ligadas diretamente cada celula do adaptador ja esta
+*	interconxoes ligadas diretamente cada celula do adaptador ja esta
 *	 com o recursoTransportado preenchido
 *
-*
 *	Requisitos:
-*		alterar a interconexao ligada a cada celula da lista de geradores
-* com o valor que sera transportado
-*		Altera o adaptador ou cidade  de destino com o recurso que sera recebido
+*		Alterar a interconexao ligada a cada celula da lista de geradores
+* 	com o valor que sera transportado
+*		Altera o adaptador ou cidade de destino com o recurso que sera recebido
 *
 *	Interfaces explicitas:
-*		void, mandarRecursoAdaptado
+*		void, mandarRecursoAdaptado, Adaptador *listaAlvo
+*	
 *	Interfaces implicitas:
-*
 *		listaAlvo - lista de adaptadores
 **/
 void mandarRecursoAdaptado(Adaptador *listaAlvo){
@@ -376,50 +374,61 @@ void mandarRecursoAdaptado(Adaptador *listaAlvo){
 	Interconexao *posterior;
 
 	while(listaAlvo != NULL){
-		//!AE : percorrendo listaAlvo
+	//! AE: a listaAlvo nao chegou ao fim
 
+		//! Assertiva estrutural: conexao sao as saidas do adaptador corrente
 		conexao = listaAlvo->saidas;
 
 		while(conexao != NULL){
-			//!AE: precorre a lista de conexoes que saem de cada adaptador
+		//! AE: a lista de saidas do adaptador nao chegou ao fim
 
+			//! Assertiva estrutural: atual eh a saida atual na lista de saidas do adaptador
 			atual = conexao;
+			
 			while(atual->saidaInterconexao != NULL){
-				//!AE: vai ater a ulcima interconexao antes do destino
+			//! AE: a lista de interconexoes da saida nao chegou ao fim
 
+				//! Assertiva estrutural: posterior eh a proxima conexao na lista de interconexoes
 				posterior = atual->saidaInterconexao;
 
-				//!Assertiva de argumentacao
-				/**
-				*	Verifica se a proxima Interconexao nao esta falha
-				* se nao esta define o recurso que ela ira transportar
-				**/
+				//! Comentarios de argumentacao
+					/**
+					*	Verifica se a proxima Interconexao nao esta falha
+					* se nao esta define o recurso que ela ira transportar
+					**/
 				if(posterior->tagFalha == SEM_FALHA){
-					//!AE : verifica se a proxima conexao nao eh falha
+				//! AE: posterior nao possui falha
 
-					//!AE : se nao for falho define quanto de recurso sera transportado
+					//! Comentarios de argumentacao
+						/**
+						*	Definicao de quanto de recurso sera transportado
+						**/
 					posterior->recursoTransportado = (posterior->capacidadeMaxima >= atual->recursoTransportado)?
 																						atual->recursoTransportado : posterior->capacidadeMaxima;
 				}
 				else{
-					//!AE : posterior esta falho, recursoTransportado = 0
+				//! AE: posterior esta falho
 					posterior->recursoTransportado = 0;
 				}
 
 				atual = posterior;
 			}
+			//! AS: a lista de interconexoes da saida chegou ao fim
 
 			if(atual->saidaCidade != NULL){
-				//! se a saida eh uma cidade
+			//! AE: a saida eh uma cidade
 				atual->saidaCidade->recursoRecebido = atual->recursoTransportado;
 			}
 			else if(atual->saidaAdaptador != NULL){
-				//! ou se a saida é um adaptador
+			//! AE: a saida eh um adaptador
 				atual->saidaAdaptador->recursoRecebido = atual->recursoTransportado;
 			}
 
 			conexao = conexao->proximoSaidaAdaptador;
 		}
+		//! AS: a lista de saidas do adaptador chegou ao fim
+		
 		listaAlvo = listaAlvo->proximo;
 	}
+	//! AS: a listaAlvo chegou ao fim
 }

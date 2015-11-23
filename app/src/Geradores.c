@@ -278,6 +278,7 @@ int recursoProduzidoTotal(Gerador *listaAlvo){
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
+	
 	//! Comentarios de argumentacao
 		/**
 		*	Somando os recursos produzidos para obter a energia total gerada
@@ -357,7 +358,6 @@ void mandarRecursoProduzido(Gerador *listaAlvo){
 	Interconexao *auxiliar;
 	Interconexao *auxProxima;
 
-
 	while(listaAlvo != NULL){
 	//! AE: nao chegou ao final da listaAlvo
 
@@ -368,72 +368,76 @@ void mandarRecursoProduzido(Gerador *listaAlvo){
 			//! AE: interconexao ligada a essa celula nao teve falha
 
 				if(listaAlvo->saida != NULL){
-					//!AE: gerador possui uma saida
+				//! AE: gerador possui uma saida
 					listaAlvo->saida->recursoTransportado = (listaAlvo->saida->capacidadeMaxima >= listaAlvo->recursoProduzido)?
 																				listaAlvo->recursoProduzido : listaAlvo->saida->capacidadeMaxima;
 
-					printf("%d\n",listaAlvo->saida->recursoTransportado);
 
 					auxiliar = listaAlvo->saida;
 
-					//! AE: laço que cobre os casos de uma interconexao apontar para outra antes
-					// de chegar ao adaptdor
+					//! Comentarios de argumentacao
+						/**
+						*	laço que cobre os casos de uma interconexao apontar para outra antes
+						* de chegar ao adaptdor
+						**/
 					while(auxiliar->saidaInterconexao != NULL){
-						//!AE: uma interconexao aponta para outra;
+					//! AE: uma interconexao aponta para outra;
 						auxProxima = auxiliar->saidaInterconexao;
 
-						//!Assertiva de argumentacao
-						/**
-						*	Verifica se a proxima Interconexao nao esta falha
-						* se nao esta define o recurso que ela ira transportar
-						**/
+						//! Comentarios de argumentacao
+							/**
+							*	Verifica se a proxima Interconexao nao esta falha
+							* se nao esta define o recurso que ela ira transportar
+							**/
 
-						//!AE : verifica se a proxima interconexao nao esta falha
 						if(auxProxima->tagFalha == SEM_FALHA){
-							//! AE: conexao nao falha
+						//! AE: conexao nao falha
 
-							//Define o recursoTransportado
+							// Assertiva estrutural: define o recursoTransportado
 							auxProxima->recursoTransportado = (auxProxima->capacidadeMaxima >= auxiliar->recursoTransportado)?
 																								auxiliar->recursoTransportado : auxProxima->capacidadeMaxima;
 
-
 						}
 						else{
-							//! AE : conexao Falha transporta 0 de recurso
+						//! AE: conexao falha
 							auxProxima->recursoTransportado = 0;
 						}
 
 						auxiliar = auxProxima;
 					}
-					//! AE: chegou na ultima interconexao depois do gerador;
+					//! AS: chegou na ultima interconexao depois do gerador;
 
 					if(auxiliar->saidaAdaptador != NULL){
-						//! AE: a interconexao aponta para o adaptador
+					//! AE: a interconexao aponta para o adaptador
 						auxiliar->saidaAdaptador->recursoRecebido = auxiliar->recursoTransportado;
 					}
 				}
-
+				//! AS: gerador nao possui uma saida
 			}
 			else{
 			//! AE: interconexao ligada a essa celula falhou
 				auxiliar = listaAlvo->saida;
 
 				if(auxiliar != NULL){
-					//! AE: tem saida
+				//! AE: a lista possui saida
 					auxiliar->recursoTransportado = 0;
+					
 					while(auxiliar->saidaInterconexao != NULL){
-						//! AE: percorrrer a lista de inteconexao das saidas
+					//! AE: a lista de inteconexao das saidas nao chegou ao fim
 						auxiliar = auxiliar->saidaInterconexao;
 						auxiliar->recursoTransportado = 0;
 					}
+					//! AE: a lista de inteconexao das saidas chegou ao fim
 
 					if(auxiliar->saidaAdaptador != NULL){
-						//! AE: a interconexao aponta para o adaptador
+					//! AE: a interconexao aponta para o adaptador
 						auxiliar->saidaAdaptador->recursoRecebido = auxiliar->recursoTransportado;
 					}
 				}
 			}
 		}
+		//! AS: o elemento nao possui saidas
+		
 		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: chegou ao final da listaAlvo
