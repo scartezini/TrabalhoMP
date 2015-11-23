@@ -317,7 +317,7 @@ int custoGeradores(Gerador *listaAlvo){
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Somando os custos de cada gerador da lista de geradores
@@ -343,6 +343,7 @@ int custoGeradores(Gerador *listaAlvo){
 *	Requisitos:
 *		alterar a interconexao ligada a cada celula da lista de geradores
 * com o valor que sera transportado
+*		Altera o adaptador de destino com o recurso que sera recebido
 *
 *	Interfaces explicitas:
 *		void, mandarRecursoProduzido, Gerador *listaAlvo
@@ -353,19 +354,63 @@ int custoGeradores(Gerador *listaAlvo){
 void mandarRecursoProduzido(Gerador *listaAlvo){
 	assert(geradorVazio(listaAlvo) == NAO_VAZIO);
 
+	Interconexao *auxiliar;
+	Interconexao *auxProxima;
+
 	while(listaAlvo != NULL){
-	//! AE: nao chegou ao final da listaAlvo	
-	
+	//! AE: nao chegou ao final da listaAlvo
+
 		if(listaAlvo->saida != NULL){
-		//! AE: o elemento possui saidas	
-			
+		//! AE: o elemento possui saidas
+
 			if(listaAlvo->saida->tagFalha == SEM_FALHA){
 			//! AE: interconexao ligada a essa celula nao teve falha
-				listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
+
+				if(listaAlvo->saida != NULL){
+					//!AE: gerador possui uma saida
+					listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
+					auxiliar = listaAlvo->saida;
+
+					//! AE: laço que cobre os casos de uma interconexao apontar para outra antes
+					// de chegar ao adaptdor
+					while(auxiliar->saidaInterconexao != NULL){
+						//!AE: uma interconexao aponta para outra;
+						auxProxima = auxiliar->saidaInterconexao;
+
+						//!Assertiva de argumentacao
+						/**
+						*	Verifica se a proxima Interconexao nao esta falha
+						* se nao esta define o recurso que ela ira transportar
+						**/
+
+						//!AE : verifica se a proxima interconexao nao esta falha
+						if(auxProxima->tagFalha == SEM_FALHA){
+							//! AE: conexao nao falha
+
+							//Define o recursoTransportado
+							auxProxima->recursoTransportado = (auxProxima->capacidadeMaxima >= auxiliar->recursoTransportado)?
+																								auxiliar->recursoTransportado : auxProxima->capacidadeMaxima;
+						}
+						else{
+							//! AE : conexao Falha transporta 0 de recurso
+							auxProxima->recursoTransportado = 0;
+						}
+
+						auxiliar = auxProxima;
+					}
+					//! AE: chegou na ultima interconexao depois do gerador;
+
+					if(auxiliar->saidaAdaptador != NULL){
+						//! AE: a interconexao aponta para o adaptador
+						auxiliar->saidaAdaptador->recursoRecebido = auxiliar->recursoTransportado;
+					}
+				}
+
 			}
 			else{
 			//! AE: interconexao ligada a essa celula falhou
 				listaAlvo->saida->recursoTransportado = 0;
+				auxiliar->saidaAdaptador->recursoRecebido = 0;
 			}
 
 			listaAlvo = listaAlvo->proximo;
@@ -405,7 +450,7 @@ int numeroGeradores(Gerador *listaAlvo){
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Contagem do numero de total de geradores na listaAlvo
