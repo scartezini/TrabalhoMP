@@ -322,7 +322,7 @@ float tamanhoConexao(Interconexao *listaAlvo){
 	int xB; //!< Valor no eixo x da posicao final
 	int yB; //!< Valor no eixo y da posicao final
 
-	int distancia;
+	float distancia;
 
 	xA = listaAlvo->posicaoInicial[0];
 	yA = listaAlvo->posicaoInicial[1];
