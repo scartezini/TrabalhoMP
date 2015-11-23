@@ -96,11 +96,36 @@ TEST(insereInterconexao, naoVazia){
 }
 
 //! Testando a funcao tamanhoConexao
+TEST(tamanhoConexao, geral){
+	Interconexao *interconexao = criaListaInterconexao();
+
+	int distancia;
+
+	char *entrada = (char *) malloc(sizeof(char) * strlen("I inter_1 5 5 10 5 100 0.1 15 20"));
+	
+	strcpy(entrada,"I inter_1 5 5 10 5 100 0.1 15 20");
+
+	interconexao = insereInterconexao(entrada,interconexao);
+
+	distancia = sqrt(pow((interconexao->posicaoFinal[0] - interconexao->posicaoInicial[0]),2) + pow((interconexao->posicaoFinal[1] - interconexao->posicaoInicial[1]),2));
+
+	ASSERT_TRUE(tamanhoConexao(interconexao) == distancia);
+
+}
 
 //! Testando a funcao tamanhoTotalConexao
+TEST(tamanhoTotalConexao, geral){
+	Interconexao *interconexao = criaListaInterconexao();
 
-//! Testando a funcao totalGastoConserto
+	char *entrada = (char *) malloc(sizeof(char) * strlen("I inter_1 5 5 10 5 100 0.1 15 20"));
+	
+	strcpy(entrada,"I inter_1 5 5 10 5 100 0.1 15 20");
 
-//! Testando a funcao calculaFalha
+	interconexao = insereInterconexao(entrada,interconexao);
 
-//! Testando a funcao mandarRecursoTransportado
+	strcpy(entrada,"I inter_2 5 15 10 10 200 0.2 17 25");
+
+	interconexao = insereInterconexao(entrada,interconexao);
+
+	ASSERT_TRUE((tamanhoConexao(interconexao)+tamanhoConexao(interconexao->proximo)) == tamanhoTotalConexao(interconexao));
+}

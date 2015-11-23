@@ -28,7 +28,6 @@ gcov:
 # Make para realizar o cppcheck
 cppcheck:
 	cd app/src; cppcheck *.c
-	cd test; cppcheck *.c
 
 # Make para checar memory leak com o Valgrind
 valgrind:

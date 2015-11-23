@@ -73,3 +73,52 @@ TEST(insereCidade, naoVazia){
 	EXPECT_EQ(cidade->posicao[1], 5);
 	EXPECT_EQ(cidade->recursoNecessario, 143);
 }
+
+//! Testando a funcao recursoGastoTotal
+TEST(recursoGastoTotal, geral){
+	Cidade *cidade = criaListaCidade();
+
+	int soma = 0;
+
+	char *entrada = (char *) malloc(sizeof(char) * strlen("C Belo_Horizonte 1 10 177"));
+
+	strcpy(entrada,"C Belo_Horizonte 1 10 177");
+
+	cidade = insereCidade(entrada,cidade);
+	soma++;
+
+	strcpy(entrada,"C Brasília 1 5 143");
+
+	cidade = insereCidade(entrada,cidade);
+	soma++;
+
+	ASSERT_TRUE(numeroCidades(cidade) == soma);
+
+	soma++;
+	ASSERT_TRUE(numeroCidades(cidade) != soma);
+}
+
+//! Testando a funcao numeroCidades
+TEST(numeroCidades, geral){
+	Cidade *cidade = criaListaCidade();
+
+	int soma = 0;
+
+	char *entrada = (char *) malloc(sizeof(char) * strlen("C Belo_Horizonte 1 10 177"));
+
+	strcpy(entrada,"C Belo_Horizonte 1 10 177");
+
+	cidade = insereCidade(entrada,cidade);
+	soma++;
+
+	strcpy(entrada,"C Brasília 1 5 143");
+
+	cidade = insereCidade(entrada,cidade);
+	soma++;
+
+	//! Inicio do teste em si
+	ASSERT_TRUE(numeroCidades(cidade) == soma);
+
+	soma++;
+	ASSERT_TRUE(numeroCidades(cidade) != soma);
+}
