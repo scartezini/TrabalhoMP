@@ -5,7 +5,7 @@
 *	Funcao: criaListaAdaptador (Iterador)
 *
 *	AssertivaSaida:
-*		NULL;	
+*		NULL;
 *
 *	Requisitos:
 *		criacao de uma nova lista do tipo Adaptador
@@ -202,7 +202,8 @@ void imprimeListaAdaptador(Adaptador *listaAlvo){
 		**/
 		printf("nome: %s pos_x: %d pos_y: %d recurso recebido: %d quantidade de saídas: %d\n"
 				,aux->nome,aux->posicao[0]
-				,aux->posicao[1],aux->recursoRecebido
+				,aux->posicao[1]
+				,aux->recursoRecebido
 				,aux->quantidadeSaidas);
 	}
 	//! AS: listaAlvo chegou ao fim
@@ -334,6 +335,8 @@ void defineDistribuicao(Adaptador *listaAlvo){
 
 				}
 				//! AS: a saida corrente do adaptador possui falha
+
+				conexao = conexao->proximoSaidaAdaptador;
 			}
 			//! AS: a lista de saidas do adaptador chegou ao fim
 		}
@@ -341,4 +344,82 @@ void defineDistribuicao(Adaptador *listaAlvo){
 		aux = aux->proximo;
 	}
 	//! AS: a lista de adaptadores chegou ao fim
+}
+
+
+/**
+*	Funcao: mandarRecursoAdaptado
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para o inicio da lista do tipo Adaptador
+*
+*		A estrategia de distribuicao ja foi previamente definida e as
+*		interconxoes ligadas diretamente cada celula do adaptador ja esta
+*	 com o recursoTransportado preenchido
+*
+*
+*	Requisitos:
+*		alterar a interconexao ligada a cada celula da lista de geradores
+* com o valor que sera transportado
+*		Altera o adaptador ou cidade  de destino com o recurso que sera recebido
+*
+*	Interfaces explicitas:
+*		void, mandarRecursoAdaptado
+*	Interfaces implicitas:
+*
+*		listaAlvo - lista de adaptadores
+**/
+void mandarRecursoAdaptado(Adaptador *listaAlvo){
+
+	Interconexao *conexao;
+	Interconexao *atual;
+	Interconexao *posterior;
+
+	while(listaAlvo != NULL){
+		//!AE : percorrendo listaAlvo
+
+		conexao = listaAlvo->saidas;
+
+		while(conexao != NULL){
+			//!AE: precorre a lista de conexoes que saem de cada adaptador
+
+			atual = conexao;
+			while(atual->saidaInterconexao != NULL){
+				//!AE: vai ater a ulcima interconexao antes do destino
+
+				posterior = atual->saidaInterconexao;
+
+				//!Assertiva de argumentacao
+				/**
+				*	Verifica se a proxima Interconexao nao esta falha
+				* se nao esta define o recurso que ela ira transportar
+				**/
+				if(posterior->tagFalha == SEM_FALHA){
+					//!AE : verifica se a proxima conexao nao eh falha
+
+					//!AE : se nao for falho define quanto de recurso sera transportado
+					posterior->recursoTransportado = (posterior->capacidadeMaxima >= atual->recursoTransportado)?
+																						atual->recursoTransportado : posterior->capacidadeMaxima;
+				}
+				else{
+					//!AE : posterior esta falho, recursoTransportado = 0
+					posterior->recursoTransportado = 0;
+				}
+
+				atual = posterior;
+			}
+
+			if(atual->saidaCidade != NULL){
+				//! se a saida eh uma cidade
+				atual->saidaCidade->recursoRecebido = atual->recursoTransportado;
+			}
+			else if(atual->saidaAdaptador != NULL){
+				//! ou se a saida é um adaptador
+				atual->saidaAdaptador->recursoRecebido = atual->recursoTransportado;
+			}
+
+			conexao = conexao->proximoSaidaAdaptador;
+		}
+		listaAlvo = listaAlvo->proximo;
+	}
 }
