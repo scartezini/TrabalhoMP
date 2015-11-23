@@ -169,11 +169,14 @@ int totalGastoConserto(Interconexao *);
 *
 *	Calcula a possibilidade de falha
 *
-* @param conexao
-*   celula a qual vai ser calculada a falha
+* 	@param listaAlvo
+		celula a qual vai ser calculada a falha
 *
 *	@return
 *		variavel do tipo Falha, indicando se houve falha
+*
+*	Assertiva de entrada:
+*		a chance de falha deve estar entre 0 e 1
 *
 *	Assertiva de saida:
 *		Se a chance de falha for maior que 0 e maior que um numero aleatorio
@@ -182,7 +185,6 @@ int totalGastoConserto(Interconexao *);
 *		Senao
 *			nao ocorre uma falha
 *		FimSe
-*
 **/
 Falha calculaFalha(Interconexao *);
 
@@ -195,8 +197,7 @@ Falha calculaFalha(Interconexao *);
 * alterando o valor do recurso atual.
 *
 *	@param listaAlvo
-*		ponterio de referencia para o inicio da lista
-*		de interconexoes
+*		ponterio de referencia para o inicio da lista de interconexoes
 *
 *	Assertiva de entrada:
 *		interconexao - eh uma lista de interconexoes nao vazia
@@ -211,12 +212,10 @@ Falha calculaFalha(Interconexao *);
 **/
 void mandarRecursoTransportado(Interconexao *);
 
-
-
 /**
-* Funcao: custoGastoComConcerto
+* Funcao: custoGastoComConserto
 *
-* Calcula o custo que foi gasto com o concerto das
+*	Calcula o custo que foi gasto com o conserto das
 * interconexoes
 *
 *	@param listaAlvo
@@ -226,14 +225,16 @@ void mandarRecursoTransportado(Interconexao *);
 *	Assertiva de entrada:
 *		interconexao - eh uma lista de interconexoes nao vazia
 *
+*	Assertiva de saida:
+*		valor gasto com os consertos das interconexoes
 **/
-int custoGastoComConcerto(Interconexao *);
+int custoGastoComConserto(Interconexao *);
 
 
 /**
 * Funcao: numeroTotalFalhas
 *
-* Faz a contabilidade de quantas falas teve durante toda a simulaca
+*	Faz a contabilidade de quantas falas teve durante toda a simulaca
 *
 *	@param listaAlvo
 *		ponterio de referencia para o inicio da lista
@@ -242,13 +243,15 @@ int custoGastoComConcerto(Interconexao *);
 *	Assertiva de entrada:
 *		interconexao - eh uma lista de interconexoes nao vazia
 *
+*	Assertiva de saida:
+*		total de falhas
 **/
 int numeroTotalFalhas(Interconexao *);
 
 /**
 * Funcao: gerenciaFalhas
 *
-* Marca as celulas que falharam como falhas
+*	Marca as celulas que falharam como falhas
 * e comtabilizam as celulas que estao no concerto o tempo
 * que falta para sairem
 *
@@ -259,5 +262,20 @@ int numeroTotalFalhas(Interconexao *);
 *	Assertiva de entrada:
 *		interconexao - eh uma lista de interconexoes nao vazia
 *
+*	Assertiva de saida:
+*		Se a interconexao corrente nao falhou
+*		Entao
+*			Se a chance desta interconexao falhar der FALHA
+*			Entao
+*				zera o contador de tempo de conserto
+*				numero de falhas + 1
+*				tagFalha = falha
+*			FimSe
+*		Senao
+*			contador de tempo de conserto + 1
+*			Se contador de tempo de conserto alcançar ou ultrapassar o tempo de conserto
+*				zera o contador de tempo de conserto
+*				tagFalha = sem falha
+*			Fimse
 **/
 void gerenciaFalhas(Interconexao *);
