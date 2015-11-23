@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['recursogasto',['recursoGasto',['../structcidade.html#a4c30c9bf20d81925543c43abfaee74ac',1,'cidade']]],
   ['recursogastototal',['recursoGastoTotal',['../_cidades_8h.html#a7babe2976194524370135d6b70ce4026',1,'recursoGastoTotal(Cidade *):&#160;Cidades.c'],['../_cidades_8c.html#adf26999503d210d627caf5c8858115f7',1,'recursoGastoTotal(Cidade *listaAlvo):&#160;Cidades.c']]],
   ['recursonecessario',['recursoNecessario',['../structcidade.html#ae8b356353114803f6f5076a6b7bb411a',1,'cidade']]],

@@ -1,0 +1,19 @@
+digraph "cidade"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="cidade",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" proximo" ,fontname="Helvetica"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entradas" ,fontname="Helvetica"];
+  Node2 [label="interconexao",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structinterconexao.html"];
+  Node1 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" saidaCidade" ,fontname="Helvetica"];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" proximoSaidaAdaptador\nproximo\nproximoEntradaAdaptador\nproximoEntradaCidade\nsaidaInterconexao\nentradaInterconexao" ,fontname="Helvetica"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" saidaAdaptador\nentradaAdaptador" ,fontname="Helvetica"];
+  Node3 [label="adaptador",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structadaptador.html"];
+  Node2 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entradas\nsaidas" ,fontname="Helvetica"];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" proximo" ,fontname="Helvetica"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entradaGerador" ,fontname="Helvetica"];
+  Node4 [label="gerador",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgerador.html"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" saida" ,fontname="Helvetica"];
+  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" proximo" ,fontname="Helvetica"];
+}

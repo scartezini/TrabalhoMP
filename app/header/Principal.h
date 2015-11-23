@@ -41,6 +41,14 @@ typedef enum destino{
 
 }Destino;
 
+/**
+*	Enumeracao para detectar qual é o estado
+* que a cidade esta de acordo com o recurso rece
+**/
+typedef enum condicaoCidade{
+	VERDE, AMARELO, VERMELHO
+}CondicaoCidade;
+
 /** -----------------------Cidades---------------------------- */
 
 /**
@@ -62,13 +70,21 @@ typedef enum destino{
 * 	recursoGasto:
 *		quantidade de recurso que a cidade usou
 *
+*	tagEstado:
+*		flag para definir qual eh o estado da cidade (VERMELHO,AMARELO,VERDE)
+*
+* turnosNegativados:
+* 	contador para armazenar quantos turnos a cidade ficou fora do VERDE
+*
+*	turnosNoVermelho:
+*		contador para armazenar quantos turnos a cidade ficou no VERMELHO
+*
 * 	proximo:
 * 		representa a proxima cidade da rede de cidades
 *
 *	entradas:
 *		ponteiro que representa a interconexao de entrada da cidade
 **/
-
 typedef struct cidade{
 	char *nome;
 	int posicao[2];
@@ -76,6 +92,10 @@ typedef struct cidade{
 	int recursoNecessario;
 	int recursoRecebido;
 	int recursoGasto;
+
+	int tagEstado;
+	int turnosNegativados;
+	int turnosNoVermelho;
 
 	struct cidade *proximo;
 	struct interconexao *entradas;

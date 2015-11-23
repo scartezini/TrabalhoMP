@@ -16,23 +16,23 @@ int main()
 	printf("Rede de distribuicao\n");
 
 	do{
-	//! AE: o nome do arquivo nao eh valido 
+	//! AE: o nome do arquivo nao eh valido
 
 		printf("Digite o caminho para o arquivo (a partir de ./app/src):\n");
 		scanf("%s",arquivo);
 		getchar();
 
 		fp = fopen(arquivo,"r");//!< Abre arquivo de entrada
-	
+
 	} while(fp == NULL);
-	//! AE: o nome do arquivo eh valido 
+	//! AE: o nome do arquivo eh valido
 
 	printf("Digite o tempo desejado de simulacao\n");
 	scanf("%d",&tempoSimulacao);
 
 	do{
 	//! AE: o arquivo nao chegou ao fim
-	
+
 		if(fgets(str,100,fp)!=NULL){
 		//! AE: a linha (registro) obtido do arquivo possui conteudo
 
@@ -76,9 +76,15 @@ int main()
 	printf("\n\n");
 	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 
+
 	for(i=0;i<tempoSimulacao;i++){
 		gerenciaFalhas(listaInterconexoes);
+		//! AE: manda recurso ate os adaptadores
 		mandarRecursoProduzido(listaGeradores);
+		defineDistribuicao(listaAdaptadores);
+		//!	AE: mandar  o recurso ate as cidades
+		mandarRecursoAdaptado(listaAdaptadores);
+		gerenciaRecursoRecebido(listaCidades);
 	}
 
 	//! Comentarios de argumentacao
@@ -95,34 +101,42 @@ int main()
 		*	Preenchimento do relatorio
 		**/
 	printf("\nRelatório:\n");
-		
+
 	relatorio.tempoTotalSimulacao = tempoSimulacao;
 	printf("Tempo total da simulação: %d segundos\n", relatorio.tempoTotalSimulacao);
-	
+
 	relatorio.custoTotalSimulacao = custoGeradores(listaGeradores)*tempoSimulacao + custoGastoComConserto(listaInterconexoes);
 	printf("Custo total na simulação: %d\n", relatorio.custoTotalSimulacao);
 
 	relatorio.totalGeradores = numeroGeradores(listaGeradores);
 	printf("Total de geradores: %d\n", relatorio.totalGeradores);
-	
+
 	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
 	printf("Energia total gerada: %d\n", relatorio.energiaTotalGerada);
-	
+
 	relatorio.totalCidades = numeroCidades(listaCidades);
 	printf("Total de cidades: %d\n", relatorio.totalCidades);
-	
+
 	relatorio.energiaGastaCidades = recursoGastoTotal(listaCidades);
 	printf("Energia total gasta pelas cidades: %d\n", relatorio.energiaGastaCidades);
-	
+
 	relatorio.tamanhoTotalInterconexoes = tamanhoTotalConexao(listaInterconexoes);
 	printf("Tamanho total das interconexões: %.2f\n", relatorio.tamanhoTotalInterconexoes);
-	
+
 	relatorio.numeroFalhaInterconexoes = numeroTotalFalhas(listaInterconexoes);
-	printf("Número de falhas nas interconexões: %d\n\n", relatorio.numeroFalhaInterconexoes);
-	//relatorio.numeroCidadesNegativadas =
-	//relatorio.tempoSemRecurso =
-	//relatorio.numeroCidadesNoVermelho =
-	//relatorio.tempoCidadesNoVermelho =
+	printf("Número de falhas nas interconexões: %d\n", relatorio.numeroFalhaInterconexoes);
+
+	relatorio.numeroCidadesNegativadas = numeroCidadesNegativadas(listaCidades);
+	printf("Número de cidades que ficaram com menos recurso que o necessário: %d\n",relatorio.numeroCidadesNegativadas );
+
+	relatorio.tempoSemRecurso =	tempoSemRecursoNecessario(listaCidades);
+	printf("Tempo que ficaram sem recurso: %d\n",relatorio.tempoSemRecurso);
+
+	relatorio.numeroCidadesNoVermelho = numeroCidadesNoVermelho(listaCidades);
+	printf("Número de cidades que ficaram com menos de 30 dos recursos: %d\n",relatorio.numeroCidadesNoVermelho);
+
+	relatorio.tempoCidadesNoVermelho = tempoCidadesNoVermelho(listaCidades);
+	printf("Tempo que ficaram com menos de 30 dos recurso: %d\n", relatorio.tempoCidadesNoVermelho);
 
 	//! Comentarios de argumentacao
 		/**
