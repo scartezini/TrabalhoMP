@@ -357,6 +357,7 @@ void mandarRecursoProduzido(Gerador *listaAlvo){
 	Interconexao *auxiliar;
 	Interconexao *auxProxima;
 
+
 	while(listaAlvo != NULL){
 	//! AE: nao chegou ao final da listaAlvo
 
@@ -368,7 +369,11 @@ void mandarRecursoProduzido(Gerador *listaAlvo){
 
 				if(listaAlvo->saida != NULL){
 					//!AE: gerador possui uma saida
-					listaAlvo->saida->recursoTransportado = listaAlvo->recursoProduzido;
+					listaAlvo->saida->recursoTransportado = (listaAlvo->saida->capacidadeMaxima >= listaAlvo->recursoProduzido)?
+																				listaAlvo->recursoProduzido : listaAlvo->saida->capacidadeMaxima;
+
+					printf("%d\n",listaAlvo->saida->recursoTransportado);
+
 					auxiliar = listaAlvo->saida;
 
 					//! AE: laço que cobre os casos de uma interconexao apontar para outra antes
@@ -390,6 +395,8 @@ void mandarRecursoProduzido(Gerador *listaAlvo){
 							//Define o recursoTransportado
 							auxProxima->recursoTransportado = (auxProxima->capacidadeMaxima >= auxiliar->recursoTransportado)?
 																								auxiliar->recursoTransportado : auxProxima->capacidadeMaxima;
+
+
 						}
 						else{
 							//! AE : conexao Falha transporta 0 de recurso
@@ -409,16 +416,25 @@ void mandarRecursoProduzido(Gerador *listaAlvo){
 			}
 			else{
 			//! AE: interconexao ligada a essa celula falhou
-				listaAlvo->saida->recursoTransportado = 0;
-				auxiliar->saidaAdaptador->recursoRecebido = 0;
-			}
+				auxiliar = listaAlvo->saida;
 
-			listaAlvo = listaAlvo->proximo;
+				if(auxiliar != NULL){
+					//! AE: tem saida
+					auxiliar->recursoTransportado = 0;
+					while(auxiliar->saidaInterconexao != NULL){
+						//! AE: percorrrer a lista de inteconexao das saidas
+						auxiliar = auxiliar->saidaInterconexao;
+						auxiliar->recursoTransportado = 0;
+					}
+
+					if(auxiliar->saidaAdaptador != NULL){
+						//! AE: a interconexao aponta para o adaptador
+						auxiliar->saidaAdaptador->recursoRecebido = auxiliar->recursoTransportado;
+					}
+				}
+			}
 		}
-		else{
-		//! AE: o elemento nao possui saidas
-			return;
-		}
+		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: chegou ao final da listaAlvo
 }

@@ -421,7 +421,7 @@ Falha calculaFalha(Interconexao *listaAlvo){
 	numGerado = rand() % 101;
 	num = numGerado/100;
 
-	return ( (chance > 0) && (chance >= num) ) ? FALHA : SEM_FALHA;
+	return ( (chance > 0) && (chance <= num) ) ? FALHA : SEM_FALHA;
 }
 
 /**
@@ -513,7 +513,7 @@ int custoGastoComConserto(Interconexao *listaAlvo){
 
 	while(aux != NULL){
 	//! AE : listaAlvo nao chegou ao fim
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Incrementa o total com o resultado da multiplicacao
@@ -526,7 +526,7 @@ int custoGastoComConserto(Interconexao *listaAlvo){
 	//! AS: listaAlvo chegou ao fim
 
 	assert(total >= 0);
-	
+
 	return total;
 }
 
@@ -555,7 +555,7 @@ int custoGastoComConserto(Interconexao *listaAlvo){
 **/
 int numeroTotalFalhas(Interconexao *listaAlvo){
 	assert(interconexaoVazia(listaAlvo) == NAO_VAZIA);
-	
+
 	int total = 0;
 
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
@@ -609,11 +609,13 @@ void gerenciaFalhas(Interconexao *listaAlvo){
 				listaAlvo->contadorTempoConserto = 0;
 				listaAlvo->numeroFalha++;
 				listaAlvo->tagFalha = FALHA;
+			}else{
+				listaAlvo->tagFalha = SEM_FALHA;
 			}
 		}
 		else{
 		//! AE: interconexao corrente falhou
-		
+
 			listaAlvo->contadorTempoConserto++;
 
 			if(listaAlvo->contadorTempoConserto >= listaAlvo->tempoConserto){
