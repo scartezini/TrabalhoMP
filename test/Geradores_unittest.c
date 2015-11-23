@@ -77,3 +77,78 @@ TEST(insereGerador, naoVazio){
 	EXPECT_EQ(gerador->recursoProduzido, 100);
 	EXPECT_EQ(gerador->custo, 1000);
 }
+
+//! Testando a funcao recursoProduzidoTotal
+TEST(recursoProduzidoTotal, geral){
+	Gerador *gerador = criaListaGerador();
+
+	int soma = 0;
+
+	char *entrada = (char *) malloc(sizeof(char) * strlen("G Usina1 5 5 100 1000"));
+
+	strcpy(entrada,"G Usina1 5 5 100 1000");
+
+	gerador = insereGerador(entrada,gerador);
+	soma += gerador->recursoProduzido;
+
+	strcpy(entrada,"G Usina2 5 15 388 788");
+
+	gerador = insereGerador(entrada,gerador);
+	soma += gerador->recursoProduzido;
+
+	//! Inicio do teste em si
+	ASSERT_TRUE(recursoProduzidoTotal(gerador) == soma);
+
+	soma++;
+	ASSERT_TRUE(recursoProduzidoTotal(gerador) != soma);
+}
+
+//! Testando a funcao custoGeradores
+TEST(custoGeradores, geral){
+	Gerador *gerador = criaListaGerador();
+
+	int soma = 0;
+
+	char *entrada = (char *) malloc(sizeof(char) * strlen("G Usina1 5 5 100 1000"));
+
+	strcpy(entrada,"G Usina1 5 5 100 1000");
+
+	gerador = insereGerador(entrada,gerador);
+	soma += gerador->custo;
+
+	strcpy(entrada,"G Usina2 5 15 388 788");
+
+	gerador = insereGerador(entrada,gerador);
+	soma += gerador->custo;
+
+	//! Inicio do teste em si
+	ASSERT_TRUE(custoGeradores(gerador) == soma);
+
+	soma++;
+	ASSERT_TRUE(custoGeradores(gerador) != soma);
+}
+
+//! Testando a funcao numeroGeradores
+TEST(numeroGeradores, geral){
+	Gerador *gerador = criaListaGerador();
+
+	int soma = 0;
+
+	char *entrada = (char *) malloc(sizeof(char) * strlen("G Usina1 5 5 100 1000"));
+
+	strcpy(entrada,"G Usina1 5 5 100 1000");
+
+	gerador = insereGerador(entrada,gerador);
+	soma++;
+
+	strcpy(entrada,"G Usina2 5 15 388 788");
+
+	gerador = insereGerador(entrada,gerador);
+	soma++;
+
+	//! Inicio do teste em si
+	ASSERT_TRUE(numeroGeradores(gerador) == soma);
+
+	soma++;
+	ASSERT_TRUE(numeroGeradores(gerador) != soma);
+}
