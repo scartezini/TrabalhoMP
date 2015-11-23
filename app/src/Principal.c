@@ -1,53 +1,143 @@
-#include "../header/Interconexoes.h"
+#include "../header/Geral.h"
 
 int main()
 {
-	FILE *fp = fopen("teste.txt","r"); //!< Abre arquivo de entrada
+	FILE *fp;
 	Cidade *listaCidades = criaListaCidade();
 	Gerador *listaGeradores = criaListaGerador();
 	Interconexao *listaInterconexoes = criaListaInterconexao();
 	Adaptador *listaAdaptadores = criaListaAdaptador();
+	Relatorio relatorio;
+	int i, tempoSimulacao = 2;
+	char arquivo[100];
+
 	char str[100]; //!< String auxiliar para obter registros
-	
+
+	printf("Rede de distribuicao\n");
+
+	do{
+	//! AE: o nome do arquivo nao eh valido
+
+		printf("Digite o caminho para o arquivo (a partir de ./app/src):\n");
+		scanf("%s",arquivo);
+		getchar();
+
+		fp = fopen(arquivo,"r");//!< Abre arquivo de entrada
+
+	} while(fp == NULL);
+	//! AE: o nome do arquivo eh valido
+
+	printf("Digite o tempo desejado de simulacao\n");
+	scanf("%d",&tempoSimulacao);
+
 	do{
 	//! AE: o arquivo nao chegou ao fim
-	
+
 		if(fgets(str,100,fp)!=NULL){
 		//! AE: a linha (registro) obtido do arquivo possui conteudo
-		
-			if(str[0] == 'C'){
-			//! AE: O registro obtido eh do tipo Cidade
-				listaCidades = insereCidade(str,listaCidades);
-			} 
-			else if(str[0] == 'G'){
-			//! AE: O registro obtido eh do tipo Gerador 
-				listaGeradores = insereGerador(str,listaGeradores);
-			}
-			else if(str[0] == 'I'){
-			//! AE: O registro obtido eh do tipo Interconexao 
-				listaInterconexoes = insereInterconexao(str,listaInterconexoes);
-			}
-			else if(str[0] == 'A'){
-			//! AE: O registro obtido eh do tipo Adaptador 
-				listaAdaptadores = insereAdaptador(str,listaAdaptadores);
+
+			switch (str[0]) {
+				case 'C':
+					//! AE: O registro obtido eh do tipo Cidade
+					listaCidades = insereCidade(str,listaCidades);
+					break;
+
+				case 'G':
+				//! AE: O registro obtido eh do tipo Gerador
+					listaGeradores = insereGerador(str,listaGeradores);
+					break;
+
+				case 'I':
+				//! AE: O registro obtido eh do tipo Interconexao
+					listaInterconexoes = insereInterconexao(str,listaInterconexoes);
+					break;
+
+				case 'A':
+				//! AE: O registro obtido eh do tipo Adaptador
+					listaAdaptadores = insereAdaptador(str,listaAdaptadores);
+					break;
+
+				default:
+					break;
 			}
 		}
 		//! AS: a linha (registro) obtido do arquivo nao possui conteudo, ou seja, o arquivo chegou ao fim
-		
+
 	} while(!feof(fp));
 	//! AS: o arquivo chegou ao fim
 
 	fclose(fp);
-	
+
+	//! Comentarios de argumentacao
+		/**
+		*	Conectando e verificando as listas
+		**/
+	conecta(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
+	printf("\n\n");
+	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
+
+
+	for(i=0;i<tempoSimulacao;i++){
+		gerenciaFalhas(listaInterconexoes);
+		//! AE: manda recurso ate os adaptadores
+		mandarRecursoProduzido(listaGeradores);
+		defineDistribuicao(listaAdaptadores);
+		//!	AE: mandar  o recurso ate as cidades
+		mandarRecursoAdaptado(listaAdaptadores);
+		gerenciaRecursoRecebido(listaCidades);
+	}
+
 	//! Comentarios de argumentacao
 		/**
 		*	Imprimindo as listas obtidas a partir do arquivo de entrada
 		**/
-	printf("\nlistaCidades:\n");imprimeListaCidade(listaCidades);
-	printf("\nlistaGeradores:\n");imprimeListaGerador(listaGeradores);
-	printf("\nlistaInterconexoes:\n");imprimeListaInterconexao(listaInterconexoes);
-	printf("\nlistaAdaptadores:\n");imprimeListaAdaptador(listaAdaptadores);
-	
+	printf("\nLista de cidades:\n");imprimeListaCidade(listaCidades);
+	printf("\nLista de geradores:\n");imprimeListaGerador(listaGeradores);
+	printf("\nLista de interconexões:\n");imprimeListaInterconexao(listaInterconexoes);
+	printf("\nLista de adaptadores:\n");imprimeListaAdaptador(listaAdaptadores);
+
+	//! Comentarios de argumentacao
+		/**
+		*	Preenchimento do relatorio
+		**/
+	printf("\nRelatório:\n");
+
+	relatorio.tempoTotalSimulacao = tempoSimulacao;
+	printf("Tempo total da simulação: %d segundos\n", relatorio.tempoTotalSimulacao);
+
+	relatorio.custoTotalSimulacao = custoGeradores(listaGeradores)*tempoSimulacao + custoGastoComConserto(listaInterconexoes);
+	printf("Custo total na simulação: %d\n", relatorio.custoTotalSimulacao);
+
+	relatorio.totalGeradores = numeroGeradores(listaGeradores);
+	printf("Total de geradores: %d\n", relatorio.totalGeradores);
+
+	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
+	printf("Energia total gerada: %d\n", relatorio.energiaTotalGerada);
+
+	relatorio.totalCidades = numeroCidades(listaCidades);
+	printf("Total de cidades: %d\n", relatorio.totalCidades);
+
+	relatorio.energiaGastaCidades = recursoGastoTotal(listaCidades);
+	printf("Energia total gasta pelas cidades: %d\n", relatorio.energiaGastaCidades);
+
+	relatorio.tamanhoTotalInterconexoes = tamanhoTotalConexao(listaInterconexoes);
+	printf("Tamanho total das interconexões: %.2f\n", relatorio.tamanhoTotalInterconexoes);
+
+	relatorio.numeroFalhaInterconexoes = numeroTotalFalhas(listaInterconexoes);
+	printf("Número de falhas nas interconexões: %d\n", relatorio.numeroFalhaInterconexoes);
+
+	relatorio.numeroCidadesNegativadas = numeroCidadesNegativadas(listaCidades);
+	printf("Número de cidades que ficaram com menos recurso que o necessário: %d\n",relatorio.numeroCidadesNegativadas );
+
+	relatorio.tempoSemRecurso =	tempoSemRecursoNecessario(listaCidades);
+	printf("Tempo que ficaram sem recurso: %d\n",relatorio.tempoSemRecurso);
+
+	relatorio.numeroCidadesNoVermelho = numeroCidadesNoVermelho(listaCidades);
+	printf("Número de cidades que ficaram com menos de 30 dos recursos: %d\n",relatorio.numeroCidadesNoVermelho);
+
+	relatorio.tempoCidadesNoVermelho = tempoCidadesNoVermelho(listaCidades);
+	printf("Tempo que ficaram com menos de 30 dos recurso: %d\n", relatorio.tempoCidadesNoVermelho);
+
 	//! Comentarios de argumentacao
 		/**
 		*	Desalocando as listas obtidas

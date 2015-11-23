@@ -1,0 +1,500 @@
+\hypertarget{_cidades_8h}{\section{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Cidades.h File Reference}
+\label{_cidades_8h}\index{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Cidades.\-h@{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Cidades.\-h}}
+}
+{\ttfamily \#include \char`\"{}Adaptadores.\-h\char`\"{}}\\*
+Include dependency graph for Cidades.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$ \hyperlink{_cidades_8h_a22406bb10365a0a8dbe63848d4a73330}{cria\-Lista\-Cidade} ()
+\item 
+\hyperlink{_principal_8h_a453af0716bcc535c4aa941283edbb273}{Vazia} \hyperlink{_cidades_8h_a26efe4bca2a0c1ab12d998422cf32ceb}{cidade\-Vazia} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$ \hyperlink{_cidades_8h_a2cb23fafae0bcd14863801d9655e7edc}{insere\-Cidade} (char $\ast$, \hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+void \hyperlink{_cidades_8h_ac69c4879960258e1778920e9b545d806}{imprime\-Lista\-Cidade} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+void \hyperlink{_cidades_8h_a9138d2a7e193d7a63bbcbb249613dee7}{libera\-Lista\-Cidade} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+int \hyperlink{_cidades_8h_a7babe2976194524370135d6b70ce4026}{recurso\-Gasto\-Total} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+int \hyperlink{_cidades_8h_a0c3dd25fe32819fbddc455578e1ef5b7}{numero\-Cidades} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+void \hyperlink{_cidades_8h_a3098196bdb24a86912179e91e7aebf44}{gerencia\-Recurso\-Recebido} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+int \hyperlink{_cidades_8h_aad5dc6cfac02602c4c4bce18d9bff2cb}{numero\-Cidades\-Negativadas} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+int \hyperlink{_cidades_8h_a99be1331f4402381282863ee01d0d7f3}{tempo\-Sem\-Recurso\-Necessario} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+int \hyperlink{_cidades_8h_aaaa5c05652a84a136783a30ab7a24bd4}{numero\-Cidades\-No\-Vermelho} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\item 
+int \hyperlink{_cidades_8h_ac75e019673d568bff9abf635a97ce5c1}{tempo\-Cidades\-No\-Vermelho} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_cidades_8h_a26efe4bca2a0c1ab12d998422cf32ceb}{\index{Cidades.\-h@{Cidades.\-h}!cidade\-Vazia@{cidade\-Vazia}}
+\index{cidade\-Vazia@{cidade\-Vazia}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{cidade\-Vazia}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vazia} cidade\-Vazia (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_a26efe4bca2a0c1ab12d998422cf32ceb}
+Funcao\-: cidade\-Vazia
+
+Verifica se a lista de cidades esta vazia
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de cidades\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+variavel do tipo Vazia, indicando se a lista esta vazia
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Cidade
+
+Assertiva de saida\-: condicao da Cidade sendo vazia ou nao vazia
+
+Funcao\-: cidade\-Vazia (Iterador)
+
+Assertiva\-Saida\-: V\-A\-Z\-I\-A $|$$|$ N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Cidade
+
+Requisitos\-: checar se a lista está vazia
+
+Interfaces explicitas\-: Vazia, cidade\-Vazia, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: Vazia -\/ tipo de dado, indicando se a lista eh vazia ou nao lista\-Alvo -\/ lista de cidades A\-E\-: lista\-Alvo eh vazia
+
+A\-E\-: lista\-Alvo nao eh vazia
+
+A\-S\-: o retorno deve ser uma variavel do tipo Vazia \hypertarget{_cidades_8h_a22406bb10365a0a8dbe63848d4a73330}{\index{Cidades.\-h@{Cidades.\-h}!cria\-Lista\-Cidade@{cria\-Lista\-Cidade}}
+\index{cria\-Lista\-Cidade@{cria\-Lista\-Cidade}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{cria\-Lista\-Cidade}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cidade}$\ast$ cria\-Lista\-Cidade (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_a22406bb10365a0a8dbe63848d4a73330}
+Funcao\-: cria\-Lista\-Cidade
+
+Inicia um ponteiro que sera para Cidade
+
+\begin{DoxyReturn}{Returns}
+null
+\end{DoxyReturn}
+Assertiva de saida\-: estrutura do tipo Cidade nula
+
+Funcao\-: cria\-Lista\-Cidade (Iterador)
+
+Assertiva\-Saida\-: N\-U\-L\-L;
+
+Requisitos\-: criacao de uma nova lista do tipo Cidade
+
+Interfaces explicitas\-: Cidade$\ast$, cria\-Lista\-Cidade \hypertarget{_cidades_8h_a3098196bdb24a86912179e91e7aebf44}{\index{Cidades.\-h@{Cidades.\-h}!gerencia\-Recurso\-Recebido@{gerencia\-Recurso\-Recebido}}
+\index{gerencia\-Recurso\-Recebido@{gerencia\-Recurso\-Recebido}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{gerencia\-Recurso\-Recebido}]{\setlength{\rightskip}{0pt plus 5cm}void gerencia\-Recurso\-Recebido (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_a3098196bdb24a86912179e91e7aebf44}
+Funcao\-: gerencia\-Recurso\-Recebido
+
+Altera os atributos das celulas de cidade de acordo com o recurso que foi recebido
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de cidades\\
+\hline
+\end{DoxyParams}
+Assertiva de entrada\-: estrutura do tipo Cidade
+
+Funcao\-: gerencia\-Recurso\-Recebido
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para o inicio da lista do tipo Cidade
+
+Requisitos\-: gerencia o recurso recebido, aterando o valor do recurso gasto
+
+Interfaces explicitas\-: int, gerencia\-Recurso\-Recebido, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades A\-E \-: percorrer a lista de cidades
+
+A\-E \-: se a porcentagem do recurso Necessario eh positiva
+
+A\-E\-: se a porcentagem eh negativa mas nao critica
+
+A\-E\-: se a porcentagem eh critica \hypertarget{_cidades_8h_ac69c4879960258e1778920e9b545d806}{\index{Cidades.\-h@{Cidades.\-h}!imprime\-Lista\-Cidade@{imprime\-Lista\-Cidade}}
+\index{imprime\-Lista\-Cidade@{imprime\-Lista\-Cidade}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{imprime\-Lista\-Cidade}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\-Lista\-Cidade (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_ac69c4879960258e1778920e9b545d806}
+Funcao\-: imprime\-Lista\-Cidade
+
+Imprime de todas as celulas de lista de cidade as respectivas caracteristicas\-: nome posicao x posicao y recurso necessario recurso recebido recurso gasto
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & lista que sera impressa\\
+\hline
+\end{DoxyParams}
+Assertiva\-Entrada\-: A lista nao deve ser vazia
+
+Assertiva\-Saida\-: Se a lista de cidades a ser imprimida nao eh vazia Entao ela eh imprimida Senao a lista de cidades nao eh imprimida Fim\-Se
+
+Funcao\-: imprime\-Lista\-Cidade (Iterador)
+
+Assertiva\-Entrada\-: cidade\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Cidade
+
+Requisitos\-: impressao da lista de cidades
+
+Interfaces explicitas\-: void, imprime\-Lista\-Cidade, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim
+
+Comentarios de argumentacao
+
+Imprime os atributos da cidade corrente
+
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_cidades_8h_a2cb23fafae0bcd14863801d9655e7edc}{\index{Cidades.\-h@{Cidades.\-h}!insere\-Cidade@{insere\-Cidade}}
+\index{insere\-Cidade@{insere\-Cidade}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{insere\-Cidade}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cidade}$\ast$ insere\-Cidade (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{registro, }
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_a2cb23fafae0bcd14863801d9655e7edc}
+Funcao\-: insere\-Cidade
+
+Inserir uma nova celula na lista de cidades a insercao se da pelo inicio da lista e é retornadado o novo ponterio para lista.
+
+
+\begin{DoxyParams}{Parameters}
+{\em registro} & string que sera lida do arquivo representando Cidade \\
+\hline
+{\em lista\-Alvo} & lista de cidades onde a nova celula sera inserida\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+novo pontero para a o inicio da lista de cidades
+\end{DoxyReturn}
+Assertiva de entrada\-: registro -\/ eh um vetor contendo o conteudo do txt, deve ser diferente de N\-U\-L\-L
+
+Assertiva de saida\-: A lista recebida pela funcao, deve ser a proxima cidade apontada pela lista retornada
+
+Funcao\-: insere\-Cidade
+
+Assertiva\-Entrada\-: registro != N\-U\-L\-L;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Cidade registro -\/ string, nao vazia, contendo uma linha do arquivo txt de entrada
+
+Requisitos\-: inserir uma nova cidade na lista de cidades
+
+Interfaces explicitas\-: Cidade$\ast$, insere\-Cidade, char $\ast$registro, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: registro -\/ representa uma linha do arquivo de entrada lista\-Alvo -\/ lista de cidades $<$ Alocacao da nova cidade
+
+$<$ Alocacao de um vetor do tamanho do registro
+
+$<$ Variaveis de auxilio
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Comecando de registro\mbox{[}2\mbox{]}, enquanto registro\mbox{[}i\mbox{]} for um caracter irrelevante, soma-\/se 1 a variavel de auxilio i
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante
+
+Asseriva estrutural\-: o nome da nova cidade possui tamanho i-\/1
+
+A\-E\-: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos da cidade
+
+A\-E\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-E\-: o valor de j eh igual a 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) recebe um caracter finalizador
+
+A\-S\-: o valor de j eh maior que 0
+
+A\-E\-: o valor de j eh maior que 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) do vetor num\-Char recebe um caracter finalizador
+
+Comentarios de argumentacao
+
+De acordo com o valor da variavel auxiliar j, armazena-\/se o vetor num\-Char no seu respectivo atributo lido
+
+A\-S\-: o valor de j eh maior que 4
+
+A\-S\-: a posicao corrente do registro possui um caracter relevante
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Se o valor da variavel de auxilio j for 0 Entao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do nome da cidade Senao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do vetor num\-Char Fim\-Se
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-S\-: o valor da variavel auxiliar j ultrapassou o numero total de atributos lidos da cidade
+
+Comentarios de argumentacao
+
+Os atributos nao lidos da cidade inserida recebem o valor nulo, e a proxima cidade da lista que contem a nova cidade inserido na cabeca recebe a lista de cidades atual\hypertarget{_cidades_8h_a9138d2a7e193d7a63bbcbb249613dee7}{\index{Cidades.\-h@{Cidades.\-h}!libera\-Lista\-Cidade@{libera\-Lista\-Cidade}}
+\index{libera\-Lista\-Cidade@{libera\-Lista\-Cidade}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{libera\-Lista\-Cidade}]{\setlength{\rightskip}{0pt plus 5cm}void libera\-Lista\-Cidade (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_a9138d2a7e193d7a63bbcbb249613dee7}
+Funcao\-: libera\-Lista\-Cidade
+
+Desaloca a memoria reservada para toda celula pertecente a lista de cidades
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & lista a ser desalocada\\
+\hline
+\end{DoxyParams}
+Assertiva de entrada\-: A lista nao deve ser vazia
+
+Assertiva de saida\-: A lista deve estar vazia
+
+Funcao\-: libera\-Lista\-Cidade (Iterador)
+
+Assertiva\-Entrada\-: cidade\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: cidade\-Vazia(aux1) == V\-A\-Z\-I\-A;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Cidade
+
+Requisitos\-: liberacao da lista de cidades
+
+Interfaces explicitas\-: void, libera\-Lista\-Cidade, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades Asseriva estrutural\-: aux1 é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim
+
+Comentarios de argumentacao
+
+Liberam os atributos alocados dinamicamente do elemento Cidade corrente
+
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_cidades_8h_a0c3dd25fe32819fbddc455578e1ef5b7}{\index{Cidades.\-h@{Cidades.\-h}!numero\-Cidades@{numero\-Cidades}}
+\index{numero\-Cidades@{numero\-Cidades}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{numero\-Cidades}]{\setlength{\rightskip}{0pt plus 5cm}int numero\-Cidades (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_a0c3dd25fe32819fbddc455578e1ef5b7}
+Funcao\-: numero\-Cidades
+
+Calcula o numero total de cidades na lista de cidades
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de cidades\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Numero total de cidades
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Cidade
+
+Assertiva de saida\-: numero total de cidades na lista de cidades
+
+Funcao\-: numero\-Cidades (Iterador)
+
+Assertiva\-Saida\-: total $>$= 0;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Cidade
+
+Requisitos\-: conta o numero total de cidades em uma lista de cidades
+
+Interfaces explicitas\-: int, numero\-Cidades, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim
+
+Comentarios de argumentacao
+
+Contagem do numero de total de cidades na lista\-Alvo
+
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_cidades_8h_aad5dc6cfac02602c4c4bce18d9bff2cb}{\index{Cidades.\-h@{Cidades.\-h}!numero\-Cidades\-Negativadas@{numero\-Cidades\-Negativadas}}
+\index{numero\-Cidades\-Negativadas@{numero\-Cidades\-Negativadas}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{numero\-Cidades\-Negativadas}]{\setlength{\rightskip}{0pt plus 5cm}int numero\-Cidades\-Negativadas (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_aad5dc6cfac02602c4c4bce18d9bff2cb}
+Funcao\-: numero\-Cidades\-Negativadas
+
+Resultado da contagem de quantas cidades ficaram sem recurso necessario
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de cidades\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total de cidades que ficaram com menos recurso que o necessario
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Cidade
+
+Funcao\-: numero\-Cidades\-Negativadas
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para o inicio da lista do tipo Cidade
+
+Requisitos\-: contabilizar quantas cidades tiveram seus recursos abaixo do necessario
+
+Interfaces explicitas\-: int, numero\-Cidades\-Negativadas, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades A\-E\-: percorrer a lista de cidade
+
+A\-E \-: teve algum turno negativado \hypertarget{_cidades_8h_aaaa5c05652a84a136783a30ab7a24bd4}{\index{Cidades.\-h@{Cidades.\-h}!numero\-Cidades\-No\-Vermelho@{numero\-Cidades\-No\-Vermelho}}
+\index{numero\-Cidades\-No\-Vermelho@{numero\-Cidades\-No\-Vermelho}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{numero\-Cidades\-No\-Vermelho}]{\setlength{\rightskip}{0pt plus 5cm}int numero\-Cidades\-No\-Vermelho (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_aaaa5c05652a84a136783a30ab7a24bd4}
+Funcao\-: numero\-Cidades\-No\-Vermelho
+
+Resultado da contagem de quantas cidades receberam menos de 30\% do recurso necessario
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de cidades\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total de cidades que receberam menos de 30\% do recurso necessario
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Cidade
+
+Funcao\-: numero\-Cidades\-No\-Vermelho
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para o inicio da lista do tipo Cidade
+
+Requisitos\-: contabilizar quantas cidades tiveram seus recursos abaixo de 30\% do necessario
+
+Interfaces explicitas\-: int, numero\-Cidades, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades A\-E\-: percorrer a lista de cidade
+
+A\-E \-: teve algum turno no vermelho \hypertarget{_cidades_8h_a7babe2976194524370135d6b70ce4026}{\index{Cidades.\-h@{Cidades.\-h}!recurso\-Gasto\-Total@{recurso\-Gasto\-Total}}
+\index{recurso\-Gasto\-Total@{recurso\-Gasto\-Total}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{recurso\-Gasto\-Total}]{\setlength{\rightskip}{0pt plus 5cm}int recurso\-Gasto\-Total (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_a7babe2976194524370135d6b70ce4026}
+Funcao\-: recurso\-Gasto\-Total
+
+Resultado da soma de todos recursos gasto pelas cidades
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de cidades\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total de recursos gasto pelas cidades
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Cidade
+
+Assertiva de saida\-:
+
+Funcao\-: recurso\-Gasto\-Total
+
+Assertiva\-Entrada\-: cidade\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: total $>$= 0;
+
+Hipotese\-: cidade -\/ ponteiro para o inicio da lista de cidades
+
+Requisitos\-: Somar os recursos gatos por todas as cidades
+
+Interfaces explicitas\-: int, recurso\-Gasto\-Total, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista nao chegou ao fim
+
+Comentarios de argumentacao
+
+Incrementa o somatorio com o valor do recurso gasto pela celula atual muda a referencia de cidade para a proxima celula
+
+A\-S\-: lista chegou ao fim \hypertarget{_cidades_8h_ac75e019673d568bff9abf635a97ce5c1}{\index{Cidades.\-h@{Cidades.\-h}!tempo\-Cidades\-No\-Vermelho@{tempo\-Cidades\-No\-Vermelho}}
+\index{tempo\-Cidades\-No\-Vermelho@{tempo\-Cidades\-No\-Vermelho}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{tempo\-Cidades\-No\-Vermelho}]{\setlength{\rightskip}{0pt plus 5cm}int tempo\-Cidades\-No\-Vermelho (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_ac75e019673d568bff9abf635a97ce5c1}
+Funcao\-: tempo\-Cidades\-No\-Vermelho
+
+Resultado da soma do tempo que as cidades passaram com menos de 30\% do recurso necessario
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de cidades\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total da soma dos tempos que as cidades ficaram com menos de 30\% do recurso necessario
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Cidade
+
+Funcao\-: tempo\-Sem\-Recurso\-Necessario
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para o inicio da lista do tipo Cidade
+
+Requisitos\-: contabilizar a soma dos tempos que as cidades ficaram com menos de 30\% do recurso necessario
+
+Interfaces explicitas\-: int, tempo\-Sem\-Recurso\-Necessario, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades A\-E\-: percorrer lista de cidades \hypertarget{_cidades_8h_a99be1331f4402381282863ee01d0d7f3}{\index{Cidades.\-h@{Cidades.\-h}!tempo\-Sem\-Recurso\-Necessario@{tempo\-Sem\-Recurso\-Necessario}}
+\index{tempo\-Sem\-Recurso\-Necessario@{tempo\-Sem\-Recurso\-Necessario}!Cidades.h@{Cidades.\-h}}
+\subsubsection[{tempo\-Sem\-Recurso\-Necessario}]{\setlength{\rightskip}{0pt plus 5cm}int tempo\-Sem\-Recurso\-Necessario (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_cidades_8h_a99be1331f4402381282863ee01d0d7f3}
+Funcao\-: tempo\-Sem\-Recurso\-Necessario
+
+Resultado da soma do tempo de turnos que as Cidades ficaram sem recurso necessario
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de cidades\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total da soma dos tempos que as cidades ficaram sem recurso necessario
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Cidade
+
+Funcao\-: tempo\-Sem\-Recurso\-Necessario
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para o inicio da lista do tipo Cidade
+
+Requisitos\-: contabilizar a soma dos tempos que as cidades ficaram sem recurso
+
+Interfaces explicitas\-: int, tempo\-Sem\-Recurso\-Necessario, Cidade $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de cidades A\-E\-: percorrer lista de cidades 

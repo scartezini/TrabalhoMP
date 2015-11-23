@@ -1,7 +1,5 @@
 #include "Adaptadores.h"
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
 *	Funcao: criaListaCidade
 *
@@ -18,12 +16,12 @@ Cidade* criaListaCidade();
 /**
 *	Funcao: cidadeVazia
 *
-*	Verifica se a lista de cidades esta vazia	
+*	Verifica se a lista de cidades esta vazia
 *
-*	@param cidade
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de cidades
 *
-*	@return 
+*	@return
 *		variavel do tipo Vazia, indicando se a lista esta vazia
 *
 *	Assertiva de entrada:
@@ -44,7 +42,7 @@ Vazia cidadeVazia(Cidade *);
 *
 *	@param registro
 *		string que sera lida do arquivo representando Cidade
-*	@param listaAlvo 
+*	@param listaAlvo
 *		lista de cidades onde a nova celula sera inserida
 *
 *	@return
@@ -71,11 +69,8 @@ Cidade* insereCidade(char *, Cidade *);
 *	recurso gasto
 *
 *	@param listaAlvo
-*		lista que sera impressa 
+*		lista que sera impressa
 *
-*	@return listaAlvo
-*		variavel do tipo Vazia, indicando se a lista esta vazia
-*		 
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
 *
@@ -92,37 +87,154 @@ void imprimeListaCidade(Cidade *);
 /**
 *	Funcao: liberaListaCidade
 *
-*	Desaloca a memoria reservada para 
+*	Desaloca a memoria reservada para
 * toda celula pertecente a lista de cidades
 *
 *	@param listaAlvo
 *		lista a ser desalocada
 *
-*	AssertivaEntrada:
+*	Assertiva de entrada:
 *		A lista nao deve ser vazia
 *
-*	AssertivaSaida:
+*	Assertiva de saida:
 *		A lista deve estar vazia
 **/
 void liberaListaCidade(Cidade *);
 
-/** -----------------------Funcoes de Calculo---------------------------- */
-
 /**
 *	Funcao: recursoGastoTotal
 *
-*	Resultado da soma de todos recursos 
-* gasto pelas cidades 
+*	Resultado da soma de todos recursos
+* gasto pelas cidades
 *
-*	@param cidade
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de cidades
-*	
-*	@return 
+*
+*	@return
 *		total de recursos gasto pelas cidades
 *
 *	Assertiva de entrada:
+*		estrutura do tipo Cidade
 *
 *	Assertiva de saida:
 *
 **/
 int recursoGastoTotal(Cidade *);
+
+/**
+*	Funcao: numeroCidades
+*
+*	Calcula o numero total de cidades na lista de cidades
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return
+*		Numero total de cidades
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade
+*
+*	Assertiva de saida:
+*		numero total de cidades na lista de cidades
+**/
+int numeroCidades(Cidade *);
+
+/**
+*	Funcao: gerenciaRecursoRecebido
+*
+*	Altera os atributos das celulas de cidade de acordo com o recurso
+* que foi recebido
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de cidades
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade, nao vazia
+*
+**/
+void gerenciaRecursoRecebido(Cidade *);
+
+/**
+*	Funcao: numeroCidadesNegativadas
+*
+*	Resultado da contagem de quantas cidades ficaram
+* sem recurso necessario
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return
+*		total de cidades que ficaram com menos recurso que o necessario
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade, nao vazia
+*
+*	Assertiva de saida:
+*		numero total de cidades negativadas na lista de cidades
+**/
+int numeroCidadesNegativadas(Cidade *);
+
+
+/**
+*	Funcao: tempoSemRecursoNecessario
+*
+*	Resultado da soma do tempo de turnos que as Cidades
+* ficaram sem recurso necessario
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return
+*		total da soma dos tempos que as cidades ficaram sem recurso necessario
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade, nao vazia
+*
+*	Assertiva de saida:
+*		numero total de cidades turnos negativos na lista de cidades
+**/
+int tempoSemRecursoNecessario(Cidade *);
+
+
+/**
+*	Funcao: numeroCidadesNoVermelho
+*
+*	Resultado da contagem de quantas cidades receberam menos de
+* 30% do recurso necessario
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return
+*		total de cidades que receberam menos de 30% do recurso necessario
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade, nao vazia
+*
+*	Assertiva de saida:
+*		numero total de cidades no vermelho na lista de cidades
+**/
+int numeroCidadesNoVermelho(Cidade *);
+
+
+/**
+*	Funcao: tempoCidadesNoVermelho
+*
+*	Resultado da soma do tempo que as cidades passaram com menos de
+* 30% do recurso necessario
+*
+*	@param listaAlvo
+*		ponteiro para o inicio da lista de cidades
+*
+*	@return
+*			total da soma dos tempos que as cidades ficaram com menos
+*     de 30% do recurso necessario
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Cidade, nao vazia
+*
+*	Assertiva de saida:
+*		tempo total de cidades no vermelho na lista de cidades
+**/
+int tempoCidadesNoVermelho(Cidade *);

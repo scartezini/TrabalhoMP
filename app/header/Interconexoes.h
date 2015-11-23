@@ -1,26 +1,24 @@
 #include "Geradores.h"
 
-/** -----------------------Funcoes Basicas---------------------------- */
-
 /**
 *	Funcao: criaListaInterconexao
 *
 *	Inicia um ponteiro que sera para Interconexao
 *
 *	AssertivaSaida:
-*		NULL; 
+*		NULL;
 **/
 Interconexao* criaListaInterconexao();
 
 /**
 *	Funcao: interconexaoVazia
 *
-*	Verifica se a lista de interconexoes esta vazia	
+*	Verifica se a lista de interconexoes esta vazia
 *
-*	@param cidade
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de interconexoes
 *
-*	@return 
+*	@return
 *		variavel do tipo Vazia, indicando se a lista esta vazia
 *
 *	Assertiva de entrada:
@@ -41,7 +39,7 @@ Vazia interconexaoVazia(Interconexao *);
 *
 *	@param registro
 *		string que sera lida do arquivo representando Inteconexao
-*	@param listaAlvo 
+*	@param listaAlvo
 *		lista de interconexoes onde a nova celula sera inserida
 *
 *	@return
@@ -75,11 +73,8 @@ Interconexao* insereInterconexao(char *, Interconexao *);
 *	recurso transportado
 *
 *	@param listaAlvo
-*		lista que sera impressa 
+*		lista que sera impressa
 *
-*	@return listaAlvo
-*		variavel do tipo Vazia, indicando se a lista esta vazia
-*		 
 *	AssertivaEntrada:
 *		A lista nao deve ser vazia
 *
@@ -96,7 +91,7 @@ void imprimeListaInterconexao(Interconexao *);
 /**
 *	Funcao: liberaListaInterconexao
 *
-*	Desaloca a memoria reservada para 
+*	Desaloca a memoria reservada para
 * toda celula pertecente a lista de interconexoes
 *
 *	@param listaAlvo
@@ -110,18 +105,16 @@ void imprimeListaInterconexao(Interconexao *);
 **/
 void liberaListaInterconexao(Interconexao *);
 
-/** -----------------------Funcoes de Calculo---------------------------- */
-
 /**
 *	Funcao: tamanhoConexao
 *
 *	Calcula o tamanho da celula de conexao que
 * eh passada para a funcao
 *
-*	@param interconexao
+*	@param listaAlvo
 *		ponteiro para a celula de interconexao
 *
-*	@return 
+*	@return
 *		tamanho da celula de conexao que foi passada
 *
 *	Assertiva de entrada:
@@ -137,10 +130,10 @@ float tamanhoConexao(Interconexao *);
 /**
 *	Funcao: tamanhoTotalConexao
 *
-*	Calcula o tamanho total das conexoes 
+*	Calcula o tamanho total das conexoes
 * da lista que eh passada
 *
-*	@param interconexao
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de celulas de conexao
 *
 *	@return
@@ -159,10 +152,10 @@ float tamanhoTotalConexao(Interconexao *);
 /**
 *	Funcao: totalGastoConserto
 *
-*	Calcula o custo total gasto com conserto 
+*	Calcula o custo total gasto com conserto
 * de todas as celulas de conexao
 *
-*	@param interconexao
+*	@param listaAlvo
 *		ponteiro para o inicio da lista de interconexao
 *
 *	@return
@@ -176,9 +169,15 @@ int totalGastoConserto(Interconexao *);
 *
 *	Calcula a possibilidade de falha
 *
+* 	@param listaAlvo
+		celula a qual vai ser calculada a falha
+*
 *	@return
 *		variavel do tipo Falha, indicando se houve falha
-* 
+*
+*	Assertiva de entrada:
+*		a chance de falha deve estar entre 0 e 1
+*
 *	Assertiva de saida:
 *		Se a chance de falha for maior que 0 e maior que um numero aleatorio
 *		Entao
@@ -186,21 +185,19 @@ int totalGastoConserto(Interconexao *);
 *		Senao
 *			nao ocorre uma falha
 *		FimSe
-*
 **/
-Falha calculaFalha();
+Falha calculaFalha(Interconexao *);
 
 /**
 *
 *	Funcao: mandarRecursoTransportado
 *
-*	Muda cada referencia seja para adaptador ou 
+*	Muda cada referencia seja para adaptador ou
 * para cidade, dependenodo do em qual esta ligada,
-* alterando o valor do recurso atual. 
+* alterando o valor do recurso atual.
 *
-*	@param interconexao
-*		ponterio de referencia para o inicio da lista
-*		de interconexoes 
+*	@param listaAlvo
+*		ponterio de referencia para o inicio da lista de interconexoes
 *
 *	Assertiva de entrada:
 *		interconexao - eh uma lista de interconexoes nao vazia
@@ -214,3 +211,71 @@ Falha calculaFalha();
 *		FimSe
 **/
 void mandarRecursoTransportado(Interconexao *);
+
+/**
+* Funcao: custoGastoComConserto
+*
+*	Calcula o custo que foi gasto com o conserto das
+* interconexoes
+*
+*	@param listaAlvo
+*		ponterio de referencia para o inicio da lista
+*		de interconexoes
+*
+*	Assertiva de entrada:
+*		interconexao - eh uma lista de interconexoes nao vazia
+*
+*	Assertiva de saida:
+*		valor gasto com os consertos das interconexoes
+**/
+int custoGastoComConserto(Interconexao *);
+
+
+/**
+* Funcao: numeroTotalFalhas
+*
+*	Faz a contabilidade de quantas falas teve durante toda a simulaca
+*
+*	@param listaAlvo
+*		ponterio de referencia para o inicio da lista
+*		de interconexoes
+*
+*	Assertiva de entrada:
+*		interconexao - eh uma lista de interconexoes nao vazia
+*
+*	Assertiva de saida:
+*		total de falhas
+**/
+int numeroTotalFalhas(Interconexao *);
+
+/**
+* Funcao: gerenciaFalhas
+*
+*	Marca as celulas que falharam como falhas
+* e comtabilizam as celulas que estao no concerto o tempo
+* que falta para sairem
+*
+*	@param listaAlvo
+*		ponterio de referencia para o inicio da lista
+*		de interconexoes
+*
+*	Assertiva de entrada:
+*		interconexao - eh uma lista de interconexoes nao vazia
+*
+*	Assertiva de saida:
+*		Se a interconexao corrente nao falhou
+*		Entao
+*			Se a chance desta interconexao falhar der FALHA
+*			Entao
+*				zera o contador de tempo de conserto
+*				numero de falhas + 1
+*				tagFalha = falha
+*			FimSe
+*		Senao
+*			contador de tempo de conserto + 1
+*			Se contador de tempo de conserto alcançar ou ultrapassar o tempo de conserto
+*				zera o contador de tempo de conserto
+*				tagFalha = sem falha
+*			Fimse
+**/
+void gerenciaFalhas(Interconexao *);
