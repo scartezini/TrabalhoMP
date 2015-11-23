@@ -163,6 +163,9 @@ Cidade* insereCidade(char *registro, Cidade *listaAlvo){
 	novo->recursoRecebido = 0;
 	novo->recursoGasto = 0;
 	novo->entradas = NULL;
+	novo->tagEstado = VERDE;
+	novo->turnosNegativados = 0;
+	novo->turnosNoVermelho = 0;
 
 	novo->proximo = listaAlvo;
 	listaAlvo = novo;
@@ -197,7 +200,7 @@ void imprimeListaCidade(Cidade *listaAlvo){
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	for(aux=listaAlvo;aux!=NULL;aux=aux->proximo){
 	//! AE: listaAlvo nao chegou ao fim
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Imprime os atributos da cidade corrente
@@ -240,7 +243,7 @@ void liberaListaCidade(Cidade *listaAlvo){
 	//! Asseriva estrutural: aux1 é a listaAlvo, porem sendo percorrida
 	for(aux1=listaAlvo;aux1!=NULL;aux1=aux2){
 	//! AE: listaAlvo nao chegou ao fim
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Liberam os atributos alocados dinamicamente do elemento Cidade corrente
@@ -282,10 +285,10 @@ int recursoGastoTotal(Cidade *listaAlvo){
 
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 	Cidade *aux = listaAlvo;
-	
+
 	while(aux != NULL){
 	//! AE: lista nao chegou ao fim
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Incrementa o somatorio com o valor do recurso gasto pela celula atual
@@ -297,7 +300,7 @@ int recursoGastoTotal(Cidade *listaAlvo){
 	//! AS: lista chegou ao fim
 
 	assert(total >= 0);
-	
+
 	return total;
 }
 
@@ -320,6 +323,7 @@ int recursoGastoTotal(Cidade *listaAlvo){
 *		listaAlvo - lista de cidades
 **/
 int numeroCidades(Cidade *listaAlvo){
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 	int total = 0;
 
 	//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
@@ -327,7 +331,7 @@ int numeroCidades(Cidade *listaAlvo){
 
 	while(aux != NULL){
 	//! AE: listaAlvo nao chegou ao fim
-	
+
 	//! Comentarios de argumentacao
 		/**
 		*	Contagem do numero de total de cidades na listaAlvo
@@ -336,8 +340,205 @@ int numeroCidades(Cidade *listaAlvo){
 		aux = aux->proximo;
 	}
 	//! AS: listaAlvo chegou ao fim
-	
+
 	assert(total >= 0);
 
 	return total;
+}
+
+
+
+
+/**
+*	Funcao: gerenciaRecursoRecebido
+*
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
+*
+*	Requisitos:
+*		gerencia o recurso recebido, aterando o valor do recurso gasto
+*
+*	Interfaces explicitas:
+*		int, gerenciaRecursoRecebido, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
+**/
+void gerenciaRecursoRecebido(Cidade *listaAlvo){
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+
+	Cidade *cidade;
+	float porcentagemRecursoNecessario;
+
+	while (listaAlvo != NULL) {
+		//!AE : percorrer a lista de cidades
+		cidade = listaAlvo;
+
+		cidade->recursoGasto += cidade->recursoRecebido;
+		porcentagemRecursoNecessario = (cidade->recursoRecebido / cidade->recursoNecessario)*100;
+
+		if(porcentagemRecursoNecessario >= 100){
+			//!AE : se a porcentagem do recurso Necessario eh positiva
+			cidade->tagEstado = VERDE;
+		}
+		else if(porcentagemRecursoNecessario < 100 && porcentagemRecursoNecessario >= 30){
+			//!AE: se a porcentagem eh negativa mas nao critica
+			cidade->tagEstado = AMARELO;
+			cidade->turnosNegativados += 1;
+		}
+		else{
+			//!AE: se a porcentagem eh critica
+			cidade->tagEstado = VERMELHO;
+			cidade->turnosNegativados += 1;
+			cidade->turnosNoVermelho += 1;
+		}
+
+		listaAlvo = listaAlvo->proximo;
+	}
+}
+
+/**
+*	Funcao: numeroCidadesNegativadas
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
+*
+*	Requisitos:
+*		contabilizar quantas cidades tiveram seus recursos abaixo do
+* necessario
+*
+*	Interfaces explicitas:
+*		int, numeroCidadesNegativadas, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
+**/
+int numeroCidadesNegativadas(Cidade *listaAlvo){
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+
+	Cidade *cidade;
+	int somatorio = 0;
+
+	while (listaAlvo != NULL) {
+		//! AE: percorrer a lista de cidade
+		cidade = listaAlvo;
+
+		if(cidade->turnosNegativados > 0){
+			//! AE : teve algum turno negativado
+			somatorio++;
+		}
+
+		listaAlvo = listaAlvo->proximo;
+	}
+
+	return somatorio;
+}
+
+
+
+/**
+*	Funcao: tempoSemRecursoNecessario
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
+*
+*	Requisitos:
+*		contabilizar a soma dos tempos que as cidades ficaram sem
+* recurso
+*
+*	Interfaces explicitas:
+*		int, tempoSemRecursoNecessario, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
+**/
+int tempoSemRecursoNecessario(Cidade *listaAlvo){
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+
+	Cidade *cidade;
+	int somatorio = 0;
+
+	while(listaAlvo != NULL){
+		//! AE: percorrer lista de cidades
+		cidade = listaAlvo;
+
+		somatorio = cidade->turnosNegativados;
+
+		listaAlvo = listaAlvo->proximo;
+	}
+
+	return somatorio;
+}
+
+/**
+*	Funcao: numeroCidadesNoVermelho
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
+*
+*	Requisitos:
+*		contabilizar quantas cidades tiveram seus recursos abaixo
+* de 30% do necessario
+*
+*	Interfaces explicitas:
+*		int, numeroCidades, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
+**/
+int numeroCidadesNoVermelho(Cidade *listaAlvo){
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+
+	Cidade *cidade;
+	int somatorio = 0;
+
+	while (listaAlvo != NULL) {
+		//! AE: percorrer a lista de cidade
+		cidade = listaAlvo;
+
+		if(cidade->turnosNoVermelho > 0){
+			//! AE : teve algum turno no vermelho
+			somatorio++;
+		}
+
+		listaAlvo = listaAlvo->proximo;
+	}
+
+	return somatorio;
+
+}
+
+/**
+*	Funcao: tempoSemRecursoNecessario
+*
+*	Hipóteses:
+*		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
+*
+*	Requisitos:
+*		contabilizar a soma dos tempos que as cidades ficaram com
+* menos de 30% do recurso necessario
+*
+*	Interfaces explicitas:
+*		int, tempoSemRecursoNecessario, Cidade *listaAlvo
+*
+*	Interfaces implicitas:
+*		listaAlvo - lista de cidades
+**/
+int tempoCidadesNoVermelho(Cidade *listaAlvo){
+	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+
+	Cidade *cidade;
+	int somatorio = 0;
+
+	while(listaAlvo != NULL){
+		//! AE: percorrer lista de cidades
+		cidade = listaAlvo;
+
+		somatorio = cidade->turnosNoVermelho;
+
+		listaAlvo = listaAlvo->proximo;
+	}
+
+	return somatorio;
 }

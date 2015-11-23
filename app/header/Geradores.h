@@ -146,6 +146,7 @@ int custoGeradores(Gerador *);
 *
 *	Altera os nos de conexão do grafo com o recurso
 * enviado
+* Altera os adaptadores com o recurso recebido
 *
 *	@param listaAlvo
 *		ponteiro para o inicio da lista de geradores

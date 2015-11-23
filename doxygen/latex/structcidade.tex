@@ -5,6 +5,9 @@
 
 {\ttfamily \#include $<$Principal.\-h$>$}
 
+
+
+Collaboration diagram for cidade\-:
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,6 +20,12 @@ int \hyperlink{structcidade_ae8b356353114803f6f5076a6b7bb411a}{recurso\-Necessar
 int \hyperlink{structcidade_a34541bd6c7eec1f2049716b02efe9572}{recurso\-Recebido}
 \item 
 int \hyperlink{structcidade_a4c30c9bf20d81925543c43abfaee74ac}{recurso\-Gasto}
+\item 
+int \hyperlink{structcidade_a8d061419bb8ae9b9fa16677008e41883}{tag\-Estado}
+\item 
+int \hyperlink{structcidade_a04ccadacb6fd2e1b9ce7469caee09cdd}{turnos\-Negativados}
+\item 
+int \hyperlink{structcidade_a15629cd2f5e328c1abbb6ee4b09b0af1}{turnos\-No\-Vermelho}
 \item 
 struct \hyperlink{structcidade}{cidade} $\ast$ \hyperlink{structcidade_ac7a8c5f5dbf854099849bd3d9ab51517}{proximo}
 \item 
@@ -37,66 +46,49 @@ recurso\-Recebido\-: quantidade de recurso recebido por segundo pela Cidade
 
 recurso\-Gasto\-: quantidade de recurso que a cidade usou
 
+tag\-Estado\-: flag para definir qual eh o estado da cidade (V\-E\-R\-M\-E\-L\-H\-O,A\-M\-A\-R\-E\-L\-O,V\-E\-R\-D\-E)
+
+turnos\-Negativados\-: contador para armazenar quantos turnos a cidade ficou fora do V\-E\-R\-D\-E
+
+turnos\-No\-Vermelho\-: contador para armazenar quantos turnos a cidade ficou no V\-E\-R\-M\-E\-L\-H\-O
+
 proximo\-: representa a proxima cidade da rede de cidades
 
 entradas\-: ponteiro que representa a interconexao de entrada da cidade 
-
-Definition at line 72 of file Principal.\-h.
-
-
 
 \subsection{Field Documentation}
 \hypertarget{structcidade_ae28777a0a252764c89fe126c8d7fba4a}{\index{cidade@{cidade}!entradas@{entradas}}
 \index{entradas@{entradas}!cidade@{cidade}}
 \subsubsection[{entradas}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf interconexao}$\ast$ entradas}}\label{structcidade_ae28777a0a252764c89fe126c8d7fba4a}
-
-
-Definition at line 81 of file Principal.\-h.
-
 \hypertarget{structcidade_ae2a0f66178bb1c4d42e2b70ec9426ccb}{\index{cidade@{cidade}!nome@{nome}}
 \index{nome@{nome}!cidade@{cidade}}
 \subsubsection[{nome}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ nome}}\label{structcidade_ae2a0f66178bb1c4d42e2b70ec9426ccb}
-
-
-Definition at line 73 of file Principal.\-h.
-
 \hypertarget{structcidade_a7e30d633898517077a4363ad6fade5b6}{\index{cidade@{cidade}!posicao@{posicao}}
 \index{posicao@{posicao}!cidade@{cidade}}
 \subsubsection[{posicao}]{\setlength{\rightskip}{0pt plus 5cm}int posicao\mbox{[}2\mbox{]}}}\label{structcidade_a7e30d633898517077a4363ad6fade5b6}
-
-
-Definition at line 74 of file Principal.\-h.
-
 \hypertarget{structcidade_ac7a8c5f5dbf854099849bd3d9ab51517}{\index{cidade@{cidade}!proximo@{proximo}}
 \index{proximo@{proximo}!cidade@{cidade}}
 \subsubsection[{proximo}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf cidade}$\ast$ proximo}}\label{structcidade_ac7a8c5f5dbf854099849bd3d9ab51517}
-
-
-Definition at line 80 of file Principal.\-h.
-
 \hypertarget{structcidade_a4c30c9bf20d81925543c43abfaee74ac}{\index{cidade@{cidade}!recurso\-Gasto@{recurso\-Gasto}}
 \index{recurso\-Gasto@{recurso\-Gasto}!cidade@{cidade}}
 \subsubsection[{recurso\-Gasto}]{\setlength{\rightskip}{0pt plus 5cm}int recurso\-Gasto}}\label{structcidade_a4c30c9bf20d81925543c43abfaee74ac}
-
-
-Definition at line 78 of file Principal.\-h.
-
 \hypertarget{structcidade_ae8b356353114803f6f5076a6b7bb411a}{\index{cidade@{cidade}!recurso\-Necessario@{recurso\-Necessario}}
 \index{recurso\-Necessario@{recurso\-Necessario}!cidade@{cidade}}
 \subsubsection[{recurso\-Necessario}]{\setlength{\rightskip}{0pt plus 5cm}int recurso\-Necessario}}\label{structcidade_ae8b356353114803f6f5076a6b7bb411a}
-
-
-Definition at line 76 of file Principal.\-h.
-
 \hypertarget{structcidade_a34541bd6c7eec1f2049716b02efe9572}{\index{cidade@{cidade}!recurso\-Recebido@{recurso\-Recebido}}
 \index{recurso\-Recebido@{recurso\-Recebido}!cidade@{cidade}}
 \subsubsection[{recurso\-Recebido}]{\setlength{\rightskip}{0pt plus 5cm}int recurso\-Recebido}}\label{structcidade_a34541bd6c7eec1f2049716b02efe9572}
-
-
-Definition at line 77 of file Principal.\-h.
-
+\hypertarget{structcidade_a8d061419bb8ae9b9fa16677008e41883}{\index{cidade@{cidade}!tag\-Estado@{tag\-Estado}}
+\index{tag\-Estado@{tag\-Estado}!cidade@{cidade}}
+\subsubsection[{tag\-Estado}]{\setlength{\rightskip}{0pt plus 5cm}int tag\-Estado}}\label{structcidade_a8d061419bb8ae9b9fa16677008e41883}
+\hypertarget{structcidade_a04ccadacb6fd2e1b9ce7469caee09cdd}{\index{cidade@{cidade}!turnos\-Negativados@{turnos\-Negativados}}
+\index{turnos\-Negativados@{turnos\-Negativados}!cidade@{cidade}}
+\subsubsection[{turnos\-Negativados}]{\setlength{\rightskip}{0pt plus 5cm}int turnos\-Negativados}}\label{structcidade_a04ccadacb6fd2e1b9ce7469caee09cdd}
+\hypertarget{structcidade_a15629cd2f5e328c1abbb6ee4b09b0af1}{\index{cidade@{cidade}!turnos\-No\-Vermelho@{turnos\-No\-Vermelho}}
+\index{turnos\-No\-Vermelho@{turnos\-No\-Vermelho}!cidade@{cidade}}
+\subsubsection[{turnos\-No\-Vermelho}]{\setlength{\rightskip}{0pt plus 5cm}int turnos\-No\-Vermelho}}\label{structcidade_a15629cd2f5e328c1abbb6ee4b09b0af1}
 
 
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-app/header/\hyperlink{_principal_8h}{Principal.\-h}\end{DoxyCompactItemize}
+/home/eduardo/\-Trabalho\-M\-P/app/header/\hyperlink{_principal_8h}{Principal.\-h}\end{DoxyCompactItemize}

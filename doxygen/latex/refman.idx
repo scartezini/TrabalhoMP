@@ -3,10 +3,10 @@
 \indexentry{entradas@{entradas}!adaptador@{adaptador}|hyperpage}{7}
 \indexentry{adaptador@{adaptador}!nome@{nome}|hyperpage}{7}
 \indexentry{nome@{nome}!adaptador@{adaptador}|hyperpage}{7}
-\indexentry{adaptador@{adaptador}!posicao@{posicao}|hyperpage}{8}
-\indexentry{posicao@{posicao}!adaptador@{adaptador}|hyperpage}{8}
-\indexentry{adaptador@{adaptador}!proximo@{proximo}|hyperpage}{8}
-\indexentry{proximo@{proximo}!adaptador@{adaptador}|hyperpage}{8}
+\indexentry{adaptador@{adaptador}!posicao@{posicao}|hyperpage}{7}
+\indexentry{posicao@{posicao}!adaptador@{adaptador}|hyperpage}{7}
+\indexentry{adaptador@{adaptador}!proximo@{proximo}|hyperpage}{7}
+\indexentry{proximo@{proximo}!adaptador@{adaptador}|hyperpage}{7}
 \indexentry{adaptador@{adaptador}!quantidade\discretionary {-}{}{}Saidas@{quantidade\discretionary {-}{}{}Saidas}|hyperpage}{8}
 \indexentry{quantidade\discretionary {-}{}{}Saidas@{quantidade\discretionary {-}{}{}Saidas}!adaptador@{adaptador}|hyperpage}{8}
 \indexentry{adaptador@{adaptador}!recurso\discretionary {-}{}{}Recebido@{recurso\discretionary {-}{}{}Recebido}|hyperpage}{8}
@@ -28,6 +28,12 @@
 \indexentry{recurso\discretionary {-}{}{}Necessario@{recurso\discretionary {-}{}{}Necessario}!cidade@{cidade}|hyperpage}{9}
 \indexentry{cidade@{cidade}!recurso\discretionary {-}{}{}Recebido@{recurso\discretionary {-}{}{}Recebido}|hyperpage}{9}
 \indexentry{recurso\discretionary {-}{}{}Recebido@{recurso\discretionary {-}{}{}Recebido}!cidade@{cidade}|hyperpage}{9}
+\indexentry{cidade@{cidade}!tag\discretionary {-}{}{}Estado@{tag\discretionary {-}{}{}Estado}|hyperpage}{9}
+\indexentry{tag\discretionary {-}{}{}Estado@{tag\discretionary {-}{}{}Estado}!cidade@{cidade}|hyperpage}{9}
+\indexentry{cidade@{cidade}!turnos\discretionary {-}{}{}Negativados@{turnos\discretionary {-}{}{}Negativados}|hyperpage}{9}
+\indexentry{turnos\discretionary {-}{}{}Negativados@{turnos\discretionary {-}{}{}Negativados}!cidade@{cidade}|hyperpage}{9}
+\indexentry{cidade@{cidade}!turnos\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{turnos\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}|hyperpage}{9}
+\indexentry{turnos\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{turnos\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}!cidade@{cidade}|hyperpage}{9}
 \indexentry{gerador@{gerador}|hyperpage}{9}
 \indexentry{gerador@{gerador}!custo@{custo}|hyperpage}{10}
 \indexentry{custo@{custo}!gerador@{gerador}|hyperpage}{10}
@@ -43,236 +49,371 @@
 \indexentry{saida@{saida}!gerador@{gerador}|hyperpage}{10}
 \indexentry{gerador@{gerador}!taxa\discretionary {-}{}{}Producao@{taxa\discretionary {-}{}{}Producao}|hyperpage}{10}
 \indexentry{taxa\discretionary {-}{}{}Producao@{taxa\discretionary {-}{}{}Producao}!gerador@{gerador}|hyperpage}{10}
-\indexentry{interconexao@{interconexao}|hyperpage}{11}
-\indexentry{interconexao@{interconexao}!capacidade\discretionary {-}{}{}Maxima@{capacidade\discretionary {-}{}{}Maxima}|hyperpage}{12}
-\indexentry{capacidade\discretionary {-}{}{}Maxima@{capacidade\discretionary {-}{}{}Maxima}!interconexao@{interconexao}|hyperpage}{12}
-\indexentry{interconexao@{interconexao}!chance\discretionary {-}{}{}Falha@{chance\discretionary {-}{}{}Falha}|hyperpage}{12}
-\indexentry{chance\discretionary {-}{}{}Falha@{chance\discretionary {-}{}{}Falha}!interconexao@{interconexao}|hyperpage}{12}
-\indexentry{interconexao@{interconexao}!custo\discretionary {-}{}{}Conserto@{custo\discretionary {-}{}{}Conserto}|hyperpage}{12}
-\indexentry{custo\discretionary {-}{}{}Conserto@{custo\discretionary {-}{}{}Conserto}!interconexao@{interconexao}|hyperpage}{12}
-\indexentry{interconexao@{interconexao}!entrada\discretionary {-}{}{}Adaptador@{entrada\discretionary {-}{}{}Adaptador}|hyperpage}{12}
-\indexentry{entrada\discretionary {-}{}{}Adaptador@{entrada\discretionary {-}{}{}Adaptador}!interconexao@{interconexao}|hyperpage}{12}
-\indexentry{interconexao@{interconexao}!entrada\discretionary {-}{}{}Gerador@{entrada\discretionary {-}{}{}Gerador}|hyperpage}{12}
-\indexentry{entrada\discretionary {-}{}{}Gerador@{entrada\discretionary {-}{}{}Gerador}!interconexao@{interconexao}|hyperpage}{12}
-\indexentry{interconexao@{interconexao}!entrada\discretionary {-}{}{}Interconexao@{entrada\discretionary {-}{}{}Interconexao}|hyperpage}{12}
-\indexentry{entrada\discretionary {-}{}{}Interconexao@{entrada\discretionary {-}{}{}Interconexao}!interconexao@{interconexao}|hyperpage}{12}
-\indexentry{interconexao@{interconexao}!nome@{nome}|hyperpage}{12}
-\indexentry{nome@{nome}!interconexao@{interconexao}|hyperpage}{12}
-\indexentry{interconexao@{interconexao}!numero\discretionary {-}{}{}Falha@{numero\discretionary {-}{}{}Falha}|hyperpage}{12}
-\indexentry{numero\discretionary {-}{}{}Falha@{numero\discretionary {-}{}{}Falha}!interconexao@{interconexao}|hyperpage}{12}
-\indexentry{interconexao@{interconexao}!posicao\discretionary {-}{}{}Final@{posicao\discretionary {-}{}{}Final}|hyperpage}{13}
-\indexentry{posicao\discretionary {-}{}{}Final@{posicao\discretionary {-}{}{}Final}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!posicao\discretionary {-}{}{}Inicial@{posicao\discretionary {-}{}{}Inicial}|hyperpage}{13}
-\indexentry{posicao\discretionary {-}{}{}Inicial@{posicao\discretionary {-}{}{}Inicial}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!proximo@{proximo}|hyperpage}{13}
-\indexentry{proximo@{proximo}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador@{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador}|hyperpage}{13}
-\indexentry{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador@{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade@{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade}|hyperpage}{13}
-\indexentry{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade@{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador@{proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador}|hyperpage}{13}
-\indexentry{proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador@{proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!recurso\discretionary {-}{}{}Transportado@{recurso\discretionary {-}{}{}Transportado}|hyperpage}{13}
-\indexentry{recurso\discretionary {-}{}{}Transportado@{recurso\discretionary {-}{}{}Transportado}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!saida\discretionary {-}{}{}Adaptador@{saida\discretionary {-}{}{}Adaptador}|hyperpage}{13}
-\indexentry{saida\discretionary {-}{}{}Adaptador@{saida\discretionary {-}{}{}Adaptador}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!saida\discretionary {-}{}{}Cidade@{saida\discretionary {-}{}{}Cidade}|hyperpage}{13}
-\indexentry{saida\discretionary {-}{}{}Cidade@{saida\discretionary {-}{}{}Cidade}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!saida\discretionary {-}{}{}Interconexao@{saida\discretionary {-}{}{}Interconexao}|hyperpage}{13}
-\indexentry{saida\discretionary {-}{}{}Interconexao@{saida\discretionary {-}{}{}Interconexao}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!tag\discretionary {-}{}{}Destino@{tag\discretionary {-}{}{}Destino}|hyperpage}{13}
-\indexentry{tag\discretionary {-}{}{}Destino@{tag\discretionary {-}{}{}Destino}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!tag\discretionary {-}{}{}Falha@{tag\discretionary {-}{}{}Falha}|hyperpage}{13}
-\indexentry{tag\discretionary {-}{}{}Falha@{tag\discretionary {-}{}{}Falha}!interconexao@{interconexao}|hyperpage}{13}
-\indexentry{interconexao@{interconexao}!tempo\discretionary {-}{}{}Conserto@{tempo\discretionary {-}{}{}Conserto}|hyperpage}{14}
-\indexentry{tempo\discretionary {-}{}{}Conserto@{tempo\discretionary {-}{}{}Conserto}!interconexao@{interconexao}|hyperpage}{14}
-\indexentry{app/header/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}h@{app/header/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}h}|hyperpage}{15}
+\indexentry{interconexao@{interconexao}|hyperpage}{10}
+\indexentry{interconexao@{interconexao}!capacidade\discretionary {-}{}{}Maxima@{capacidade\discretionary {-}{}{}Maxima}|hyperpage}{11}
+\indexentry{capacidade\discretionary {-}{}{}Maxima@{capacidade\discretionary {-}{}{}Maxima}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!chance\discretionary {-}{}{}Falha@{chance\discretionary {-}{}{}Falha}|hyperpage}{11}
+\indexentry{chance\discretionary {-}{}{}Falha@{chance\discretionary {-}{}{}Falha}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!contador\discretionary {-}{}{}Tempo\discretionary {-}{}{}Conserto@{contador\discretionary {-}{}{}Tempo\discretionary {-}{}{}Conserto}|hyperpage}{11}
+\indexentry{contador\discretionary {-}{}{}Tempo\discretionary {-}{}{}Conserto@{contador\discretionary {-}{}{}Tempo\discretionary {-}{}{}Conserto}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!custo\discretionary {-}{}{}Conserto@{custo\discretionary {-}{}{}Conserto}|hyperpage}{11}
+\indexentry{custo\discretionary {-}{}{}Conserto@{custo\discretionary {-}{}{}Conserto}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!entrada\discretionary {-}{}{}Adaptador@{entrada\discretionary {-}{}{}Adaptador}|hyperpage}{11}
+\indexentry{entrada\discretionary {-}{}{}Adaptador@{entrada\discretionary {-}{}{}Adaptador}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!entrada\discretionary {-}{}{}Gerador@{entrada\discretionary {-}{}{}Gerador}|hyperpage}{11}
+\indexentry{entrada\discretionary {-}{}{}Gerador@{entrada\discretionary {-}{}{}Gerador}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!entrada\discretionary {-}{}{}Interconexao@{entrada\discretionary {-}{}{}Interconexao}|hyperpage}{11}
+\indexentry{entrada\discretionary {-}{}{}Interconexao@{entrada\discretionary {-}{}{}Interconexao}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!nome@{nome}|hyperpage}{11}
+\indexentry{nome@{nome}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!numero\discretionary {-}{}{}Falha@{numero\discretionary {-}{}{}Falha}|hyperpage}{11}
+\indexentry{numero\discretionary {-}{}{}Falha@{numero\discretionary {-}{}{}Falha}!interconexao@{interconexao}|hyperpage}{11}
+\indexentry{interconexao@{interconexao}!posicao\discretionary {-}{}{}Final@{posicao\discretionary {-}{}{}Final}|hyperpage}{12}
+\indexentry{posicao\discretionary {-}{}{}Final@{posicao\discretionary {-}{}{}Final}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!posicao\discretionary {-}{}{}Inicial@{posicao\discretionary {-}{}{}Inicial}|hyperpage}{12}
+\indexentry{posicao\discretionary {-}{}{}Inicial@{posicao\discretionary {-}{}{}Inicial}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!proximo@{proximo}|hyperpage}{12}
+\indexentry{proximo@{proximo}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador@{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador}|hyperpage}{12}
+\indexentry{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador@{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Adaptador}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade@{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade}|hyperpage}{12}
+\indexentry{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade@{proximo\discretionary {-}{}{}Entrada\discretionary {-}{}{}Cidade}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador@{proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador}|hyperpage}{12}
+\indexentry{proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador@{proximo\discretionary {-}{}{}Saida\discretionary {-}{}{}Adaptador}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!recurso\discretionary {-}{}{}Transportado@{recurso\discretionary {-}{}{}Transportado}|hyperpage}{12}
+\indexentry{recurso\discretionary {-}{}{}Transportado@{recurso\discretionary {-}{}{}Transportado}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!saida\discretionary {-}{}{}Adaptador@{saida\discretionary {-}{}{}Adaptador}|hyperpage}{12}
+\indexentry{saida\discretionary {-}{}{}Adaptador@{saida\discretionary {-}{}{}Adaptador}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!saida\discretionary {-}{}{}Cidade@{saida\discretionary {-}{}{}Cidade}|hyperpage}{12}
+\indexentry{saida\discretionary {-}{}{}Cidade@{saida\discretionary {-}{}{}Cidade}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!saida\discretionary {-}{}{}Interconexao@{saida\discretionary {-}{}{}Interconexao}|hyperpage}{12}
+\indexentry{saida\discretionary {-}{}{}Interconexao@{saida\discretionary {-}{}{}Interconexao}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!tag\discretionary {-}{}{}Destino@{tag\discretionary {-}{}{}Destino}|hyperpage}{12}
+\indexentry{tag\discretionary {-}{}{}Destino@{tag\discretionary {-}{}{}Destino}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!tag\discretionary {-}{}{}Falha@{tag\discretionary {-}{}{}Falha}|hyperpage}{12}
+\indexentry{tag\discretionary {-}{}{}Falha@{tag\discretionary {-}{}{}Falha}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{interconexao@{interconexao}!tempo\discretionary {-}{}{}Conserto@{tempo\discretionary {-}{}{}Conserto}|hyperpage}{12}
+\indexentry{tempo\discretionary {-}{}{}Conserto@{tempo\discretionary {-}{}{}Conserto}!interconexao@{interconexao}|hyperpage}{12}
+\indexentry{relatorio@{relatorio}|hyperpage}{12}
+\indexentry{relatorio@{relatorio}!custo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao@{custo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao}|hyperpage}{13}
+\indexentry{custo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao@{custo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!energia\discretionary {-}{}{}Gasta\discretionary {-}{}{}Cidades@{energia\discretionary {-}{}{}Gasta\discretionary {-}{}{}Cidades}|hyperpage}{13}
+\indexentry{energia\discretionary {-}{}{}Gasta\discretionary {-}{}{}Cidades@{energia\discretionary {-}{}{}Gasta\discretionary {-}{}{}Cidades}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!energia\discretionary {-}{}{}Total\discretionary {-}{}{}Gerada@{energia\discretionary {-}{}{}Total\discretionary {-}{}{}Gerada}|hyperpage}{13}
+\indexentry{energia\discretionary {-}{}{}Total\discretionary {-}{}{}Gerada@{energia\discretionary {-}{}{}Total\discretionary {-}{}{}Gerada}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}|hyperpage}{13}
+\indexentry{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}|hyperpage}{13}
+\indexentry{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!numero\discretionary {-}{}{}Falha\discretionary {-}{}{}Interconexoes@{numero\discretionary {-}{}{}Falha\discretionary {-}{}{}Interconexoes}|hyperpage}{13}
+\indexentry{numero\discretionary {-}{}{}Falha\discretionary {-}{}{}Interconexoes@{numero\discretionary {-}{}{}Falha\discretionary {-}{}{}Interconexoes}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Interconexoes@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Interconexoes}|hyperpage}{13}
+\indexentry{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Interconexoes@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Interconexoes}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}|hyperpage}{13}
+\indexentry{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso@{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso}|hyperpage}{13}
+\indexentry{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso@{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!tempo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao@{tempo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao}|hyperpage}{13}
+\indexentry{tempo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao@{tempo\discretionary {-}{}{}Total\discretionary {-}{}{}Simulacao}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!total\discretionary {-}{}{}Cidades@{total\discretionary {-}{}{}Cidades}|hyperpage}{13}
+\indexentry{total\discretionary {-}{}{}Cidades@{total\discretionary {-}{}{}Cidades}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{relatorio@{relatorio}!total\discretionary {-}{}{}Geradores@{total\discretionary {-}{}{}Geradores}|hyperpage}{13}
+\indexentry{total\discretionary {-}{}{}Geradores@{total\discretionary {-}{}{}Geradores}!relatorio@{relatorio}|hyperpage}{13}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}h@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}h}|hyperpage}{15}
 \indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!adaptador\discretionary {-}{}{}Vazio@{adaptador\discretionary {-}{}{}Vazio}|hyperpage}{15}
 \indexentry{adaptador\discretionary {-}{}{}Vazio@{adaptador\discretionary {-}{}{}Vazio}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{15}
-\indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{15}
-\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{15}
+\indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{16}
+\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{16}
 \indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!define\discretionary {-}{}{}Distribuicao@{define\discretionary {-}{}{}Distribuicao}|hyperpage}{16}
 \indexentry{define\discretionary {-}{}{}Distribuicao@{define\discretionary {-}{}{}Distribuicao}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{16}
 \indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{17}
 \indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{17}
 \indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!insere\discretionary {-}{}{}Adaptador@{insere\discretionary {-}{}{}Adaptador}|hyperpage}{17}
 \indexentry{insere\discretionary {-}{}{}Adaptador@{insere\discretionary {-}{}{}Adaptador}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{17}
-\indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{18}
-\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{18}
-\indexentry{app/header/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}h@{app/header/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}h}|hyperpage}{19}
-\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!cidade\discretionary {-}{}{}Vazia@{cidade\discretionary {-}{}{}Vazia}|hyperpage}{19}
-\indexentry{cidade\discretionary {-}{}{}Vazia@{cidade\discretionary {-}{}{}Vazia}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{19}
-\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{19}
-\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{19}
-\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{20}
-\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{20}
-\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!insere\discretionary {-}{}{}Cidade@{insere\discretionary {-}{}{}Cidade}|hyperpage}{20}
-\indexentry{insere\discretionary {-}{}{}Cidade@{insere\discretionary {-}{}{}Cidade}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{20}
-\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{21}
-\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{21}
-\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}|hyperpage}{22}
-\indexentry{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{22}
-\indexentry{app/header/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}h@{app/header/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}h}|hyperpage}{22}
-\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{22}
-\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{22}
-\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!custo\discretionary {-}{}{}Geradores@{custo\discretionary {-}{}{}Geradores}|hyperpage}{22}
-\indexentry{custo\discretionary {-}{}{}Geradores@{custo\discretionary {-}{}{}Geradores}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{22}
-\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!gerador\discretionary {-}{}{}Vazio@{gerador\discretionary {-}{}{}Vazio}|hyperpage}{23}
-\indexentry{gerador\discretionary {-}{}{}Vazio@{gerador\discretionary {-}{}{}Vazio}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{23}
-\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{23}
-\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{23}
-\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!insere\discretionary {-}{}{}Gerador@{insere\discretionary {-}{}{}Gerador}|hyperpage}{24}
-\indexentry{insere\discretionary {-}{}{}Gerador@{insere\discretionary {-}{}{}Gerador}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{24}
-\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{25}
-\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{25}
-\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}|hyperpage}{25}
-\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{25}
-\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}|hyperpage}{25}
-\indexentry{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{25}
-\indexentry{app/header/\discretionary {-}{}{}Geral.\discretionary {-}{}{}h@{app/header/\discretionary {-}{}{}Geral.\discretionary {-}{}{}h}|hyperpage}{26}
-\indexentry{Geral.\discretionary {-}{}{}h@{Geral.\discretionary {-}{}{}h}!conecta@{conecta}|hyperpage}{26}
-\indexentry{conecta@{conecta}!Geral.h@{Geral.\discretionary {-}{}{}h}|hyperpage}{26}
-\indexentry{Geral.\discretionary {-}{}{}h@{Geral.\discretionary {-}{}{}h}!verifica@{verifica}|hyperpage}{27}
-\indexentry{verifica@{verifica}!Geral.h@{Geral.\discretionary {-}{}{}h}|hyperpage}{27}
-\indexentry{app/header/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}h@{app/header/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}h}|hyperpage}{28}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!calcula\discretionary {-}{}{}Falha@{calcula\discretionary {-}{}{}Falha}|hyperpage}{29}
-\indexentry{calcula\discretionary {-}{}{}Falha@{calcula\discretionary {-}{}{}Falha}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{29}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{29}
-\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{29}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{29}
-\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{29}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!insere\discretionary {-}{}{}Interconexao@{insere\discretionary {-}{}{}Interconexao}|hyperpage}{30}
-\indexentry{insere\discretionary {-}{}{}Interconexao@{insere\discretionary {-}{}{}Interconexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{30}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!interconexao\discretionary {-}{}{}Vazia@{interconexao\discretionary {-}{}{}Vazia}|hyperpage}{31}
-\indexentry{interconexao\discretionary {-}{}{}Vazia@{interconexao\discretionary {-}{}{}Vazia}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{31}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{31}
-\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{31}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}|hyperpage}{32}
-\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{32}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!tamanho\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Conexao}|hyperpage}{32}
-\indexentry{tamanho\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Conexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{32}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}|hyperpage}{33}
-\indexentry{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{33}
-\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto@{total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto}|hyperpage}{33}
-\indexentry{total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto@{total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{33}
-\indexentry{app/header/\discretionary {-}{}{}Principal.\discretionary {-}{}{}h@{app/header/\discretionary {-}{}{}Principal.\discretionary {-}{}{}h}|hyperpage}{34}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Adaptador@{Adaptador}|hyperpage}{34}
-\indexentry{Adaptador@{Adaptador}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{34}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Cidade@{Cidade}|hyperpage}{34}
-\indexentry{Cidade@{Cidade}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{34}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Destino@{Destino}|hyperpage}{35}
-\indexentry{Destino@{Destino}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{35}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Falha@{Falha}|hyperpage}{35}
-\indexentry{Falha@{Falha}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{35}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Gerador@{Gerador}|hyperpage}{35}
-\indexentry{Gerador@{Gerador}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{35}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Interconexao@{Interconexao}|hyperpage}{35}
-\indexentry{Interconexao@{Interconexao}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{35}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Vazia@{Vazia}|hyperpage}{36}
-\indexentry{Vazia@{Vazia}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{36}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Vazio@{Vazio}|hyperpage}{36}
-\indexentry{Vazio@{Vazio}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{36}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!destino@{destino}|hyperpage}{36}
-\indexentry{destino@{destino}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{36}
-\indexentry{A\-D\-A\-P\-T\-A\-D\-O\-R@{A\-D\-A\-P\-T\-A\-D\-O\-R}!Principal.\-h@{Principal.\-h}|hyperpage}{36}
-\indexentry{Principal.\-h@{Principal.\-h}!A\-D\-A\-P\-T\-A\-D\-O\-R@{A\-D\-A\-P\-T\-A\-D\-O\-R}|hyperpage}{36}
-\indexentry{C\-I\-D\-A\-D\-E@{C\-I\-D\-A\-D\-E}!Principal.\-h@{Principal.\-h}|hyperpage}{36}
-\indexentry{Principal.\-h@{Principal.\-h}!C\-I\-D\-A\-D\-E@{C\-I\-D\-A\-D\-E}|hyperpage}{36}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!falha@{falha}|hyperpage}{36}
-\indexentry{falha@{falha}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{36}
-\indexentry{F\-A\-L\-H\-A@{F\-A\-L\-H\-A}!Principal.\-h@{Principal.\-h}|hyperpage}{36}
-\indexentry{Principal.\-h@{Principal.\-h}!F\-A\-L\-H\-A@{F\-A\-L\-H\-A}|hyperpage}{36}
-\indexentry{S\-E\-M\-\_\-\-F\-A\-L\-H\-A@{S\-E\-M\-\_\-\-F\-A\-L\-H\-A}!Principal.\-h@{Principal.\-h}|hyperpage}{36}
-\indexentry{Principal.\-h@{Principal.\-h}!S\-E\-M\-\_\-\-F\-A\-L\-H\-A@{S\-E\-M\-\_\-\-F\-A\-L\-H\-A}|hyperpage}{36}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!vazia@{vazia}|hyperpage}{36}
-\indexentry{vazia@{vazia}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{36}
-\indexentry{V\-A\-Z\-I\-A@{V\-A\-Z\-I\-A}!Principal.\-h@{Principal.\-h}|hyperpage}{37}
-\indexentry{Principal.\-h@{Principal.\-h}!V\-A\-Z\-I\-A@{V\-A\-Z\-I\-A}|hyperpage}{37}
-\indexentry{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}!Principal.\-h@{Principal.\-h}|hyperpage}{37}
-\indexentry{Principal.\-h@{Principal.\-h}!N\-A\-O\-\_\-\-V\-A\-Z\-I\-A@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}|hyperpage}{37}
-\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!vazio@{vazio}|hyperpage}{37}
-\indexentry{vazio@{vazio}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{37}
-\indexentry{V\-A\-Z\-I\-O@{V\-A\-Z\-I\-O}!Principal.\-h@{Principal.\-h}|hyperpage}{37}
-\indexentry{Principal.\-h@{Principal.\-h}!V\-A\-Z\-I\-O@{V\-A\-Z\-I\-O}|hyperpage}{37}
-\indexentry{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}!Principal.\-h@{Principal.\-h}|hyperpage}{37}
-\indexentry{Principal.\-h@{Principal.\-h}!N\-A\-O\-\_\-\-V\-A\-Z\-I\-O@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}|hyperpage}{37}
-\indexentry{app/src/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}c@{app/src/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}c}|hyperpage}{37}
-\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!adaptador\discretionary {-}{}{}Vazio@{adaptador\discretionary {-}{}{}Vazio}|hyperpage}{37}
-\indexentry{adaptador\discretionary {-}{}{}Vazio@{adaptador\discretionary {-}{}{}Vazio}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{37}
-\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{37}
-\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{37}
-\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!define\discretionary {-}{}{}Distribuicao@{define\discretionary {-}{}{}Distribuicao}|hyperpage}{37}
-\indexentry{define\discretionary {-}{}{}Distribuicao@{define\discretionary {-}{}{}Distribuicao}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{37}
-\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{38}
-\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{38}
-\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!insere\discretionary {-}{}{}Adaptador@{insere\discretionary {-}{}{}Adaptador}|hyperpage}{38}
-\indexentry{insere\discretionary {-}{}{}Adaptador@{insere\discretionary {-}{}{}Adaptador}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{38}
-\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{39}
-\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{39}
-\indexentry{app/src/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}c@{app/src/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}c}|hyperpage}{40}
-\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!cidade\discretionary {-}{}{}Vazia@{cidade\discretionary {-}{}{}Vazia}|hyperpage}{40}
-\indexentry{cidade\discretionary {-}{}{}Vazia@{cidade\discretionary {-}{}{}Vazia}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{40}
-\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{40}
-\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{40}
-\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{40}
-\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{40}
-\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!insere\discretionary {-}{}{}Cidade@{insere\discretionary {-}{}{}Cidade}|hyperpage}{40}
-\indexentry{insere\discretionary {-}{}{}Cidade@{insere\discretionary {-}{}{}Cidade}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{40}
-\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{41}
-\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{41}
-\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}|hyperpage}{42}
-\indexentry{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{42}
-\indexentry{app/src/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}c@{app/src/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}c}|hyperpage}{42}
-\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{42}
-\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{42}
-\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!gerador\discretionary {-}{}{}Vazio@{gerador\discretionary {-}{}{}Vazio}|hyperpage}{42}
-\indexentry{gerador\discretionary {-}{}{}Vazio@{gerador\discretionary {-}{}{}Vazio}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{42}
-\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{42}
-\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{42}
-\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!insere\discretionary {-}{}{}Gerador@{insere\discretionary {-}{}{}Gerador}|hyperpage}{42}
-\indexentry{insere\discretionary {-}{}{}Gerador@{insere\discretionary {-}{}{}Gerador}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{42}
-\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{43}
-\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{43}
-\indexentry{app/src/\discretionary {-}{}{}Geral.\discretionary {-}{}{}c@{app/src/\discretionary {-}{}{}Geral.\discretionary {-}{}{}c}|hyperpage}{44}
-\indexentry{Geral.\discretionary {-}{}{}c@{Geral.\discretionary {-}{}{}c}!conecta@{conecta}|hyperpage}{44}
-\indexentry{conecta@{conecta}!Geral.c@{Geral.\discretionary {-}{}{}c}|hyperpage}{44}
-\indexentry{Geral.\discretionary {-}{}{}c@{Geral.\discretionary {-}{}{}c}!verifica@{verifica}|hyperpage}{45}
-\indexentry{verifica@{verifica}!Geral.c@{Geral.\discretionary {-}{}{}c}|hyperpage}{45}
-\indexentry{app/src/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}c@{app/src/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}c}|hyperpage}{46}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!calcula\discretionary {-}{}{}Falha@{calcula\discretionary {-}{}{}Falha}|hyperpage}{46}
-\indexentry{calcula\discretionary {-}{}{}Falha@{calcula\discretionary {-}{}{}Falha}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{46}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{46}
-\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{46}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{46}
-\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{46}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!insere\discretionary {-}{}{}Interconexao@{insere\discretionary {-}{}{}Interconexao}|hyperpage}{47}
-\indexentry{insere\discretionary {-}{}{}Interconexao@{insere\discretionary {-}{}{}Interconexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{47}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!interconexao\discretionary {-}{}{}Vazia@{interconexao\discretionary {-}{}{}Vazia}|hyperpage}{48}
-\indexentry{interconexao\discretionary {-}{}{}Vazia@{interconexao\discretionary {-}{}{}Vazia}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{48}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{48}
-\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{48}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}|hyperpage}{48}
-\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{48}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!tamanho\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Conexao}|hyperpage}{48}
-\indexentry{tamanho\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Conexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{48}
-\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}|hyperpage}{49}
-\indexentry{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{49}
-\indexentry{app/src/\discretionary {-}{}{}Principal.\discretionary {-}{}{}c@{app/src/\discretionary {-}{}{}Principal.\discretionary {-}{}{}c}|hyperpage}{49}
-\indexentry{Principal.\discretionary {-}{}{}c@{Principal.\discretionary {-}{}{}c}!main@{main}|hyperpage}{49}
-\indexentry{main@{main}!Principal.c@{Principal.\discretionary {-}{}{}c}|hyperpage}{49}
-\indexentry{app/test/\discretionary {-}{}{}Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{app/test/\discretionary {-}{}{}Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{50}
-\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{50}
-\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{50}
-\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{50}
-\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{50}
-\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{50}
-\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{50}
-\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{50}
-\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{50}
-\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{50}
-\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{50}
-\indexentry{app/test/\discretionary {-}{}{}Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{app/test/\discretionary {-}{}{}Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{51}
-\indexentry{app/test/main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{app/test/main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{51}
-\indexentry{main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!main@{main}|hyperpage}{51}
-\indexentry{main@{main}!main_unittest.c@{main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{51}
-\indexentry{R\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}M\discretionary {-}{}{}E.\discretionary {-}{}{}md@{R\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}M\discretionary {-}{}{}E.\discretionary {-}{}{}md}|hyperpage}{51}
+\indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{19}
+\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{19}
+\indexentry{Adaptadores.\discretionary {-}{}{}h@{Adaptadores.\discretionary {-}{}{}h}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado}|hyperpage}{19}
+\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado}!Adaptadores.h@{Adaptadores.\discretionary {-}{}{}h}|hyperpage}{19}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}h@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}h}|hyperpage}{20}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!cidade\discretionary {-}{}{}Vazia@{cidade\discretionary {-}{}{}Vazia}|hyperpage}{20}
+\indexentry{cidade\discretionary {-}{}{}Vazia@{cidade\discretionary {-}{}{}Vazia}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{20}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{21}
+\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{21}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido@{gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido}|hyperpage}{21}
+\indexentry{gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido@{gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{21}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{21}
+\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{21}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!insere\discretionary {-}{}{}Cidade@{insere\discretionary {-}{}{}Cidade}|hyperpage}{22}
+\indexentry{insere\discretionary {-}{}{}Cidade@{insere\discretionary {-}{}{}Cidade}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{22}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{23}
+\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{23}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!numero\discretionary {-}{}{}Cidades@{numero\discretionary {-}{}{}Cidades}|hyperpage}{24}
+\indexentry{numero\discretionary {-}{}{}Cidades@{numero\discretionary {-}{}{}Cidades}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{24}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}|hyperpage}{24}
+\indexentry{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{24}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}|hyperpage}{24}
+\indexentry{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{24}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}|hyperpage}{25}
+\indexentry{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{25}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}|hyperpage}{25}
+\indexentry{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{25}
+\indexentry{Cidades.\discretionary {-}{}{}h@{Cidades.\discretionary {-}{}{}h}!tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario@{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario}|hyperpage}{26}
+\indexentry{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario@{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario}!Cidades.h@{Cidades.\discretionary {-}{}{}h}|hyperpage}{26}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}h@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}h}|hyperpage}{26}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{27}
+\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{27}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!custo\discretionary {-}{}{}Geradores@{custo\discretionary {-}{}{}Geradores}|hyperpage}{27}
+\indexentry{custo\discretionary {-}{}{}Geradores@{custo\discretionary {-}{}{}Geradores}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{27}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!gerador\discretionary {-}{}{}Vazio@{gerador\discretionary {-}{}{}Vazio}|hyperpage}{27}
+\indexentry{gerador\discretionary {-}{}{}Vazio@{gerador\discretionary {-}{}{}Vazio}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{27}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{28}
+\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{28}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!insere\discretionary {-}{}{}Gerador@{insere\discretionary {-}{}{}Gerador}|hyperpage}{28}
+\indexentry{insere\discretionary {-}{}{}Gerador@{insere\discretionary {-}{}{}Gerador}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{28}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{30}
+\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{30}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}|hyperpage}{30}
+\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{30}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!numero\discretionary {-}{}{}Geradores@{numero\discretionary {-}{}{}Geradores}|hyperpage}{31}
+\indexentry{numero\discretionary {-}{}{}Geradores@{numero\discretionary {-}{}{}Geradores}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{31}
+\indexentry{Geradores.\discretionary {-}{}{}h@{Geradores.\discretionary {-}{}{}h}!recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}|hyperpage}{31}
+\indexentry{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}!Geradores.h@{Geradores.\discretionary {-}{}{}h}|hyperpage}{31}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Geral.\discretionary {-}{}{}h@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Geral.\discretionary {-}{}{}h}|hyperpage}{32}
+\indexentry{Geral.\discretionary {-}{}{}h@{Geral.\discretionary {-}{}{}h}!conecta@{conecta}|hyperpage}{32}
+\indexentry{conecta@{conecta}!Geral.h@{Geral.\discretionary {-}{}{}h}|hyperpage}{32}
+\indexentry{Geral.\discretionary {-}{}{}h@{Geral.\discretionary {-}{}{}h}!verifica@{verifica}|hyperpage}{34}
+\indexentry{verifica@{verifica}!Geral.h@{Geral.\discretionary {-}{}{}h}|hyperpage}{34}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}h@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}h}|hyperpage}{35}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!calcula\discretionary {-}{}{}Falha@{calcula\discretionary {-}{}{}Falha}|hyperpage}{35}
+\indexentry{calcula\discretionary {-}{}{}Falha@{calcula\discretionary {-}{}{}Falha}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{35}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{36}
+\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{36}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto@{custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto}|hyperpage}{36}
+\indexentry{custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto@{custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{36}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!gerencia\discretionary {-}{}{}Falhas@{gerencia\discretionary {-}{}{}Falhas}|hyperpage}{36}
+\indexentry{gerencia\discretionary {-}{}{}Falhas@{gerencia\discretionary {-}{}{}Falhas}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{36}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{37}
+\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{37}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!insere\discretionary {-}{}{}Interconexao@{insere\discretionary {-}{}{}Interconexao}|hyperpage}{37}
+\indexentry{insere\discretionary {-}{}{}Interconexao@{insere\discretionary {-}{}{}Interconexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{37}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!interconexao\discretionary {-}{}{}Vazia@{interconexao\discretionary {-}{}{}Vazia}|hyperpage}{39}
+\indexentry{interconexao\discretionary {-}{}{}Vazia@{interconexao\discretionary {-}{}{}Vazia}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{39}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{39}
+\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{39}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}|hyperpage}{40}
+\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{40}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas@{numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas}|hyperpage}{40}
+\indexentry{numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas@{numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{40}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!tamanho\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Conexao}|hyperpage}{41}
+\indexentry{tamanho\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Conexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{41}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}|hyperpage}{42}
+\indexentry{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{42}
+\indexentry{Interconexoes.\discretionary {-}{}{}h@{Interconexoes.\discretionary {-}{}{}h}!total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto@{total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto}|hyperpage}{42}
+\indexentry{total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto@{total\discretionary {-}{}{}Gasto\discretionary {-}{}{}Conserto}!Interconexoes.h@{Interconexoes.\discretionary {-}{}{}h}|hyperpage}{42}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Principal.\discretionary {-}{}{}h@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/header/\discretionary {-}{}{}Principal.\discretionary {-}{}{}h}|hyperpage}{42}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Adaptador@{Adaptador}|hyperpage}{43}
+\indexentry{Adaptador@{Adaptador}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{43}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Cidade@{Cidade}|hyperpage}{43}
+\indexentry{Cidade@{Cidade}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{43}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Condicao\discretionary {-}{}{}Cidade@{Condicao\discretionary {-}{}{}Cidade}|hyperpage}{44}
+\indexentry{Condicao\discretionary {-}{}{}Cidade@{Condicao\discretionary {-}{}{}Cidade}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{44}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Destino@{Destino}|hyperpage}{44}
+\indexentry{Destino@{Destino}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{44}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Falha@{Falha}|hyperpage}{44}
+\indexentry{Falha@{Falha}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{44}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Gerador@{Gerador}|hyperpage}{44}
+\indexentry{Gerador@{Gerador}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{44}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Interconexao@{Interconexao}|hyperpage}{44}
+\indexentry{Interconexao@{Interconexao}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{44}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Relatorio@{Relatorio}|hyperpage}{45}
+\indexentry{Relatorio@{Relatorio}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{45}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Vazia@{Vazia}|hyperpage}{45}
+\indexentry{Vazia@{Vazia}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{45}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!Vazio@{Vazio}|hyperpage}{46}
+\indexentry{Vazio@{Vazio}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{46}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!condicao\discretionary {-}{}{}Cidade@{condicao\discretionary {-}{}{}Cidade}|hyperpage}{46}
+\indexentry{condicao\discretionary {-}{}{}Cidade@{condicao\discretionary {-}{}{}Cidade}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{46}
+\indexentry{V\-E\-R\-D\-E@{V\-E\-R\-D\-E}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!V\-E\-R\-D\-E@{V\-E\-R\-D\-E}|hyperpage}{46}
+\indexentry{A\-M\-A\-R\-E\-L\-O@{A\-M\-A\-R\-E\-L\-O}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!A\-M\-A\-R\-E\-L\-O@{A\-M\-A\-R\-E\-L\-O}|hyperpage}{46}
+\indexentry{V\-E\-R\-M\-E\-L\-H\-O@{V\-E\-R\-M\-E\-L\-H\-O}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!V\-E\-R\-M\-E\-L\-H\-O@{V\-E\-R\-M\-E\-L\-H\-O}|hyperpage}{46}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!destino@{destino}|hyperpage}{46}
+\indexentry{destino@{destino}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{46}
+\indexentry{A\-D\-A\-P\-T\-A\-D\-O\-R@{A\-D\-A\-P\-T\-A\-D\-O\-R}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!A\-D\-A\-P\-T\-A\-D\-O\-R@{A\-D\-A\-P\-T\-A\-D\-O\-R}|hyperpage}{46}
+\indexentry{C\-I\-D\-A\-D\-E@{C\-I\-D\-A\-D\-E}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!C\-I\-D\-A\-D\-E@{C\-I\-D\-A\-D\-E}|hyperpage}{46}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!falha@{falha}|hyperpage}{46}
+\indexentry{falha@{falha}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{46}
+\indexentry{F\-A\-L\-H\-A@{F\-A\-L\-H\-A}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!F\-A\-L\-H\-A@{F\-A\-L\-H\-A}|hyperpage}{46}
+\indexentry{S\-E\-M\-\_\-\-F\-A\-L\-H\-A@{S\-E\-M\-\_\-\-F\-A\-L\-H\-A}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!S\-E\-M\-\_\-\-F\-A\-L\-H\-A@{S\-E\-M\-\_\-\-F\-A\-L\-H\-A}|hyperpage}{46}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!vazia@{vazia}|hyperpage}{46}
+\indexentry{vazia@{vazia}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{46}
+\indexentry{V\-A\-Z\-I\-A@{V\-A\-Z\-I\-A}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!V\-A\-Z\-I\-A@{V\-A\-Z\-I\-A}|hyperpage}{46}
+\indexentry{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!N\-A\-O\-\_\-\-V\-A\-Z\-I\-A@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}|hyperpage}{46}
+\indexentry{Principal.\discretionary {-}{}{}h@{Principal.\discretionary {-}{}{}h}!vazio@{vazio}|hyperpage}{46}
+\indexentry{vazio@{vazio}!Principal.h@{Principal.\discretionary {-}{}{}h}|hyperpage}{46}
+\indexentry{V\-A\-Z\-I\-O@{V\-A\-Z\-I\-O}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!V\-A\-Z\-I\-O@{V\-A\-Z\-I\-O}|hyperpage}{46}
+\indexentry{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}!Principal.\-h@{Principal.\-h}|hyperpage}{46}
+\indexentry{Principal.\-h@{Principal.\-h}!N\-A\-O\-\_\-\-V\-A\-Z\-I\-O@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}|hyperpage}{46}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Adaptadores.\discretionary {-}{}{}c}|hyperpage}{47}
+\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!adaptador\discretionary {-}{}{}Vazio@{adaptador\discretionary {-}{}{}Vazio}|hyperpage}{47}
+\indexentry{adaptador\discretionary {-}{}{}Vazio@{adaptador\discretionary {-}{}{}Vazio}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{47}
+\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{47}
+\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{47}
+\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!define\discretionary {-}{}{}Distribuicao@{define\discretionary {-}{}{}Distribuicao}|hyperpage}{47}
+\indexentry{define\discretionary {-}{}{}Distribuicao@{define\discretionary {-}{}{}Distribuicao}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{47}
+\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{48}
+\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{48}
+\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!insere\discretionary {-}{}{}Adaptador@{insere\discretionary {-}{}{}Adaptador}|hyperpage}{48}
+\indexentry{insere\discretionary {-}{}{}Adaptador@{insere\discretionary {-}{}{}Adaptador}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{48}
+\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}|hyperpage}{49}
+\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Adaptador}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{49}
+\indexentry{Adaptadores.\discretionary {-}{}{}c@{Adaptadores.\discretionary {-}{}{}c}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado}|hyperpage}{50}
+\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Adaptado}!Adaptadores.c@{Adaptadores.\discretionary {-}{}{}c}|hyperpage}{50}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Cidades.\discretionary {-}{}{}c}|hyperpage}{50}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!cidade\discretionary {-}{}{}Vazia@{cidade\discretionary {-}{}{}Vazia}|hyperpage}{51}
+\indexentry{cidade\discretionary {-}{}{}Vazia@{cidade\discretionary {-}{}{}Vazia}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{51}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{51}
+\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{51}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido@{gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido}|hyperpage}{51}
+\indexentry{gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido@{gerencia\discretionary {-}{}{}Recurso\discretionary {-}{}{}Recebido}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{51}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{51}
+\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{51}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!insere\discretionary {-}{}{}Cidade@{insere\discretionary {-}{}{}Cidade}|hyperpage}{51}
+\indexentry{insere\discretionary {-}{}{}Cidade@{insere\discretionary {-}{}{}Cidade}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{51}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}|hyperpage}{52}
+\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Cidade}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{52}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!numero\discretionary {-}{}{}Cidades@{numero\discretionary {-}{}{}Cidades}|hyperpage}{53}
+\indexentry{numero\discretionary {-}{}{}Cidades@{numero\discretionary {-}{}{}Cidades}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{53}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}|hyperpage}{53}
+\indexentry{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}Negativadas}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{53}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}|hyperpage}{53}
+\indexentry{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{numero\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{53}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}|hyperpage}{54}
+\indexentry{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Gasto\discretionary {-}{}{}Total}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{54}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}|hyperpage}{54}
+\indexentry{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho@{tempo\discretionary {-}{}{}Cidades\discretionary {-}{}{}No\discretionary {-}{}{}Vermelho}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{54}
+\indexentry{Cidades.\discretionary {-}{}{}c@{Cidades.\discretionary {-}{}{}c}!tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario@{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario}|hyperpage}{54}
+\indexentry{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario@{tempo\discretionary {-}{}{}Sem\discretionary {-}{}{}Recurso\discretionary {-}{}{}Necessario}!Cidades.c@{Cidades.\discretionary {-}{}{}c}|hyperpage}{54}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Geradores.\discretionary {-}{}{}c}|hyperpage}{54}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{55}
+\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{55}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!custo\discretionary {-}{}{}Geradores@{custo\discretionary {-}{}{}Geradores}|hyperpage}{55}
+\indexentry{custo\discretionary {-}{}{}Geradores@{custo\discretionary {-}{}{}Geradores}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{55}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!gerador\discretionary {-}{}{}Vazio@{gerador\discretionary {-}{}{}Vazio}|hyperpage}{55}
+\indexentry{gerador\discretionary {-}{}{}Vazio@{gerador\discretionary {-}{}{}Vazio}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{55}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{55}
+\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{55}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!insere\discretionary {-}{}{}Gerador@{insere\discretionary {-}{}{}Gerador}|hyperpage}{56}
+\indexentry{insere\discretionary {-}{}{}Gerador@{insere\discretionary {-}{}{}Gerador}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{56}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}|hyperpage}{57}
+\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Gerador}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{57}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}|hyperpage}{57}
+\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Produzido}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{57}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!numero\discretionary {-}{}{}Geradores@{numero\discretionary {-}{}{}Geradores}|hyperpage}{58}
+\indexentry{numero\discretionary {-}{}{}Geradores@{numero\discretionary {-}{}{}Geradores}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{58}
+\indexentry{Geradores.\discretionary {-}{}{}c@{Geradores.\discretionary {-}{}{}c}!recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}|hyperpage}{58}
+\indexentry{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total@{recurso\discretionary {-}{}{}Produzido\discretionary {-}{}{}Total}!Geradores.c@{Geradores.\discretionary {-}{}{}c}|hyperpage}{58}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Geral.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Geral.\discretionary {-}{}{}c}|hyperpage}{58}
+\indexentry{Geral.\discretionary {-}{}{}c@{Geral.\discretionary {-}{}{}c}!conecta@{conecta}|hyperpage}{58}
+\indexentry{conecta@{conecta}!Geral.c@{Geral.\discretionary {-}{}{}c}|hyperpage}{58}
+\indexentry{Geral.\discretionary {-}{}{}c@{Geral.\discretionary {-}{}{}c}!verifica@{verifica}|hyperpage}{59}
+\indexentry{verifica@{verifica}!Geral.c@{Geral.\discretionary {-}{}{}c}|hyperpage}{59}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Interconexoes.\discretionary {-}{}{}c}|hyperpage}{60}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!calcula\discretionary {-}{}{}Falha@{calcula\discretionary {-}{}{}Falha}|hyperpage}{61}
+\indexentry{calcula\discretionary {-}{}{}Falha@{calcula\discretionary {-}{}{}Falha}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{61}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{61}
+\indexentry{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{cria\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{61}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto@{custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto}|hyperpage}{61}
+\indexentry{custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto@{custo\discretionary {-}{}{}Gasto\discretionary {-}{}{}Com\discretionary {-}{}{}Conserto}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{61}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!gerencia\discretionary {-}{}{}Falhas@{gerencia\discretionary {-}{}{}Falhas}|hyperpage}{62}
+\indexentry{gerencia\discretionary {-}{}{}Falhas@{gerencia\discretionary {-}{}{}Falhas}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{62}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{62}
+\indexentry{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{imprime\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{62}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!insere\discretionary {-}{}{}Interconexao@{insere\discretionary {-}{}{}Interconexao}|hyperpage}{62}
+\indexentry{insere\discretionary {-}{}{}Interconexao@{insere\discretionary {-}{}{}Interconexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{62}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!interconexao\discretionary {-}{}{}Vazia@{interconexao\discretionary {-}{}{}Vazia}|hyperpage}{63}
+\indexentry{interconexao\discretionary {-}{}{}Vazia@{interconexao\discretionary {-}{}{}Vazia}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{63}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}|hyperpage}{63}
+\indexentry{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao@{libera\discretionary {-}{}{}Lista\discretionary {-}{}{}Interconexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{63}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}|hyperpage}{64}
+\indexentry{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado@{mandar\discretionary {-}{}{}Recurso\discretionary {-}{}{}Transportado}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{64}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas@{numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas}|hyperpage}{64}
+\indexentry{numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas@{numero\discretionary {-}{}{}Total\discretionary {-}{}{}Falhas}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{64}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!tamanho\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Conexao}|hyperpage}{64}
+\indexentry{tamanho\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Conexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{64}
+\indexentry{Interconexoes.\discretionary {-}{}{}c@{Interconexoes.\discretionary {-}{}{}c}!tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}|hyperpage}{65}
+\indexentry{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao@{tamanho\discretionary {-}{}{}Total\discretionary {-}{}{}Conexao}!Interconexoes.c@{Interconexoes.\discretionary {-}{}{}c}|hyperpage}{65}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Principal.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/app/src/\discretionary {-}{}{}Principal.\discretionary {-}{}{}c}|hyperpage}{65}
+\indexentry{Principal.\discretionary {-}{}{}c@{Principal.\discretionary {-}{}{}c}!main@{main}|hyperpage}{65}
+\indexentry{main@{main}!Principal.c@{Principal.\discretionary {-}{}{}c}|hyperpage}{65}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}M\discretionary {-}{}{}E.\discretionary {-}{}{}md@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/\discretionary {-}{}{}R\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}M\discretionary {-}{}{}E.\discretionary {-}{}{}md}|hyperpage}{66}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{66}
+\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{67}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{67}
+\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{67}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{67}
+\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{67}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{67}
+\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{67}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{67}
+\indexentry{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{67}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Adaptadores_unittest.c@{Adaptadores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{67}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{67}
+\indexentry{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{68}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Cidades_unittest.c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{68}
+\indexentry{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{68}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Cidades_unittest.c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{68}
+\indexentry{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{68}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Cidades_unittest.c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{68}
+\indexentry{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{68}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Cidades_unittest.c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{68}
+\indexentry{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{68}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Cidades_unittest.c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{68}
+\indexentry{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{68}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Cidades_unittest.c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{68}
+\indexentry{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{68}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Cidades_unittest.c@{Cidades\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{68}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{68}
+\indexentry{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{69}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Geradores_unittest.c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{69}
+\indexentry{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{69}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Geradores_unittest.c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{69}
+\indexentry{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{69}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Geradores_unittest.c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{69}
+\indexentry{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{69}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Geradores_unittest.c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{69}
+\indexentry{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{69}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Geradores_unittest.c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{69}
+\indexentry{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{69}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Geradores_unittest.c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{69}
+\indexentry{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{69}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Geradores_unittest.c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{69}
+\indexentry{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{69}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Geradores_unittest.c@{Geradores\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{69}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/\discretionary {-}{}{}Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{70}
+\indexentry{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{70}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Interconexoes_unittest.c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{70}
+\indexentry{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{70}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Interconexoes_unittest.c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{70}
+\indexentry{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{70}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Interconexoes_unittest.c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{70}
+\indexentry{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{70}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Interconexoes_unittest.c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{70}
+\indexentry{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{70}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Interconexoes_unittest.c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{70}
+\indexentry{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{71}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Interconexoes_unittest.c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{71}
+\indexentry{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}|hyperpage}{71}
+\indexentry{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T@{T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T}!Interconexoes_unittest.c@{Interconexoes\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{71}
+\indexentry{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{/home/eduardo/\discretionary {-}{}{}Trabalho\discretionary {-}{}{}M\discretionary {-}{}{}P/test/main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{71}
+\indexentry{main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c@{main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}!main@{main}|hyperpage}{71}
+\indexentry{main@{main}!main_unittest.c@{main\discretionary {-}{}{}\_\discretionary {-}{}{}unittest.\discretionary {-}{}{}c}|hyperpage}{71}
