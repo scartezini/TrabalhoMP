@@ -205,7 +205,7 @@ void imprimeListaCidade(Cidade *listaAlvo){
 		/**
 		*	Imprime os atributos da cidade corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso necessario: %d recurso recebido: %d recurso gasto: %d\n"
+		printf(" - nome: %s | pos_x: %d | pos_y: %d | recurso necessario: %d | recurso recebido: %d | recurso gasto: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoNecessario,aux->recursoRecebido
 				,aux->recursoGasto);
@@ -307,6 +307,9 @@ int recursoGastoTotal(Cidade *listaAlvo){
 /**
 *	Funcao: numeroCidades (Iterador)
 *
+*	AssertivaEntrada:
+*		assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+*
 *	AssertivaSaida:
 *		total >= 0;
 *
@@ -346,12 +349,11 @@ int numeroCidades(Cidade *listaAlvo){
 	return total;
 }
 
-
-
-
 /**
 *	Funcao: gerenciaRecursoRecebido
 *
+*	AssertivaEntrada:
+*		assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 *
 *	Hipóteses:
 *		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
@@ -372,23 +374,25 @@ void gerenciaRecursoRecebido(Cidade *listaAlvo){
 	float porcentagemRecursoNecessario;
 
 	while (listaAlvo != NULL) {
-		//!AE : percorrer a lista de cidades
+	//! AE: listaAlvo nao chegou ao fim
+	
+		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 		cidade = listaAlvo;
 
 		cidade->recursoGasto += cidade->recursoRecebido;
 		porcentagemRecursoNecessario = (cidade->recursoRecebido / cidade->recursoNecessario)*100;
 
 		if(porcentagemRecursoNecessario >= 100){
-			//!AE : se a porcentagem do recurso Necessario eh positiva
+		//! AE: a porcentagem do recurso Necessario eh positiva
 			cidade->tagEstado = VERDE;
 		}
 		else if(porcentagemRecursoNecessario < 100 && porcentagemRecursoNecessario >= 30){
-			//!AE: se a porcentagem eh negativa mas nao critica
+		//! AE: a porcentagem eh negativa mas nao critica
 			cidade->tagEstado = AMARELO;
 			cidade->turnosNegativados += 1;
 		}
 		else{
-			//!AE: se a porcentagem eh critica
+		//! AE: a porcentagem eh critica
 			cidade->tagEstado = VERMELHO;
 			cidade->turnosNegativados += 1;
 			cidade->turnosNoVermelho += 1;
@@ -396,10 +400,17 @@ void gerenciaRecursoRecebido(Cidade *listaAlvo){
 
 		listaAlvo = listaAlvo->proximo;
 	}
+	//! AS: listaAlvo chegou ao fim
 }
 
 /**
 *	Funcao: numeroCidadesNegativadas
+*
+*	AssertivaEntrada:
+*		assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+*
+*	AssertivaSaida:
+*		total >= 0;
 *
 *	Hipóteses:
 *		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
@@ -418,27 +429,36 @@ int numeroCidadesNegativadas(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 
 	Cidade *cidade;
-	int somatorio = 0;
+	int total = 0;
 
 	while (listaAlvo != NULL) {
-		//! AE: percorrer a lista de cidade
+	//! AE: listaAlvo nao chegou ao fim
+	
+		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 		cidade = listaAlvo;
 
 		if(cidade->turnosNegativados > 0){
-			//! AE : teve algum turno negativado
-			somatorio++;
+		//! AE: teve algum turno negativado
+			total++;
 		}
 
 		listaAlvo = listaAlvo->proximo;
 	}
-
-	return somatorio;
+	//! AS: listaAlvo chegou ao fim
+	
+	assert(total >= 0);
+	
+	return total;
 }
-
-
 
 /**
 *	Funcao: tempoSemRecursoNecessario
+*
+*	AssertivaEntrada:
+*		assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+*
+*	AssertivaSaida:
+*		total >= 0;
 *
 *	Hipóteses:
 *		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
@@ -457,22 +477,33 @@ int tempoSemRecursoNecessario(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 
 	Cidade *cidade;
-	int somatorio = 0;
+	int total = 0;
 
 	while(listaAlvo != NULL){
-		//! AE: percorrer lista de cidades
+	//! AE: listaAlvo nao chegou ao fim
+	
+		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida	
 		cidade = listaAlvo;
 
-		somatorio = cidade->turnosNegativados;
+		total += cidade->turnosNegativados;
 
 		listaAlvo = listaAlvo->proximo;
 	}
+	//! AS: listaAlvo chegou ao fim
 
-	return somatorio;
+	assert(total >= 0);
+
+	return total;
 }
 
 /**
 *	Funcao: numeroCidadesNoVermelho
+*
+*	AssertivaEntrada:
+*		assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+*
+*	AssertivaSaida:
+*		total >= 0;
 *
 *	Hipóteses:
 *		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
@@ -491,26 +522,37 @@ int numeroCidadesNoVermelho(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 
 	Cidade *cidade;
-	int somatorio = 0;
+	int total = 0;
 
 	while (listaAlvo != NULL) {
-		//! AE: percorrer a lista de cidade
+	//! AE: listaAlvo nao chegou ao fim
+	
+		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida	
 		cidade = listaAlvo;
 
 		if(cidade->turnosNoVermelho > 0){
-			//! AE : teve algum turno no vermelho
-			somatorio++;
+		//! AE: teve algum turno no vermelho
+			total++;
 		}
 
 		listaAlvo = listaAlvo->proximo;
 	}
-
-	return somatorio;
+	//! AS: listaAlvo chegou ao fim
+	
+	assert(total >= 0);
+		
+	return total;
 
 }
 
 /**
 *	Funcao: tempoSemRecursoNecessario
+*
+*	AssertivaEntrada:
+*		assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
+*
+*	AssertivaSaida:
+*		total >= 0;
 *
 *	Hipóteses:
 *		listaAlvo - ponteiro para o inicio da lista do tipo Cidade
@@ -529,16 +571,21 @@ int tempoCidadesNoVermelho(Cidade *listaAlvo){
 	assert(cidadeVazia(listaAlvo) == NAO_VAZIA);
 
 	Cidade *cidade;
-	int somatorio = 0;
+	int total = 0;
 
 	while(listaAlvo != NULL){
-		//! AE: percorrer lista de cidades
+	//! AE: listaAlvo nao chegou ao fim
+	
+		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida	
 		cidade = listaAlvo;
 
-		somatorio = cidade->turnosNoVermelho;
+		total += cidade->turnosNoVermelho;
 
 		listaAlvo = listaAlvo->proximo;
 	}
-
-	return somatorio;
+	//! AS: listaAlvo chegou ao fim
+	
+	assert(total >= 0);
+	
+	return total;
 }
