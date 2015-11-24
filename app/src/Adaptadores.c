@@ -200,7 +200,7 @@ void imprimeListaAdaptador(Adaptador *listaAlvo){
 		/**
 		*	Imprime os atributos do adaptador corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso recebido: %d quantidade de saídas: %d\n"
+		printf(" - nome: %s | pos_x: %d | pos_y: %d | recurso recebido: %d | quantidade de saídas: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1]
 				,aux->recursoRecebido
