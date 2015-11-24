@@ -150,6 +150,9 @@ int custoGeradores(Gerador *);
 *
 *	@param listaAlvo
 *		ponteiro para o inicio da lista de geradores
+*
+*	Assertiva de entrada:
+*		estrutura do tipo Gerador, nao vazia
 **/
 void mandarRecursoProduzido(Gerador *);
 

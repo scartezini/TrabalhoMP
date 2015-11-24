@@ -106,9 +106,12 @@ void liberaListaAdaptador(Adaptador *);
 *	Essa funcao espera que a lista de interconexoes ja foi previamente
 * estabelecida
 *
-*
 *	@param listaAlvo
 *		ponteiro para o inico da lista de adaptadores;
+*
+*	Assertiva de entrada:
+*		A lista nao deve ser vazia
+*		A lista de saidas nao deve ser vazia
 **/
 void defineDistribuicao(Adaptador *);
 
