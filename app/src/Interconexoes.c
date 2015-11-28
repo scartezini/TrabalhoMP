@@ -240,7 +240,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 		/**
 		*	Imprime os atributos da interconexao corrente
 		**/
-		printf("nome: %s posI_x: %d posI_y: %d posF_x: %d posF_y: %d tag destino: %d chance falha: %.2f tempo conserto: %d custo conserto: %d número falha: %d tag falha: %d capacidade máxima: %d recurso transportado: %d\n"
+		printf(" - nome: %s | posI_x: %d | posI_y: %d | posF_x: %d | posF_y: %d | tag destino: %d | chance falha: %.2f | tempo conserto: %d | custo conserto: %d | número falha: %d | tag falha: %d | capacidade máxima: %d | recurso transportado: %d\n"
 				,aux->nome,aux->posicaoInicial[0],aux->posicaoInicial[1],aux->posicaoFinal[0],aux->posicaoFinal[1]
 				,aux->tagDestino, aux->chanceFalha, aux->tempoConserto, aux->custoConserto, aux->numeroFalha
 				,aux->tagFalha, aux->capacidadeMaxima, aux->recursoTransportado);
