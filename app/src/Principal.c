@@ -1,4 +1,5 @@
-#include "../header/Geral.h"
+#include "../header/Interface.h"
+
 
 int main()
 {
@@ -75,6 +76,11 @@ int main()
 	conecta(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 
+
+
+	inicializa(listaGeradores,listaInterconexoes,listaAdaptadores,listaCidades);
+	getch();
+	endwin();			/* End curses mode		  */
 
 	for(i=0;i<tempoSimulacao;i++){
 		gerenciaFalhas(listaInterconexoes);
