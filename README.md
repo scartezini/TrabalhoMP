@@ -1,7 +1,5 @@
-# TrabalhoMP
+# Rede de distribuição
 Projeto da disciplina de Métodos de Programação (2/2015) na Universidade de Brasília 
-
-Rede de distribuição
 
 Obs.: Todos os comandos a seguir devem ser executados no diretório raiz do projeto
 
