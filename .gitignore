@@ -7,7 +7,7 @@
 *.gcov
 *.gcna
 *.gcno
-
+*.gcda
 
 # Precompiled Headers
 *.gch

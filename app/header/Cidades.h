@@ -149,9 +149,8 @@ int numeroCidades(Cidade *);
 *	@param listaAlvo
 *		ponteiro para o inicio da lista de cidades
 *
-*
 *	Assertiva de entrada:
-*		estrutura do tipo Cidade
+*		estrutura do tipo Cidade, nao vazia
 *
 **/
 void gerenciaRecursoRecebido(Cidade *);
@@ -169,7 +168,10 @@ void gerenciaRecursoRecebido(Cidade *);
 *		total de cidades que ficaram com menos recurso que o necessario
 *
 *	Assertiva de entrada:
-*		estrutura do tipo Cidade
+*		estrutura do tipo Cidade, nao vazia
+*
+*	Assertiva de saida:
+*		numero total de cidades negativadas na lista de cidades
 **/
 int numeroCidadesNegativadas(Cidade *);
 
@@ -187,7 +189,10 @@ int numeroCidadesNegativadas(Cidade *);
 *		total da soma dos tempos que as cidades ficaram sem recurso necessario
 *
 *	Assertiva de entrada:
-*		estrutura do tipo Cidade
+*		estrutura do tipo Cidade, nao vazia
+*
+*	Assertiva de saida:
+*		numero total de cidades turnos negativos na lista de cidades
 **/
 int tempoSemRecursoNecessario(Cidade *);
 
@@ -205,7 +210,10 @@ int tempoSemRecursoNecessario(Cidade *);
 *		total de cidades que receberam menos de 30% do recurso necessario
 *
 *	Assertiva de entrada:
-*		estrutura do tipo Cidade
+*		estrutura do tipo Cidade, nao vazia
+*
+*	Assertiva de saida:
+*		numero total de cidades no vermelho na lista de cidades
 **/
 int numeroCidadesNoVermelho(Cidade *);
 
@@ -224,6 +232,9 @@ int numeroCidadesNoVermelho(Cidade *);
 *     de 30% do recurso necessario
 *
 *	Assertiva de entrada:
-*		estrutura do tipo Cidade
+*		estrutura do tipo Cidade, nao vazia
+*
+*	Assertiva de saida:
+*		tempo total de cidades no vermelho na lista de cidades
 **/
 int tempoCidadesNoVermelho(Cidade *);
