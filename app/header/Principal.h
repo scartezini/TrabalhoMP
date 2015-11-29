@@ -3,6 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <ncurses.h>
+#include <unistd.h>
 
 /** -----------------------Enumeracoes---------------------------- */
 

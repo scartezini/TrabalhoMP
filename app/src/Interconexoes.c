@@ -412,16 +412,16 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 Falha calculaFalha(Interconexao *listaAlvo){
 	assert(listaAlvo->chanceFalha >= 0 && listaAlvo->chanceFalha <= 1);
 
-	int numGerado;
+	float numGerado;
 	float num;
 	float chance = listaAlvo->chanceFalha;
 
 	//! Asseriva estrutural: num eh um numero gerado aleatoriamente
-	srand(1);
 	numGerado = rand() % 101;
 	num = numGerado/100;
 
-	return ( (chance > 0) && (chance <= num) ) ? FALHA : SEM_FALHA;
+	mvprintw(1,0,"%f falha", num);
+	return ( (chance > 0) && (chance <= num) ) ? SEM_FALHA : FALHA ;
 }
 
 /**
@@ -628,4 +628,14 @@ void gerenciaFalhas(Interconexao *listaAlvo){
 		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: listaAlvo chegou ao fim
+}
+
+
+void zerarInterconexoes(interconexao *listaAlvo){
+	Interconexao *conexao;
+
+	for(conexao = listaAlvo ; conexao != NULL ; conexao = conexao->proximo){
+		conexao->recursoTransportado = 0;
+	}
+
 }
