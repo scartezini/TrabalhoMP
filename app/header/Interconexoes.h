@@ -279,3 +279,5 @@ int numeroTotalFalhas(Interconexao *);
 *			Fimse
 **/
 void gerenciaFalhas(Interconexao *);
+
+void zerarInterconexoes(interconexao *);

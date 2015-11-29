@@ -1,8 +1,9 @@
 #include "../header/Interface.h"
 
 
-int main()
-{
+
+int main(){
+
 	FILE *fp;
 	Cidade *listaCidades = criaListaCidade();
 	Gerador *listaGeradores = criaListaGerador();
@@ -79,10 +80,22 @@ int main()
 
 
 	inicializa(listaGeradores,listaInterconexoes,listaAdaptadores,listaCidades);
+	mvprintw(0,0,"Precione enter para comecar!");
 	getch();
-	endwin();			/* End curses mode		  */
+	mvprintw(0,0,"                             ");
 
+	srand(1);
 	for(i=0;i<tempoSimulacao;i++){
+
+		start_color();			/* Start color 			*/
+	  init_pair(1, COLOR_GREEN, COLOR_BLACK);
+		attron(COLOR_PAIR(1));
+		mvprintw(0,0,"%d segundos", i);
+
+
+		zerarCidades(listaCidades);
+		zerarAdaptadores(listaAdaptadores);
+		zerarInterconexoes(listaInterconexoes);
 		gerenciaFalhas(listaInterconexoes);
 		//! AE: manda recurso ate os adaptadores
 		mandarRecursoProduzido(listaGeradores);
@@ -90,8 +103,17 @@ int main()
 		//!	AE: mandar  o recurso ate as cidades
 		mandarRecursoAdaptado(listaAdaptadores);
 		gerenciaRecursoRecebido(listaCidades);
-	}
 
+		atualizaCidades(listaCidades);
+		atualizaInterconexoes(listaInterconexoes);
+		//sleep(1);
+		getch();
+	}
+	mvprintw(0,0,"                             ");
+	mvprintw(1,0,"                             ");
+	mvprintw(0,0,"Precione enter para finalizar!");
+	getch();
+	endwin();			/* End curses mode		  */
 	//! Comentarios de argumentacao
 		/**
 		*	Imprimindo as listas obtidas a partir do arquivo de entrada
