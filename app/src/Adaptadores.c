@@ -183,11 +183,7 @@ Adaptador* insereAdaptador(char *registro, Adaptador *listaAlvo){
 *		impressao da lista de adaptadores
 *
 *	Interfaces explicitas:
-*		void, imprimeListaAdaptador, Adaptador *listaAlvo
-*
-*	Interfaces implicitas:
-*		listaAlvo - lista de adaptadores
-**/
+*		void, imprimeListaAdaptador, Adaptador *listaAlvo**/
 void imprimeListaAdaptador(Adaptador *listaAlvo){
 	assert(adaptadorVazio(listaAlvo) == NAO_VAZIO);
 
@@ -200,7 +196,7 @@ void imprimeListaAdaptador(Adaptador *listaAlvo){
 		/**
 		*	Imprime os atributos do adaptador corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso recebido: %d quantidade de saídas: %d\n"
+		printf(" - nome: %s | pos_x: %d | pos_y: %d | recurso recebido: %d | quantidade de saídas: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1]
 				,aux->recursoRecebido
@@ -363,7 +359,7 @@ void defineDistribuicao(Adaptador *listaAlvo){
 *
 *	Interfaces explicitas:
 *		void, mandarRecursoAdaptado, Adaptador *listaAlvo
-*	
+*
 *	Interfaces implicitas:
 *		listaAlvo - lista de adaptadores
 **/
@@ -384,7 +380,7 @@ void mandarRecursoAdaptado(Adaptador *listaAlvo){
 
 			//! Assertiva estrutural: atual eh a saida atual na lista de saidas do adaptador
 			atual = conexao;
-			
+
 			while(atual->saidaInterconexao != NULL){
 			//! AE: a lista de interconexoes da saida nao chegou ao fim
 
@@ -427,8 +423,18 @@ void mandarRecursoAdaptado(Adaptador *listaAlvo){
 			conexao = conexao->proximoSaidaAdaptador;
 		}
 		//! AS: a lista de saidas do adaptador chegou ao fim
-		
+
 		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: a listaAlvo chegou ao fim
+}
+
+
+void zerarAdaptadores(Adaptador *listaAlvo){
+	Adaptador *adaptador;
+
+	for(adaptador = listaAlvo ; adaptador != NULL ; adaptador = adaptador->proximo){
+		adaptador->recursoRecebido = 0;
+	}
+
 }

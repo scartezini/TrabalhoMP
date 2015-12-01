@@ -128,3 +128,6 @@ void defineDistribuicao(Adaptador *);
 *		ponteiro para o inico da lista de adaptadores;
 **/
 void mandarRecursoAdaptado(Adaptador *);
+
+
+void zerarAdaptadores(Adaptador *);

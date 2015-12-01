@@ -240,7 +240,7 @@ void imprimeListaInterconexao(Interconexao *listaAlvo){
 		/**
 		*	Imprime os atributos da interconexao corrente
 		**/
-		printf("nome: %s posI_x: %d posI_y: %d posF_x: %d posF_y: %d tag destino: %d chance falha: %.2f tempo conserto: %d custo conserto: %d número falha: %d tag falha: %d capacidade máxima: %d recurso transportado: %d\n"
+		printf(" - nome: %s | posI_x: %d | posI_y: %d | posF_x: %d | posF_y: %d | tag destino: %d | chance falha: %.2f | tempo conserto: %d | custo conserto: %d | número falha: %d | tag falha: %d | capacidade máxima: %d | recurso transportado: %d\n"
 				,aux->nome,aux->posicaoInicial[0],aux->posicaoInicial[1],aux->posicaoFinal[0],aux->posicaoFinal[1]
 				,aux->tagDestino, aux->chanceFalha, aux->tempoConserto, aux->custoConserto, aux->numeroFalha
 				,aux->tagFalha, aux->capacidadeMaxima, aux->recursoTransportado);
@@ -412,16 +412,16 @@ float tamanhoTotalConexao(Interconexao *listaAlvo){
 Falha calculaFalha(Interconexao *listaAlvo){
 	assert(listaAlvo->chanceFalha >= 0 && listaAlvo->chanceFalha <= 1);
 
-	int numGerado;
+	float numGerado;
 	float num;
 	float chance = listaAlvo->chanceFalha;
 
 	//! Asseriva estrutural: num eh um numero gerado aleatoriamente
-	srand(1);
 	numGerado = rand() % 101;
 	num = numGerado/100;
 
-	return ( (chance > 0) && (chance <= num) ) ? FALHA : SEM_FALHA;
+	mvprintw(1,0,"%f falha", num);
+	return ( (chance > 0) && (chance <= num) ) ? SEM_FALHA : FALHA ;
 }
 
 /**
@@ -628,4 +628,14 @@ void gerenciaFalhas(Interconexao *listaAlvo){
 		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: listaAlvo chegou ao fim
+}
+
+
+void zerarInterconexoes(interconexao *listaAlvo){
+	Interconexao *conexao;
+
+	for(conexao = listaAlvo ; conexao != NULL ; conexao = conexao->proximo){
+		conexao->recursoTransportado = 0;
+	}
+
 }

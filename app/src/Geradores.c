@@ -201,7 +201,7 @@ void imprimeListaGerador(Gerador *listaAlvo){
 		/**
 		*	Imprime os atributos do gerador corrente
 		**/
-		printf("nome: %s pos_x: %d pos_y: %d recurso recebido: %d custo: %d taxa de produção: %d\n"
+		printf(" - nome: %s | pos_x: %d | pos_y: %d | recurso recebido: %d | custo: %d | taxa de produção: %d\n"
 				,aux->nome,aux->posicao[0]
 				,aux->posicao[1],aux->recursoProduzido
 				,aux->custo, aux->taxaProducao);

@@ -238,3 +238,6 @@ int numeroCidadesNoVermelho(Cidade *);
 *		tempo total de cidades no vermelho na lista de cidades
 **/
 int tempoCidadesNoVermelho(Cidade *);
+
+
+void zerarCidades(Cidade *);
