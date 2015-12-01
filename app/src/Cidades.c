@@ -372,15 +372,18 @@ void gerenciaRecursoRecebido(Cidade *listaAlvo){
 
 	Cidade *cidade;
 	float porcentagemRecursoNecessario;
+	float acumulador;
 
 	while (listaAlvo != NULL) {
 	//! AE: listaAlvo nao chegou ao fim
-	
+
 		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 		cidade = listaAlvo;
 
+		acumulador = (float) cidade->recursoRecebido;
 		cidade->recursoGasto += cidade->recursoRecebido;
-		porcentagemRecursoNecessario = (cidade->recursoRecebido / cidade->recursoNecessario)*100;
+		porcentagemRecursoNecessario = (acumulador / cidade->recursoNecessario)*100;
+
 
 		if(porcentagemRecursoNecessario >= 100){
 		//! AE: a porcentagem do recurso Necessario eh positiva
@@ -433,7 +436,7 @@ int numeroCidadesNegativadas(Cidade *listaAlvo){
 
 	while (listaAlvo != NULL) {
 	//! AE: listaAlvo nao chegou ao fim
-	
+
 		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 		cidade = listaAlvo;
 
@@ -445,9 +448,9 @@ int numeroCidadesNegativadas(Cidade *listaAlvo){
 		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: listaAlvo chegou ao fim
-	
+
 	assert(total >= 0);
-	
+
 	return total;
 }
 
@@ -481,8 +484,8 @@ int tempoSemRecursoNecessario(Cidade *listaAlvo){
 
 	while(listaAlvo != NULL){
 	//! AE: listaAlvo nao chegou ao fim
-	
-		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida	
+
+		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 		cidade = listaAlvo;
 
 		total += cidade->turnosNegativados;
@@ -526,8 +529,8 @@ int numeroCidadesNoVermelho(Cidade *listaAlvo){
 
 	while (listaAlvo != NULL) {
 	//! AE: listaAlvo nao chegou ao fim
-	
-		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida	
+
+		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 		cidade = listaAlvo;
 
 		if(cidade->turnosNoVermelho > 0){
@@ -538,9 +541,9 @@ int numeroCidadesNoVermelho(Cidade *listaAlvo){
 		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: listaAlvo chegou ao fim
-	
+
 	assert(total >= 0);
-		
+
 	return total;
 
 }
@@ -575,8 +578,8 @@ int tempoCidadesNoVermelho(Cidade *listaAlvo){
 
 	while(listaAlvo != NULL){
 	//! AE: listaAlvo nao chegou ao fim
-	
-		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida	
+
+		//! Asseriva estrutural: aux é a listaAlvo, porem sendo percorrida
 		cidade = listaAlvo;
 
 		total += cidade->turnosNoVermelho;
@@ -584,8 +587,19 @@ int tempoCidadesNoVermelho(Cidade *listaAlvo){
 		listaAlvo = listaAlvo->proximo;
 	}
 	//! AS: listaAlvo chegou ao fim
-	
+
 	assert(total >= 0);
-	
+
 	return total;
+}
+
+
+void zerarCidades(Cidade *listaAlvo){
+
+	Cidade *cidade;
+
+	for(cidade = listaAlvo ; cidade != NULL ; cidade = cidade->proximo){
+		cidade->recursoRecebido = 0;
+	}
+
 }
