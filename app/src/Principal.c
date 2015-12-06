@@ -90,7 +90,7 @@ int main(){
 		start_color();			/* Start color 			*/
 	  init_pair(1, COLOR_GREEN, COLOR_BLACK);
 		attron(COLOR_PAIR(1));
-		mvprintw(0,0,"%d segundos", i);
+		mvprintw(1,100,"%d segundos", i);
 
 
 		zerarCidades(listaCidades);
@@ -106,8 +106,9 @@ int main(){
 
 		atualizaCidades(listaCidades);
 		atualizaInterconexoes(listaInterconexoes);
-		//sleep(1);
-		getch();
+		atualizaGeradores(listaGeradores);
+		atualizaAdaptadores(listaAdaptadores);
+		sleep(1);
 	}
 	mvprintw(0,0,"                             ");
 	mvprintw(1,0,"                             ");
@@ -143,7 +144,7 @@ int main(){
 	fprintf(fp,"Total de geradores: %d\n", relatorio.totalGeradores);
 	printf("Total de geradores: %d\n", relatorio.totalGeradores);
 
-	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
+	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores) * tempoSimulacao;
 	fprintf(fp,"Energia total gerada: %d\n", relatorio.energiaTotalGerada);
 	printf("Energia total gerada: %d\n", relatorio.energiaTotalGerada);
 
