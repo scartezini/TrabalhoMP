@@ -5,6 +5,9 @@
 *
 *	Inicia um ponteiro que sera para Interconexao
 *
+*	@return
+*		lista do tipo Interconexao vazia
+*
 *	AssertivaSaida:
 *		NULL;
 **/

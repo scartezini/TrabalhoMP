@@ -420,7 +420,6 @@ Falha calculaFalha(Interconexao *listaAlvo){
 	numGerado = rand() % 101;
 	num = numGerado/100;
 
-	mvprintw(1,0,"%f falha", num);
 	return ( (chance > 0) && (chance <= num) ) ? SEM_FALHA : FALHA ;
 }
 

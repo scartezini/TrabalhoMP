@@ -11,5 +11,6 @@ var _cidades_8h =
     [ "numeroCidadesNoVermelho", "_cidades_8h.html#aaaa5c05652a84a136783a30ab7a24bd4", null ],
     [ "recursoGastoTotal", "_cidades_8h.html#a7babe2976194524370135d6b70ce4026", null ],
     [ "tempoCidadesNoVermelho", "_cidades_8h.html#ac75e019673d568bff9abf635a97ce5c1", null ],
-    [ "tempoSemRecursoNecessario", "_cidades_8h.html#a99be1331f4402381282863ee01d0d7f3", null ]
+    [ "tempoSemRecursoNecessario", "_cidades_8h.html#a99be1331f4402381282863ee01d0d7f3", null ],
+    [ "zerarCidades", "_cidades_8h.html#a147a28a10ee92181364f05557c815725", null ]
 ];
