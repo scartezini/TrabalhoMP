@@ -6,5 +6,6 @@ var _adaptadores_8c =
     [ "imprimeListaAdaptador", "_adaptadores_8c.html#ac11e0a3ed9cce110c509ba510d3f8941", null ],
     [ "insereAdaptador", "_adaptadores_8c.html#a66e1b4b4ebf5d34dd8abbf306b7d0819", null ],
     [ "liberaListaAdaptador", "_adaptadores_8c.html#a2eac9813746b314d773147476ce83b48", null ],
-    [ "mandarRecursoAdaptado", "_adaptadores_8c.html#a914b72d6bb477360a5965e651f55b3f7", null ]
+    [ "mandarRecursoAdaptado", "_adaptadores_8c.html#a914b72d6bb477360a5965e651f55b3f7", null ],
+    [ "zerarAdaptadores", "_adaptadores_8c.html#a18496f8129a7066a592b79bf86dfac5e", null ]
 ];

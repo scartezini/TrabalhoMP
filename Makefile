@@ -5,7 +5,7 @@
 default: trabalho
 
 # Criando o executavel do programa
-trabalho: 
+trabalho:
 	cd app/src; make
 
 # Make para rodar o executavel do programa
@@ -33,6 +33,14 @@ cppcheck:
 valgrind:
 	cd app/src; valgrind --track-origins=yes --leak-check=full ./trabalho.out
 
+# Make para instalar o gource
+instalar_gource:
+		sudo apt-get install gource
+
+# Make para visualizar o gource
+gource:
+	gource -s 1
+
 # Make para limpar todos os arquivos gerados
-clean: 
+clean:
 	rm app/src/*.gcno app/src/*.out app/src/*.c.gcov app/src/*.h.gcov app/src/*.gcov app/src/*.gcda test/*.gcno test/*.out test/*.c.gcov test/*.h.gcov test/*.gcov test/*.gcda

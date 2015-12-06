@@ -5,6 +5,9 @@
 *
 *	Inicia um ponteiro que sera para Adaptador
 *
+*	@return
+*		lista do tipo Adaptador vazia
+*
 *	AssertivaSaida:
 *		NULL;
 **/

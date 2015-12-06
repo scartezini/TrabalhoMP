@@ -11,5 +11,6 @@ var _interconexoes_8c =
     [ "mandarRecursoTransportado", "_interconexoes_8c.html#a9fe0a3964db07bb25add21beec1b31f5", null ],
     [ "numeroTotalFalhas", "_interconexoes_8c.html#a55ddff4b38a44e0577c5f483c39d2c95", null ],
     [ "tamanhoConexao", "_interconexoes_8c.html#acdc6ff55787a76bb84b6f48e975c6a66", null ],
-    [ "tamanhoTotalConexao", "_interconexoes_8c.html#a2cf32d3b1703ed7f27ee48f31d78a7d3", null ]
+    [ "tamanhoTotalConexao", "_interconexoes_8c.html#a2cf32d3b1703ed7f27ee48f31d78a7d3", null ],
+    [ "zerarInterconexoes", "_interconexoes_8c.html#a14f1423db016467c593b74c9aee01052", null ]
 ];
