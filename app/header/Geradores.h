@@ -5,7 +5,8 @@
 *
 *	Inicia um ponteiro que sera para Gerador
 *
-*	@return null
+*	@return
+*   lista do tipo Gerador vazia
 *
 *	Assertiva de saida:
 *		estrutura do tipo Gerador nula
