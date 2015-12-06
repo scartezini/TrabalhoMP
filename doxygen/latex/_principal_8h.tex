@@ -1,0 +1,288 @@
+\hypertarget{_principal_8h}{\section{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Principal.h File Reference}
+\label{_principal_8h}\index{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Principal.\-h@{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Principal.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+Include dependency graph for Principal.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcidade}{cidade}
+\item 
+struct \hyperlink{structadaptador}{adaptador}
+\item 
+struct \hyperlink{structinterconexao}{interconexao}
+\item 
+struct \hyperlink{structgerador}{gerador}
+\item 
+struct \hyperlink{structrelatorio}{relatorio}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{_principal_8h_aed90cefa1d5654e6330aa65575ed3650}{vazia} \hyperlink{_principal_8h_a453af0716bcc535c4aa941283edbb273}{Vazia}
+\item 
+typedef enum \hyperlink{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059}{vazio} \hyperlink{_principal_8h_ad14a49393e140b5aaf590f1133a735f3}{Vazio}
+\item 
+typedef enum \hyperlink{_principal_8h_a78592843de133ea1bf1e49c527aa9e86}{falha} \hyperlink{_principal_8h_ab80478651cd53bf69168abd99c5b2afb}{Falha}
+\item 
+typedef enum \hyperlink{_principal_8h_a467017c0eacafcaed2939e930c562d0e}{destino} \hyperlink{_principal_8h_a25b25bd9b7208df5558e2c89bb31469f}{Destino}
+\item 
+typedef enum \hyperlink{_principal_8h_a385a14573e75e4c37ebcde69926dfc8c}{condicao\-Cidade} \hyperlink{_principal_8h_af017e6e6ef6d471439f7076382d9a7bc}{Condicao\-Cidade}
+\item 
+typedef struct \hyperlink{structcidade}{cidade} \hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade}
+\item 
+typedef struct \hyperlink{structadaptador}{adaptador} \hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador}
+\item 
+typedef struct \hyperlink{structinterconexao}{interconexao} \hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao}
+\item 
+typedef struct \hyperlink{structgerador}{gerador} \hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador}
+\item 
+typedef struct \hyperlink{structrelatorio}{relatorio} \hyperlink{_principal_8h_a74c9d9bcd5f4bbf56461d97daab221b0}{Relatorio}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_principal_8h_aed90cefa1d5654e6330aa65575ed3650}{vazia} \{ \hyperlink{_principal_8h_aed90cefa1d5654e6330aa65575ed3650a7178e5f8c6909b8396c7bcfe8c6549fc}{V\-A\-Z\-I\-A}, 
+\hyperlink{_principal_8h_aed90cefa1d5654e6330aa65575ed3650aed5ec5baeae83fe6a99581cd31ac7238}{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}
+ \}
+\item 
+enum \hyperlink{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059}{vazio} \{ \hyperlink{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059abc711f491a56ec7af7a688be508c5113}{V\-A\-Z\-I\-O}, 
+\hyperlink{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059a6a85ddb601ea3b6bee0f8d8361b162ef}{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}
+ \}
+\item 
+enum \hyperlink{_principal_8h_a78592843de133ea1bf1e49c527aa9e86}{falha} \{ \hyperlink{_principal_8h_a78592843de133ea1bf1e49c527aa9e86aad016e79b1e6a04be51ee73d7a5be62f}{F\-A\-L\-H\-A}, 
+\hyperlink{_principal_8h_a78592843de133ea1bf1e49c527aa9e86a10130aa3a2fc81c7bab44f43d1ddd929}{S\-E\-M\-\_\-\-F\-A\-L\-H\-A}
+ \}
+\item 
+enum \hyperlink{_principal_8h_a467017c0eacafcaed2939e930c562d0e}{destino} \{ \hyperlink{_principal_8h_a467017c0eacafcaed2939e930c562d0eae9841c3bad30a33d494772b8db733870}{A\-D\-A\-P\-T\-A\-D\-O\-R}, 
+\hyperlink{_principal_8h_a467017c0eacafcaed2939e930c562d0ea1b84583223e4c2e9d5f01c1126d9e94a}{C\-I\-D\-A\-D\-E}
+ \}
+\item 
+enum \hyperlink{_principal_8h_a385a14573e75e4c37ebcde69926dfc8c}{condicao\-Cidade} \{ \hyperlink{_principal_8h_a385a14573e75e4c37ebcde69926dfc8caf9efd9e6bd17c0580d8a0432ba1b04a2}{V\-E\-R\-D\-E}, 
+\hyperlink{_principal_8h_a385a14573e75e4c37ebcde69926dfc8ca968fd04270855d4f614b4650f33e5f9f}{A\-M\-A\-R\-E\-L\-O}, 
+\hyperlink{_principal_8h_a385a14573e75e4c37ebcde69926dfc8ca2f985094c4ea0066b0e04d47f38d2153}{V\-E\-R\-M\-E\-L\-H\-O}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{\index{Principal.\-h@{Principal.\-h}!Adaptador@{Adaptador}}
+\index{Adaptador@{Adaptador}!Principal.h@{Principal.\-h}}
+\subsubsection[{Adaptador}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf adaptador} {\bf Adaptador}}}\label{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Adaptadores-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Cabecalho do elemento Adaptador
+
+nome\-: nome do adaptador
+
+posicao\-: vetor posicao, representando x na posicao\mbox{[}0\mbox{]} e y na posicao\mbox{[}1\mbox{]}, ambas em km, representando tambem a posicao do adaptador na interface
+
+recurso\-Recebido\-: quantidade de recurso recebido por segundo pelo Adaptador
+
+entrada\-: ponteiro que representa a interconexao de entrada do adaptador
+
+saidas\-: representa as interconexoes realizadas/apontadas pelos adaptadores
+
+quantidade\-Saidas\-: quantidade de conexoes que o adaptador possui
+
+proximo\-: representa a proxima Adaptador da lista de Adaptadores \hypertarget{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{\index{Principal.\-h@{Principal.\-h}!Cidade@{Cidade}}
+\index{Cidade@{Cidade}!Principal.h@{Principal.\-h}}
+\subsubsection[{Cidade}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf cidade} {\bf Cidade}}}\label{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Cidades-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Cabecalho do elemento Cidade
+
+nome\-: nome da cidade
+
+posicao\-: vetor posicao, representando x na posicao\mbox{[}0\mbox{]} e y na posicao\mbox{[}1\mbox{]}, ambas em km, representando tambem a posicao do adaptador na interface
+
+recurso\-Necessario\-: quantidade de recurso que a cidade precisa por segundo
+
+recurso\-Recebido\-: quantidade de recurso recebido por segundo pela Cidade
+
+recurso\-Gasto\-: quantidade de recurso que a cidade usou
+
+tag\-Estado\-: flag para definir qual eh o estado da cidade (V\-E\-R\-M\-E\-L\-H\-O,A\-M\-A\-R\-E\-L\-O,V\-E\-R\-D\-E)
+
+turnos\-Negativados\-: contador para armazenar quantos turnos a cidade ficou fora do V\-E\-R\-D\-E
+
+turnos\-No\-Vermelho\-: contador para armazenar quantos turnos a cidade ficou no V\-E\-R\-M\-E\-L\-H\-O
+
+proximo\-: representa a proxima cidade da rede de cidades
+
+entradas\-: ponteiro que representa a interconexao de entrada da cidade \hypertarget{_principal_8h_af017e6e6ef6d471439f7076382d9a7bc}{\index{Principal.\-h@{Principal.\-h}!Condicao\-Cidade@{Condicao\-Cidade}}
+\index{Condicao\-Cidade@{Condicao\-Cidade}!Principal.h@{Principal.\-h}}
+\subsubsection[{Condicao\-Cidade}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf condicao\-Cidade} {\bf Condicao\-Cidade}}}\label{_principal_8h_af017e6e6ef6d471439f7076382d9a7bc}
+Enumeracao para detectar qual é o estado que a cidade esta de acordo com o recurso rece \hypertarget{_principal_8h_a25b25bd9b7208df5558e2c89bb31469f}{\index{Principal.\-h@{Principal.\-h}!Destino@{Destino}}
+\index{Destino@{Destino}!Principal.h@{Principal.\-h}}
+\subsubsection[{Destino}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf destino} {\bf Destino}}}\label{_principal_8h_a25b25bd9b7208df5558e2c89bb31469f}
+Enumeracao para detectar qual eh o ponto final de ligacao da conexao \hypertarget{_principal_8h_ab80478651cd53bf69168abd99c5b2afb}{\index{Principal.\-h@{Principal.\-h}!Falha@{Falha}}
+\index{Falha@{Falha}!Principal.h@{Principal.\-h}}
+\subsubsection[{Falha}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf falha} {\bf Falha}}}\label{_principal_8h_ab80478651cd53bf69168abd99c5b2afb}
+Enumeracao para detectar uma falha \hypertarget{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{\index{Principal.\-h@{Principal.\-h}!Gerador@{Gerador}}
+\index{Gerador@{Gerador}!Principal.h@{Principal.\-h}}
+\subsubsection[{Gerador}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf gerador} {\bf Gerador}}}\label{_principal_8h_aa88efc2f060c102dc5a9205258edd639}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Geradores-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Cabecalho do elemento Gerador
+
+nome\-: nome do gerador
+
+posicao\-: vetor posicao, representando x na posicao\mbox{[}0\mbox{]} e y na posicao\mbox{[}1\mbox{]}, ambas em km, representando tambem a posicao do adaptador na interface
+
+taxa\-Producao\-: quantidade de recurso que a cidade precisa por segundo
+
+recurso\-Produzido\-: quantidade total de recurso produzido pelo gerador
+
+custo\-: custo de geração por segundo
+
+proximo\-: representa a proxima cidade da rede de cidades
+
+saida\-: representa as interconexoes realizadas/apontadas pelos adaptadores \hypertarget{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{\index{Principal.\-h@{Principal.\-h}!Interconexao@{Interconexao}}
+\index{Interconexao@{Interconexao}!Principal.h@{Principal.\-h}}
+\subsubsection[{Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf interconexao} {\bf Interconexao}}}\label{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Interconexoes-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Cabecalho do elemento Inerconexao
+
+nome\-: nome da interconexao
+
+posicao\-Inicial\-: vetor posicao\-Inicial, representando x na posicao\mbox{[}0\mbox{]} e y na posicao\mbox{[}1\mbox{]}, ambas em km, representando tambem a posicao do adaptador na interface
+
+posicao\-Final\-: vetor posicao\-Final, representando x na posicao\mbox{[}0\mbox{]} e y na posicao\mbox{[}1\mbox{]}, ambas em km, representando tambem a posicao do adaptador na interface
+
+tag\-Destino\-: tag para indentificar qual é a ligaçao final de cada conexao, seja cidade ou adaptador
+
+chance\-Falha\-: chance de falha por segundo
+
+tempo\-Concerto\-: tempo de concerto em caso de falha em segundos
+
+custo\-Concerto\-: custo do concerto em segundos
+
+contador\-Tempo\-Conserto\-: contabiliza quanto tempo ja esta no concerto
+
+numero\-Falha\-: total de falhas
+
+tag\-Falha\-: indica se houve falha
+
+capacidade\-Maxima\-: capacidade maxima da interconexao
+
+recurso\-Transtortado\-: quantidade de recuso que esta sendo transportado pela conexao no turno
+
+proximo\-: representa a proxima interconexao na lista de interconexoes
+
+entrada\-Adaptador\-: aponta, caso a entrada seja um adaptador, para o adaptador cuja saída eh esta interconexao
+
+saida\-Adaptador\-: aponta, caso a saida seja um adaptador, para o adaptador cuja entrada eh esta interconexao
+
+entrada\-Interconexao\-: aponta, caso a entrada seja interconexao, para a interconexao cuja saida eh esta interconexao
+
+saida\-Interconexao\-: aponta, caso a saida seja interconexao, para a interconexao cuja entrada eh esta interconexao
+
+proximo\-Entrada\-Adaptador\-: ponteiro para a proxima entrada do adaptador relacionado a interconexao
+
+proximo\-Saida\-Adaptador\-: ponteiro para a proxima saida do adaptador relacionado a interconexao
+
+proximo\-Entrada\-Cidade\-: ponteiro para a proxima cidade de destino
+
+entrada\-Gerador\-: aponta, caso a entrada seja um gerador, para o gerador cuja saida eh esta interconexao
+
+saida\-Cidade\-: aponta, caso a saida seja uma cidade, para a cidade cuja entrada eh esta interconexao \hypertarget{_principal_8h_a74c9d9bcd5f4bbf56461d97daab221b0}{\index{Principal.\-h@{Principal.\-h}!Relatorio@{Relatorio}}
+\index{Relatorio@{Relatorio}!Principal.h@{Principal.\-h}}
+\subsubsection[{Relatorio}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf relatorio} {\bf Relatorio}}}\label{_principal_8h_a74c9d9bcd5f4bbf56461d97daab221b0}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Relatorio-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Cabecalho onde serao armazenadas as respostas paras as perguntas do relatorio inicial
+
+tempo\-Total\-Simulacao\-: tempo total da simulacao
+
+custo\-Total\-Simulacao\-: custo total na simulacao
+
+total\-Geradores\-: total de geradores
+
+energia\-Total\-Gerada\-: energia total gerada
+
+total\-Cidades\-: total de cidades
+
+energia\-Gasta\-Cidades\-: energia total gasta pelas cidades
+
+tamanho\-Total\-Interconexoes\-: tamanho total das interconexoes
+
+numero\-Falha\-Interconexoes\-: numero de falhas nas interconexoes
+
+numero\-Cidades\-Negativadas\-: numero de cidades que ficaram com menos recurso que o necessário
+
+tempo\-Sem\-Recurso\-: tempo que ficaram sem recurso
+
+nomero\-Cidades\-No\-Vermelho\-: número de cidades que ficaram com menos de 30\% dos recursos
+
+tempo\-Cidades\-No\-Vermelho\-: tempo que ficaram com menos de 30\% de recurso \hypertarget{_principal_8h_a453af0716bcc535c4aa941283edbb273}{\index{Principal.\-h@{Principal.\-h}!Vazia@{Vazia}}
+\index{Vazia@{Vazia}!Principal.h@{Principal.\-h}}
+\subsubsection[{Vazia}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf vazia} {\bf Vazia}}}\label{_principal_8h_a453af0716bcc535c4aa941283edbb273}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Enumeracoes-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Enumeracao para detectar se a lista esta vazia ou nao \hypertarget{_principal_8h_ad14a49393e140b5aaf590f1133a735f3}{\index{Principal.\-h@{Principal.\-h}!Vazio@{Vazio}}
+\index{Vazio@{Vazio}!Principal.h@{Principal.\-h}}
+\subsubsection[{Vazio}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf vazio} {\bf Vazio}}}\label{_principal_8h_ad14a49393e140b5aaf590f1133a735f3}
+Enumeracao para detectar se a lista esta vazia ou nao 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_principal_8h_a385a14573e75e4c37ebcde69926dfc8c}{\index{Principal.\-h@{Principal.\-h}!condicao\-Cidade@{condicao\-Cidade}}
+\index{condicao\-Cidade@{condicao\-Cidade}!Principal.h@{Principal.\-h}}
+\subsubsection[{condicao\-Cidade}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf condicao\-Cidade}}}\label{_principal_8h_a385a14573e75e4c37ebcde69926dfc8c}
+Enumeracao para detectar qual é o estado que a cidade esta de acordo com o recurso rece \begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{V\-E\-R\-D\-E@{V\-E\-R\-D\-E}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!V\-E\-R\-D\-E@{V\-E\-R\-D\-E}}\item[{\em 
+\hypertarget{_principal_8h_a385a14573e75e4c37ebcde69926dfc8caf9efd9e6bd17c0580d8a0432ba1b04a2}{V\-E\-R\-D\-E}\label{_principal_8h_a385a14573e75e4c37ebcde69926dfc8caf9efd9e6bd17c0580d8a0432ba1b04a2}
+}]\index{A\-M\-A\-R\-E\-L\-O@{A\-M\-A\-R\-E\-L\-O}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!A\-M\-A\-R\-E\-L\-O@{A\-M\-A\-R\-E\-L\-O}}\item[{\em 
+\hypertarget{_principal_8h_a385a14573e75e4c37ebcde69926dfc8ca968fd04270855d4f614b4650f33e5f9f}{A\-M\-A\-R\-E\-L\-O}\label{_principal_8h_a385a14573e75e4c37ebcde69926dfc8ca968fd04270855d4f614b4650f33e5f9f}
+}]\index{V\-E\-R\-M\-E\-L\-H\-O@{V\-E\-R\-M\-E\-L\-H\-O}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!V\-E\-R\-M\-E\-L\-H\-O@{V\-E\-R\-M\-E\-L\-H\-O}}\item[{\em 
+\hypertarget{_principal_8h_a385a14573e75e4c37ebcde69926dfc8ca2f985094c4ea0066b0e04d47f38d2153}{V\-E\-R\-M\-E\-L\-H\-O}\label{_principal_8h_a385a14573e75e4c37ebcde69926dfc8ca2f985094c4ea0066b0e04d47f38d2153}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{_principal_8h_a467017c0eacafcaed2939e930c562d0e}{\index{Principal.\-h@{Principal.\-h}!destino@{destino}}
+\index{destino@{destino}!Principal.h@{Principal.\-h}}
+\subsubsection[{destino}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf destino}}}\label{_principal_8h_a467017c0eacafcaed2939e930c562d0e}
+Enumeracao para detectar qual eh o ponto final de ligacao da conexao \begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{A\-D\-A\-P\-T\-A\-D\-O\-R@{A\-D\-A\-P\-T\-A\-D\-O\-R}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!A\-D\-A\-P\-T\-A\-D\-O\-R@{A\-D\-A\-P\-T\-A\-D\-O\-R}}\item[{\em 
+\hypertarget{_principal_8h_a467017c0eacafcaed2939e930c562d0eae9841c3bad30a33d494772b8db733870}{A\-D\-A\-P\-T\-A\-D\-O\-R}\label{_principal_8h_a467017c0eacafcaed2939e930c562d0eae9841c3bad30a33d494772b8db733870}
+}]\index{C\-I\-D\-A\-D\-E@{C\-I\-D\-A\-D\-E}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!C\-I\-D\-A\-D\-E@{C\-I\-D\-A\-D\-E}}\item[{\em 
+\hypertarget{_principal_8h_a467017c0eacafcaed2939e930c562d0ea1b84583223e4c2e9d5f01c1126d9e94a}{C\-I\-D\-A\-D\-E}\label{_principal_8h_a467017c0eacafcaed2939e930c562d0ea1b84583223e4c2e9d5f01c1126d9e94a}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{_principal_8h_a78592843de133ea1bf1e49c527aa9e86}{\index{Principal.\-h@{Principal.\-h}!falha@{falha}}
+\index{falha@{falha}!Principal.h@{Principal.\-h}}
+\subsubsection[{falha}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf falha}}}\label{_principal_8h_a78592843de133ea1bf1e49c527aa9e86}
+Enumeracao para detectar uma falha \begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{F\-A\-L\-H\-A@{F\-A\-L\-H\-A}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!F\-A\-L\-H\-A@{F\-A\-L\-H\-A}}\item[{\em 
+\hypertarget{_principal_8h_a78592843de133ea1bf1e49c527aa9e86aad016e79b1e6a04be51ee73d7a5be62f}{F\-A\-L\-H\-A}\label{_principal_8h_a78592843de133ea1bf1e49c527aa9e86aad016e79b1e6a04be51ee73d7a5be62f}
+}]\index{S\-E\-M\-\_\-\-F\-A\-L\-H\-A@{S\-E\-M\-\_\-\-F\-A\-L\-H\-A}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!S\-E\-M\-\_\-\-F\-A\-L\-H\-A@{S\-E\-M\-\_\-\-F\-A\-L\-H\-A}}\item[{\em 
+\hypertarget{_principal_8h_a78592843de133ea1bf1e49c527aa9e86a10130aa3a2fc81c7bab44f43d1ddd929}{S\-E\-M\-\_\-\-F\-A\-L\-H\-A}\label{_principal_8h_a78592843de133ea1bf1e49c527aa9e86a10130aa3a2fc81c7bab44f43d1ddd929}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{_principal_8h_aed90cefa1d5654e6330aa65575ed3650}{\index{Principal.\-h@{Principal.\-h}!vazia@{vazia}}
+\index{vazia@{vazia}!Principal.h@{Principal.\-h}}
+\subsubsection[{vazia}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf vazia}}}\label{_principal_8h_aed90cefa1d5654e6330aa65575ed3650}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------Enumeracoes-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Enumeracao para detectar se a lista esta vazia ou nao \begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{V\-A\-Z\-I\-A@{V\-A\-Z\-I\-A}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!V\-A\-Z\-I\-A@{V\-A\-Z\-I\-A}}\item[{\em 
+\hypertarget{_principal_8h_aed90cefa1d5654e6330aa65575ed3650a7178e5f8c6909b8396c7bcfe8c6549fc}{V\-A\-Z\-I\-A}\label{_principal_8h_aed90cefa1d5654e6330aa65575ed3650a7178e5f8c6909b8396c7bcfe8c6549fc}
+}]\index{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!N\-A\-O\-\_\-\-V\-A\-Z\-I\-A@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}}\item[{\em 
+\hypertarget{_principal_8h_aed90cefa1d5654e6330aa65575ed3650aed5ec5baeae83fe6a99581cd31ac7238}{N\-A\-O\-\_\-\-V\-A\-Z\-I\-A}\label{_principal_8h_aed90cefa1d5654e6330aa65575ed3650aed5ec5baeae83fe6a99581cd31ac7238}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059}{\index{Principal.\-h@{Principal.\-h}!vazio@{vazio}}
+\index{vazio@{vazio}!Principal.h@{Principal.\-h}}
+\subsubsection[{vazio}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf vazio}}}\label{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059}
+Enumeracao para detectar se a lista esta vazia ou nao \begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{V\-A\-Z\-I\-O@{V\-A\-Z\-I\-O}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!V\-A\-Z\-I\-O@{V\-A\-Z\-I\-O}}\item[{\em 
+\hypertarget{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059abc711f491a56ec7af7a688be508c5113}{V\-A\-Z\-I\-O}\label{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059abc711f491a56ec7af7a688be508c5113}
+}]\index{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}!Principal.\-h@{Principal.\-h}}\index{Principal.\-h@{Principal.\-h}!N\-A\-O\-\_\-\-V\-A\-Z\-I\-O@{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}}\item[{\em 
+\hypertarget{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059a6a85ddb601ea3b6bee0f8d8361b162ef}{N\-A\-O\-\_\-\-V\-A\-Z\-I\-O}\label{_principal_8h_acd5b0239b6ddb26b60a72b3329ff4059a6a85ddb601ea3b6bee0f8d8361b162ef}
+}]\end{description}
+\end{Desc}
+

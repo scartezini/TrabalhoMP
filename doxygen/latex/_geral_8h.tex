@@ -1,0 +1,205 @@
+\hypertarget{_geral_8h}{\section{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Geral.h File Reference}
+\label{_geral_8h}\index{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Geral.\-h@{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Geral.\-h}}
+}
+{\ttfamily \#include \char`\"{}Interconexoes.\-h\char`\"{}}\\*
+Include dependency graph for Geral.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_geral_8h_a08dca79b2cd050d67f007912fa6db8db}{conecta} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$, \hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$, \hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$, \hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$)
+\item 
+void \hyperlink{_geral_8h_a8d75da29860948b975b218935f7ea965}{verifica} (\hyperlink{_principal_8h_ab3c268b4873edddd71d5e67e30582e7d}{Cidade} $\ast$, \hyperlink{_principal_8h_aa88efc2f060c102dc5a9205258edd639}{Gerador} $\ast$, \hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$, \hyperlink{_principal_8h_af06b5ec73aa2348deb069304c8884eb9}{Adaptador} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_geral_8h_a08dca79b2cd050d67f007912fa6db8db}{\index{Geral.\-h@{Geral.\-h}!conecta@{conecta}}
+\index{conecta@{conecta}!Geral.h@{Geral.\-h}}
+\subsubsection[{conecta}]{\setlength{\rightskip}{0pt plus 5cm}void conecta (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{cidades, }
+\item[{{\bf Gerador} $\ast$}]{geradores, }
+\item[{{\bf Interconexao} $\ast$}]{interconexoes, }
+\item[{{\bf Adaptador} $\ast$}]{adaptadores}
+\end{DoxyParamCaption}
+)}}\label{_geral_8h_a08dca79b2cd050d67f007912fa6db8db}
+Funcao\-: conecta
+
+Realiza a conexao entre as listas
+
+
+\begin{DoxyParams}{Parameters}
+{\em cidade} & lista de cidades \\
+\hline
+{\em gerador} & lista de geradores \\
+\hline
+{\em interconexao} & lista de interconexoes \\
+\hline
+{\em adaptador} & lista de adaptadores\\
+\hline
+\end{DoxyParams}
+Assertiva de entrada\-:
+
+Assertiva de saida\-:
+
+Funcao\-: conecta
+
+Hipóteses\-: cidades -\/ ponteiro para uma lista do tipo Cidade geradores -\/ ponteiro para uma lista do tipo Gerador interconexoes -\/ ponteiro para uma lista do tipo Interconexao adaptadores -\/ ponteiro para uma lista do tipo Adaptador
+
+Requisitos\-: realizar a conexao entre as listas, para gerar a rede de distribuicao
+
+Interfaces explicitas\-: void, conecta, Cidade $\ast$cidades, Gerador $\ast$geradores, Interconexao $\ast$interconexoes, Adaptador $\ast$adaptadores
+
+Interfaces implicitas\-: cidades -\/ lista de cidades geradores -\/ lista de geradores interconexoes -\/ lista de interconexoes adaptadores -\/ lista de adaptadores $<$ Ponteiro auxiliar para cidade
+
+$<$ Ponteiro auxiliar para gerador
+
+$<$ Ponteiro auxiliar para interconexao
+
+$<$ Ponteiro auxiliar para interconexao
+
+$<$ Ponteiro auxiliar para adaptador
+
+A\-E\-: o aux\-I1 ainda nao chegou ao fim da lista de interconexoes
+
+A\-E\-: o aux\-A ainda nao chegou ao fim da lista de adaptadores
+
+A\-E\-: a posicao inicial da interconexao apontada por aux\-I1 coincide com a posicao do adaptador apontado por aux\-A
+
+Comentarios de argumentacao
+
+insere-\/se o adaptador como entrada da interconexao insere-\/se a interconexao na lista de saidas do adaptador
+
+A\-E\-: a posicao final da interconexao apontada por aux\-I1 coincide com a posicao do adaptador apontado por aux\-A
+
+Comentarios de argumentacao
+
+insere-\/se o adaptador como saida da interconexao insere-\/se a interconexao na lista de entradas do adaptador
+
+A\-S\-: o aux\-A chegou ao fim da lista de adaptadores
+
+A\-E\-: o aux\-G ainda nao chegou ao fim da lista de geradores
+
+A\-E\-: a posicao inicial da interconexao apontada por aux\-I1 coincide com a posicao do gerador apontado por aux\-G
+
+Comentarios de argumentacao
+
+insere-\/se a interconexao como saida do gerador insere-\/se o gerador como entrada da interconexao
+
+A\-S\-: o aux\-G chegou ao fim da lista de geradores
+
+A\-E\-: o aux\-C ainda nao chegou ao fim da lista de cidades
+
+A\-E\-: a posicao final da interconexao apontada por aux\-I1 coincide com a posicao da cidade apontado por aux\-C
+
+Comentarios de argumentacao
+
+insere-\/se a cidade como saida da lista de interconexao insere-\/se a interconexao na lista de entradas da cidade
+
+A\-S\-: o aux\-G chegou ao fim da lista de geradores
+
+A\-E\-: o aux\-I2 ainda nao chegou ao fim da lista de interconexoes
+
+A\-E\-: a posicao inicial da interconexao apontada por aux\-I1 coincide com a posicao final da interconexao apontada por aux\-I2
+
+Comentarios de argumentacao
+
+insere-\/se a interconexao aux\-I1 como saida da interconexao aux\-I2 insere-\/se a interconexao aux\-I2 como entrada da interconexao aux\-I1
+
+A\-E\-: a posicao final da interconexao apontada por aux\-I1 coincide com a posicao inicial da interconexao apontada por aux\-I2
+
+Comentarios de argumentacao
+
+insere-\/se a interconexao aux\-I2 como saida da interconexao aux\-I1 insere-\/se a interconexao aux\-I1 como entrada da interconexao aux\-I2
+
+A\-S\-: o aux\-I2 chegou ao fim da lista de interconexoes
+
+A\-S\-: o aux\-I1 chegou ao fim da lista de interconexoes \hypertarget{_geral_8h_a8d75da29860948b975b218935f7ea965}{\index{Geral.\-h@{Geral.\-h}!verifica@{verifica}}
+\index{verifica@{verifica}!Geral.h@{Geral.\-h}}
+\subsubsection[{verifica}]{\setlength{\rightskip}{0pt plus 5cm}void verifica (
+\begin{DoxyParamCaption}
+\item[{{\bf Cidade} $\ast$}]{cidades, }
+\item[{{\bf Gerador} $\ast$}]{geradores, }
+\item[{{\bf Interconexao} $\ast$}]{interconexoes, }
+\item[{{\bf Adaptador} $\ast$}]{adaptadores}
+\end{DoxyParamCaption}
+)}}\label{_geral_8h_a8d75da29860948b975b218935f7ea965}
+Funcao\-: verifica
+
+Realiza a verificacao das conexoes, checando se as listas estao vazias
+
+
+\begin{DoxyParams}{Parameters}
+{\em cidade} & lista de cidades \\
+\hline
+{\em gerador} & lista de geradores \\
+\hline
+{\em interconexao} & lista de interconexoes \\
+\hline
+{\em adaptador} & lista de adaptadores\\
+\hline
+\end{DoxyParams}
+Assertiva de entrada\-:
+
+Assertiva de saida\-:
+
+Funcao\-: verfica
+
+Hipóteses\-: cidades -\/ ponteiro para uma lista do tipo Cidade geradores -\/ ponteiro para uma lista do tipo Gerador interconexoes -\/ ponteiro para uma lista do tipo Interconexao adaptadores -\/ ponteiro para uma lista do tipo Adaptador
+
+Requisitos\-: verificar as conexoes e gerar um arquivo com as inconsistencias encontradas
+
+Interfaces explicitas\-: void, conecta, Cidade $\ast$cidades, Gerador $\ast$geradores, Interconexao $\ast$interconexoes, Adaptador $\ast$adaptadores
+
+Interfaces implicitas\-: cidades -\/ lista de cidades geradores -\/ lista de geradores interconexoes -\/ lista de interconexoes adaptadores -\/ lista de adaptadores $<$ Ponteiro auxiliar para cidade
+
+$<$ Ponteiro auxiliar para gerador
+
+$<$ Ponteiro auxiliar para interconexao
+
+$<$ Ponteiro auxiliar para adaptador
+
+A\-E\-: a lista de cidades nao eh vazia
+
+A\-E\-: o aux\-C ainda nao chegou ao fim da lista de cidades
+
+A\-E\-: a cidade corrente nao posssui entradas
+
+A\-S\-: o aux\-C chegou ao fim da lista de cidades
+
+A\-E\-: a lista de cidades eh vazia
+
+A\-E\-: a lista de geradores nao eh vazia
+
+A\-E\-: o aux\-G ainda nao chegou ao fim da lista de geradores
+
+A\-E\-: o gerador corrente nao posssui saidas
+
+A\-S\-: o aux\-G chegou ao fim da lista de geradores
+
+A\-E\-: a lista de geradores eh vazia
+
+A\-E\-: a lista de interconexoes nao eh vazia
+
+A\-E\-: o aux\-I ainda nao chegou ao fim da lista de interconexoes
+
+A\-E\-: a interconexao nao possui entradas em geradores, adaptadores e interconexoes
+
+A\-E\-: a interconexao nao possui saidas em geradores, adaptadores e interconexoes
+
+A\-S\-: o aux\-I chegou ao fim da lista de interconexoes
+
+A\-E\-: a lista de interconexoes eh vazia
+
+A\-E\-: a lista de adaptadores nao eh vazia
+
+A\-E\-: o aux\-A ainda nao chegou ao fim da lista de adaptadores
+
+A\-E\-: o adaptador corrente nao posssui entradas
+
+A\-E\-: o adaptador corrente nao posssui saidas
+
+A\-S\-: o aux\-A chegou ao fim da lista de adaptadores
+
+A\-E\-: a lista de adaptadores eh vazia 

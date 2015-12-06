@@ -1,0 +1,13 @@
+﻿13/11/15 | 5hs | especificar os módulos, especificar as funções, revisar especificações, projetar, codificar módulo | documentação do código, criação das assertivas e de algumas funções iniciais
+14/11/15 | 45min | especificar os módulos, especificar as funções, revisar especificações, codificar módulo | funções básicas dos Geradores e assertivas
+15/11/15 | 4hs | especificar os módulos, especificar as funções, revisar especificações, projetar, codificar módulo | criação da main, funções de impressão e funções básicas
+18/11/15 | 2hs | revisar especificações, redigir casos de teste, revisar casos de teste, realizar os testes, projetar, codificar módulo | criação do makefile e testando as funções existentes
+19/11/15 | 2hs30min | revisar código de módulo, projetar, codificar módulo | implementando o makefile
+19/11/15 | 1h | revisar código de módulo, rodar cppcheck e retirar warnings, projetar, codificar módulo | adicionando funções ao makefile 19/11/15 | 45min | especificar os módulos, especificar as funções, revisar especificações, codificar módulo | funções gerais e assertivas
+19/11/15 | 1h | revisar especificações, revisar código do módulo | verificando a validade do arquivo de saida
+21/11/15 | 1h | revisar especificações, redigir casos de teste, revisar casos de teste, realizar os testes, codificar módulo | codificando os testes das funções básicas
+21/11/15 | 2hs | especificar os módulos, especificar as funções, revisar especificações, projetar | comentando no código os requisitos, hipóteses e interfaces de cada função
+21/11/15 | 1h15min | rodar cppcheck e retirar wargings, revisar projetos, revisar casos de teste | tirando warnings e verificando a memória
+22/11/15 | 1h | revisar especificações, redigir casos de teste, revisar casos de teste, realizar os testes | criação de testes unitários
+23/11/15 | 1h10min | revisar especificações, revisar código do módulo | envio da parte 1
+6/12/15 | 2hs | especificar os módulos, especificar as funções, revisar especificações | documentação do código, criação das assertivas.

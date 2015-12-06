@@ -1,0 +1,14 @@
+Relatório:
+
+Tempo total da simulação: 20 segundos
+Custo total na simulação: 2000300
+Total de geradores: 1
+Energia total gerada: 200000
+Total de cidades: 3
+Energia total gasta pelas cidades: 9118
+Tamanho total das interconexões: 29.00
+Número de falhas nas interconexões: 15
+Número de cidades que ficaram com menos recurso que o necessário: 3
+Tempo que ficaram sem recurso: 50
+Número de cidades que ficaram com menos de 30% dos recursos: 3
+Tempo que ficaram com menos de 30% dos recurso: 38

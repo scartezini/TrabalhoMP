@@ -1,0 +1,566 @@
+\hypertarget{_interconexoes_8h}{\section{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Interconexoes.h File Reference}
+\label{_interconexoes_8h}\index{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Interconexoes.\-h@{/home/eduardo/\-Trabalho\-M\-P/app/header/\-Interconexoes.\-h}}
+}
+{\ttfamily \#include \char`\"{}Geradores.\-h\char`\"{}}\\*
+Include dependency graph for Interconexoes.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$ \hyperlink{_interconexoes_8h_a32eead8ad286c2fbbfe30be0cc7c7f4a}{cria\-Lista\-Interconexao} ()
+\item 
+\hyperlink{_principal_8h_a453af0716bcc535c4aa941283edbb273}{Vazia} \hyperlink{_interconexoes_8h_a210f033585c4fe531470ae0a725f2e6b}{interconexao\-Vazia} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$ \hyperlink{_interconexoes_8h_a4d8368de9c21c3588fcf67bb4bb19a29}{insere\-Interconexao} (char $\ast$, \hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+void \hyperlink{_interconexoes_8h_aa495aa7323b72f321e9462d6b4cdd9bf}{imprime\-Lista\-Interconexao} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+void \hyperlink{_interconexoes_8h_a09f4e59da29d24fa8319a92ab02d1791}{libera\-Lista\-Interconexao} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+float \hyperlink{_interconexoes_8h_a1ae219e9c860f0a75f5aec1223e96f77}{tamanho\-Conexao} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+float \hyperlink{_interconexoes_8h_ad0494673107db031269922c052a388c6}{tamanho\-Total\-Conexao} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+int \hyperlink{_interconexoes_8h_a90e0b052e2ebad548865184298f153a1}{total\-Gasto\-Conserto} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+\hyperlink{_principal_8h_ab80478651cd53bf69168abd99c5b2afb}{Falha} \hyperlink{_interconexoes_8h_ae553839a5e85155d1fcf618352af7af0}{calcula\-Falha} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+void \hyperlink{_interconexoes_8h_a594e7e574c435b3d66db4a1d988ae82f}{mandar\-Recurso\-Transportado} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+int \hyperlink{_interconexoes_8h_ac39834172a709a9f0fc4392d1aea4f6e}{custo\-Gasto\-Com\-Conserto} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+int \hyperlink{_interconexoes_8h_a9fce02f080e13128c5aba5afd5535400}{numero\-Total\-Falhas} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\item 
+void \hyperlink{_interconexoes_8h_a6ec861c4363dbbdb8980a22d0d4c9d34}{gerencia\-Falhas} (\hyperlink{_principal_8h_a96c78a0ea848bfd877a207999ce2dccf}{Interconexao} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_interconexoes_8h_ae553839a5e85155d1fcf618352af7af0}{\index{Interconexoes.\-h@{Interconexoes.\-h}!calcula\-Falha@{calcula\-Falha}}
+\index{calcula\-Falha@{calcula\-Falha}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{calcula\-Falha}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Falha} calcula\-Falha (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_ae553839a5e85155d1fcf618352af7af0}
+Funcao\-: calcula\-Falha
+
+Calcula a possibilidade de falha
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & celula a qual vai ser calculada a falha\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+variavel do tipo Falha, indicando se houve falha
+\end{DoxyReturn}
+Assertiva de entrada\-: a chance de falha deve estar entre 0 e 1
+
+Assertiva de saida\-: Se a chance de falha for maior que 0 e maior que um numero aleatorio Entao ocorre um falha Senao nao ocorre uma falha Fim\-Se
+
+Funcao\-: calcula\-Falha
+
+Assertiva\-Entrada\-: conexao-\/$>$chance\-Falha $>$= 0 \&\& conexao-\/$>$chance\-Falha $<$= 1;
+
+Assertiva\-Saida\-: F\-A\-L\-H\-A $|$$|$ S\-E\-M\-\_\-\-F\-A\-L\-H\-A;
+
+Requisitos\-: calculo da chance de falha
+
+Interfaces explicitas\-: Falha, calcula\-Falha, Interconexao $\ast$conexao
+
+Interfaces implicitas\-: Falha -\/ tipo de dado, indicando se houve falha ou nao lista\-Alvo -\/ lista de interconexoes Asseriva estrutural\-: num eh um numero gerado aleatoriamente \hypertarget{_interconexoes_8h_a32eead8ad286c2fbbfe30be0cc7c7f4a}{\index{Interconexoes.\-h@{Interconexoes.\-h}!cria\-Lista\-Interconexao@{cria\-Lista\-Interconexao}}
+\index{cria\-Lista\-Interconexao@{cria\-Lista\-Interconexao}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{cria\-Lista\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interconexao}$\ast$ cria\-Lista\-Interconexao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a32eead8ad286c2fbbfe30be0cc7c7f4a}
+Funcao\-: cria\-Lista\-Interconexao
+
+Inicia um ponteiro que sera para Interconexao
+
+Assertiva\-Saida\-: N\-U\-L\-L;
+
+Funcao\-: cria\-Lista\-Interconexao (Iterador)
+
+Assertiva\-Saida\-: N\-U\-L\-L;
+
+Requisitos\-: criacao de uma nova lista do tipo Interconexao
+
+Interfaces explicitas\-: Interconexao$\ast$, cria\-Lista\-Interconexao \hypertarget{_interconexoes_8h_ac39834172a709a9f0fc4392d1aea4f6e}{\index{Interconexoes.\-h@{Interconexoes.\-h}!custo\-Gasto\-Com\-Conserto@{custo\-Gasto\-Com\-Conserto}}
+\index{custo\-Gasto\-Com\-Conserto@{custo\-Gasto\-Com\-Conserto}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{custo\-Gasto\-Com\-Conserto}]{\setlength{\rightskip}{0pt plus 5cm}int custo\-Gasto\-Com\-Conserto (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_ac39834172a709a9f0fc4392d1aea4f6e}
+Funcao\-: custo\-Gasto\-Com\-Conserto
+
+Calcula o custo que foi gasto com o conserto das interconexoes
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponterio de referencia para o inicio da lista de interconexoes\\
+\hline
+\end{DoxyParams}
+Assertiva de entrada\-: interconexao -\/ eh uma lista de interconexoes nao vazia
+
+Assertiva de saida\-: valor gasto com os consertos das interconexoes
+
+Funcao\-: custo\-Gasto\-Com\-Conserto
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: total $>$= 0;
+
+Hipóteses\-: lista\-Alvo -\/ ponterio para o inicio da lista do tipo Interconexao
+
+Requisitos\-: calcular o quanto foi gasto com concerto das interconexoes
+
+Interfaces explicitas\-: int, custo\-Gasto\-Com\-Concerto, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de interconexoes Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E \-: lista\-Alvo nao chegou ao fim
+
+Comentarios de argumentacao
+
+Incrementa o total com o resultado da multiplicacao do numero de falhas com o custo gasto com o conserto de cada falha
+
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_interconexoes_8h_a6ec861c4363dbbdb8980a22d0d4c9d34}{\index{Interconexoes.\-h@{Interconexoes.\-h}!gerencia\-Falhas@{gerencia\-Falhas}}
+\index{gerencia\-Falhas@{gerencia\-Falhas}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{gerencia\-Falhas}]{\setlength{\rightskip}{0pt plus 5cm}void gerencia\-Falhas (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a6ec861c4363dbbdb8980a22d0d4c9d34}
+Funcao\-: gerencia\-Falhas
+
+Marca as celulas que falharam como falhas e comtabilizam as celulas que estao no concerto o tempo que falta para sairem
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponterio de referencia para o inicio da lista de interconexoes\\
+\hline
+\end{DoxyParams}
+Assertiva de entrada\-: interconexao -\/ eh uma lista de interconexoes nao vazia
+
+Assertiva de saida\-: Se a interconexao corrente nao falhou Entao Se a chance desta interconexao falhar der F\-A\-L\-H\-A Entao zera o contador de tempo de conserto numero de falhas + 1 tag\-Falha = falha Fim\-Se Senao contador de tempo de conserto + 1 Se contador de tempo de conserto alcançar ou ultrapassar o tempo de conserto zera o contador de tempo de conserto tag\-Falha = sem falha Fimse
+
+Funcao\-: gerencia\-Falhas
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Hipóteses\-: lista\-Alvo -\/ ponterio para o inicio da lista do tipo Interconexao
+
+Requisitos\-: marcar as celulas que falharam como falhas e contabilizar o concertos das celulas que estao paradas
+
+Interfaces explicitas\-: int, numero\-Total\-Falhas, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de interconexoes A\-E\-: lista\-Alvo nao chegou ao fim
+
+A\-E\-: interconexao corrente nao falhou
+
+A\-E\-: chance falha da interconexao corrente eh F\-A\-L\-H\-A
+
+A\-E\-: interconexao corrente falhou
+
+A\-E\-: tempo de conserto foi atingido pelo contador
+
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_interconexoes_8h_aa495aa7323b72f321e9462d6b4cdd9bf}{\index{Interconexoes.\-h@{Interconexoes.\-h}!imprime\-Lista\-Interconexao@{imprime\-Lista\-Interconexao}}
+\index{imprime\-Lista\-Interconexao@{imprime\-Lista\-Interconexao}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{imprime\-Lista\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}void imprime\-Lista\-Interconexao (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_aa495aa7323b72f321e9462d6b4cdd9bf}
+Funcao\-: imprime\-Lista\-Interconexao
+
+Imprime de todas as celulas de lista de interconexoes as respectivas caracteristicas\-: nome posicao inicial x posicao inicial y posicao final x posicao final y tag de destino chance de falha tempo de concerto custo de concerto numero de falhas tag de falha capacidade maxima recurso transportado
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & lista que sera impressa\\
+\hline
+\end{DoxyParams}
+Assertiva\-Entrada\-: A lista nao deve ser vazia
+
+Assertiva\-Saida\-: Se a lista de interconexoes a ser imprimida nao eh vazia Entao ela eh imprimida Senao a lista de interconexoes nao eh imprimida Fim\-Se
+
+Funcao\-: imprime\-Lista\-Interconexao (Iterador)
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Interconexao
+
+Requisitos\-: impressao da lista de interconexoes
+
+Interfaces explicitas\-: void, imprime\-Lista\-Interconexao, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de interconexoes Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Imprime os atributos da interconexao corrente
+
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_interconexoes_8h_a4d8368de9c21c3588fcf67bb4bb19a29}{\index{Interconexoes.\-h@{Interconexoes.\-h}!insere\-Interconexao@{insere\-Interconexao}}
+\index{insere\-Interconexao@{insere\-Interconexao}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{insere\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interconexao}$\ast$ insere\-Interconexao (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{registro, }
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a4d8368de9c21c3588fcf67bb4bb19a29}
+Funcao\-: insere\-Interconexao
+
+Inserir uma nova celula na lista de interconexoes a insercao se da pelo inicio da lista e é retornadado o novo ponterio para lista.
+
+
+\begin{DoxyParams}{Parameters}
+{\em registro} & string que sera lida do arquivo representando Inteconexao \\
+\hline
+{\em lista\-Alvo} & lista de interconexoes onde a nova celula sera inserida\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+novo pontero para a o inicio da lista de interconexoes
+\end{DoxyReturn}
+Assertiva de entrada\-: registro -\/ eh um vetor contendo o conteudo do txt, deve ser diferente de N\-U\-L\-L
+
+Assertiva de saida\-: A lista recebida pela funcao, deve ser a proxima interconexao apontada pela lista retornada
+
+Funcao\-: insere\-Interconexao
+
+Assertiva\-Entrada\-: registro != N\-U\-L\-L;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Interconexao registro -\/ string, nao vazia, contendo uma linha do arquivo txt de entrada
+
+Requisitos\-: inserir um novo gerador na lista de interconexoes
+
+Interfaces explicitas\-: Interconexao$\ast$, insere\-Interconexao, char $\ast$registro, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: registro -\/ representa uma linha do arquivo de entrada lista\-Alvo -\/ lista de interconexoes $<$ Alocacao da nova Interconexao
+
+$<$ Variavel auxiliar para percorrer a lista e inserir o elemento no final
+
+$<$ Alocacao de um vetor do tamanho do registro
+
+$<$ Variaveis de auxilio
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Comecando de registro\mbox{[}2\mbox{]}, enquanto registro\mbox{[}i\mbox{]} for um caracter irrelevante, soma-\/se 1 a variavel de auxilio i
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante
+
+Asseriva estrutural\-: o nome da nova interconexao possui tamanho i-\/1
+
+A\-E\-: o valor da variavel auxiliar j deve ser menor ou igual ao numero total de atributos lidos da interconexao
+
+A\-E\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-E\-: o valor de j eh igual a 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) recebe um caracter finalizador
+
+A\-S\-: o valor de j eh maior que 0
+
+A\-E\-: o valor de j eh maior que 0
+
+Comentarios de argumentacao
+
+A (posicao corrente-\/k) do vetor num\-Char recebe um caracter finalizador
+
+Comentarios de argumentacao
+
+De acordo com o valor da variavel auxiliar j, armazena-\/se o vetor num\-Char no seu respectivo atributo lido
+
+A\-S\-: o valor de j eh maior que 8
+
+A\-S\-: a posicao corrente do registro possui um caracter relevante
+
+A\-E\-: a posicao corrente do registro possui um caracter relevante
+
+Comentarios de argumentacao
+
+Se o valor da variavel de auxilio j for 0 Entao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do nome da interconexao Senao armazena-\/se a posicao corrente do registro na (posicao corrente-\/k) do vetor num\-Char Fim\-Se
+
+A\-S\-: a posicao corrente do registro possui um caracter irrelevante, ou um caracter finalizador
+
+A\-S\-: o valor da variavel auxiliar j ultrapassou o numero total de atributos lidos da interconexao
+
+Comentarios de argumentacao
+
+Os atributos nao lidos da inteconexao inserida recebem o valor nulo, e a proxima interconexao da lista que contem a nova inteconexao inserido na cabeca recebe a lista de interconexoes atual
+
+A\-E\-: se a lista\-Alvo nao for vazia
+
+A\-E\-: o aux nao chegou ao final da lista de interconexoes
+
+A\-E\-: se a lista\-Alvo for vazia \hypertarget{_interconexoes_8h_a210f033585c4fe531470ae0a725f2e6b}{\index{Interconexoes.\-h@{Interconexoes.\-h}!interconexao\-Vazia@{interconexao\-Vazia}}
+\index{interconexao\-Vazia@{interconexao\-Vazia}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{interconexao\-Vazia}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vazia} interconexao\-Vazia (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a210f033585c4fe531470ae0a725f2e6b}
+Funcao\-: interconexao\-Vazia
+
+Verifica se a lista de interconexoes esta vazia
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de interconexoes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+variavel do tipo Vazia, indicando se a lista esta vazia
+\end{DoxyReturn}
+Assertiva de entrada\-: estrutura do tipo Interconexao
+
+Assertiva de saida\-: condicao da Interconexao sendo vazia ou nao vazia
+
+Funcao\-: interconexao\-Vazia (Iterador)
+
+Assertiva\-Saida\-: V\-A\-Z\-I\-A $|$$|$ N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Interconexao
+
+Requisitos\-: checar se a lista está vazia
+
+Interfaces explicitas\-: Vazia, interconexao\-Vazia, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: Vazia -\/ tipo de dado, indicando se a lista eh vazia ou nao lista\-Alvo -\/ lista de interconexoes A\-E\-: lista\-Alvo eh vazia
+
+A\-E\-: lista\-Alvo nao eh vazia
+
+A\-S\-: o retorno deve ser uma variavel do tipo Vazia \hypertarget{_interconexoes_8h_a09f4e59da29d24fa8319a92ab02d1791}{\index{Interconexoes.\-h@{Interconexoes.\-h}!libera\-Lista\-Interconexao@{libera\-Lista\-Interconexao}}
+\index{libera\-Lista\-Interconexao@{libera\-Lista\-Interconexao}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{libera\-Lista\-Interconexao}]{\setlength{\rightskip}{0pt plus 5cm}void libera\-Lista\-Interconexao (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a09f4e59da29d24fa8319a92ab02d1791}
+Funcao\-: libera\-Lista\-Interconexao
+
+Desaloca a memoria reservada para toda celula pertecente a lista de interconexoes
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & lista a ser desalocada\\
+\hline
+\end{DoxyParams}
+Assertiva\-Entrada\-: A lista nao deve ser vazia
+
+Assertiva\-Saida\-: A lista deve estar vazia
+
+Funcao\-: libera\-Lista\-Interconexao (Iterador)
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: interconexao\-Vazia(lista\-Alvo) == V\-A\-Z\-I\-A;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Interconexao
+
+Requisitos\-: liberacao da lista de interconexoes
+
+Interfaces explicitas\-: void, libera\-Lista\-Interconexao, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de interconexoes Assertiva estrutural\-: aux1 é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo nao chegou ao fim Comentarios de argumentacao
+
+Liberam os atributos alocados dinamicamente do elemento Interconexao corrente
+
+A\-S\-: lista\-Alvo chegou ao fim \hypertarget{_interconexoes_8h_a594e7e574c435b3d66db4a1d988ae82f}{\index{Interconexoes.\-h@{Interconexoes.\-h}!mandar\-Recurso\-Transportado@{mandar\-Recurso\-Transportado}}
+\index{mandar\-Recurso\-Transportado@{mandar\-Recurso\-Transportado}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{mandar\-Recurso\-Transportado}]{\setlength{\rightskip}{0pt plus 5cm}void mandar\-Recurso\-Transportado (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a594e7e574c435b3d66db4a1d988ae82f}
+Funcao\-: mandar\-Recurso\-Transportado
+
+Muda cada referencia seja para adaptador ou para cidade, dependenodo do em qual esta ligada, alterando o valor do recurso atual.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponterio de referencia para o inicio da lista de interconexoes\\
+\hline
+\end{DoxyParams}
+Assertiva de entrada\-: interconexao -\/ eh uma lista de interconexoes nao vazia
+
+Assertiva de saida\-: Se o destino da interconexao for um adaptador Entao soma-\/se o recurso transportado ao Adaptador da lista de interconexoes Senao soma-\/se o recurso transportado ao Adaptador da lista de interconexoes Fim\-Se
+
+Funcao\-: mandar\-Recurso\-Transportado
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Interconexao
+
+Requisitos\-: transporte dos recursos
+
+Interfaces explicitas\-: void, mandar\-Recurso\-Transportado, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de interconexoes Asseriva estrutural\-: aux é a lista nao-\/nula de interconexoes
+
+A\-E\-: aux nao chegou ao fim da lista de inteconexoes
+
+A\-E\-: a interconexao corrente nao possui falha
+
+Comentarios de argumentacao
+
+Enqaunto a lista de interconexoes eh percorrida, dependendo do destino da interconexao, soma-\/se o recurso ao respectivo destino
+
+A\-E\-: o destino da interconexao eh um Adaptador
+
+A\-E\-: o destino da interconexao eh uma Cidade
+
+A\-S\-: a lista de interconexoes chegou ao fim \hypertarget{_interconexoes_8h_a9fce02f080e13128c5aba5afd5535400}{\index{Interconexoes.\-h@{Interconexoes.\-h}!numero\-Total\-Falhas@{numero\-Total\-Falhas}}
+\index{numero\-Total\-Falhas@{numero\-Total\-Falhas}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{numero\-Total\-Falhas}]{\setlength{\rightskip}{0pt plus 5cm}int numero\-Total\-Falhas (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a9fce02f080e13128c5aba5afd5535400}
+Funcao\-: numero\-Total\-Falhas
+
+Faz a contabilidade de quantas falas teve durante toda a simulaca
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponterio de referencia para o inicio da lista de interconexoes\\
+\hline
+\end{DoxyParams}
+Assertiva de entrada\-: interconexao -\/ eh uma lista de interconexoes nao vazia
+
+Assertiva de saida\-: total de falhas
+
+Funcao\-: numero\-Total\-Falhas
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: total $>$= 0;
+
+Hipóteses\-: lista\-Alvo -\/ ponterio para o inicio da lista do tipo Interconexao
+
+Requisitos\-: contabilizar a quantidade de falhas
+
+Interfaces explicitas\-: int, numero\-Total\-Falhas, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: lista\-Alvo -\/ lista de interconexoes Asseriva estrutural\-: aux é a lista\-Alvo, porem sendo percorrida
+
+A\-E\-: lista\-Alvo ainda nao acabou Comentarios de argumentacao
+
+Incrementa o somatorio com o numero de falhas da celula atual\hypertarget{_interconexoes_8h_a1ae219e9c860f0a75f5aec1223e96f77}{\index{Interconexoes.\-h@{Interconexoes.\-h}!tamanho\-Conexao@{tamanho\-Conexao}}
+\index{tamanho\-Conexao@{tamanho\-Conexao}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{tamanho\-Conexao}]{\setlength{\rightskip}{0pt plus 5cm}float tamanho\-Conexao (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a1ae219e9c860f0a75f5aec1223e96f77}
+Funcao\-: tamanho\-Conexao
+
+Calcula o tamanho da celula de conexao que eh passada para a funcao
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para a celula de interconexao\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tamanho da celula de conexao que foi passada
+\end{DoxyReturn}
+Assertiva de entrada\-: interconexao -\/ eh uma lista de interconexoes nao vazia
+
+Assertiva de saida\-: tamanho de uma conexao
+
+Funcao\-: tamanho\-Conexao
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: distancia $>$ 0;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Interconexao
+
+Requisitos\-: calculo da distancia entre a posicao final e inicial
+
+Interfaces explicitas\-: float, tamanho\-Conexao, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: float -\/ valor do tamanho lista\-Alvo -\/ lista de interconexoes $<$ Valor no eixo x da posicao inicial
+
+$<$ Valor no eixo y da posicao inicial
+
+$<$ Valor no eixo x da posicao final
+
+$<$ Valor no eixo y da posicao final
+
+Comentarios de argumentacao
+
+Calculando a distancia utilizando ((xb-\/xa)$^\wedge$2 + (yb-\/ya)$^\wedge$2)$^\wedge$(1/2)\hypertarget{_interconexoes_8h_ad0494673107db031269922c052a388c6}{\index{Interconexoes.\-h@{Interconexoes.\-h}!tamanho\-Total\-Conexao@{tamanho\-Total\-Conexao}}
+\index{tamanho\-Total\-Conexao@{tamanho\-Total\-Conexao}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{tamanho\-Total\-Conexao}]{\setlength{\rightskip}{0pt plus 5cm}float tamanho\-Total\-Conexao (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{lista\-Alvo}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_ad0494673107db031269922c052a388c6}
+Funcao\-: tamanho\-Total\-Conexao
+
+Calcula o tamanho total das conexoes da lista que eh passada
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de celulas de conexao\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna o tamanho total das conexoes da lista
+\end{DoxyReturn}
+Assertiva de entrada\-: interconexao -\/ eh uma lista de interconexoes nao vazia
+
+Assertiva de saida\-: resultado da soma dos tamanhos de todas as conexoes
+
+Funcao\-: tamanho\-Total\-Conexao
+
+Assertiva\-Entrada\-: interconexao\-Vazia(lista\-Alvo) == N\-A\-O\-\_\-\-V\-A\-Z\-I\-A;
+
+Assertiva\-Saida\-: resultado $>$ 0;
+
+Hipóteses\-: lista\-Alvo -\/ ponteiro para uma lista do tipo Interconexao
+
+Requisitos\-: calculo da soma dos tamanhos das interconexoes
+
+Interfaces explicitas\-: float, tamanho\-Total\-Conexao, Interconexao $\ast$lista\-Alvo
+
+Interfaces implicitas\-: float -\/ valor da soma dos tamanhos lista\-Alvo -\/ lista de interconexoes Asseriva estrutural\-: aux é a lista nao-\/nula de interconexoes
+
+A\-E\-: aux nao chegou ao fim da lista de inteconexoes
+
+Comentarios de argumentacao
+
+Enquanto a lista de interconexoes eh percorrida, o tamanho das conexoes sao somados e armazenados na variavel resultado
+
+A\-S\-: a lista de interconexoes chegou ao fim \hypertarget{_interconexoes_8h_a90e0b052e2ebad548865184298f153a1}{\index{Interconexoes.\-h@{Interconexoes.\-h}!total\-Gasto\-Conserto@{total\-Gasto\-Conserto}}
+\index{total\-Gasto\-Conserto@{total\-Gasto\-Conserto}!Interconexoes.h@{Interconexoes.\-h}}
+\subsubsection[{total\-Gasto\-Conserto}]{\setlength{\rightskip}{0pt plus 5cm}int total\-Gasto\-Conserto (
+\begin{DoxyParamCaption}
+\item[{{\bf Interconexao} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{_interconexoes_8h_a90e0b052e2ebad548865184298f153a1}
+Funcao\-: total\-Gasto\-Conserto
+
+Calcula o custo total gasto com conserto de todas as celulas de conexao
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\-Alvo} & ponteiro para o inicio da lista de interconexao\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total gasto com conserto de todas as conexoes 
+\end{DoxyReturn}

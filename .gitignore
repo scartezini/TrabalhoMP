@@ -3,6 +3,11 @@
 *.lo
 *.o
 *.obj
+*.out
+*.gcov
+*.gcna
+*.gcno
+*.gcda
 
 # Precompiled Headers
 *.gch
