@@ -13,10 +13,6 @@
 *		lista de interconexoes
 *	@param adaptador
 *		lista de adaptadores
-*
-*	Assertiva de entrada:
-*
-*	Assertiva de saida:
 **/
 void conecta(Cidade *, Gerador *, Interconexao *, Adaptador *);
 
@@ -33,9 +29,5 @@ void conecta(Cidade *, Gerador *, Interconexao *, Adaptador *);
 *		lista de interconexoes
 *	@param adaptador
 *		lista de adaptadores
-*
-*	Assertiva de entrada:
-*
-*	Assertiva de saida:
 **/
 void verifica(Cidade *, Gerador *, Interconexao *, Adaptador *);

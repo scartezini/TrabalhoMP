@@ -8,7 +8,7 @@ var searchData=
   ['cidades_2eh',['Cidades.h',['../_cidades_8h.html',1,'']]],
   ['cidades_5funittest_2ec',['Cidades_unittest.c',['../_cidades__unittest_8c.html',1,'']]],
   ['cidadevazia',['cidadeVazia',['../_cidades_8h.html#a26efe4bca2a0c1ab12d998422cf32ceb',1,'cidadeVazia(Cidade *):&#160;Cidades.c'],['../_cidades_8c.html#a3bc0bff36c122f4937db77f910f4934e',1,'cidadeVazia(Cidade *listaAlvo):&#160;Cidades.c']]],
-  ['condicaocidade',['condicaoCidade',['../_principal_8h.html#a385a14573e75e4c37ebcde69926dfc8c',1,'condicaoCidade():&#160;Principal.h'],['../_principal_8h.html#af017e6e6ef6d471439f7076382d9a7bc',1,'CondicaoCidade():&#160;Principal.h']]],
+  ['condicaocidade',['CondicaoCidade',['../_principal_8h.html#af017e6e6ef6d471439f7076382d9a7bc',1,'CondicaoCidade():&#160;Principal.h'],['../_principal_8h.html#a385a14573e75e4c37ebcde69926dfc8c',1,'condicaoCidade():&#160;Principal.h']]],
   ['conecta',['conecta',['../_geral_8h.html#a08dca79b2cd050d67f007912fa6db8db',1,'conecta(Cidade *, Gerador *, Interconexao *, Adaptador *):&#160;Geral.c'],['../_geral_8c.html#a06fcaf2a2adbb67d0647d51e19da46e6',1,'conecta(Cidade *cidades, Gerador *geradores, Interconexao *interconexoes, Adaptador *adaptadores):&#160;Geral.c']]],
   ['contadortempoconserto',['contadorTempoConserto',['../structinterconexao.html#ad528963bec160684795fa243ed6d8036',1,'interconexao']]],
   ['crialistaadaptador',['criaListaAdaptador',['../_adaptadores_8h.html#ae153537ae7870c9c435cacddfb1f08c2',1,'criaListaAdaptador():&#160;Adaptadores.c'],['../_adaptadores_8c.html#ae153537ae7870c9c435cacddfb1f08c2',1,'criaListaAdaptador():&#160;Adaptadores.c']]],

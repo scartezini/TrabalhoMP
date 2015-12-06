@@ -12,5 +12,6 @@ var _interconexoes_8h =
     [ "numeroTotalFalhas", "_interconexoes_8h.html#a9fce02f080e13128c5aba5afd5535400", null ],
     [ "tamanhoConexao", "_interconexoes_8h.html#a1ae219e9c860f0a75f5aec1223e96f77", null ],
     [ "tamanhoTotalConexao", "_interconexoes_8h.html#ad0494673107db031269922c052a388c6", null ],
-    [ "totalGastoConserto", "_interconexoes_8h.html#a90e0b052e2ebad548865184298f153a1", null ]
+    [ "totalGastoConserto", "_interconexoes_8h.html#a90e0b052e2ebad548865184298f153a1", null ],
+    [ "zerarInterconexoes", "_interconexoes_8h.html#a618c67d4b934c8797fea5c3ab3ed9e98", null ]
 ];

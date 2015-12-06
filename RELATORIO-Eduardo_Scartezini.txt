@@ -1,0 +1,16 @@
+11/11/15 | 2hs | criaçao dos pacotes e arquitetura do projeto
+11/11/15 | 1hs | inicio das regras de negocio das interconexoes
+12/11/15 | 1hs | organizaçoes dos geradores
+12/11/15 | 1hr | regra de negocio dos adaptadores
+12/11/15 | 30min | documentaçao e testes
+13/11/15 | 2hr | refatoriamento da regra de negocio dos Adaptadores
+13/11/15 | 1hr | documentaçao e testes
+13/11/15 | 1hr | regras de negocio das interconexoes
+13/11/15 | 40min | documentaçao e testes
+14/11/15 | 2hr | refatoramento e testes
+16/11/15 | 3hr | funçoes que geram o relatorio
+21/11/15 | 2hr30min | funçoes de gerenciamento
+22/11/15 | 2hr | gerando relatorio e testes
+23/11/15 | 2hr | arquitetura em maquina de estado
+29/11/15 | 4hr | interface grafica, precorrer listas e imprimir a interface
+6/12/15 | 1hr | acoplaçao do relatorio na interface grafica 

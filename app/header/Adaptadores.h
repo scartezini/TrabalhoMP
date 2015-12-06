@@ -5,6 +5,9 @@
 *
 *	Inicia um ponteiro que sera para Adaptador
 *
+*	@return
+*		lista do tipo Adaptador vazia
+*
 *	AssertivaSaida:
 *		NULL;
 **/
@@ -128,3 +131,6 @@ void defineDistribuicao(Adaptador *);
 *		ponteiro para o inico da lista de adaptadores;
 **/
 void mandarRecursoAdaptado(Adaptador *);
+
+
+void zerarAdaptadores(Adaptador *);

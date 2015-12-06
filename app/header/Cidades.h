@@ -5,7 +5,8 @@
 *
 *	Inicia um ponteiro que sera para Cidade
 *
-*	@return null
+*	@return
+*   lista do tipo Cidade vazia
 *
 *	Assertiva de saida:
 *		estrutura do tipo Cidade nula
@@ -238,3 +239,6 @@ int numeroCidadesNoVermelho(Cidade *);
 *		tempo total de cidades no vermelho na lista de cidades
 **/
 int tempoCidadesNoVermelho(Cidade *);
+
+
+void zerarCidades(Cidade *);

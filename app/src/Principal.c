@@ -1,7 +1,7 @@
-#include "../header/Geral.h"
+#include "../header/Interface.h"
 
-int main()
-{
+int main(){
+
 	FILE *fp;
 	Cidade *listaCidades = criaListaCidade();
 	Gerador *listaGeradores = criaListaGerador();
@@ -74,17 +74,55 @@ int main()
 		**/
 	conecta(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
 	verifica(listaCidades,listaGeradores,listaInterconexoes,listaAdaptadores);
+	inicializa(listaGeradores,listaInterconexoes,listaAdaptadores,listaCidades);
 
+	//! Comentarios de argumentacao
+		/**
+		*	Iniciando a interface
+		**/
+	mvprintw(0,0,"Pressione enter para comecar!");
+	getch();
+	mvprintw(0,0,"                             ");
+
+	srand(1);
 
 	for(i=0;i<tempoSimulacao;i++){
+	// AE: tempo de simulacao nao chegou ao fim
+
+		start_color();
+	  init_pair(1, COLOR_GREEN, COLOR_BLACK);
+		attron(COLOR_PAIR(1));
+		mvprintw(1,100,"%d segundos", i);
+
+		zerarCidades(listaCidades);
+		zerarAdaptadores(listaAdaptadores);
+		zerarInterconexoes(listaInterconexoes);
+
 		gerenciaFalhas(listaInterconexoes);
-		//! AE: manda recurso ate os adaptadores
+
 		mandarRecursoProduzido(listaGeradores);
 		defineDistribuicao(listaAdaptadores);
-		//!	AE: mandar  o recurso ate as cidades
 		mandarRecursoAdaptado(listaAdaptadores);
 		gerenciaRecursoRecebido(listaCidades);
+
+		atualizaCidades(listaCidades);
+		atualizaInterconexoes(listaInterconexoes);
+		atualizaGeradores(listaGeradores);
+		atualizaAdaptadores(listaAdaptadores);
+
+		getch();
 	}
+	// AS: tempo de simulacao chegou ao fim
+
+	mvprintw(0,0,"                             ");
+	mvprintw(1,0,"                             ");
+	mvprintw(0,0,"Pressione enter para finalizar!");
+	getch();
+	endwin();
+	//! Comentarios de argumentacao
+		/**
+		*	Finalizando a interface
+		**/
 
 	//! Comentarios de argumentacao
 		/**
@@ -115,7 +153,7 @@ int main()
 	fprintf(fp,"Total de geradores: %d\n", relatorio.totalGeradores);
 	printf("Total de geradores: %d\n", relatorio.totalGeradores);
 
-	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores);
+	relatorio.energiaTotalGerada = recursoProduzidoTotal(listaGeradores) * tempoSimulacao;
 	fprintf(fp,"Energia total gerada: %d\n", relatorio.energiaTotalGerada);
 	printf("Energia total gerada: %d\n", relatorio.energiaTotalGerada);
 

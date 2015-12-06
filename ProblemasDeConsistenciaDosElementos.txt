@@ -1,13 +1,7 @@
 CIDADES:
-# Rio_de_Janeiro está desconectada!
 
 GERADORES:
-# Usina3 está desconectado!
 
 INTERCONEXÕES:
-# Saída de inter_10 está desconectada!
-# Entrada de inter_13 está desconectada!
 
 ADAPTADORES:
-# Não há entrada em adapta_6!
-# Não há saídas em adapta_6!
