@@ -1,22 +1,24 @@
 var NAVTREE =
 [
   [ "Trabalho da disciplina Métodos de Programação", "index.html", [
-    [ "Estruturas de Dados", null, [
-      [ "Estruturas de Dados", "annotated.html", "annotated" ],
-      [ "Índice das Estruturas de Dados", "classes.html", null ],
-      [ "Campos de Dados", "functions.html", [
-        [ "Todos", "functions.html", null ],
-        [ "Variáveis", "functions_vars.html", null ]
+    [ "Data Structures", null, [
+      [ "Data Structures", "annotated.html", "annotated" ],
+      [ "Data Structure Index", "classes.html", null ],
+      [ "Data Fields", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
-    [ "Arquivos", null, [
-      [ "Lista de Arquivos", "files.html", "files" ],
-      [ "Globais", "globals.html", [
-        [ "Todos", "globals.html", null ],
-        [ "Funções", "globals_func.html", null ],
-        [ "Definições de Tipos", "globals_type.html", null ],
-        [ "Enumerações", "globals_enum.html", null ],
-        [ "Valores enumerados", "globals_eval.html", null ]
+    [ "Files", null, [
+      [ "File List", "files.html", "files" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
+        [ "Defines", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
