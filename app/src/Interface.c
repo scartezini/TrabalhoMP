@@ -1,6 +1,9 @@
 #include "../header/Interface.h"
 
+#define DESLOCAMENTO_VERTICAL 4
+#define DESLOCAMENTO_HORIZONTAL 2
 
+int deslocamento;
 
 void inicializa(Gerador* listaGeradores ,Interconexao* listaInterconexoes,Adaptador* listaAdaptadores ,Cidade* listaCidades){
 
@@ -39,8 +42,8 @@ void inicializa(Gerador* listaGeradores ,Interconexao* listaInterconexoes,Adapta
 }
 void desenhaGerador(Gerador* gerador){
 
-  int x = gerador->posicao[0] + 3;
-  int y = gerador->posicao[1] + 3;
+  int x = gerador->posicao[0] + DESLOCAMENTO_VERTICAL;
+  int y = gerador->posicao[1] + DESLOCAMENTO_HORIZONTAL;
 
   int auxX;
   int auxY;
@@ -59,8 +62,8 @@ void desenhaGerador(Gerador* gerador){
 
 void desenhaCidade(Cidade* cidade){
 
-  int x = cidade->posicao[0] + 3;
-  int y = cidade->posicao[1] + 3;
+  int x = cidade->posicao[0] + DESLOCAMENTO_VERTICAL;
+  int y = cidade->posicao[1] + DESLOCAMENTO_HORIZONTAL;
 
   int auxX;
   int auxY;
@@ -82,8 +85,8 @@ void desenhaCidade(Cidade* cidade){
 
 void desenhaAdaptador(Adaptador* adaptador){
 
-  int x = adaptador->posicao[0] + 3;
-  int y = adaptador->posicao[1] + 3;
+  int x = adaptador->posicao[0] + DESLOCAMENTO_VERTICAL;
+  int y = adaptador->posicao[1] + DESLOCAMENTO_HORIZONTAL;
 
   int auxX;
   int auxY;
@@ -98,11 +101,11 @@ void desenhaAdaptador(Adaptador* adaptador){
 
 void desenhaInterconexao(Interconexao* conexao){
 
-  int xIn = conexao->posicaoInicial[0] + 3;
-  int yIn = conexao->posicaoInicial[1] + 3;
+  int xIn = conexao->posicaoInicial[0] + DESLOCAMENTO_VERTICAL;
+  int yIn = conexao->posicaoInicial[1] + DESLOCAMENTO_HORIZONTAL;
 
-  int xOut = conexao->posicaoFinal[0] + 3;
-  int yOut = conexao->posicaoFinal[1] + 3;
+  int xOut = conexao->posicaoFinal[0] + DESLOCAMENTO_VERTICAL;
+  int yOut = conexao->posicaoFinal[1] + DESLOCAMENTO_HORIZONTAL;
 
   start_color();			/* Start color 			*/
   init_pair(4, COLOR_RED, COLOR_BLACK);
@@ -133,20 +136,62 @@ void atualizaCidades(Cidade* listaCidades){
 
   Cidade *cidade;
 
-  for(cidade = listaCidades ; cidade != NULL ; cidade = cidade->proximo)
+
+  for(cidade = listaCidades , deslocamento = 3; cidade != NULL ; cidade = cidade->proximo , deslocamento += 5){
+    attron(COLOR_PAIR(cidade->tagEstado + 1));
+    mvprintw(deslocamento,100,"%s:\n",cidade->nome);
+    mvprintw(deslocamento+1,100,"\trecurso necessario: %d\n",cidade->recursoNecessario);
+    mvprintw(deslocamento+2,100,"\trecurso recebido: %d\n",cidade->recursoRecebido);
+    mvprintw(deslocamento+3,100,"\trecurso gasto %d\n",cidade->recursoGasto);
     desenhaCidade(cidade);
+  }
 
 
   refresh();			/* Print it on to the real screen */
-
 }
 
 void atualizaInterconexoes(Interconexao* listaInterconexoes){
   Interconexao* conexao;
 
-  for(conexao = listaInterconexoes ; conexao != NULL ; conexao = conexao->proximo)
+  for(conexao = listaInterconexoes; conexao != NULL ; conexao = conexao->proximo, deslocamento+=6){
+    attron(COLOR_PAIR(conexao->tagFalha + 4));
+    mvprintw(deslocamento,100,"%s:\n",conexao->nome);
+    mvprintw(deslocamento+1,100,"\tcapacidade maxima: %d\n",conexao->capacidadeMaxima);
+    mvprintw(deslocamento+2,100,"\trecurso transportado: %d\n",conexao->recursoTransportado);
+    mvprintw(deslocamento+3,100,"\tchance de falha: %d\n",conexao->chanceFalha);
+    mvprintw(deslocamento+4,100,"\tnumero de falhas: %d\n",conexao->numeroFalha);
     desenhaInterconexao(conexao);
+  }
 
   refresh();
+}
 
+
+void atualizaGeradores(Gerador* listaGeradores){
+  Gerador* gerador;
+
+
+  for(gerador = listaGeradores; gerador != NULL ; gerador = gerador->proximo, deslocamento+=4){
+    attron(COLOR_PAIR(7));
+    mvprintw(deslocamento,100,"%s:\n",gerador->nome);
+    mvprintw(deslocamento+1,100,"\tcusto/segundo: %d\n",gerador->custo);
+    mvprintw(deslocamento+2,100,"\trecurso produzido/segundo: %d\n",gerador->recursoProduzido);
+    desenhaGerador(gerador);
+  }
+
+  refresh();
+}
+
+void atualizaAdaptadores(Adaptador* listaAdaptadores){
+  Adaptador* adaptador;
+
+  for(adaptador = listaAdaptadores; adaptador != NULL ; adaptador = adaptador->proximo, deslocamento+=3){
+    attron(COLOR_PAIR(7));
+    mvprintw(deslocamento,100,"%s:\n",adaptador->nome);
+    mvprintw(deslocamento+1,100,"\trecurso recebido: %d\n",adaptador->recursoRecebido);
+
+    desenhaAdaptador(adaptador);
+  }
+
+  refresh();
 }

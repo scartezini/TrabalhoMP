@@ -17,6 +17,8 @@ void inicializa(Gerador*,Interconexao*,Adaptador*,Cidade*);
 
 void atualizaInterconexoes(Interconexao*);
 void atualizaCidades(Cidade*);
+void atualizaGeradores(Gerador* );
+void atualizaAdaptadores(Adaptador* );
 
 
 void desenhaCidade(Cidade*);
