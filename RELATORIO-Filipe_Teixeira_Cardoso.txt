@@ -1,0 +1,12 @@
+11/11/15 | 1h50min | Especificar os Módulos, Projetar, Codificar módulo | Criação de structs e módulos iniciais que regem o funcionamento do programa (Cidade, Gerador, Interconexao e Adaptador)
+11/11/15 | 32min | Revisar especificações, Revisar projetos, Revisar código do módulo | Revisão das especificações de struct, dos módulos projetados e de sua implementação
+11/11/15 | 25min | Estudar aulas e laboratórios relacionados | Criando arquivo de entrada de teste (teste.txt) a partir das especificações do projeto
+11/11/15 | 1h27min | Especificar as funções, Projetar, Codificar módulo |  Criação da rotina de leitura do arquivo de entrada
+11/11/15 | 30min | Revisar especificações, Revisar projetos, Revisar código do módulo | Revisão das especificações da rotina de leitura, do módulo projetado e de sua implementação
+11/11/15 | 3h55min | Especificar as funções, Projetar, Codificar módulo | Criação das funções de criar, inserir, imprimir e desalocar listas das estruturas especificadas
+12/11/15 | 44min | Revisar especificações, Revisar projetos, Revisar código do módulo | Revisão das especificações das funções de criar, inserir, imprimir e desalocar listas das estruturas especificadas, dos módulos projetados e de suas implementações
+12/11/15 | 27min | Revisar especificações, Projetar | Adaptando structs de cada tipo de forma a comportar todas variáveis necessárias para a simulação que não foram obtidas do arquivo de entrada
+12/11/15 | 8min | Revisar projetos, Revisar código do módulo | Revisando variáveis complementadas no passo anterior
+18/11/15 | 1h35min | Especificar os Módulos, Especificar as Funções, Projetar, Codificar módulo | Fazendo função para conectar os elementos da simulação (cidades, geradores, adaptadores e interconexões) para um módulo de funções gerais
+18/11/15 | 1h17min | Especificar as Funções, Projetar, Codificar módulo | Criando função que verifica possíveis problemas de consistência dos elementos para o módulo de funções gerais
+18/11/15 | 50min | Revisar especificações, Revisar projetos, Revisar código do módulo, Codificar módulo | Repensando função para conectar os elementos da simulação (cidades, geradores, adaptadores e interconexões)
