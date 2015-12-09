@@ -110,7 +110,7 @@ int main(){
 		atualizaGeradores(listaGeradores);
 		atualizaAdaptadores(listaAdaptadores);
 
-		getch();
+		sleep(1);
 	}
 	// AS: tempo de simulacao chegou ao fim
 
