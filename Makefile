@@ -39,7 +39,7 @@ instalar_gource:
 
 # Make para visualizar o gource
 gource:
-	gource -s 1
+	gource -f -s 1
 
 # Make para limpar todos os arquivos gerados
 clean:
